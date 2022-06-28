@@ -1,0 +1,19 @@
+site_name: Cudos Docs
+theme:
+  features:
+    - navigation.tabs
+    - navigation.sections
+  name: material
+  custom_dir: overrides
+  font:
+    text: Montserrat
+    code: Roboto Mono
+  logo: assets/logo.svg
+plugins:
+  - search
+markdown_extensions: 
+  - attr_list
+  - md_in_html
+
+
+
