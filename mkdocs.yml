@@ -6,7 +6,7 @@ theme:
   name: material
   custom_dir: overrides
   font:
-    text: Montserrat
+    text: Lato
     code: Roboto Mono
   logo: assets/logo.svg
 plugins:
