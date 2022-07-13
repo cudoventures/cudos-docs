@@ -66,14 +66,7 @@ const config = {
                 label: 'Node',
                 docId: 'node/introduction',
                 position: "left",
-              },
-              {
-                type: 'doc',
-                label: 'Learn',
-                docId: 'learn/introduction/overview',
-                position: "left",
-              },
-             
+              },             
             ],
       },
       footer: {
