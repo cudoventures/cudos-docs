@@ -61,53 +61,42 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: "dropdown",
-            label: "🔨 Node",
-            position: "left",
-            items: [
               {
-                to: "docs/node/introduction",
-                label: "Overview",
+                type: 'doc',
+                label: 'Node',
+                docId: 'node/introduction',
+                position: "left",
+              },
+              {
+                type: 'doc',
+                label: 'Learn',
+                docId: 'learn/introduction/overview',
+                position: "left",
               },
              
             ],
-          },
-          
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
       },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Telegram',
+                href: 'https://t.me/cudostelegram',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.com/invite/t397SKqf4u',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/CUDOS_',
+              },
+              {
+                label: 'Medium',
+                href: 'https://medium.com/cudos'
               },
             ],
           },
