@@ -30,6 +30,12 @@ module.exports = {
       label: 'Run a node',
       items: [
         'node/run-node/full-node',
+        {
+          type: 'category',
+          label: 'Run a validator node',
+          items: ['node/run-node/validator-node-1',
+          'node/run-node/validator-node-2'],
+        },
         'node/run-node/check-sync',
       ],
     },

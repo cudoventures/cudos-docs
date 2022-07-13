@@ -63,14 +63,13 @@ const config = {
         items: [
           {
             type: "dropdown",
-            label: "🔨 Node",
+            label: " Node",
             position: "left",
             items: [
               {
                 to: "docs/node/introduction",
                 label: "Overview",
               },
-             
             ],
           },
           
