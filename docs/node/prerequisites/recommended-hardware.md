@@ -1,5 +1,5 @@
 ---
-title: Recommended Hardware requirements
+title: Recommended hardware requirements
 id: hw-req
 ---
 
