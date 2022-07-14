@@ -1,5 +1,5 @@
 ---
-title: Build Environment (Docker)
+title: Build environment (Docker)
 id: build-envt
 ---
 
