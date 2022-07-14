@@ -5,7 +5,7 @@ id: full-node
 
 This guide explains how to initialise and start a **full node**. A full node has the addresses of 3 **Seed nodes** pre-configured to allow it to connect to the Cudos network. 
 
-It follows on from the [build environment](../prerequisites/build-envt) which is a prerequisite for this step. 
+It follows on from the [build environment](/docs/node/prerequisites/build-envt) which is a prerequisite for this step. 
 
 A full node allows you to deploy **NFTs** and **Smart Contracts** to the Cudos blockchain. 
 
