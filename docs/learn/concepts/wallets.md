@@ -5,13 +5,12 @@ id: wallet
 
 **Keplr Wallets** are used to connect to the **Cudos Network**, store assets, perform transactions and interact with the wider inter blockchain ecosystem. 
 
-## Understanding Keplr Wallets
-
-:::info About Keplr Wallet
+## About Keplr
 
 [Keplr](https://www.keplr.app/) is an open source browser extension wallet that supports the Cudos blockchain. It enables interoperability with the wider **Inter blockchain (IBC) ecosystem** and provides flexible and account management and wallet functionalities.
 
 Keplr enables:
+
 - Multi-chain account management
 - Stake to any validator and claim rewards
 - Vote on governance proposals
@@ -28,8 +27,6 @@ The **Keplr extension** supports transfers/staking for:
 * Regen Network
 * Cyber (beta)
 * Straightedge (beta)
-
-:::
 
 :::caution Keplr Mobile
 

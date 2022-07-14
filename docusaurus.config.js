@@ -60,7 +60,13 @@ const config = {
                 label: 'Node',
                 docId: 'node/overview/introduction',
                 position: "left",
-              },             
+              }, 
+              {
+                type: 'doc',
+                label: '📚 Learn',
+                docId: 'learn/introduction/overview',
+                position: "left",
+              },            
             ],
       },
       footer: {
