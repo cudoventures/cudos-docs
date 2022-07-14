@@ -62,8 +62,11 @@ The mnemonic is a human readable representation of the wallet’s address and ke
 
 ## 02 Connect to the Cudos network
 
-1. From the [Cudos Explorer](https://explorer.cudos.org), click the key icon to link the Keplr extension to the Cudos network
-2. Click the "key icon” in the upper right corner:
+Connect to the Cudos network from [**Cudos Explorer**](https://explorer.cudos.org).
+
+1. Click the **key icon** at the top right:
+
+<img src={require('@site/static/img/clusterbasic.png')width="500" } />
 img src="./keplr3.png" width="500"
 3. This will prompt a window asking you for permission to add a new network to Keplr and also give access to it:
 
