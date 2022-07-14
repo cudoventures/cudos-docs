@@ -11,69 +11,92 @@ This guide explains how to prepare and build a **Validator node**. This is a pre
 
 :::
 
-It follows on from the [build environment](/docs/node/prerequisites/build-envt) which is a prerequisite for this step. 
-
 The steps to prepare a Validator node are:
 
-### 1. Build a full node
-### 2. Stake CUDOS to your node
+### STEP ONE: Build a full node
+### STEP TWO: Stake CUDOS to your node
 
-## Networks
+## Prerequisites
 
-`Testnet`
-`Mainnet`
+1. Already built a full node 
 
-## 01 Build a full node
+Follow the instructions to [**Run a full node**](node/run-node/full-node)
 
-## 02 Stake CUDOS to your node
+2. Installed Keplr Wallet
 
-1. Create a Keplr Wallet
+#### Understanding Keplr Wallets
 
-:::info Security
-All **Keplr** transactions are signed offline on your device. Your private keys are encrypted and securely stored on your computer.
-:::
+:::info About Keplr Wallet
 
-[Keplr](https://www.keplr.app/) is an open source browser extension wallet that supports the Cudos blockchain. It enables interoperability with the wider Inter blockchain (IBC) ecosystem and provides flexible and versatile account management and wallet functionalities.
+[Keplr](https://www.keplr.app/) is an open source browser extension wallet that supports the Cudos blockchain. It enables interoperability with the wider **Inter blockchain (IBC) ecosystem** and provides flexible and account management and wallet functionalities.
 
 Keplr enables:
 - Multi-chain account management
 - Stake to any validator and claim rewards
 - Vote on governance proposals
 
-[Keplr extension](https://chrome.google.com/webstore/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap?hl=en) is supported only on Chrome. It can also be used on Brave, but some features may be unavailable. 
+The **Keplr extension** supports transfers/staking for:
 
-:::caution 
+* Kava
+* Secret Network
+* Akash
+* Starname
+* Sifchain
+* CertiK
+* IRISnet
+* Regen Network
+* Cyber (beta)
+* Straightedge (beta)
 
-Currently, (as of July 2022), it is not possible to use the Keplr Mobile App with the Cudos Network. Stay tuned in [Cudos Discord](https://discord.com/invite/t397SKqf4u) for any updates. 
 :::
 
-## 01 Install Keplr
+:::caution Keplr Mobile
 
-Use the Keplr Chrome extension to create a wallet:
+Currently, (as of July 2022) it is not possible to use **Keplr Mobile App** with the Cudos Network. This is due to the limited functionality of the **Keplr App**. Stay tuned in [Cudos Discord](https://discord.com/invite/t397SKqf4u) for any updates. 
+:::
+
+#### Install Keplr Wallet
 
 1. Install the [Keplr extension](https://chrome.google.com/webstore/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap?hl=en) on your browser.
 
 :::danger Security
+
+All **Keplr** transactions are signed offline on your device. Your private keys are encrypted and securely stored on your computer.
+
 **Be sure** to save your mnemonic offline is a secure place. 
 
 The mnemonic is a human readable representation of the wallet’s address and key combined. **Anyone with your mnemonic can take your assets and any lost mnemonic can not be recovered.**
 :::
 
+## Networks
+
+`Testnet`
+`Mainnet`
+
+## 02 Stake CUDOS to your node
+
+:::success Testnet
+
+If you want to run a validator node on **Testnet**, join '#Validator Chat' in the [Cudos Discord]((https://discord.com/invite/t397SKqf4u)) to request CUDOS testnet tokens.
+::: 
+
+
 
 ## 02 Connect to the Cudos network
 
-Connect to the Cudos network from [**Cudos Explorer**](https://explorer.cudos.org).
+Connect to the Cudos network from [**Cudos Explorer**](https://explorer-v1.cudos.org/).
 
-1. Click the **key icon** at the top right:
+1. To connect your **Keplr wallet**, click the **key icon**.
 
-<img src={require('@site/static/img/clusterbasic.png')width="500" } />
-img src="./keplr3.png" width="500"
-3. This will prompt a window asking you for permission to add a new network to Keplr and also give access to it:
+![Click key](@site/static/img/keplr3.png)
 
-img src="./keplr2.png" width="200"
+2. Authorise **Keplr** to access the Cudos network.
 
-4. After you Approve, open the Keplr extension and click on the network name on the upper side of it. From there a menu with all the networks will open, and you should select  **CudosTestnet-Public-v2**. 
-img src="./keplr4.png" width="300"
+![Authorise wallet](@site/static/img/keplr2.png)
+
+3. Open the **Keplr** extension and click on the network name on the upper side of it. From there a menu with all the networks will open, and you should select  **CudosTestnet-Public-v2**. 
+
+![Select network ](@site/static/img/keplr4.png)
 
 You should now see your account details.
 
@@ -86,15 +109,20 @@ You should now see your account details.
 --->
 
 
-### Funding your wallet
+## 03 How to fund your wallet
 
-A wallet allows you to store and retrieve CUDOS tokens. When you buy or receive CUDOS tokens, you can keep them in a wallet from where you can fund transactions, pay gas, or stake CUDOS as a validator or delegator.
+This section explains where to buy/trade CUDOS and how to apply for grants.
 
-A wallet allows you to store and retrieve CUDOS tokens. When you buy or receive CUDOS tokens, you can keep them in a wallet and start different transactions. Owning CUDOS will provide you with more options, such as using your tokens to become a validator/delegator and participate in staking.
+:::note Validate on Testnet
 
-This article explains where to buy/trade CUDOS and how to apply for grants.
 
-#### Where to buy CUDOS?
+
+### Centralized Exchanges (CEXs)
+
+
+
+
+#### Decentralized exchanges (DEXs)
 
 The current top exchanges for CUDOS trading are BitMax, KuCoin, Gate.io, Uniswap, and Poloniex. You can also trade CUDOS on the following exchanges:
 
@@ -257,7 +285,7 @@ If you can’t see your node in the explorer's [Validators tab](https://explorer
 ### Get the validator’s operator address
 If you want to find your validator’s operator address, run the command:
 
-```
+```bash
 cudos-noded q staking validators | grep -B13 -A9 "$MONIKER" | grep operator_address
 ```
 
