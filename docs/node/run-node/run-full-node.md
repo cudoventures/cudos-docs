@@ -78,8 +78,3 @@ You have been successful if you see a newly generated file containing your **nod
 ## 05 Check node status
 
 Syncing may take several hours. Refer to [Checking sync status](./check-sync) to verify your node is syncing. 
-
- 
-Once your node is synced, you will be able to either:
-- Use it as a **Full Node**. If you wish to send transactions from your node, you will need to create a wallet, fund it, and stash it in your node. Refer to [Setting up your nodes wallet](/mainnet/build/mainnet-fundnodes.html) for instructions.
-- Configure it as a **Standalone Validator Node:**
