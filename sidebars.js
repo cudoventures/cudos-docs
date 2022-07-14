@@ -4,8 +4,8 @@ module.exports = {
       type: 'category',
       label: 'Overview',
       items: [
-        'node/introduction',
-        'node/understanding-nodes'
+        'node/overview/introduction',
+        'node/overview/understanding-nodes'
       ],
     },
     {
