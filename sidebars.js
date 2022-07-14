@@ -34,4 +34,21 @@ module.exports = {
       ],
     },
   ],
+  learnSidebar: [
+    {
+      type: 'category',
+      label: 'Introduction',
+      items: [
+        'learn/introduction/overview',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Concepts',
+      items: [
+        'learn/concepts/account',
+        'learn/concepts/wallet'
+      ],
+    },
+  ]
 };
