@@ -140,7 +140,7 @@ Error: rpc error: code = NotFound desc = rpc error: code = NotFound desc = accou
 ```
 
 **Solution**
-Your validator is probably still syncing. Refer to [Checking sync status](node/run-node/check) to verify sync status. 
+Your validator is probably still syncing. Refer to [Checking sync status](/docs/node/run-node/check-sync) to verify sync status. 
 
 2. Cannot see validator in Cudos Explorer
 

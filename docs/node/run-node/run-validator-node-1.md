@@ -24,7 +24,7 @@ Validator nodes are run on
 
 **1. You have built a full node** 
 
-Follow the instructions to [**Run a full node**](node/run-node/full-node)
+Follow the instructions to [**Run a full node**](/docs/node/run-node/full-node)
 
 **2. You have installed a Keplr Wallet**
 
@@ -38,7 +38,7 @@ Follow the instructions to get **CUDOS tokens**(link-to-be-inserted)
 
 :::success Testnet
 
-If you want to run a validator node on **Testnet**, join '#Validator Chat' in the [Cudos Discord]((https://discord.com/invite/t397SKqf4u)) to request the required number of CUDOS testnet tokens.
+If you want to run a validator node on **Testnet**, join '#Validator Chat' in the [Cudos Discord](https://discord.com/invite/t397SKqf4u) to request the required number of CUDOS testnet tokens.
 ::: 
 
 ## Prepare your node for Staking
