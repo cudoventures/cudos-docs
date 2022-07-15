@@ -60,7 +60,13 @@ const config = {
                 label: 'Node',
                 docId: 'node/overview/introduction',
                 position: "left",
-              },             
+              }, 
+              {
+                type: 'doc',
+                label: 'Governance',
+                docId: 'governance/tokens',
+                position: "left",
+              },            
             ],
       },
       footer: {
