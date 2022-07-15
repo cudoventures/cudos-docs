@@ -3,7 +3,7 @@ title: Overview
 id: overview
 ---
 
-# Cudos
+# Cudos (WiP)
 
 Cudos is a Delegated Proof-of-Stake, layer-1 blockchain with a vision for a decentralised computation accessible on-chain.
 

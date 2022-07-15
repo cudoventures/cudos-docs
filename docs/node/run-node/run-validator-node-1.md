@@ -29,6 +29,9 @@ The steps to prepare a Validator node are:
 
 
 
+The process for stashing a key on a full node or a validator is the same, however you should use a meaningful string as the name for your keyring; for example  `validator1keyring` if the wallet is going to be used by a validator, or `fullnode1keyring` if it is for a full node.
+
+
 
 
 
