@@ -40,4 +40,22 @@ module.exports = {
       ],
     },
   ],
+  buildSidebar: [
+    {
+      type: 'category',
+      label: 'Overview',
+      items: [
+        'build/intro',
+        'build/setup-rust'
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Cudos Blast',
+      items: [
+        'build/install-blast',
+        'build/blast-init'
+      ],
+    },
+  ],
 };
