@@ -28,6 +28,7 @@ cudos-noded tx staking edit-validator \
 --commission-rate="0.50" \
 --keyring-backend="os" \
 --gas-prices="5000000000000acudos" \
+--gas-adjustment 1.3 \
 -y
 ```
 
