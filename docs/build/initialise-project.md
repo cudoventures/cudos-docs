@@ -32,9 +32,19 @@ blast init --dir /Your/Location/Here
 ```
 :::
 
-2. Open your project in your preferred code editor
+2. Open your project in your favourite IDE.
+
+## Project contents
 
 ![Project contents](/img/dapp-contents.png)
+
+The `/src` directory contains the smart contract source code in different files.
+
+1. `src/contract.rs` contains the main smart contract logic and is where the functions `instantiate()`, `execute()` and `query()` are implemented.
+
+```rust
+
+
 
 **contracts** - Sample contracts. Add more as desired.
 
