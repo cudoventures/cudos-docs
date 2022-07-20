@@ -8,13 +8,15 @@ You are welcome to join the Cudos Community and contribute to the docs and to th
 
 Cudos Docs is built using [Docusaurus 2](https://docusaurus.io/), a static website generator.
 
-### How to contribute
+## How to contribute
 
-If you're interested in contributing to this repo, feel free to clone the repo, make changes and open a PR.
+- If you're interested in contributing to this repo, feel free to clone the repo, make changes and open a PR.
 
-Be sure to checkout the `.contributing.md` file before making any changes. (TO BE DONE)
+- Be sure to checkout the `.contributing.md` file before making any changes. (TO BE DONE)
 
-### Preview changes locally
+- You can also open an issue.
+
+## Preview changes locally
 
 To preview your changes as you edit the files, you can run a local development server that will serve your website and reflect the latest changes.
 
