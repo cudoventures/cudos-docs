@@ -28,7 +28,7 @@ npm run start
 
 By default, a browser window opens at http://localhost:3000.
 
-### Search Engine Optimisation (SEO)
+## Search Engine Optimisation (SEO)
 
 1. Check out these resources to help create good titles and descriptions for SEO:
 
@@ -47,7 +47,7 @@ keywords: [keywords, describing, the main topics]
 ---
 ```
 
-### Images
+## Adding Images
 
 Images are stored in `static/img` folder.
 Images can be referenced in three different ways: Markdown syntax, CJS require, or ES imports syntax.
