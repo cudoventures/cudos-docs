@@ -45,13 +45,11 @@ Validators and Delegators stake CUDOS onto the network to secure it and earn sta
 
 :::tip Validator Stake
 
-To be a validator, requires 2,000,000 CUDOS tokens.
+To be a validator, requires **2,000,000 CUDOS** tokens.
 
 :::
 
-### Governance
 
-CUDOS holders can participate in network governance and vote on active proposals to shape the network's future.
 
 
 

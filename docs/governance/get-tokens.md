@@ -1,5 +1,5 @@
 ---
-title: Buy CUDOS tokens
+title: Get CUDOS
 id: buy-tokens
 ---
 
@@ -9,7 +9,7 @@ id: buy-tokens
 
 :::caution Be Aware
 
-Listing here does not constitute a recommendation. You are advised to DYR.
+Listing here does not constitute a recommendation. You are advised to always ***Do Your Own Research*** (DYOR).
 :::
 
 ### Centralised Exchanges (CEXs)
