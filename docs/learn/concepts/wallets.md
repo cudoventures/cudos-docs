@@ -7,6 +7,8 @@ id: wallet
 
 ## About Keplr
 
+Keplr is a **non-custodial** wallet. This means that your private keys are encrypted and securely stored on your own computer.
+
 [Keplr](https://www.keplr.app/) is an open source browser extension wallet that supports the Cudos blockchain. It enables interoperability with the wider **Inter blockchain (IBC) ecosystem** and provides flexible and account management and wallet functionalities.
 
 Keplr enables:
@@ -33,15 +35,31 @@ The **Keplr extension** supports transfers/staking for:
 Currently, (as of July 2022) it is not possible to use **Keplr Mobile App** with the Cudos Network. This is due to the limited functionality of the **Keplr App**. Stay tuned in [Cudos Discord](https://discord.com/invite/t397SKqf4u) for any updates. 
 :::
 
-#### Install Keplr Wallet
+#### How to set up a Keplr Wallet
 
 1. Install the [Keplr extension](https://chrome.google.com/webstore/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap?hl=en) on your browser.
+
+2. Create a Secret Seed/mnemonic Phrase account. 
+- Select ***Create new account***
+
+3. Select a ***24 word phrase.*** 
 
 :::danger Security
 
 All **Keplr** transactions are signed offline on your device. Your private keys are encrypted and securely stored on your computer.
 
-**Be sure** to save your mnemonic offline is a secure place. 
+The 24 word secret seed phrase is a is a string of 12 or 24 words combined to form your master account key. 
 
-The mnemonic is a human readable representation of the wallet’s address and key combined. **Anyone with your mnemonic can take your assets and any lost mnemonic can not be recovered.**
+**Anyone with it can take your assets**
+
+**A lost secret phrase cannot be recovered.**
+
+**Be sure** to save your 24 word secret seed phrase **offline** is a **secure** place. 
+
 :::
+
+4. Enter a ***Name*** and ***Password***.
+
+5. Confirm your secret phrase in the correct order.
+
+6. Click to ***Register***
