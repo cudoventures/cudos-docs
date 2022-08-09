@@ -45,17 +45,6 @@ Running either type of node allows you to effectively extract blockchain data fo
 
 :::
 
-As well as Full and Validator nodes, there are a number of other node types listed below.
-
-|**NODE TYPE**|**DESCRIPTION**|
-|:-----:|:-----:|
-|Full Node| A full node is a node that participates in the network but does not help secure it. Full nodes can be used to store the entire state of a blockchain. |
-|Validator Node| Validator Nodes participate in the consensus and produce blocks.|
-|Sentry Node| Sentry nodes are Full Nodes used to isolate Validator nodes from public access.|
-|Seed Node | A Seed node provides a node with a list of peers which a node can connect to. |
-|Relay Node| A Relay Node is a full node that only make connections to sentry nodes of validators other than the operator of the Relay Node. |
-
-
 ## Networks 
 
 The following networks are available to run a node. Each network has its own set of validators. 

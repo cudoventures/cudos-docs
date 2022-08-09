@@ -22,6 +22,7 @@ These constitute the interface of a smart contract:
 
 1. `instantiate()`: serves as the constructor during contract instantiation and provides the initial state.
 
-2. `execute()`: gets called when a user wants to invoke a method on the smart contract
+2. `execute()`: gets called when a user wants to invoke a method on the smart contract.
 
-3. `query()`: gets called when a user wants to request current-state related data from the smart contract
+3. `query()`: gets called when a user wants to request current-state related data from the smart contract.
+

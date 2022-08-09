@@ -11,8 +11,6 @@ Rust and WebAssembly integrate well with existing JavaScript tooling.
 
 **CosmWasm** is a smart contract platform built for the Cosmos ecosystem of which Cudos is a member. It is is the Cosmos (Cosm) way of using WebAssembly (Wasm) hence the name. CosmWasm provides API and library functions such as verifying addresses and more advanced storage items. These enable you to write powerful smart contracts. 
 
-
-
 ## Install Rust and WASM
 
 1. Install the latest version of [Rust](https://www.rust-lang.org/tools/install)
