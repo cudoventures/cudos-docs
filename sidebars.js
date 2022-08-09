@@ -33,13 +33,13 @@ module.exports = {
         {
           type: 'category',
           label: 'Run a validator node',
-          items: ['node/run-node/validator-node-1',
-          'node/run-node/validator-node-2'],
+          items: ['node/run-node/validator-node-1','node/run-node/validator-node-2', 'node/run-node/how-to'],
         },
         'node/run-node/check-sync',
       ],
     },
   ],
+
   buildSidebar: [
     {
       type: 'category',
@@ -58,4 +58,16 @@ module.exports = {
       ],
     },
   ],
+
+  governanceSidebar: [
+    {
+      type: 'category',
+      label: 'Tokens & Governance',
+      items: [
+        'governance/tokens',
+        'governance/governance',
+        'governance/buy-tokens',
+      ],
+    },
+  ]
 };

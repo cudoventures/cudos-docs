@@ -65,6 +65,11 @@ const config = {
                 type: 'doc',
                 label: 'Build',
                 docId: 'build/intro',
+              }, 
+              {
+                type: 'doc',
+                label: 'Tokens & Governance',
+                docId: 'governance/tokens',
                 position: "left",
               },            
             ],
