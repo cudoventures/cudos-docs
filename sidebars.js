@@ -51,7 +51,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Cudos Blast',
+      label: 'Tools',
       items: [
         'build/install-blast',
         'build/blast-init'

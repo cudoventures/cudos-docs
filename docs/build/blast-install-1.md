@@ -1,9 +1,9 @@
 ---
-title: Install Cudos blast
+title: Cudos blast
 id: install-blast
 ---
 
-**Cudos Blast** is a Node.js CLI (command line interface) tool for working with the Cudos blockchain. You can use it to:
+**Cudos Blast** is a CLI (command line interface) tool for working with the Cudos blockchain. You can use it to:
 
 1. Scaffold, compile and test **Rust** smart contracts and javascript
 

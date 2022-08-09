@@ -45,7 +45,6 @@ The `/src` directory contains the smart contract source code in different files.
 ```rust
 
 
-
 **contracts** - Sample contracts. Add more as desired.
 
 **scripts** - Sample scripts to deploy a contract and interact with it.
