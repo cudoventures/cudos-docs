@@ -3,9 +3,7 @@ title: Get CUDOS
 id: buy-tokens
 ---
 
-## Get CUDOS
-
-To swap or buy CUDOS, check out [Coinmarketcap](https://coinmarketcap.com/currencies/cudos/markets/) to view the markets and latest prices.
+To swap or buy CUDOS, check out [**Coinmarketcap**](https://coinmarketcap.com/currencies/cudos/markets/) or [**CoinGecko**](https://www.coingecko.com/en/coins/cudos) view the markets and latest prices.
 
 :::caution Be Aware
 
