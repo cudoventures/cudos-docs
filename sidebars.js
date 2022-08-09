@@ -39,4 +39,18 @@ module.exports = {
       ],
     },
   ],
+  governanceSidebar: [
+    {
+      type: 'category',
+      label: 'Tokens & Governance',
+      items: [
+        'governance/tokens',
+        'governance/governance',
+        'governance/buy-tokens',
+      ],
+    },
+
+
+
+  ]
 };
