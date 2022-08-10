@@ -23,23 +23,6 @@ To partipate as a **Validator**, you can run a **Validator Cluster** comprised o
 |Sentry Node| Sentry nodes are Full Nodes used to isolate Validator nodes from public access.|
 |Relay Node| A Relay Node is a full node that only make connections to sentry nodes of validators other than the operator of the Relay Node. |
 
-## Ports
-
-Nodes use the following tcp ports:
-
-**Port**| **Usage**
-|-----|-----|
-|1317| API port, Sentry node |
-|9090| gRPC port |
-|26656| P2P port used fortransferring internal data between nodes,   Full/Seed nodes     Sentry nodes 
-|26657 | [Tendermint RPC server](https://docs.tendermint.com/master/rpc/)   Full/Seed nodes   Sentry nodes |  
-|26660 | Port for Prometheus monitoring   Full/Seed nodes   Sentry nodes | 
-|1317| API port   Sentry node | 
-|9090| gRPC port    Sentry node |  
-|26656| P2P port used fortransferring internal data between nodes   Full/Seed nodes     Sentry nodes|  
-|26657 | [Tendermint RPC server](https://docs.tendermint.com/master/rpc/)   Full/Seed nodes   Sentry nodes | 
-|26660 | Port for Prometheus monitoring   Full/Seed nodes   Sentry nodes  |
-
 
 ## Full nodes
 
