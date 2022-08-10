@@ -9,7 +9,7 @@ id: install-blast
 
 2. Deploy smart contracts on a local, test or public network.
 
-3. Interact with smart contracts with `blast.config.js` on a specified network (local, test or public).
+3. Interact with smart contracts using `blast.config.js` on a specified network (local, test or public).
 
 4. Spin up a local [`Cudos node`](https://github.com/CudoVentures/cudos-node) to interact with. 
 
@@ -22,7 +22,7 @@ id: install-blast
 | Install [Docker engine]((https://docs.docker.com/engine/install))  | 19.03.13        | 20.10.12            |
 | Install [Docker compose](https://github.com/docker/compose) | 1.27.4          | 1.29.2              |  
 
-:::note WINDOWs USERS
+:::tip WINDOWs USERS
 > For Windows users we recommend using Windows Subsystem for Linux ([WSL](https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distros)).
 > To avoid permission issues with `WSL`, you may have to [change](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally#manually-change-npms-default-directory) `npm` default directory. 
 :::
@@ -33,9 +33,9 @@ Checkout [Setup Rust](/docs/build/setup-rust)
 
 ## 3. Install Cudos Blast
 
-### Globally
+### Globally - Create a new project anywhere
 
-Use npm to install Cudos Blast CLI tool globally:
+Use `npm` to install Cudos Blast CLI tool globally. This means you can create a new project anywhere. 
 
 ```bash
 npm install cudos-blast -g
@@ -49,10 +49,11 @@ blast --version
 Use `npx cudos-blast` to run commands. This ensures you are always using the latest version. 
 :::
 
-### Locally
+### Locally - Add to a single project
+
+If you only want to install Cudos Blast into a single project then do the following:
 
 ```bash
-
 # Create a folder for your project
 
 mkdir myproject
@@ -69,8 +70,13 @@ npm install cudos-blast
 # Confirm installation
 
 blast --version
-
 ```
 
-Interact using `npx blast` to run commands or `npx cudos-blast`. 
+:::success 
+
+The next stages assume that you have installed Cudos Blast globally. 
+
+:::
+
+ 
 

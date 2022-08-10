@@ -1,22 +1,18 @@
 ---
-title: Initialise project
+title: Create project
 id: blast-init
 ---
 
-Initialise a **Blast** project and get started interacting with the Cudos network. 
+This section explains how to create a dApp. It assumes that you have installed Cudos Blast globally. 
 
-:::caution
-
-Ensure that a new project is initialised in a directory other than the local `cudos-blast` repository
-:::
-
-1. Scaffold your dapp 
-
-Create a new project folder (or navigate to your local cudos-blast project installation)
+1. Create a new folder for your project 
 
 ```bash
 mkdir myCudosDapp
 cd myCudosDapp
+```
+
+2. Add Blast to your project
 
 # Initialise a blast project
 
@@ -32,11 +28,19 @@ blast init --dir /Your/Location/Here
 ```
 :::
 
-2. Open your project in your favourite IDE.
+2. Open your project in your favourite IDE. (We're using Visual Studio Code on a Mac for this tutorial)
 
-## Project contents
+## Explore your project
+
+When you open the project you see something similar to below:
 
 ![Project contents](/img/dapp-contents.png)
+
+Let's walk through each section. 
+
+### contracts
+
+Inside the `contracts` folder
 
 The `/src` directory contains the smart contract source code in different files.
 

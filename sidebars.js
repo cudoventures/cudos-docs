@@ -51,6 +51,14 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Build dApp',
+      items: [
+        'build/dapp-structure',
+        'build/simple-dapp'
+      ],
+    },
+    {
+      type: 'category',
       label: 'Tools',
       items: [
         'build/install-blast',
