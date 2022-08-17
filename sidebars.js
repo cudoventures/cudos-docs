@@ -51,10 +51,18 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Smart Contracts',
+      items: [
+        'build/contract-basics',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Build dApp',
       items: [
         'build/dapp-structure',
-        'build/simple-dapp'
+        'build/simple-dapp',
+        'build/dapp-no-docker'
       ],
     },
     {

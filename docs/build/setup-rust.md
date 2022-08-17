@@ -5,7 +5,7 @@ id: setup-rust
 
 The Cudos Network uses **CosmWasm** as a framework for developing smart contracts and infrastructure to run them on chain. Smart contracts are written using Rust. 
 
-In order to develop smart contracts, you need the rust toolchain
+In order to develop smart contracts, you need the rust toolchain.
 
 ### About Rust
 Rust is a statically-typed programming language designed for **performance** and **safety**, especially safe concurrency and memory management. Its syntax is similar to that of C++. It is an open-source project developed originally at Mozilla Research.
@@ -14,7 +14,7 @@ Rust design principles minimise smart contract vulnerabilities by using existing
 
 
 ### About Webassembly 
-**WebAssembly** is a small, fast, efficient and very secure, stack-based virtual machine that is CPU and OS neutral. It is designed to execute portable bytecode — compiled from code at near-native speed.
+**WebAssembly** is a small, fast, efficient and very secure, stack-based virtual machine that is CPU and OS neutral. It is designed to execute portable bytecode — compiled from code at near-native speed. Sandboxed environment means can run in any environment. WASM programming language support is extensive and growing.
 
 
 ### About CosmWasm
