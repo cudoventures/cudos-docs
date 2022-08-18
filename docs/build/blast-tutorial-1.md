@@ -1,6 +1,6 @@
 ---
 title: Create Counter project
-id: blast-init
+id: blast-tutorial-1
 ---
 
 This short tutorial walks you through setting up your project and creating a simple counter that increments upon request.
@@ -35,7 +35,7 @@ When you open the project you see something similar to below:
 
 Let's walk through each section. 
 
-### contracts
+### Project overview
 
 Inside the `contracts` folder are `alpha` and `beta` folders.
 These are 2 example workspaces to use if one contract depends on another for example.
@@ -43,6 +43,16 @@ These are 2 example workspaces to use if one contract depends on another for exa
 Let's enter the `alpha` folder.
 
 The `/src` directory contains the smart contract source code in different files. 
+
+1. **src/contract.rs** contains the main smart contract logic and is where the functions instantiate(), execute() and query() are implemented.
+
+2. **src/state.rs** defines how the smart contract state data is represented and how it will be stored.
+
+3. **src/msg.rs** is where different types of messages and responses the smart contract can receive and return are defined.
+
+4. **src/error.rs** defines the error types that can be returned by the smart contract.
+
+5. **src/lib.rs** is where any previous modules are exposed and made accessible.
 
 
 ### State.rs - This is the starting state

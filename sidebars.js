@@ -70,7 +70,10 @@ module.exports = {
       label: 'Tools',
       items: [
         'build/install-blast',
-        'build/blast-init'
+        'build/blast-tutorial-1',
+        'build/blast-tutorial-2',
+        'build/blast-connect',
+
       ],
     },
   ],
