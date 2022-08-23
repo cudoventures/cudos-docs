@@ -5,7 +5,7 @@ id: introduction
 
 # Introduction
 
-Running a Cudos node is a unique opportunity to be a part of a project and wider ecosystem aimed at solving today’s blockchain scalability and interoperability issues.
+Running a Cudos **Node** is a unique opportunity to be a part of a project and wider ecosystem aimed at solving today’s blockchain scalability and interoperability issues.
 
 This section is intended to assist participating in the **Cudos network** as a **Node Operator**. To join the network we recommend you first try running a node on the **Testnet**. The Testnet is a playground where you can learn and experiment without the risk of losing real tokens.
 
@@ -21,25 +21,30 @@ A "node" is a computer running **Cudos** client software.
 
 ### Reasons to run a Full node
 
-* Running your own node allows you to interact with the Cudos Network in a truly private, self-sufficient and trustless manner.
+* Running your own node allows you to interact with the Cudos Network in a truly **private**, **self-sufficient** and **trustless** manner.
 
-* Your node can verify transactions and blocks without relying on any other nodes in the network.
+* Your node can **verify transactions** and **blocks** without relying on any other nodes in the network.
 
-* Addresses and balances remain private and can be checked with your own client.
+* **Addresses** and **balances** remain private and can be checked with your own client.
 
-* You can build a more secure and private dApp if you use your own node. Wallets can be configured to point to your own local node.
+* You can build a more **secure** and **private dApp**. Wallets can be configured to point to your own local node.
 
-* You can program your own custom RPC endpoints.
+* You can program your own **custom RPC endpoints**.
 
-* You can connect to your node using Inter-process Communications (IPC) or rewrite the node to load your program as a plugin. This grants low latency, which is required to replace your transactions as fast as possible (i.e. frontrunning).
+* You can connect to your node using **Inter-process Communications (IPC)** or rewrite the node to load your program as a plugin. This enables **low latency** to replace your transactions as fast as possible (i.e. frontrunning).
 
 ### Reasons to run a Validator node
 
-* Running a validator node is critical to the Cudos system’s success by relaying transactions and proposing, verifying and finalizing blocks. The maintenance and security of the Cudos Network relies on a community of validators to perform certain operations. In return for securing the network, Validators earn rewards.
+* Running a validator node is critical to the Cudos system’s success by relaying **transactions** and **proposing, verifying** and **finalising** blocks. 
 
-* Validators are also responsible for the development and evolution of the network by using their “stake” to vote on governance proposals. This gives you influence over the future direction of the Cudos Network.
+* The **maintenance** and **security** of the Cudos Network relies on a community of validators to perform certain operations. 
 
-:::info
+* In return for securing the network, Validators earn **rewards**.
+
+* Validators are also responsible for the **development** and **evolution** of the network by using their “stake” to vote on **governance proposals**. This gives you influence over the future direction of the Cudos Network.
+
+
+:::tip Other benefits
 
 Running either type of node allows you to effectively extract blockchain data for chain analytics or other data use cases.
 

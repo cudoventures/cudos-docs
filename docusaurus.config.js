@@ -68,6 +68,12 @@ const config = {
               }, 
               {
                 type: 'doc',
+                label: '📚 Learn',
+                docId: 'learn/introduction/overview',
+                position: "left",
+               },
+               {
+                type: 'doc',
                 label: 'Tokens & Governance',
                 docId: 'governance/tokens',
                 position: "left",

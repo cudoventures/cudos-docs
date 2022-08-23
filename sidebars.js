@@ -48,7 +48,7 @@ module.exports = {
       items: [
         'build/intro',
         'build/setup-rust'
-      ],
+      ]
     },
     {
       type: 'category',
@@ -75,10 +75,27 @@ module.exports = {
         'build/blast-tutorial-2',
         'build/blast-connect',
         'build/coin-tutorial'
-
       ],
     },
   ],
+
+  learnSidebar: [
+          {
+            type: 'category',
+            label: 'Introduction',
+            items: [
+              'learn/introduction/overview'
+            ],
+          },
+          {
+            type: 'category',
+            label: 'Concepts',
+            items: [
+             'learn/concepts/account',
+              'learn/concepts/wallet'
+            ],
+          },
+      ],
 
   governanceSidebar: [
     {
@@ -90,5 +107,5 @@ module.exports = {
         'governance/buy-tokens',
       ],
     },
-  ]
+  ],
 };

@@ -128,6 +128,7 @@ sudo docker exec -it cudos-start-full-node-mainnet bash
 
 2. Add your wallet’s **mnemonic** to the keyring `validator1keyring` by running the command below:
 
+
 ```bash
 cudos-noded keys add validator1keyring --recover --keyring-backend="os"
 ```
