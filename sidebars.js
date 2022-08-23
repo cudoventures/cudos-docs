@@ -56,6 +56,7 @@ module.exports = {
         'learn/concepts/wallet'
       ],
     },
+  ],
 
   governanceSidebar: [
     {
