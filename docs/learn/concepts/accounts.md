@@ -3,20 +3,17 @@ title: Accounts
 id: account
 ---
 
-A Cudos **Account** is created in two ways.
-
-You can generate a account locally using cudos noded with the following command:
-
-cudos-noded keys add <account_name> --keyring-backend <one of (os|file|test)>
-
-you can use this command to add an account for which you have a mnemonic
-cudos-noded keys add <account_name> --recover
-
-for ledger wallet:
-cudos-noded keys add <account_name> --ledger (edited) 
+A Cudos **account** is created in two ways:
 
 1. Connecting a **Keplr wallet** to the Cudos Network.
-2. On the command line when `cudosnoded` binaries are installed.
+
+2. On the command line using the `cudosnoded` binary.
+
+:::note
+When setting up nodes on the Cudos Network, each node has an **account** and **wallet**. 
+
+You can also use the **mnemonic** from your Keplr wallet.
+:::
 
 Creating a Cudos account designates a **key pair**.
 
@@ -29,3 +26,22 @@ The **PubKey** is derived to generate **addresses**. These **addresses** are use
 ## Private key
 
 The **PrivKey** is used to generate **digital signatures** to prove that an **Address** associated with the PrivKey approved of a given message.
+
+
+Generate an account locally using `cudos noded` with the following command:
+
+```shell 
+cudos-noded keys add <account_name> --keyring-backend <one of (os|file|test)>
+```
+
+This command generates your **24 word mnemonic** and a single **seed** from which your **private key** is derived.
+
+You can use this command to add an account for which you have a mnemonic
+cudos-noded keys add <account_name> --recover
+
+for ledger wallet:
+cudos-noded keys add <account_name> --ledger (edited) 
+
+
+
+
