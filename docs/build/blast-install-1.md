@@ -23,7 +23,7 @@ Before you get started with **Cudos Blast**, ensure you have met the following p
 | ---            | ---             | ---                 |
 | Install [Node.js](https://nodejs.org/en/download/package-manager/)       | 14.15.0         | 16.10.0             |
 | Install [npm](https://www.npmjs.com/)            | 6.9.0           | 7.24.0              |
-| Install [Docker engine]((https://docs.docker.com/engine/install))  | 19.03.13        | 20.10.12            |
+| Install [Docker engine](https://docs.docker.com/engine/install)  | 19.03.13        | 20.10.12            |
 | Install [Docker compose](https://github.com/docker/compose) | 1.27.4          | 1.29.2              |  
 
 :::tip WINDOWs USERS

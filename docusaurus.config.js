@@ -57,13 +57,13 @@ const config = {
         items: [
               {
                 type: 'doc',
-                label: 'Node',
+                label: '💻 Node',
                 docId: 'node/overview/introduction',
                 position: "left",
               },  
               {
                 type: 'doc',
-                label: 'Build',
+                label: '🛠 Build',
                 docId: 'build/intro',
               }, 
               {
@@ -74,7 +74,7 @@ const config = {
                },
                {
                 type: 'doc',
-                label: 'Tokens & Governance',
+                label: '🏦 Tokens & Governance',
                 docId: 'governance/tokens',
                 position: "left",
               },            
