@@ -148,7 +148,13 @@ cudos-noded init salsa-node
 {"app_message":{"admin":{},"auth":{"accounts":[],"params":{"max_memo_characters":"256","sig_verify_cost_ed25519":"590","sig_verify_cost_secp256k1":"1000","tx_sig_limit":"7","tx_size_cost_per_byte":"10"}},"bank":{"balances":[],"denom_metadata":[],"params":{"default_send_enabled":true,"send_enabled":[]},"supply":[]},"capability":{"index":"1","owners":[]},"crisis":{"constant_fee":{"amount":"1000","denom":"stake"}},"cudoMint":{"minter":{"mint_remainder":"0.000000000000000000","norm_time_passed":"0.000000000000000000"},"params":{"blocks_per_day":"17280"}},"distribution":{"delegator_starting_infos":[],"delegator_withdraw_infos":[],"fee_pool":{"community_pool":[]},"outstanding_rewards":[],"params":{"base_proposer_reward":"0.010000000000000000","bonus_proposer_reward":"0.040000000000000000","community_tax":"0.020000000000000000","withdraw_addr_enabled":true},"previous_proposer":"","validator_accumulated_commissions":[],"validator_current_rewards":[],"validator_historical_rewards":[],"validator_slash_events":[]},"evidence":{"evidence":[]},"feegrant":{"allowances":[]},"genutil":{"gen_txs":[]},"gov":{"deposit_params":{"max_deposit_period":"172800s","min_deposit":[{"amount":"10000000","denom":"stake"}]},"deposits":[],"proposals":[],"starting_proposal_id":"1","tally_params":{"quorum":"0.334000000000000000","threshold":"0.500000000000000000","veto_threshold":"0.334000000000000000"},"votes":[],"voting_params":{"voting_period":"172800s"}},"gravity":{"attestations":[],"batch_confirms":[],"batches":[],"delegate_keys":[],"erc20_to_denoms":[],"last_latest_valset_nonce":"0","last_observed_nonce":"0","last_outgoing_batch_id":"0","last_slashed_batched_block":"0","last_slashed_logic_call_block":"0","last_slashed_valset_nonce":"0","last_tx_pool_id":"0","last_un_bonding_block_height":"0","logic_call_confirms":[],"logic_calls":[],"params":{"average_block_time":"5000","average_ethereum_block_time":"15000","bridge_chain_id":"0","bridge_ethereum_address":"0x0000000000000000000000000000000000000000","contract_source_hash":"","gravity_id":"defaultgravityid","minimum_fee_transfer_to_eth":"1","minimum_transfer_to_eth":"5","signed_batches_window":"10000","signed_logic_calls_window":"10000","signed_valsets_window":"10000","slash_fraction_bad_eth_signature":"0.001000000000000000","slash_fraction_batch":"0.001000000000000000","slash_fraction_logic_call":"0.001000000000000000","slash_fraction_valset":"0.001000000000000000","target_batch_timeout":"43200000","unbond_slashing_valsets_window":"10000","valset_reward":{"amount":"0","denom":""}},"static_val_cosmos_addrs":[],"unbatched_transfers":[],"valset_confirms":[],"valsets":[]},"ibc":{"channel_genesis":{"ack_sequences":[],"acknowledgements":[],"channels":[],"commitments":[],"next_channel_sequence":"0","receipts":[],"recv_sequences":[],"send_sequences":[]},"client_genesis":{"clients":[],"clients_consensus":[],"clients_metadata":[],"create_localhost":false,"next_client_sequence":"0","params":{"allowed_clients":["06-solomachine","07-tendermint"]}},"connection_genesis":{"client_connection_paths":[],"connections":[],"next_connection_sequence":"0","params":{"max_expected_time_per_block":"30000000000"}}},"nft":{"collections":[]},"params":null,"slashing":{"missed_blocks":[],"params":{"downtime_jail_duration":"600s","min_signed_per_window":"0.500000000000000000","signed_blocks_window":"100","slash_fraction_double_sign":"0.050000000000000000","slash_fraction_downtime":"0.010000000000000000"},"signing_infos":[]},"staking":{"delegations":[],"exported":false,"last_total_power":"0","last_validator_powers":[],"params":{"bond_denom":"stake","historical_entries":10000,"max_entries":7,"max_validators":100,"unbonding_time":"1814400s"},"redelegations":[],"unbonding_delegations":[],"validators":[]},"transfer":{"denom_traces":[],"params":{"receive_enabled":true,"send_enabled":true},"port_id":"transfer"},"upgrade":{},"wasm":{"codes":[],"contracts":[],"gen_msgs":[],"params":{"code_upload_access":{"address":"","permission":"Everybody"},"instantiate_default_permission":"Everybody","max_wasm_code_size":"1228800"},"sequences":[]}},"chain_id":"test-chain-J5YFnx","gentxs_dir":"","moniker":"salsa-node","node_id":"d52195b0879329547f29644434ca34df8375735e"}
 ```
 
+2. Download the Genesis File
 
+Once the node is initialized, download the genesis file and move to the /config directory of the Cudos home directory.
+
+wget https://github.com/cosmos/mainnet/raw/master/genesis.cosmoshub-4.json.gz
+gzip -d genesis.cosmoshub-4.json.gz
+mv genesis.cosmoshub-4.json ~/.gaia/config/genesis.json
 
 
 ```shell
@@ -161,6 +167,7 @@ cudos-noded is the tool that enables you to interact with the node that runs on 
 
 To set up Cudos on a local machine and connect to an existing full node, use the following command:
 
+```
 $ NODE="<node_ip>"
 $ CHAIN_ID="cudos-testnet-public-3"
 $ KEYRING="os"
@@ -168,6 +175,7 @@ $ KEYRING="os"
 $ TXFLAGS="--node $NODE --chain-id $CHAIN_ID --gas auto --gas-adjustment 1.3 --gas-prices 5000000000000acudos--keyring-backend $KEYRING -y"
 
 $ alias CUDOS_NODED='docker exec -it binary-builder cudos-noded'
+```
 Where:
 
 NODE should refer to the IP address of your sentry or full/validator node that is running on the Cudos public testnet (see public node list here).
@@ -185,6 +193,12 @@ Here's how to create an account and wallet on the Cudos network.
 
 ```shell
 cudos-noded keys add INSERT_DESIRED_NAME --keyring-backend "os"
+```
+
+To add an account from an existing keplr wallet
+
+```shell
+cudos-noded keys add keplrwalletname --keyring-backend $TESTNET_KEYRING --recover
 ```
 
 ### Example 

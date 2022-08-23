@@ -21,6 +21,7 @@ module.exports = {
       label: 'Prerequisites',
       items: [
         'node/prerequisites/hw-req',
+        'node/prerequisites/binary',
         'node/prerequisites/build-envt',
         'node/prerequisites/stake-req'
       ],
@@ -73,6 +74,7 @@ module.exports = {
         'build/blast-tutorial-1',
         'build/blast-tutorial-2',
         'build/blast-connect',
+        'build/coin-tutorial'
 
       ],
     },

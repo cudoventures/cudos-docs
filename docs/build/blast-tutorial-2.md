@@ -3,7 +3,7 @@ title: Compile & Deploy your Contract
 id: blast-tutorial-2
 ---
 
-Before a Rust contract can be used, it must be compiled into `wasm` bytecode that can be stored on chain.
+Before a Rust contract can be used, it must be compiled into `wasm` bytecode or artefacts that can be stored on chain.
 
 **Cudos Blast** makes compilation easy with a single command.
 
@@ -21,7 +21,9 @@ blast.config.js		package.json		tests
 contracts		schema
 ```
 
-2. Run the compile command
+## Compile contracts
+
+1. Run the compile command
 
 ```shell
 blast compile
@@ -57,31 +59,23 @@ done
 
 Now we are ready to deploy the artifacts.
 
-## Deploy
 
-In this section, we're going to upload one of our optimised builds `alpha.wasm` to our local environment.
 
-1. First, check you are in the the current working directory.
+## Spin up a local node
 
-```shell
-pwd
-```
-
-2. ## Interacting with a Cudos node
-
-You can interact with a local [`Cudos node`](https://github.com/CudoVentures/cudos-node) with `blast node` command.
+To interact with your contract, spin up a Cudos node with the `blast node` command.
 
 ### Starting a local node
 
-To start a fresh local Cudos node run
+Run the following command
 
-```bash
+```shell
 blast node start
 ```
 
-or you can show the node logging output in current terminal window. To do this use `--log` or `-l`.
+View the node logging output in current terminal window. To do this use `--log` or `-l`.
 
-```bash
+```shell
 blast node start -l
 ```
 
@@ -91,7 +85,7 @@ To see how to manage local node accounts go [here](#managing-accounts).
 
 To stop a running node run
 
-```bash
+```shell
 blast node stop
 ```
 
@@ -99,12 +93,102 @@ blast node stop
 
 To check whether any Cudos node is online or offline run
 
-```bash
+```shell
 blast node status
 blast node status -n testnet
 ```
 
-More information about connecting to a non-local Cudos node [here](#network).
+#### Example
+
+```shell
+blast node status
+Node is online.
+Node id: d3ce9ba26e9d826e3f3216d3eed54624ebe1f30d
+Network: cudos-network
+```
+
+:::NOTE 
+
+`cudos-network` is the local network running on your machine.
+
+:::
+
+## Deploy your contract
+
+In this section, we're going to upload one of our optimised builds `alpha.wasm` to our local environment.
+
+1. First, check you are in the root of the project.
+
+```shell
+pwd
+```
+
+
+:::warning BUG TO BE FIXED
+
+2. You have to reinstall `cudos-blast`
+
+```shell
+npm install cudos-blast
+```
+
+:::
+
+3. Now run the deploy script (This only works for this specific contract)
+
+```shell
+blast run scripts/deploy.js
+```
+
+### EXAMPLE 
+
+```shell
+blast run scripts/deploy.js
+Contract deployed at: cudos14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9strccpl
+```
+
+When the contract is deployed, the `address` of the contract is returned. 
+
+You need this to interact with your contract. 
+
+## Interact with your contract
+
+1. Open `{project_root}/scripts/interact.js` and add the new contract `address` as follows:
+
+```shell
+
+async function main() {
+  const [alice, bob] = await bre.getSigners()
+  const contract = await bre.getContractFromAddress
+  # Replace the next line with the new contract address
+  ('cudos14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9strccpl')
+```
+
+2. Now run the script to interact with the deployed smart contract.
+
+```shell
+blast run scripts/interact.js
+```
+
+You should get a response similar to that below:
+
+### Example
+
+```shell
+blast run scripts/interact.js
+Initial count: 13
+{
+  logs: [ { msg_index: 0, log: '', events: [Array] } ],
+  height: 14969,
+  transactionHash: '5C61E6C9EA7FF2376487508D9F9F4417B655D09EE3DB8B4D39EB4E52B22B88DB',
+  gasWanted: 155578,
+  gasUsed: 131142
+}
+Count after increment: 14
+```
+
+
+
 
 ---
 ## Deploying smart contracts, interacting with them and running custom script files
@@ -141,26 +225,29 @@ Deploy the contract by running the script:
 blast run scripts/deploy.js
 ```
 
-When the contract is deployed, its address will be printed. Then you can edit `{project_root}/scripts/interact.js` with the new address
+Then you can 
 
-```bash
-async function main() {
-  const [alice, bob] = await bre.getSigners()
 
-  // replace the address with the new one from your deployed smart contract
-  const contract = await bre.getContractFromAddress('cudos1uul3yzm2lgskp3dxpj0zg558hppxk6pt8t00qe')
-// ...
-```
+## EXAMPLE
 
-and run the script to interact with the deployed smart contract.
-
-```bash
+```shell
 blast run scripts/interact.js
+Initial count: 13
+{
+  logs: [ { msg_index: 0, log: '', events: [Array] } ],
+  height: 14969,
+  transactionHash: '5C61E6C9EA7FF2376487508D9F9F4417B655D09EE3DB8B4D39EB4E52B22B88DB',
+  gasWanted: 155578,
+  gasUsed: 131142
+}
+Count after increment: 14
 ```
 
-When running scripts through `blast run` the `bre` object in injected. It provides various useful functions to interact with cudos blockchain network. You can also `require` the `cudos-blast` library to access the same functions and enable your code editor's intellisense.
 
-```bash
+
+When running scripts through `blast run` the `bre` object is injected. It provides various useful functions to interact with cudos blockchain network. You can also `require` the `cudos-blast` library to access the same functions and enable your code editor's intellisense.
+
+```js
 const bre = require('cudos-blast')
 ```
 

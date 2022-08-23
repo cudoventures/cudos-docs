@@ -1,6 +1,6 @@
 ---
 title: Install Cudos Node Binary
-id: install-binary
+id: binary
 ---
 
 :::warning
@@ -9,6 +9,11 @@ id: install-binary
 
 :::
 
+:::Operating system
+
+It is assumed that you are working on an Ubuntu LTS release. 
+
+:::
 
 The Cudos Node is a binary created directly from the original Cudos repositories. This guide explains how to install a Cudos node daemon using binary packages on a Linux system. 
 
@@ -17,10 +22,21 @@ The Cudos Node is a binary created directly from the original Cudos repositories
 The Cudos node is currently only supported on x86_64 Linux systems
 :::
 
+## 00 Prerequisites
+
+```shell
+# update the local package list and install any available upgrades
+sudo apt-get update && sudo apt upgrade -y
+
+# install toolchain and ensure accurate time synchronization
+sudo apt-get install make build-essential gcc git jq chrony -y
+```
+
 ## 01 Clone the repository
 
 ```
 git clone https://github.com/CudoVentures/cudos-noded-packager
+cd cudos-noded-packager
 ```
 
 ## 02 Install the Network Pack 
