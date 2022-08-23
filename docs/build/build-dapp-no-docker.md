@@ -5,6 +5,11 @@ id: dapp-no-docker
 
 In this guide, we are going to build a domain name service application to purchase domain names, and map values to those names and transfer domain names. 
 
+:::warning
+The binary build does not work with Mac M1
+:::
+
+
 You will learn:
 
 * How to set up your environment for smart contract development and testing
@@ -36,8 +41,6 @@ We're now going to use the Cudos binary - `cudos-noded` to set up our environmen
 
 ```shell
 git clone https://github.com/CudoVentures/cudos-node.git
-
-
 ```
 
 2. Build the binary
