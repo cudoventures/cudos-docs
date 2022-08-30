@@ -70,7 +70,9 @@ git clone --branch v1.0.0 https://github.com/CudoVentures/cosmos-gravity-bridge.
 
 ## 03 Build docker image
 
-
+:::warning
+If you have any errors, check `docker --version` and `docker-compose --version` meet prerequisite specifications
+:::
 
 ```bash
 
@@ -82,6 +84,49 @@ cd CudosBuilders/docker/binary-builder
 
 docker-compose --env-file binary-builder.arg -f binary-builder.yml -p cudos-binary-builder up --build --detach
 ```
+
+## 04 Successful image build
+
+You should start to see the docker image building similar to the example below:
+
+```shell
+root@docker-test:/var/lib/cudos/CudosBuilders/docker/binary-builder# docker-compose --env-file binary-builder.arg -f binary-builder.yml -p cudos-binary-builder up --build --detach
+Creating network "shared-cudos-network" with the default driver
+Building binary-builder
+Sending build context to Docker daemon    179MB
+Step 1/14 : FROM golang:buster as builder
+buster: Pulling from library/golang
+76dff75df4d9: Pull complete 
+3e8c90a1c4bb: Pull complete 
+b3662c105080: Pull complete 
+ad5dcb7dd592: Pull complete 
+5752150a0cf9: Pull complete 
+ced6eadc4c5a: Pull complete 
+0ffa11a5d094: Pull complete 
+Digest: sha256:d84495e2ad12dfeb51dec3c9f170659ebd09db234d6990b3364f877785684a14
+Status: Downloaded newer image for golang:buster
+ ---> a5bebd3d28cc
+Step 2/14 : RUN apt update
+```
+
+Upon completion of the 14 steps, you are notified of a successful build as in the example below:
+
+```shell
+# Sample extract
+
+Step 13/14 : COPY --from=builder /go/bin/cudos-noded /go/bin/cudos-noded
+ ---> 3cf60f6ad233
+Step 14/14 : CMD ["sleep", "infinity"]
+ ---> Running in a0a606c48277
+Removing intermediate container a0a606c48277
+ ---> 7ec72cf9e257
+Successfully built 7ec72cf9e257
+Successfully tagged binary-builder:latest
+Creating binary-builder ... done
+root@docker-test:/var/lib/cudos/CudosBuilders/docker/binary-builder# 
+```
+
+
 
 :::success ✅ Nice work!
 

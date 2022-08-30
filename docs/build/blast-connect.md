@@ -55,6 +55,8 @@ Cudos Blast local node is ready
 Local accounts information file created
 ```
 
+::: 
+
 ## Stop a running local Cudos node
 
 Run the following command:
@@ -86,6 +88,8 @@ Network: cudos-network
 `cudos-network` is the local network running on your machine.
 
 :::
+
+
 
 
 
