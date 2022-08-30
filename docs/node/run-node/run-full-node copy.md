@@ -65,7 +65,13 @@ cp full-node.env.example full-node.client.testnet.public01.env
 
 2. Open the file ***full-node.client.testnet.public01.env***. 
  
-```bash
+```shell
+$ nano full-node.client.testnet.public01.env
+```
+
+3. Add the following to the file:
+
+```
 # Set the `"MONIKER"` (your node’s name on the blockchain) attribute to your desired name:
 
 MONIKER=<your-node-moniker>
