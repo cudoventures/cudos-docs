@@ -9,7 +9,7 @@ To interact with your contract, spin up a Cudos node with the `blast node` comma
 
 Use Blast to connect to a new local CUDOS node and view events in the terminal as follows:
 
-## Start a local CUDOS node
+## Start a local Cudos node
 
 To start a new local Cudos node, run the following command:
 
