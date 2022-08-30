@@ -55,6 +55,17 @@ module.exports = {
       label: 'Smart Contracts',
       items: [
         'build/contract-basics',
+        'build/contract-execution',
+        'build/messages',
+        'build/state',
+        'build/entry-points',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'RPC API',
+      items: [
+        'build/rpc-api',
       ],
     },
     {
@@ -62,8 +73,6 @@ module.exports = {
       label: 'Build dApp',
       items: [
         'build/dapp-structure',
-        'build/simple-dapp',
-        'build/dapp-no-docker'
       ],
     },
     {
@@ -71,10 +80,18 @@ module.exports = {
       label: 'Tools',
       items: [
         'build/install-blast',
-        'build/blast-tutorial-1',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Counter Tutorial',
+      items: [
+        'build/create-counter',
         'build/blast-tutorial-2',
         'build/blast-connect',
-        'build/coin-tutorial'
+        'build/deploy-counter',
+        'build/interact-counter',
+        'build/deploy-testnet-mainnet',
       ],
     },
   ],

@@ -74,7 +74,7 @@ const config = {
                },
                {
                 type: 'doc',
-                label: '🏦 Tokens & Governance',
+                label: '🏦 Governance',
                 docId: 'governance/tokens',
                 position: "left",
               },            

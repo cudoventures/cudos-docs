@@ -40,8 +40,9 @@ These constitute the interface of a smart contract:
 
 3. `query()`: gets called when a user wants to request current-state related data from the smart contract.
 
-## Two key actions 
+## In General
 
+With all smart contracts, there are two main types of actions: mutating actions, which receive `DepsMut` and are able to modify the state of the blockchain, and `query` actions, which are run on a single node with read-only access to the data.
 
 
 

@@ -7,7 +7,7 @@ id: introduction
 
 Running a Cudos **Node** is a unique opportunity to be a part of a project and wider ecosystem aimed at solving today’s blockchain scalability and interoperability issues.
 
-This section is intended to assist participating in the **Cudos network** as a **Node Operator**. To join the network we recommend you first try running a node on the **Testnet**. The Testnet is a playground where you can learn and experiment without the risk of losing real tokens.
+This section is intended to assist participating in the **Cudos network** as a **Node Operator**. To join the network we recommend you first try running a node **Locally** then on the **Testnet**. The Testnet is a playground where you can learn and experiment without the risk of losing real tokens.
 
 The Cudos Network is based on **Tendermint**[Find out more about Tendermint](https://docs.tendermint.com/v0.35/introduction/what-is-tendermint.html) and secured by **Validators** responsible for committing new blocks to the blockchain using **Proof-of-Stake consensus**.
 
@@ -18,20 +18,6 @@ The Cudos Network is based on **Tendermint**[Find out more about Tendermint](htt
 A "node" is a computer running **Cudos** client software.
 
 :::
-
-### Reasons to run a Full node
-
-* Running your own node allows you to interact with the Cudos Network in a truly **private**, **self-sufficient** and **trustless** manner.
-
-* Your node can **verify transactions** and **blocks** without relying on any other nodes in the network.
-
-* **Addresses** and **balances** remain private and can be checked with your own client.
-
-* You can build a more **secure** and **private dApp**. Wallets can be configured to point to your own local node.
-
-* You can program your own **custom RPC endpoints**.
-
-* You can connect to your node using **Inter-process Communications (IPC)** or rewrite the node to load your program as a plugin. This enables **low latency** to replace your transactions as fast as possible (i.e. frontrunning).
 
 ### Reasons to run a Validator node
 

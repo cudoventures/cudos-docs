@@ -115,5 +115,5 @@ Options:
 ```
 
 
-Now, let's connect to a local CUDOS node.
+Now try out the Counter project tutorial. 
 

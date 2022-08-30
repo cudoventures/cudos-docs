@@ -1,5 +1,5 @@
 ---
-title: Create your own token
+title: Create CW-20 Token project
 id: coin-tutorial
 ---
 
@@ -8,7 +8,7 @@ id: coin-tutorial
 
 ```shell
 mkdir projects
-cd projects
+cd projects[](http://localhost:3000/)
 ```
 
 2. Let's create a new directory and initialise a Blast project for our new coin. Let's call it 'Kula' after the Trobriand Islanders exchange system. 
@@ -29,14 +29,14 @@ Success! Sample project initialized in /Users/ad/projects/Kula
 rm -rf contracts/ scripts/
 ```
 
-2. Now, in the `projects` directory, let's clone some helpful templates from cosmwasm
+4. Now, in the `projects` directory, let's clone some helpful templates from cosmwasm
 
 ```shell
 cd projects
 git clone https://github.com/CosmWasm/cw-plus.git
 ```
 
-3. From `projects` let's copy everything inside `cw-plus` into our `Kula` project. 
+5. From `projects` let's copy everything inside `cw-plus` into our `Kula` project. 
 
 ```shell
 projects ad$ cp -r cw-plus/* Kula
@@ -44,34 +44,100 @@ cd Kula
 blast compile
 ```
 
-## Setting the environment
+6. An artifacts folder is generated with all the compiled contracts.
 
-From the Kula project
+Our Kula contract is 
+
+```shell
+cw20_ics20.wasm
+```
+
+Now let's test our contract on a local node. 
+
+## Spin up a local node
+
+Test your contract on a local node before deploying on testnet or mainnet.
+
+To interact with your contract, spin up a Cudos node with the `blast node` command.
+
+### Starting a local node
+
+Run the following command
+
+```shell
+blast node start
+```
+
+View the node logging output in current terminal window. To do this use `--log` or `-l`.
+
+```shell
+blast node start -l
+```
+
+
+### Stopping a running local node
+
+To stop a running node run
+
+```shell
+blast node stop
+```
+
+### Checking node status
+
+To check whether any Cudos node is online or offline run
 
 ```shell
 blast node status
+blast node status -n testnet
+```
 
-# Example response
+### Example
 
+```shell
+blast node status
 Node is online.
 Node id: d3ce9ba26e9d826e3f3216d3eed54624ebe1f30d
 Network: cudos-network
 ```
 
-:::caution
+:::note 
 
-cudos-network is the local network on your machine
+`cudos-network` is the local network running on your machine.
+
 :::
 
+Now let's deploy our contract. 
 
 ## Deploy
 
 You are issued with a large amount of CUDOS tokens. 
 Let's test our contract by deploying to our local node.
 
-Open deploy.js
+1. Open `deploy.js`
 
-## Deploy.js
+2. Modify `deploy.js` as follows:
+
+```js
+const bre = require('cudos-blast')
+
+async function main() {
+  const [alice] = await bre.getSigners()
+  const contract = await bre.getContractFactory('cw20_ics20')
+
+const MSG_INIT = {
+      default_timeout: 0,
+      gov_contract: "an address, perhaps of alice", 
+      allowlist: [],
+      default_gas_limit: 1000000
+    }
+ 
+  await contract.deploy(MSG_INIT, 'Kula', { signer: alice })
+  console.log(`Contract deployed at: ${contract.getAddress()}`)
+}
+
+module.exports = { main: main }
+```
 
 Signers is referring to a default account. There are 10 default accounts. One of which is Alice.
 
@@ -79,10 +145,60 @@ If you run `blast keys ls` Alice is account1.
 
 Now from const MSG_INIT remove COUNT13.
 
+3. Amend `deploy.js`
 
+- Create a local-accounts.json at the root of the folder.
 
+- Add a wallet address with CUDOS tokens here:
 
+The `Alice` account has `account1` that is a sample account on the Testnet.
 
+```shell
+{
+    "account1": {
+        "address": "cudos1yvtuaadhfhxf8ke7zm902z4rj382a8ayymq32s",
+        "mnemonic": "ordinary witness such toddler tag mouse helmet perfect venue eyebrow upgrade rabbit"
+    }
+}
+```
+
+- Copy the account address and insert in `gov_contract` section "an address, perhaps of alice".
+
+```js
+const bre = require('cudos-blast')
+
+async function main() {
+  const [alice] = await bre.getSigners()
+  const contract = await bre.getContractFactory('cw20_ics20')
+
+const MSG_INIT = {
+      default_timeout: 0,
+      gov_contract: "an address, perhaps of alice", 
+      allowlist: [],
+      default_gas_limit: 1000000
+    }
+ 
+  await contract.deploy(MSG_INIT, 'Kula', { signer: alice })
+  console.log(`Contract deployed at: ${contract.getAddress()}`)
+}
+
+module.exports = { main: main }
+```
+
+Now run the Deploy script
+
+```shell
+blast run scripts/deploy.js
+Contract deployed at: cudos1qg5ega6dykkxc307y25pecuufrjkxkaggkkxh7nad0vhyhtuhw3syg2g9f
+```
+
+An `address` is returned where the contract is deployed. 
+
+## Interact 
+
+ This is an IBC Enabled contract that allows us to send CW20 tokens from one chain over the standard ICS20 protocol to the bank module of another chain. In short, it let's us send our custom CW20 tokens with IBC and use them just like native tokens on other chains.
+
+ We can send tokens to other Cosmos chains. 
 
 
 

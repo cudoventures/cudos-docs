@@ -1,9 +1,9 @@
 ---
 title: Create Counter project
-id: blast-tutorial-1
+id: create-counter
 ---
 
-This short tutorial walks you through setting up your project and creating a simple counter that increments upon request.
+This short tutorial walks you through setting up your project and creating a simple counter that increments upon request using **Cudos Blast**.
 
 It assumes that you have installed **Cudos Blast** globally. 
 
@@ -35,24 +35,46 @@ When you open the project you see something similar to below:
 
 Let's walk through each section. 
 
-### Project overview
+### Workspaces 
 
 Inside the `contracts` folder are `alpha` and `beta` folders.
 These are 2 example workspaces to use if one contract depends on another for example.
 
 Let's enter the `alpha` folder.
 
+### `/src` directory
+
 The `/src` directory contains the smart contract source code in different files. 
 
-1. **src/contract.rs** contains the main smart contract logic and is where the functions instantiate(), execute() and query() are implemented.
+1. **src/contract.rs** - This contains the main smart contract logic and is where the functions instantiate(), execute() and query() are implemented.
 
-2. **src/state.rs** defines how the smart contract state data is represented and how it will be stored.
+2. **src/state.rs** - This defines how the smart contract state data is represented and how it will be stored.
 
-3. **src/msg.rs** is where different types of messages and responses the smart contract can receive and return are defined.
+3. **src/msg.rs** - This is where different types of messages and responses the smart contract can receive and return are defined.
 
-4. **src/error.rs** defines the error types that can be returned by the smart contract.
+4. **src/error.rs** - This is where the different error types are defined that can be returned by the smart contract.
 
 5. **src/lib.rs** is where any previous modules are exposed and made accessible.
+
+### `/scripts` directory
+
+The `/scripts` directory contains sample scripts 
+
+1. **deploy.js** - This is a sample script to deploy a compiled contract to the blockchain. 
+
+2. **interact.js** - This is a sample script to interact with your deployed contract on the blockchain. 
+
+### `/tests` directory
+
+The `/tests` directory contains sample testing scripts
+
+### `blast.config.js` file
+
+The **blast.config.js** is where connections and contract deployments can be configured. 
+
+### `cargo.toml` file
+
+The **cargo.toml** file must be at the root of the project in order to compile. An **artifacts** folder is generated after compilation. 
 
 
 ### State.rs - This is the starting state
@@ -97,21 +119,6 @@ The message provides the contract with an initial configuration and state.
 
 
 1. `src/contract.rs` contains the main smart contract logic and is where the functions `instantiate()`, `execute()` and `query()` are implemented.
-
-
-
-
-**contracts** - Sample contracts. Add more as desired.
-
-**scripts** - Sample scripts to deploy a contract and interact with it.
-
-**tests** - Test your contracts
-
-**blast.config.js** - Config for connections and contract deployments
-
-**cargo.toml** - Edit this file to add more contracts to compile. Contracts are compiled in alphabetical order using [rust-optimizer](https://github.com/CosmWasm/rust-optimizer). An **artifacts** folder is generated after compilation. 
-
-**jsconfig.json** - Deployed code and contract references
 
 
 Now, we understand the contract, let's compile it.

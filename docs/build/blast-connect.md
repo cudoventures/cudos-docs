@@ -3,14 +3,30 @@ title: Connect to local node
 id: blast-connect
 ---
 
+Test your contract on a **local** node before deploying on **testnet** or **mainnet**.
+
+To interact with your contract, spin up a Cudos node with the `blast node` command.
+
 Use Blast to connect to a new local CUDOS node and view events in the terminal as follows:
 
 ## Start a local CUDOS node
 
+To start a new local Cudos node, run the following command:
+
+```shell
+blast node start
+```
+
+To run a new local Cudos node with logging output, run the following command: 
+
 ```shell
 blast node start -l
+```
 
-# Example response (extract)
+### Example node start (extract)
+
+```
+blast node start -l
 Creating network "config_default" with the default driver
 Creating volume "config_cudos_data" with default driver
 Building cudos-node
@@ -39,7 +55,7 @@ Cudos Blast local node is ready
 Local accounts information file created
 ```
 
-## Stop a running local Cudos node
+## Stop a running local Cudos node
 
 Run the following command:
 
@@ -47,12 +63,30 @@ Run the following command:
 blast node stop
 ```
 
-### Checking node status
+## Checking node status
 
 To check whether any Cudos node is online or offline run
 
 ```bash
 blast node status
-blast node status -n testnet
 ```
+
+### Example node status
+
+```shell
+blast node status
+Node is online.
+Node id: d3ce9ba26e9d826e3f3216d3eed54624ebe1f30d
+Network: cudos-network
+```
+
+
+:::note 
+
+`cudos-network` is the local network running on your machine.
+
+:::
+
+
+
 
