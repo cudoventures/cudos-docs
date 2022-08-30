@@ -57,9 +57,14 @@ const config = {
         items: [
               {
                 type: 'doc',
-                label: 'Node',
+                label: '💻 Node',
                 docId: 'node/overview/introduction',
                 position: "left",
+              },  
+              {
+                type: 'doc',
+                label: '🛠 Build',
+                docId: 'build/intro',
               }, 
               {
                 type: 'doc',
@@ -69,7 +74,7 @@ const config = {
                },
                {
                 type: 'doc',
-                label: 'Tokens & Governance',
+                label: '🏦 Governance',
                 docId: 'governance/tokens',
                 position: "left",
               },            
@@ -103,8 +108,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: require('prism-react-renderer/themes/dracula'),
+        additionalLanguages: ['rust'],
       },
     }),
 };

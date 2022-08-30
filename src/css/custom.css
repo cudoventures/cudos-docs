@@ -32,6 +32,9 @@
 .markdown img {
   margin: auto;
   display: block;
-  width: 300px;
+  width: 400px;
 }
 
+img[alt=instantiated] { width: 1200px; }
+
+img[alt=deployed] { width: 1200px; }

@@ -27,7 +27,6 @@ The **PubKey** is derived to generate **addresses**. These **addresses** are use
 
 The **PrivKey** is used to generate **digital signatures** to prove that an **Address** associated with the PrivKey approved of a given message.
 
-
 Generate an account locally using `cudos noded` with the following command:
 
 ```shell 
@@ -36,12 +35,17 @@ cudos-noded keys add <account_name> --keyring-backend <one of (os|file|test)>
 
 This command generates your **24 word mnemonic** and a single **seed** from which your **private key** is derived.
 
-You can use this command to add an account for which you have a mnemonic
+You can use this command to add an account for which you have a mnemonic. For example, from a **Keplr wallet** you have created.
+
+```shell
 cudos-noded keys add <account_name> --recover
+```
 
 for ledger wallet:
-cudos-noded keys add <account_name> --ledger (edited) 
 
+```shell
+cudos-noded keys add <account_name> --ledger (edited) 
+```
 
 
 

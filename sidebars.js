@@ -21,6 +21,7 @@ module.exports = {
       label: 'Prerequisites',
       items: [
         'node/prerequisites/hw-req',
+        'node/prerequisites/binary',
         'node/prerequisites/build-envt',
         'node/prerequisites/stake-req'
       ],
@@ -40,23 +41,78 @@ module.exports = {
     },
   ],
 
-  learnSidebar: [
+  buildSidebar: [
     {
       type: 'category',
-      label: 'Introduction',
+      label: 'Overview',
       items: [
-        'learn/introduction/overview',
+        'build/intro',
+        'build/setup-rust'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Smart Contracts',
+      items: [
+        'build/contract-basics',
+        'build/contract-execution',
+        'build/messages',
+        'build/state',
+        'build/entry-points',
       ],
     },
     {
       type: 'category',
-      label: 'Concepts',
+      label: 'RPC API',
       items: [
-        'learn/concepts/account',
-        'learn/concepts/wallet'
+        'build/rpc-api',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Build dApp',
+      items: [
+        'build/dapp-structure',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Tools',
+      items: [
+        'build/install-blast',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Counter Tutorial',
+      items: [
+        'build/create-counter',
+        'build/blast-tutorial-2',
+        'build/blast-connect',
+        'build/deploy-counter',
+        'build/interact-counter',
+        'build/deploy-testnet-mainnet',
       ],
     },
   ],
+
+  learnSidebar: [
+          {
+            type: 'category',
+            label: 'Introduction',
+            items: [
+              'learn/introduction/overview'
+            ],
+          },
+          {
+            type: 'category',
+            label: 'Concepts',
+            items: [
+             'learn/concepts/account',
+              'learn/concepts/wallet'
+            ],
+          },
+      ],
 
   governanceSidebar: [
     {
@@ -68,9 +124,5 @@ module.exports = {
         'governance/buy-tokens',
       ],
     },
-
-
-
-
-  ]
+  ],
 };

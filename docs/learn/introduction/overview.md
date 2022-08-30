@@ -3,7 +3,7 @@ title: Overview
 id: overview
 ---
 
-# Cudos (WiP)
+# Cudos
 
 Cudos is a Delegated Proof-of-Stake, layer-1 blockchain with a vision for a decentralised computation accessible on-chain.
 
@@ -34,7 +34,7 @@ Cudos is fully interoperable with the wider blockchain ecosystem. It utilises th
 
 ### Cudos Bridge
 
-The **Cudos Network Bridge** enables is bridged to Ethereum and will be bridged to major blockchains in the future.
+The **Cudos Bridge** enables is bridged to Ethereum and will be bridged to major blockchains in the future.
 
 ### Developer Friendly
 
