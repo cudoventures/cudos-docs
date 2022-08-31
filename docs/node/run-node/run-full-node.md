@@ -14,7 +14,10 @@ A full node allows you to deploy **NFTs** and **Smart Contracts** to the Cudos b
 `Testnet`
 `Mainnet`
 
-## 01 Set up full node
+
+## 01 Set up a validator node
+
+## Choose your OS
 
 :::info
 
@@ -22,7 +25,8 @@ Use `sudo` or change to a `root user`.
 
 :::
 
-```bash
+
+```shell
 # Change to root
 
 sudo -i
@@ -50,7 +54,7 @@ import TabItem from '@theme/TabItem';
 
 Follow this guidance for **Testnet**
 
-## 03 Define environmental variables
+##  Define environmental variables
  
 1. Create a copy of ***full-node.env.example*** and name it ***full-node.client.testnet.public01.env***`
 
@@ -60,7 +64,13 @@ cp full-node.env.example full-node.client.testnet.public01.env
 
 2. Open the file ***full-node.client.testnet.public01.env***. 
  
-```bash
+```shell
+$ nano full-node.client.testnet.public01.env
+```
+
+3. Add the following to the file:
+
+```
 # Set the `"MONIKER"` (your node’s name on the blockchain) attribute to your desired name:
 
 MONIKER=<your-node-moniker>
@@ -71,7 +81,7 @@ SHOULD_USE_GLOBAL_PEERS=true
 
 ```
 
-## 04 Initialize full node
+##  Initialize full node
 
 1. Confirm you are in the correct directory as below:
 
@@ -86,7 +96,7 @@ pwd
 docker-compose --env-file full-node.client.testnet.public01.arg -f init-full-node.yml -p cudos-init-full-node-client-testnet-public-01 up --build
 ```
 
-## 05 Start your node
+##  Start your node
 
 ```bash
 docker-compose --env-file full-node.client.testnet.public01.arg -f start-full-node.yml -p cudos-start-full-node-client-testnet-public-01 up --build --detach
@@ -104,7 +114,7 @@ You have been successful if you see a newly generated file containing your **nod
 
 Follow this guidance for **Mainnet**
 
-## 03 Define environmental variables
+##  Define environmental variables
   
 1. Create a copy of ***full-node.env.example***, naming the copy ***full-node.client.mainnet.env***
 
@@ -126,7 +136,7 @@ SHOULD_USE_GLOBAL_PEERS=true
 
 3. **Exit** root mode and **Save** the file.
 
-## 04 Initialize full node
+## Initialize full node
 
 1. Confirm you are in the correct directory as below:
 
@@ -141,7 +151,7 @@ pwd
 docker-compose --env-file full-node.client.mainnet.arg -f init-full-node.yml -p cudos-init-full-node-mainnet up --build
 ```
 
-## 05 Start your node
+## Start your node
 
 ```
 docker-compose --env-file full-node.client.mainnet.arg -f start-full-node.yml -p cudos-start-full-node-mainnet up --build --detach
@@ -157,7 +167,7 @@ You have been successful if you see a newly generated file containing your **nod
   </TabItem>
 </Tabs>
 
-## 06 Check node status
+## 03 Check node status
 
 Syncing may take several hours. Refer to [Checking sync status](./check-sync) to verify your node is syncing. 
 
