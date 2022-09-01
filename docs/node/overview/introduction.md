@@ -9,7 +9,7 @@ Running a Cudos **Node** is a unique opportunity to be a part of a project and w
 
 This section is intended to assist participating in the **Cudos network** as a **Node Operator**. To join the network we recommend you first try running a node **Locally** then on the **Testnet**. The Testnet is a playground where you can learn and experiment without the risk of losing real tokens.
 
-The Cudos Network is based on **Tendermint**[Find out more about Tendermint](https://docs.tendermint.com/v0.35/introduction/what-is-tendermint.html) and secured by **Validators** responsible for committing new blocks to the blockchain using **Proof-of-Stake consensus**.
+The Cudos Network is based on [**Tendermint**](https://docs.tendermint.com/v0.34/introduction/what-is-tendermint.html) and secured by **Validators** responsible for committing new blocks to the blockchain using **Proof-of-Stake consensus**.
 
 ## Why run a node?
 
