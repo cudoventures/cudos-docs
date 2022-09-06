@@ -63,13 +63,6 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'RPC API',
-      items: [
-        'build/rpc-api',
-      ],
-    },
-    {
-      type: 'category',
       label: 'Build dApp',
       items: [
         'build/dapp-structure',
