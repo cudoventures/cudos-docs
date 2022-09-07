@@ -101,7 +101,8 @@ module.exports = {
             type: 'category',
             label: 'Introduction',
             items: [
-              'learn/introduction/overview'
+              'learn/introduction/overview',
+              'learn/introduction/cudos-network'             
             ],
           },
           {
@@ -109,7 +110,14 @@ module.exports = {
             label: 'Concepts',
             items: [
              'learn/concepts/account',
-              'learn/concepts/wallet'
+             'learn/concepts/cryptography',
+             'learn/concepts/wallet',
+             'learn/concepts/token-types',
+             'learn/concepts/assets',
+             'learn/concepts/transactions',
+             'learn/concepts/fees',
+             'learn/concepts/gas',
+
             ],
           },
       ],

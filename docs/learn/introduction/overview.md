@@ -22,20 +22,33 @@ The design of the Cudos network separates **consensus** from **execution** to en
 
 ## Proof-of-Stake Consensus
 
-A **Tendermint Core** engine manages consensus - powered by a Byzantine Fault Tolerant (BFT) consensus model. The BFT model can tolerate less than one-third of the Byzantine validators reaching consensus. Considered to be a gold standard in Proof-of-Stake consensus, it is the most widely used consensus engine across the industry.
+A **Tendermint Core** engine manages consensus - powered by a Byzantine Fault Tolerant (BFT) consensus model. The BFT model can tolerate less than one-third of the Byzantine validators reaching consensus. Considered to be a gold standard in Proof-of-Stake consensus, it is the most widely used consensus engine across the industry. The PoS algorithm reduces the Cosmos carbon footprint by more than 99% compared to Proof-of-Work blockchains like Bitcoin
 
 ## Why use the Cudos Network? 	
 
-Integrated toolkit - Write Smart Contracts, Deploy Smart Contracts, Build a dApp to integrate with Smart Contracts, Use Decentralized Cloud Infra for Compute and Storage
+### Scalability and cross-chain interoperability
 
-### Cross-chain interoperability
+When economic activity becomes centralised on a single network, the result is bottlenecks of congestion and high transaction fees. 
 
-Cudos is fully interoperable with the wider blockchain ecosystem. It utilises the Cosmos Inter-Blockchain Communication (IBC) protocol to enable the seamless transfer of tokens, assets, NFTs and data to and from other blockchains throughout the Cosmos Ecosystem.
+Networks such as Ethereum have attempted to solve issues with scalability **'vertically'** with **Layer 2** solutions that leverage the underlying security of the **Layer 1** - Ethereum network. Transactions are executed off-chain on the Layer 2 with a 'proof of state' change sent back to the Layer 1. These proofs are then checked for fraud and verified before the underlying Layer 1 chain is updated. 
 
-### Cudos Bridge
+Increasingly, there is also a shift towards '**horizontal**' scaling solutions. These are enabled through the use of **multiple independent blockchains** or **sidechains** within a single ecosystem. Horizontal scaling spreads the **computation** of transactions in an ecosystem across many independent blockchains, with each chain having its own block producers and execution capacity.
 
-The **Cudos Bridge** enables is bridged to Ethereum and will be bridged to major blockchains in the future.
+Cudos addresses scalability **vertically and horizontally**. A lightning fast consensus mechanism (built on tendermint) enables thousands of transactions per second (tps) whilst an **Inter-Blockchain Communication (IBC)** protocol enables **cross-chain interoperability** with an increasing number of Cosmos ecosystem members such as Osmosis. 
+
+The **Cudos Bridge** brings further interoperability between the Cudos and **Ethereum** networks allowing for the transfer of tokens, assets, NFTs and data. 
+
+The design of the Cudos network enables the following advantages:
+
+- Instant finality
+- Low latency
+- Extremely low transaction costs
+- Scalability
+- Ability to deploy inter-chain smart contracts and build cross-chain applications.
+
 
 ### Developer Friendly
 
-Cudos Network supports smart contract development that compile to Web Assembly via CosmWasm. Rust developers have many tools to get up and running including a fully fledged testnet to build with, and developer SDKs like Cudos Blast to aid testing and deployment
+Cudos Network supports smart contract development that compiles to Web Assembly. Rust developers can quickly set up a local and test network to build on.  
+
+[CosmWasm](https://docs.cosmwasm.com/docs/1.0/) - a library of modular code needed for building a contract is a helpful resource.  
