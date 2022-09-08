@@ -21,8 +21,9 @@ module.exports = {
       label: 'Prerequisites',
       items: [
         'node/prerequisites/hw-req',
-        'node/prerequisites/binary',
-        'node/prerequisites/build-envt',
+        'node/prerequisites/build-go',
+        'node/prerequisites/build-redhat-debian',
+        'node/prerequisites/build-docker',
         'node/prerequisites/stake-req'
       ],
     },
@@ -31,10 +32,11 @@ module.exports = {
       label: 'Run a node',
       items: [
         'node/run-node/full-node',
+        'node/run-node/full-debian',
         {
           type: 'category',
           label: 'Run a validator node',
-          items: ['node/run-node/validator-node-1','node/run-node/validator-node-2', 'node/run-node/how-to'],
+          items: ['node/run-node/prepare-validator','node/run-node/validator-node-2', 'node/run-node/how-to'],
         },
         'node/run-node/check-sync',
       ],

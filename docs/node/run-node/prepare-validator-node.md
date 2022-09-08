@@ -1,69 +1,17 @@
 ---
-title: Prepare validator node
-id: validator-node-1
+title: Prepare Validator node
+id: prepare-validator
 ---
 
-This guide explains how to **prepare** a node for staking by adding a keyring to securely hold validator keys and enable connection to an authorised wallet.  
+This guide explains how to **prepare** a node for staking by adding a **keyring** to securely hold validator keys and enable connection to an authorised wallet.  
 
-This is a prerequisite to staking assets on the node. 
+This is a prerequisite to staking **CUDOS tokens** on the node. 
 
 :::warning Security
 
 **Validator nodes** should not be run without being protected by a [**Sentry node architecture**](/docs/node/security/sentry-node-arch)
 
 :::
-
-### Networks
-
-Validator nodes are run on 
-
-`Testnet`
-`Mainnet`
-
-# Testnet
-
-Inside the shell, set up as a Root user:
-
-```shell
-cudos-node:~ sudo -i
-```
-
-```shell
-$ sudo -i
-```
-
-Add Debian packages
-
-```shell
-root@cudos-node:~# echo 'deb [trusted=yes] http://jenkins.gcp.service.cudo.org/cudos/0.9.0/debian stable main' > /etc/apt/sources.list.d/cudos.list
-root@cudos-node:~# apt update
-```
-
-Install Cudos Network Public Testnet
-
-```shell
-root@cudos-node:~# apt install cudos-network-public-testnet
-```
-
-```shell
-root@cudos-node:~# systemctl enable --now cosmovisor@cudos
-```
-
-```shell
-root@cudos-node:~# cudos-noded status
-{"NodeInfo":{"protocol_version":{"p2p":"8","block":"11","app":"0"},"id":"f3bc1ebea0423b87796d5c620d938a79f7a50c7a","listen_addr":"tcp://0.0.0.0:26656","network":"cudos-testnet-public-3","version":"0.34.19","channels":"40202122233038606100","moniker":"cudos-node","other":{"tx_index":"on","rpc_address":"tcp://127.0.0.1:26657"}},"SyncInfo":{"latest_block_hash":"BC292BAEAA7421168EE55EA1BE2A294AC5B33B37B74B1175A53F6ED741F4D80B","latest_app_hash":"D31FF2A770FDF6603E867477B4F0D46450F50056F4A4D5214D8B1F734A3CE136","latest_block_height":"3605101","latest_block_time":"2022-05-27T15:55:58.140942836Z","earliest_block_hash":"5FE3E88EFE9999C79B8D6271B56EE4349051FCEA290D5A512440B8BEB9662104","earliest_app_hash":"E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855","earliest_block_height":"3603400","earliest_block_time":"2021-08-25T08:21:32.483824849Z","catching_up":true},"ValidatorInfo":{"Address":"7AC5A70F5F271C6B35F48A51781D23329E58D3DD","PubKey":{"type":"tendermint/PubKeyEd25519","value":"8MECl86K55FL+s63L9wYGAyLXSPHrlHpcnE17rBm4vs="},"VotingPower":"0"}}
-```
-
-To check on status, view the explorer. 
-
-```shell
-root@cudos-node:~# cudos-noded tendermint show-validator
-{"@type":"/cosmos.crypto.ed25519.PubKey","key":"8MECl86K55FL+s63L9wYGAyLXSPHrlHpcnE17rBm4vs="}
-root@cudos-node:~# 
-```
-
-
-
 
 
 
@@ -79,9 +27,11 @@ Follow the instructions to **Install a Keplr wallet**(link-to-be-inserted)
 
 **3. You have 2,000,000 CUDOS testnet/mainnet tokens in your Keplr wallet**
 
+- Reach out to the Cudos Discord to request testnet tokens.
+
 Follow the instructions to get **CUDOS tokens**(link-to-be-inserted)
 
-**4. You have your Keplr wallet 12 word mnemonic to hand**
+**4. You have your Keplr wallet mnemonic to hand**
 
 :::success Testnet
 
@@ -99,7 +49,7 @@ A **keyring** is used to manage the cryptographic Validator key pair and allow s
 
 :::tip
 
-Your keplr wallet uses standard BIP 39 to generate a 12 word list or **mnemonic**. This is used to generate your **Private key**.
+Your keplr wallet uses standard BIP 39 to generate a 12 or 24 word list or **mnemonic**. This is used to generate your **Private key**.
 :::
 
 import Tabs from '@theme/Tabs';
@@ -218,35 +168,7 @@ Your **Validator node** is now set up to interact with your Keplr wallet on `mai
 </TabItem>
 </Tabs>
 
-## Alternative method
 
-### Install Prerequisites
-
-```shell
-sudo apt update
-sudo apt upgrade
-sudo apt install build-essential
-```
-
-### Install Go
-
-```shell
-wget https://go.dev/dl/go1.18.3.linux-amd64.tar.gz
-sudo tar -C /usr/local -xvf go1.18.3.linux-amd64.tar.gz
-rm go1.18.3.linux-amd64.tar.gz
-echo "PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.profile
-source ~/.profile
-```
-
-### Install binary and make
-
-```shell
-git clone https://github.com/CudoVentures/cudos-node.git
-cd cudos-node 
-make install
-cd
-cudos-noded version #Check for v1.0.0
-```
 
 
 ### Initialise your node
