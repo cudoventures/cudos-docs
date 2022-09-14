@@ -5,31 +5,18 @@ id: check-sync
 
 ## Checking sync status
 
-You can check the status of your node sync by running a docker exec command in the container and viewing the `SyncInfo`.
+You can check the status of your node sync by running the following command:
 
-```bash
-# Runs a command in the running docker 
-
-sudo docker exec -it <container-name> bash
-
-# Checks node sync status
-
-cudos-noded status
+```shell
+$ cudos-noded status
 ```
 
-:::tip
 
-To see the output in readable JSON format, you need to install **JQ** in your container.
-[Install JQ](https://stedolan.github.io/jq/download/)
-
-:::
 
 ## Example Sync Status Check
 
 ```js
-// Run node status command
-
-[user ~]$ cudos-noded status 2>&1 | jq -M .
+$ cudos-noded status
 {
   "NodeInfo": {
     "protocol_version": {
@@ -91,11 +78,6 @@ In which case, view the **last block height** from the current **docker log** fo
 
 :::
 
-:::tip 
-Once your node is synced, view real-time activity in your docker log with the -f (follow) flag:
-```
-sudo docker logs -f <container-name> 
-```
-:::
+
 
 

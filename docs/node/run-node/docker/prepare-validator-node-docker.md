@@ -25,8 +25,7 @@ Adding a stake to a **Full node** ensures it is ready to validate as a **Validat
 ### 1. Full node 
 
 You have already set up a **Full node** and have its `MONIKER` to hand e.g. Tango.
-
-Check out [Running a Full node (Docker)](/docs/node/run-node/full-node-docker).
+.
 
 ### 2. Keplr Wallet
 

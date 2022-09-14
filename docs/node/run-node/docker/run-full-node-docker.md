@@ -195,7 +195,7 @@ You have been successful if you see a newly generated file containing your **nod
 
 ## 03 Check node status
 
-Syncing may take several hours. Refer to [Checking sync status](./check-sync) to verify your node is syncing. 
+Syncing may take several hours. Refer to [Checking sync status](/docs/node/run-node/check-sync) to verify your node is syncing. 
 
 
 
