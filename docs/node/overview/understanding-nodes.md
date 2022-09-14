@@ -54,7 +54,7 @@ The cluster can contain many of each node type for high availability and scaling
 For security reasons, Cudos Seed and Sentry nodes are configured to reject connections from multiple peers with the same IP address. **Therefore each seed and sentry must have its own public IP address.**
 :::
 
-### Validator nodes
+### Validator node
 
 **Validator nodes** participate in the consensus and produce blocks and/or chunks. You can view active Validators on the [Cudos Explorer](https://explorer.cudos.org/validators)
 

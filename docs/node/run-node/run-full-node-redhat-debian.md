@@ -1,9 +1,11 @@
 ---
-title: Run a full node (Debian)
-id: full-debian
+title: Run a full node
+id: run-full-node-redhat-debian
 ---
 
-This guide explains how to initialise and start a **Full node**. It follows on from the **Prerequisites** section and assumes that you have built your environment by following the [**Build Binary - Redhat/Debian instructions**](/docs/node/prerequisites/build-redhat-debian). 
+This guide explains how to initialise and start a **Full Node**. 
+
+It follows on from the prerequisites section and assumes that you have built your environment by following the [**Build Binary - Redhat/Debian instructions**](/docs/node/prerequisites/build-redhat-debian). 
 
 A Full node has the addresses of 3 **Seed nodes** pre-configured to allow it to connect to the Cudos network. 
 
@@ -16,27 +18,44 @@ A Full node has the addresses of 3 **Seed nodes** pre-configured to allow it to 
 Your network was selected at the **Build Binary** stage.
 :::
 
+
+| **Hardware** 	| **Specification**           	|
+|------	|-------------------------------	|
+| CPU   | At least 2 cores.                |
+| RAM  	| 16 GB (Windows), 8 GB (Linux) 	|
+| Disk 	| An SSD drive                  	|
+|   **Software**  |**Specification**            |
+| OS | Linux or Windows with WSL2 enabled.  
+| Docker                                                       	|20.10.6+ [Get Docker](https://docs.docker.com/engine/install/) |
+| Docker compose                                                   	|1.29+
+| Server                             	| Ubuntu 21  
+|                                                                        	|
+
 ## 01 Configure the daemon 
 
-The `cudos-node` daemon must be configured to specify the following: 
+The following script can be run to automatically set up a **Full Node** and the **Seed Nodes** to connect with on the network. 
 
-* Node type (Full node)
-* Nodes to connect to in the network.
+### Standard configuration (*Recommended*)
 
-### Standard configuration
+You must run the script as user `cudos` or you will see error messages. 
 
-Run the following command to build a full-node
+```shell
+su - cudos
+```
 
 ```shell
 $ cudos-init-node.sh
 ```
+
 ### Advanced configuration
+
+If required, individual parameters can be configured by running the Cudos Daemon Configuration Tool `cudos-noded-ctl`
 
 Allows you to modify individual parameters in `config.toml` and `app.toml` such as seeds to connect to specific nodes.
 
-Use the daemon configuration tool `cudos-noded-ctl` 
+Use the daemon configuration tool  
 
-:::tip How to use Cudos Daemon Configuration Tool
+:::info How to use Cudos Daemon Configuration Tool
 
 `cudos-noded-ctl` must be run as user cudos.
 
@@ -48,9 +67,9 @@ root@debian:~# su - cudos
 cudos-noded-ctl [-h] <command> [command_options]
 ```
 
-All available **full node** CTL commands
+Below are all available **full node** CTL commands
 
-For all modifications to config.toml, contents must be on a single line, comma separated list. 
+BE AWARE: All modifications to `config.toml` must specify contents on a single line, comma separated list. 
 
 ```shell
 # Define seeds to connect to: 
@@ -100,7 +119,7 @@ root@cudos-node:~# systemctl enable --now cosmovisor@cudos
 Created symlink /etc/systemd/system/multi-user.target.wants/cosmovisor@cudos.service → /lib/systemd/system/cosmovisor@.service.
 ```
 
-## 02 Check node sync status
+## 02 Check Node Sync status
 
 ```shell
 root@cudos-node:~# cudos-noded status
@@ -120,7 +139,7 @@ Be Aware: It will take time for the node to sync
 
 :::
 
-## 03 Stop the node running
+## 03 Stop the Node running
 
 ```shell
 root@cudos-node:~# systemctl disable --now cosmovisor@cudos
