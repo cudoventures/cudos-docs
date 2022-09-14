@@ -1,5 +1,5 @@
 ---
-title: keys
+title: Useful key commands
 id: keys
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Build a dapp (without docker)
+title: Build a dapp
 id: dapp-no-docker
 ---
 

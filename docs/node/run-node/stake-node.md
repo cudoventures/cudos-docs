@@ -1,9 +1,10 @@
 ---
-title: Stake
+title: Stake your node
 id: stake
 ---
 
-This guide explains how to stake funds to your node in order for it to become a Validator Node and be listed in the Explorers. 
+This guide explains how to stake funds to your node. 
+At the end of this guide your staked node is converted to a Validator Node and is listed in the Testnet or Mainnet Explorer. 
 
 ## 00 Prerequisites
 
@@ -20,14 +21,62 @@ This guide explains how to stake funds to your node in order for it to become a 
 
 :::
 
-## 01 Run the staking command:
+## 01 Run `create-validator` transaction
 
-`--from ` - The new_wallet_keyname or existing_wallet_keyname added to your keyring. 
-`--pubkey` - The validator key added to your keyring.
-`--moniker` - The MONIKER assigned to your node.
-`--chain-id` - See above.
+This step performs a transaction that adds the required stake in a specified wallet to a chosen node and converts it to a Validator node. 
 
 ```shell
+cudos-noded tx staking create-validator --amount=$STAKE
+```
+
+Use the example below to configure and run the `create-validator` command using your own parameters.
+
+### Parameters
+
+**`--from `**
+
+The new_wallet_keyname or existing_wallet_keyname added to your keyring.
+
+**`--pubkey`** 
+
+The validator key added to your keyring.
+
+**`--moniker`** 
+
+The MONIKER assigned to your node.
+
+**`--chain-id`** 
+
+See above.
+
+**`--commission-rate`** 
+
+The commission rate on block rewards and fees charged to **delegators**.
+
+**`--commission-max-rate`**
+
+The maximum commission rate that your validator can charge.
+
+**`--commission-max-change-rate`**
+
+The maximum daily increase of the validator commission. % point change over the `commission-rate`.
+
+**`--min-self-delegation`**
+Minimum amount of CUDOS the validator requires to have bonded at all time. If your validator node's self-delegated stake falls below this limit, it may be jailed and kicked out of the active validator set.
+
+**`--gas-prices`**
+
+Amount to charge for transactions. 
+
+
+```json
+// Example staking transaction setting environmental variables
+
+```shell
+export STAKE="2000000000000000000000000acudos"
+export CHAIN_ID="cudos-testnet-public-3" //Enter the CHAIN_ID for required network
+export MONIKER="Validator1"  // Enter your own Moniker
+
 cudos-noded tx staking create-validator --amount=$STAKE \
     --from= <your_new_wallet_keyname> \
     --pubkey=$(cudos-noded tendermint show-validator) \
@@ -44,100 +93,17 @@ cudos-noded tx staking create-validator --amount=$STAKE \
     -y
 ```
 
+## 02 Enter your keyring passphrase
 
+Authenticate and authorize the transaction by entering your **keyring passphrase**.
 
-## Networks
+:::success
 
-:::info Network & Chain ID 
+Success is indicated with an error free output. 
 
-### Testnet: cudos-testnet-public-3
-### Mainnet: cudos-1
+Wait a few minutes, then checkout [the Validators tab in Explorer](https://explorer.cudos.org/validators). You should see your MONIKER in the list of validators.
 
-:::
-
-<!-- ## 00 Prerequisites
-
-This guide uses shell variables to enable the use of cudos-noded CLI commands. 
-
-Shell commands are only valid for the current shell session so if the shell session is closed, the shell variables will need to be re-defined.
-
-If you want variables to persist for multiple sessions, then set them explicitly in your shell .profile.
-
-## 01 Set the network and chain ID 
-
-### Testnet 
-
-```shell
-CHAIN_ID=cudos-testnet-public-3
-```
-
-## 02 Set the MONIKER 
-
-Choose a MONIKER that helps you identify your node. e.g Flamenco
-
-```shell
-MONIKER_NAME=<moniker-name>
-
-
-
-
-* `MONIKER` for the node to be staked
-* Completion of node preparation and keyring setup 
-
-```shell
-
-cudos-noded init <YOUR FULL NODE MONIKER> --chain-id <NETWORK ID>
-
-```--> -->
-
-## 01 Stake your node
-
-
-
-:::tip Specify environmental variables
-
-Enter the following environment variables to add your stake using `cudos-noded`. 
-
-**CHAIN_ID**: This can be specified as `localhost`, `cudos-testnet-public-3`, `cudos-1`
-
-**STAKE**: The amount in "acudos" to stake to the validator. `2000000000000000000000000acudos`
-
-**MONIKER**: This is the `<YOUR FULL NODE MONIKER>` you assigned. 
+Congratulations 🎉 you have successfully staked on your validator, and it is now operational.
 
 :::
 
-
-2. Amend the file as follows: 
-
-```shell
-export STAKE="2000000000000000000000000acudos"
-export CHAIN_ID="cudos-testnet-public-3"
-export MONIKER="YOUR FULL NODE MONIKER"
-
-```
-
-```jsx
-
-# Staking command
-
-cudos-noded tx staking create-validator --amount=$STAKE \
-    --from=validator1keyring \
-    --pubkey=$(cudos-noded tendermint show-validator) \
-    --moniker=$MONIKER \
-    --chain-id=$CHAIN_ID \
-    --commission-rate="0.10" \
-    --commission-max-rate="0.20" \
-    --commission-max-change-rate="0.01" \
-    --min-self-delegation="2000000000000000000000000" \
-    --gas="auto" \
-    --gas-prices="5000000000000acudos" \
-    --gas-adjustment="1.80" \
-    --keyring-backend="os" \
-    -y
-
- ```
-
-You will be prompted to enter your keyring passphrase.
-
-
-If successful, you should see a long output with no errors. After a few minutes, if you go to [the Validators tab in Explorer](https://explorer.cudos.org/validators) and you can see your MONIKER in the list of validators then **you have successfully staked on your validator, and it is operational.**

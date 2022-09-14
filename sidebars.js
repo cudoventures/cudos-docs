@@ -13,6 +13,7 @@ module.exports = {
       label: 'Security',
       items: [
         'node/security/key-management',
+        'node/security/keys',
         'node/security/sentry-node-arch'
       ],
     },
@@ -21,7 +22,6 @@ module.exports = {
       label: 'Prerequisites',
       items: [
         'node/prerequisites/hw-req',
-        'node/prerequisites/build-go',
         'node/prerequisites/build-redhat-debian',
         'node/prerequisites/stake-req'
       ],
@@ -73,6 +73,7 @@ module.exports = {
       label: 'Build dApp',
       items: [
         'build/dapp-structure',
+        'build/build-binary-go',
       ],
     },
     {

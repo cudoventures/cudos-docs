@@ -1,6 +1,6 @@
 ---
 title: Build Binary - Go 
-id: build-go
+id: build-binary-go
 ---
 
 This guide explains how to install the cudos-noded binary with Go. 
