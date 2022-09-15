@@ -1,6 +1,6 @@
 ---
 title: Useful staking CLI Commands
-id: how-to
+id: staking-cli
 ---
 
 ## Query

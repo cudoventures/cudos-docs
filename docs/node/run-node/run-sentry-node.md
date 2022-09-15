@@ -1,49 +1,54 @@
 ---
-title: Run a validator cluster
-id: run-validator-cluster
+title: Run sentry node
+id: run-sentry-node
 ---
 
-This guide explains how to initialise and start a **Validator Cluster**. It walks you through configuring a Validator Cluster to work with Seed and Sentry nodes. 
+This guide explains how to initialise and start a **Sentry Node**. 
 
-A **Validator Cluster** or **Clustered Node** is a **Validator** node surrounded by **Seed** and **Sentry** nodes.
- 
-Once this is completed, it can be staked. 
+It follows on from the prerequisites section and assumes that you have built your environment by following the [**Build Environment**](/docs/node/prerequisites/build-redhat-debian). 
 
-:::note
-If a clustered-node is left to the default neighbour configuration it will not try and connect to any other node and will just stall indefinitely waiting for chain infomation. As soon as another node contacts it, the synchronisation process will being.
-:::
+A Sentry Node is used to isolate Validator nodes from public access. 
+
+It must be on its own machine. 
 
 ## Networks
 
+`Private Testnet`
 `Testnet`
 `Mainnet`
 
 :::tip
-Your network was selected at the **Build Binary** stage.
+Your network was selected at the **Build Environment** stage.
 :::
 
-## 00 Prerequisites
+<!-- 
+| **Hardware** 	| **Specification**           	|
+|------	|-------------------------------	|
+| CPU   | At least 2 cores.                |
+| RAM  	| 16 GB (Windows), 8 GB (Linux) 	|
+| Disk 	| An SSD drive                  	|
+| OS | Redhat/Fedora/CentOs/Debian/Ubuntu   | -->
 
-1. This step assumes you have already built your environment and selected a network.
-[**Build Environment**](/docs/node/prerequisites/build-redhat-debian). 
 
-2. You have already started and synchronised the required **Seed nodes** and **Sentry nodes** to be added to your cluster. 
+## 01 Configure a sentry node
 
-## 01 Configure the daemon 
+The following script can be run to automatically configure a **Sentry Node**
 
-1. Make sure you run as user `Cudos`
+:::info
 
-Inside the shell run the following command:
+1. This script configures `config.toml` and `app.toml` for a `full-node` by default.
+
+2. You **must** run the script as user `cudos` or you will see error messages. 
+:::
 
 ```shell
 su - cudos
 ```
 
-2. The following script can be run to automatically set up a **Validator Cluster** on the network. 
-
 ```shell
-cudos-init-node.sh clustered-node
+$ cudos-init-node.sh sentry-node
 ```
+
 ### Cudos Daemon Configuration tool
 
 If you need to alter individual parameters, run `cudos-noded-ctl`. 
@@ -108,12 +113,7 @@ cudos-noded-ctl set minimum-gas-prices "5000000000000acudos"
 
 :::
 
-## 02 Stake the node
-
-Ensure that each node in the **Validator Cluster** has started and has synchronised. 
-Follow the instructions [**here**](/docs/node/run-node/stake-node.md) to stake the **Validator node** in the Cluster. 
-
-## 03 Run the staked Validator node in the cluster using cosmovisor
+## 02 Run a sentry node using cosmovisor
 
 It is recommended to use cosmovisor to run your node. 
 
@@ -132,16 +132,12 @@ cudos@testnet:~# systemctl enable --now cosmovisor@cudos
 Created symlink /etc/systemd/system/multi-user.target.wants/cosmovisor@cudos.service → /lib/systemd/system/cosmovisor@.service.
 ```
 
-## 04 Stop the node running
+## 03 Stop the node running
 
 ```shell
 root@cudos-node:~# systemctl disable --now cosmovisor@cudos
 Removed /etc/systemd/system/multi-user.target.wants/cosmovisor@cudos.service.
 ```
-
-
-
-
 
 
 

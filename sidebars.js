@@ -34,11 +34,15 @@ module.exports = {
         {
           type: 'category',
           label: 'Run a validator node',
-          items: ['node/run-node/prepare-node-for-validating', 'node/run-node/stake', 'node/run-node/how-to'],
+          items: ['node/run-node/prepare-node-for-validating', 'node/run-node/stake', 'node/run-node/start-validator-node'],
         },
+        'node/run-node/run-seed-node',
+        'node/run-node/run-sentry-node',
+        'node/run-node/run-validator-cluster',
         'node/run-node/check-sync',
       ],
     },
+    'node/run-node/staking-cli'
   ],
 
   buildSidebar: [

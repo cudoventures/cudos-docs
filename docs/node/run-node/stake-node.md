@@ -1,5 +1,5 @@
 ---
-title: Stake & Launch node
+title: Stake node
 id: stake
 ---
 
