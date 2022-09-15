@@ -5,55 +5,34 @@ id: run-full-node-redhat-debian
 
 This guide explains how to initialise and start a **Full Node**. 
 
-It follows on from the prerequisites section and assumes that you have built your environment by following the [**Build Binary - Redhat/Debian instructions**](/docs/node/prerequisites/build-redhat-debian). 
+It follows on from the prerequisites section and assumes that you have built your environment by following the [**Build Environment**](/docs/node/prerequisites/build-redhat-debian). 
 
 A Full node has the addresses of 3 **Seed nodes** pre-configured to allow it to connect to the Cudos network. 
 
 ## Networks
 
+`Private Testnet`
 `Testnet`
 `Mainnet`
 
 :::tip
-Your network was selected at the **Build Binary** stage.
+Your network was selected at the **Build Environment** stage.
 :::
 
-
+<!-- 
 | **Hardware** 	| **Specification**           	|
 |------	|-------------------------------	|
 | CPU   | At least 2 cores.                |
 | RAM  	| 16 GB (Windows), 8 GB (Linux) 	|
 | Disk 	| An SSD drive                  	|
-|   **Software**  |**Specification**            |
-| OS | Linux or Windows with WSL2 enabled.  
-| Docker                                                       	|20.10.6+ [Get Docker](https://docs.docker.com/engine/install/) |
-| Docker compose                                                   	|1.29+
-| Server                             	| Ubuntu 21  
-|                                                                        	|
+| OS | Redhat/Fedora/CentOs/Debian/Ubuntu   | -->
 
-## 01 Configure the daemon 
 
-The following script can be run to automatically set up a **Full Node** and the **Seed Nodes** to connect with on the network. 
 
-### Standard configuration (*Recommended*)
 
-You must run the script as user `cudos` or you will see error messages. 
+## 01 Configure a full node
 
-```shell
-su - cudos
-```
-
-```shell
-$ cudos-init-node.sh
-```
-
-### Advanced configuration
-
-If required, individual parameters can be configured by running the Cudos Daemon Configuration Tool `cudos-noded-ctl`
-
-Allows you to modify individual parameters in `config.toml` and `app.toml` such as seeds to connect to specific nodes.
-
-Use the daemon configuration tool  
+This step allows you to set up parameters to run a full node.
 
 :::info How to use Cudos Daemon Configuration Tool
 
@@ -101,7 +80,13 @@ cudos-noded-ctl set unsafe true
 
 # Activate Prometheus metrics served under /metrics on PrometheusListenAddr (Boolean)
 cudos-noded-ctl set prometheus true
+
+# Active seed mode (boolean)
+
 cudos-noded-ctl set seed_mode false
+
+# Define gas prices
+
 cudos-noded-ctl set minimum-gas-prices "5000000000000acudos"
 ```
 
@@ -110,16 +95,49 @@ cudos-noded-ctl set minimum-gas-prices "5000000000000acudos"
 :::
 
 
-## 02 Run a Full node
+The following script can be run to automatically configure a **Full Node** and the **Seed Nodes** to connect with on the network you selected at the Build Environment stage.
+
+The script can only be run a fresh node, prior to starting `cudos-noded`. If there are any existing `.toml` files, the initialisation script will not run.
+
+This script must be run BEFORE starting the node for the first time.  
+
+:::info
+
+## Full node initialisation script
+
+1. This script configures `config.toml` and `app.toml` for a `full-node` by default.
+
+2. You **must** run the script as user `cudos` or you will see error messages. 
+:::
+
+```shell
+su - cudos
+```
+
+```shell
+$ cudos-init-node.sh
+```
+
+## 02 Run a full node using cosmovisor
+
+It is recommended to use cosmovisor to run your node. 
+
+`cosmovisor` monitors the governance module for incoming chain upgrade proposals. If it sees a proposal that gets approved, it can automatically download the new binary, stop the current binary, switch from the old binary to the new one and restart the node with the new binary.
+
+It automates chain upgrades to virtually zero downtime. 
+
+```shell
+root@cudos-node:~# systemctl enable --now cosmovisor@cudos
+```
 
 Enable and start the service with Cosmovisor.
 
 ```shell
-root@cudos-node:~# systemctl enable --now cosmovisor@cudos
+cudos@testnet:~# systemctl enable --now cosmovisor@cudos
 Created symlink /etc/systemd/system/multi-user.target.wants/cosmovisor@cudos.service → /lib/systemd/system/cosmovisor@.service.
 ```
 
-## 02 Check Node Sync status
+## 02 Check node sync status
 
 ```shell
 root@cudos-node:~# cudos-noded status
@@ -139,9 +157,12 @@ Be Aware: It will take time for the node to sync
 
 :::
 
-## 03 Stop the Node running
+## 03 Stop the node running
 
 ```shell
 root@cudos-node:~# systemctl disable --now cosmovisor@cudos
 Removed /etc/systemd/system/multi-user.target.wants/cosmovisor@cudos.service.
 ```
+
+
+
