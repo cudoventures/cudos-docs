@@ -15,13 +15,12 @@ You can run a **Full Node** alone and then a **Seed Node** to help you find peer
 
 To partipate as a **Validator**, you can run a **Validator Cluster** comprised of a **Validator Node, Sentry Node(s)** and **Relay Node(s)**.
 
-|**NODE TYPE**|**DESCRIPTION**|
-|:-----:|:-----:|
-|Full Node| A full node is a node that participates in the network but does not help secure it. Full nodes can be used to store the entire state of a blockchain. |
-|Seed Node | A Seed node provides a node with a list of peers which a node can connect to. |
-|Validator Node| Validator Nodes participate in the consensus and produce blocks.|
-|Sentry Node| Sentry nodes are Full Nodes used to isolate Validator nodes from public access.|
-|Relay Node| A Relay Node is a full node that only make connections to sentry nodes of validators other than the operator of the Relay Node. |
+|-|**NODE TYPE**|**DESCRIPTION**|
+|-|:-----:|:-----:|
+|![full-node](@site/static/img/full-node.png)|Full Node| A full node is a node that participates in the network but does not help secure it. |-|Full nodes can be used to store the entire state of a blockchain. |
+|![seed-node](@site/static/img/seed-node.png)|Seed Node | A Seed node provides a node with a list of peers which a node can connect to. |
+|![validator-node](@site/static/img/validator-node.png)|Validator Node| Validator Nodes participate in the consensus and produce blocks.|
+|![sentry-node](@site/static/img/sentry-node.png)|Sentry Node| Sentry nodes are Full Nodes used to isolate Validator nodes from public access.|
 
 
 ## Full nodes
@@ -61,10 +60,6 @@ For security reasons, Cudos Seed and Sentry nodes are configured to reject conne
 ### Sentry node
 
 **Sentry Nodes** protect your validator from being attacked. One of the most common attack vectors is DDOS. Sentry Nodes can mitigate those attacks. This is especially important, since a DDOS attack prevents a validator node from communicating with the rest of the network. This leads to downtime and slashing.
-
-### Relay node
-
-A **Relay Node** is a full node that only make persistent connections to white list IP of sentry nodes of other validators. It runs with `pex` disabled and the firewall on the Relay node blocks all connections from IP addresses not on a white list
 
 ### Validator Cluster Nodes
 

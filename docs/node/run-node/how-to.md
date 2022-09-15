@@ -1,72 +1,216 @@
 ---
-title: How to...
+title: Useful staking CLI Commands
 id: how-to
 ---
 
-### Claim rewards
+## Query
 
-In order to claim pending rewards with your validator, simply
+The query commands allows users to query staking state.
 
-1. Open your **Keplr wallet** and click the **Claim** button
-
-2. Approve the transaction and wait for it to be processed.
-
-### Change your Validator fee
-
-In order to change your Validator's fee, 
-
-1. Start your Docker shell
-
-2. Execute the following command:
-
-Set desired `commission-rate`.
-
-```json
-cudos-noded tx staking edit-validator \
---from=validator \
---chain-id=$CHAIN_ID \
---commission-rate="0.50" \
---keyring-backend="os" \
---gas-prices="5000000000000acudos" \
---gas-adjustment 1.3 \
--y
+```shell
+cudos-noded query staking --help
 ```
 
-### Check Validator fee
+## Delegation
 
-You can check your current Validator's fee by running
+The delegation command allows users to query delegations for an individual delegator on an individual validator.
 
-```bash
-cudos-noded q staking validators > validatorsInfo.txt
+Usage:
+
+```shell
+cudos-noded query staking delegation [delegator-addr] [validator-addr] [flags]
 ```
-View the `commission-rate` for your Validator.
 
-### Get the validator’s operator address
 
-If you want to find your validator’s operator address, run the command:
+## Delegations
+The delegations command allows users to query delegations for an individual delegator on all validators.
 
-```bash
-cudos-noded q staking validators | grep -B13 -A9 "$MONIKER" | grep operator_address
+Usage:
+
+```shell
+cudos-noded query staking delegations [delegator-addr] [flags]
 ```
-### Add stake to my Validator
 
-1. Connect your Validator's wallet to the Cudos Explorer and navigate to your Validator's page in the explorer
+## delegations-to
+The delegations-to command allows users to query delegations on an individual validator.
 
-2. Click **DELEGATE** and introduce the amount you wish to stake in order to increase your Validator's share
+Usage:
 
-3. Click **Next** and approve the transaction in Keplr to increase your Validator's stake.
+```shell
+cudos-noded query staking delegations-to [validator-addr] [flags]
+```
 
-### Move part of my stake from my Validator to a different Validator
 
-1. Connect your Validator's wallet to the Cudos Explorer and navigate to your Validator's page in the explorer
+## historical-info
+The historical-info command allows users to query historical information at given height.
 
-2. Click **REDELEGATE** and select the new Validator to receive staked tokens.
+Usage:
 
-### Remove stake from my Validator
+```shell
+cudos-noded query staking historical-info [height] [flags]
+```
 
-:::caution
-* There is a **21-day unbonding period** between token **undelegation** and tokens being available in your wallet.
+## params
+The params command allows users to query values set as staking parameters.
 
-* A Validator needs to ensure a minimum amount of 2,000,000 CUDOS staked to perform on the Mainnet). 
-:::
+Usage:
 
+```shell
+cudos-noded query staking params [flags]
+```
+
+
+## pool
+The pool command allows users to query values for amounts stored in the staking pool.
+
+Usage:
+
+```shell
+cudos-noded q staking pool [flags]
+```
+
+## redelegation
+The redelegation command allows users to query a redelegation record based on delegator and a source and destination validator address.
+
+Usage:
+
+```shell
+cudos-noded query staking redelegation [delegator-addr] [src-validator-addr] [dst-validator-addr] [flags]
+```
+
+## redelegations
+The redelegations command allows users to query all redelegation records for an individual delegator.
+
+Usage:
+
+```shell
+cudos-noded query staking redelegations [delegator-addr] [flags]
+```
+
+## redelegations-from
+The redelegations-from command allows users to query delegations that are redelegating from a validator.
+
+Usage:
+
+```shell
+cudos-noded query staking redelegations-from [validator-addr] [flags]
+```
+
+## unbonding-delegation
+The unbonding-delegation command allows users to query unbonding delegations for an individual delegator on an individual validator.
+
+Usage:
+
+```shell
+cudos-noded query staking unbonding-delegation [delegator-addr] [validator-addr] [flags]
+```
+
+## unbonding-delegations
+The unbonding-delegations command allows users to query all unbonding-delegations records for one delegator.
+
+Usage:
+
+```shell
+cudos-noded query staking unbonding-delegations [delegator-addr] [flags]
+```
+
+
+## unbonding-delegations-from
+The unbonding-delegations-from command allows users to query delegations that are unbonding from a validator.
+
+Usage:
+
+```shell
+cudos-noded query staking unbonding-delegations-from [validator-addr] [flags]
+```
+
+## validator
+The validator command allows users to query details about an individual validator.
+
+Usage:
+
+```shell
+cudos-noded query staking validator [validator-addr] [flags]
+```
+
+## validators
+The validators command allows users to query details about all validators on a network.
+
+Usage:
+
+```shell
+cudos-noded query staking validators [flags]
+```
+
+## transactions
+The tx commands allows users to interact with the staking module.
+
+```shell
+cudos-noded tx staking --help
+```
+
+## create-validator
+The command create-validator allows users to create new validator initialized with a self-delegation to it.
+
+Usage:
+
+```shell
+cudos-noded tx staking create-validator [flags]
+```
+
+## delegate
+The command delegate allows users to delegate liquid tokens to a validator.
+
+Usage:
+
+```shell
+cudos-noded tx staking delegate [validator-addr] [amount] [flags]
+```
+
+## edit-validator
+The command edit-validator allows users to edit an existing validator account.
+
+Usage:
+
+```shell
+cudos-noded tx staking edit-validator [flags]
+```
+
+```shell
+cudos-noded tx staking edit-validator --moniker "new_moniker_name" --website "new_webiste_url" --from mykey
+```
+
+## redelegate
+The command redelegate allows users to redelegate illiquid tokens from one validator to another.
+
+Usage:
+
+```shell
+cudos-noded tx staking redelegate [src-validator-addr] [dst-validator-addr] [amount] [flags]
+```
+
+## unbond
+The command unbond allows users to unbond shares from a validator.
+
+Usage:
+
+```shell
+cudos-noded tx staking unbond [validator-addr] [amount] [flags]
+```
+
+```shell
+cudos-noded tx staking unbond cudosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj 100stake --from mykey
+```
+
+## cancel unbond
+The command cancel-unbond allow users to cancel the unbonding delegation entry and delegate back to the original validator.
+
+Usage:
+
+```shell
+cudos-noded tx staking cancel-unbond [validator-addr] [amount] [creation-height]
+```
+
+```shell
+cudos-noded tx staking cancel-unbond cudosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj 100stake 123123 --from mykey
+```

@@ -1,5 +1,5 @@
 ---
-title: Useful key commands
+title: Useful key CLI commands
 id: keys
 ---
 
