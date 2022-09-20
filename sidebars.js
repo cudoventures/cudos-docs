@@ -72,8 +72,12 @@ module.exports = {
       type: 'category',
       label: 'Tools',
       items: [
-        'build/install-blast',
-      ],
+              {
+                type: 'link',
+                label: 'RPC API',
+                href: '/api/',
+              }
+             ]
     },
     {
       type: 'category',
