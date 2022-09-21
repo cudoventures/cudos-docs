@@ -14,23 +14,16 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   plugins: [
-    [require.resolve("@cmfcmf/docusaurus-search-local")],
+    // [require.resolve("@cmfcmf/docusaurus-search-local")],
     [
       '@docusaurus-terminology/parser',
       { termsDir: '.docs/terms',
         glossaryFilepath: '.docs/glossary.md',
       }
-    ]  
-  ]
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Cudos', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+    ],
+    [require.resolve("@cmfcmf/docusaurus-search-local")],
+  ],  
+ 
   
   i18n: {
     defaultLocale: 'en',
@@ -50,24 +43,6 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
-        },
-      },
-    ],
-    // Redocusaurus config
-    [
-      'redocusaurus',
-      {
-        // Plugin Options for loading OpenAPI files
-        specs: [
-          {
-            spec: 'docs/build/api/openapi.yaml',
-            route: '/api',
-          },
-        ],
-        // Theme Options for modifying how redoc renders them
-        theme: {
-          // Change with your site colors
-          primaryColor: '#1890ff',
         },
       },
     ],
