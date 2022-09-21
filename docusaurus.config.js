@@ -14,13 +14,14 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   plugins: [
-        [
-        require.resolve("@cmfcmf/docusaurus-search-local")
-        ],
-        [
-        '@docusaurus-terminology/parser'
-        ]
-      ],
+    [require.resolve("@cmfcmf/docusaurus-search-local")],
+    [
+      '@docusaurus-terminology/parser',
+      { termsDir: '.docs/terms',
+        glossaryFilepath: '.docs/glossary.md',
+      }
+    ]  
+  ]
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -52,6 +53,24 @@ const config = {
         },
       },
     ],
+    // Redocusaurus config
+    [
+      'redocusaurus',
+      {
+        // Plugin Options for loading OpenAPI files
+        specs: [
+          {
+            spec: 'docs/build/api/openapi.yaml',
+            route: '/api',
+          },
+        ],
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          // Change with your site colors
+          primaryColor: '#1890ff',
+        },
+      },
+    ],
   ],
 
   themeConfig:
@@ -73,6 +92,7 @@ const config = {
                 type: 'doc',
                 label: '🛠 Build',
                 docId: 'build/intro',
+                position: "left",
               }, 
               {
                 type: 'doc',
