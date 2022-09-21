@@ -7,9 +7,9 @@ id: introduction
 
 Running a Cudos **Node** is a unique opportunity to be a part of a project and wider ecosystem aimed at solving today’s blockchain scalability and interoperability issues.
 
-This section is intended to assist participating in the **Cudos network** as a **Node Operator**. To join the network we recommend you first try running a node **Locally** then on the **Testnet**. The Testnet is a playground where you can learn and experiment without the risk of losing real tokens.
+This section is intended to assist participation in the **Cudos network** as a **Node Operator**. To join the network we recommend you first try running a node **locally** then on the **Testnet**. The Testnet is a playground where you can learn and experiment without the risk of losing real tokens.
 
-The Cudos Network is based on [**Tendermint**](https://docs.tendermint.com/v0.34/introduction/what-is-tendermint.html) and secured by **Validators** responsible for committing new blocks to the blockchain using **Proof-of-Stake consensus**.
+The Cudos Network is based on [**Tendermint**](https://docs.tendermint.com/v0.34/introduction/what-is-tendermint.html) and [**Cosmos**](https://cosmos.network/). It is secured by **Validators** responsible for committing new blocks to the blockchain using **Proof-of-Stake consensus**.
 
 ## Why run a node?
 
@@ -45,11 +45,13 @@ The following networks are available to run a node. Each network has its own set
 
 ### What do Validators do?
 
-Cudos Validators are nodes that verify and confirm transactions, publish new blocks to the Cudos blockchain and provide all data for dApps hosted on the Cudos network. Validators participate in the consensus protocol by broadcasting votes that contain cryptographic signatures signed by each validator's private key.In return, validators receive rewards, which are then shared with users who vote for them.
+Cudos Validators are nodes that verify and confirm transactions, publish new blocks, interact with other stakeholders in Governance votes and ensure the network's security, integrity and viability. 
 
-Validator candidates must bond their own CUDOS tokens and have CUDOS "delegated", or staked, to them by token holders. The right to validate is determined by the total number of CUDOS tokens delegated. Candidates with the most CUDOS tokens have the most Voting Power. Of these, the top validators with the largest Voting Power are allowed to take part in the validation process.
+Validators participate in the consensus protocol by broadcasting transactions and blocks contain cryptographic signatures signed by each validator's private key. In return, validators receive rewards, which are then shared with users who vote for them.
 
-Validators and their Delegators earn CUDOS as block provisions and tokens as transaction fees through execution of the consensus protocol.
+Validator candidates must self-stake their own CUDOS tokens and optionally have CUDOS "delegated" to them by token holders. The right to validate is determined by having self-staked the required amount of tokens - Currently 2,000,000 CUDOS. The staked CUDOS contributes to the Validators' Voting Power The higher a Validators Voting Power, the more likely they are to be selected by the consensus process to propose blocks and hence earn the most rewards.
+
+Validators and their Delegators earn CUDOS rewards by committing new blocks to the Cudos blockchain as well as transaction fees earned from executing the consensus protocol.
 
 :::tip
 
@@ -59,13 +61,17 @@ Validators can determine the commission percentage on the fees their delegators 
 
 ## What do Delegators do?
 
-Delegators bond or stake CUDOS to validators of their choice in return for a share of Validator rewards. The bonded CUDOS form the validators’ Voting Power. The validators with the most Voting Power are then selected for rewarding verification process.
+Delegators stake CUDOS to validators of their choice in return for a share of Validator rewards. The staked CUDOS form the validators’ Voting Power. The validators with the most Voting Power are then selected more often to propose blocks and earn more rewards. 
 
-Tokens remain on the Delegator's wallets throughout and can be accessed again once un-delegated. The un-delegation process is quick and easy to perform.
+Tokens remain on the Delegator's wallets throughout and can be accessed again once un-delegated. The un-delegation process is quick and easy to perform but there is an unbonding period of 21 days before tokens are released. 
 
 ## Slashing and penalties
 
-A Validator's stake is slashed if they become unavailable or sign blocks at the same height. Their staked CUDOS (including CUDOS of users that delegated to them) can be slashed. The penalty depends on the severity of the violation.
+A slashing event occurs if two validators sign the same block with the same key (double signing) or if the validator becomes unavailable. A Validator's staked CUDOS (including CUDOS of users that delegated to them) can be slashed. 
+
+Other penalties depends on the severity of the violation.
+
+A Validator is jailed if they miss 90% of the blocks in any interval of 19200 blocks. Tokens are slashed immediately at that point. (This equates to approximately 336 hours depending on the current block time in the network)
 
 A good Cudos validator needs to aim for 99.99% uptime and <0.01% missed blocks.
  
@@ -73,6 +79,6 @@ A good Cudos validator needs to aim for 99.99% uptime and <0.01% missed blocks.
 
 To ensure maximum uptime and availability
 1. Validators should ensure they always run a correct version of the software.
-2. Validators should implement a Sentry Node Architecture to protect their node from DDoS attacks. 
+2. Validators should implement a Sentry Node Architecture with several geographically distributed sentries.
 
 :::

@@ -7,13 +7,9 @@ id: understanding-nodes
 
 You can run five types of nodes on the Cudos Network. 
 
-:::tip
-All nodes begin life as a **Full Node**
-:::
-
 You can run a **Full Node** alone and then a **Seed Node** to help you find peers to connect with.
 
-To partipate as a **Validator**, you can run a **Validator Cluster** comprised of a **Validator Node, Sentry Node(s)** and **Relay Node(s)**.
+To partipate as a **Validator**, you can run a **Validator Cluster** comprised of a **Validator Node, Sentry Node(s)** and **Seed Node**.
 
 |-|**NODE TYPE**|**DESCRIPTION**|
 |-|:-----:|:-----:|
@@ -37,40 +33,43 @@ This represents the state that transactions modify. The application stores the k
 
 ## Seed node
 
-When you first start a node you must provide at least one type of node to be able to connect to the desired network. By providing a seed node you can populate your address quickly. A seed node is not kept as a peer, it disconnects from your node after it has provided a list of peers.
+When you first start a node you must provide the address of one or more seed nodes to connect to from the desired network. This allows the node to connect to the rest of the network. By providing a seed node you can populate your address quickly. A seed node is not kept as a peer, it disconnects from your node after it has provided a list of peers.
 
 ## Validator node cluster 
 
 The Validator Cluster is your implementation of **sentry node architecture**.
 
 It consists of:
-1. *Validator node* - at least one
+1. *Validator node* - one
 2. *Sentry node* - at least one. 
 
-The cluster can contain many of each node type for high availability and scaling. 
+The cluster can contain many of each node type for high availability and scaling.
+
+:::warning
+
+Additional Validator nodes in a cluster do not provide redundancy as there is an increased possibility of a double signing event and losing the stake.
 
 :::caution
-For security reasons, Cudos Seed and Sentry nodes are configured to reject connections from multiple peers with the same IP address. **Therefore each seed and sentry must have its own public IP address.**
+For security reasons, Cudos nodes are configured to reject connections from multiple peers with the same IP address. **Therefore each public facing node must have its own public IP address.**
 :::
 
 ### Validator node
 
-**Validator nodes** participate in the consensus and produce blocks and/or chunks. You can view active Validators on the [Cudos Explorer](https://explorer.cudos.org/validators)
+**Validator nodes** participate in the consensus protocol and produce blocks. You can view active Validators on the [Cudos Explorer](https://explorer.cudos.org/validators)
 
 ### Sentry node
 
-**Sentry Nodes** protect your validator from being attacked. One of the most common attack vectors is DDOS. Sentry Nodes can mitigate those attacks. This is especially important, since a DDOS attack prevents a validator node from communicating with the rest of the network. This leads to downtime and slashing.
+Multiple **Sentry Nodes** provide protection against your validator from being attacked. One of the most common attack vectors is DDOS. Sentry Nodes can mitigate those attacks. This is especially important, since a DDOS attack prevents a validator node from communicating with the rest of the network. This leads to downtime and slashing.
 
 ### Validator Cluster Nodes
 
-
-<img src={require('@site/static/img/clusterbasic.png').default} />
-
 A Full Node in a cluster can be configured with one of the following roles: 
 
-**Validator (protected)** 
+**Validator (Clustered)** 
 
-A validator is protected if the Seed and Sentry nodes are configured to hide its ID from the external Cudos network. Assuming it has the minimum required stake, the validator will assist with consensus activities on the Cudos network; voting on the validity of new blocks, and if chosen, creating new blocks themselves. The validator will also take part in governance decisions. The protected Validator has no direct connections to the outside Cudos network, instead it communicates at the application layer with the Sentry Node which in turn communicates with the Cudos network. If a Seed node is present, it will inform The Validator about other nodes on the Cudos network. 
+A validator in a cluster is programmed to only connect to nodes in its address book. If an outside address is introduced it will connect to it. A Validator within in a cluster is hard coded to connect only the sentry or sentries guarding it. 
+
+Assuming it has the minimum required stake and is in the active Validator list, the validator will assist with consensus activities on the Cudos network; voting on the validity of new blocks, and if chosen, proposing new blocks themselves. The validator will also take part in governance decisions. The Validator in a cluster has no direct connections to the outside Cudos network. 
 
 **Seed node**  A seed node generates a list of peers to which another node can connect, so you can think of a seed node as the first point of contact for a new node joining the network. The seed node proactively learns about nodes on the external Cudos network by a process of ‘crawling’ whereby it connects to other nodes, learns their address book, then disconnects and repeats the process. The seed node is not a mandatory requirement for a Validator Cluster, as the Sentry can locate other nodes on the Cudos network.
 
