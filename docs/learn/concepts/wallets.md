@@ -3,35 +3,35 @@ title: Wallets
 id: wallet
 ---
 
-**Keplr Wallets** are used to connect to the **Cudos Network**, store assets, perform transactions and interact with the wider inter blockchain ecosystem. 
+**Wallets** provide a convenient way to generate and store **key pairs** and perform various basic activities such as:
 
-## About Keplr
+*creating transactions*, 
 
-Keplr is a **non-custodial** wallet. This means that your private keys are encrypted and securely stored on your own computer.
+*signing messages*, 
 
-[Keplr](https://www.keplr.app/) is an open source browser extension wallet that supports the Cudos blockchain. It enables interoperability with the wider **Inter blockchain (IBC) ecosystem** and provides flexible and account management and wallet functionalities.
+*interacting with applications*, 
 
-Keplr enables:
+*communicating with the blockchain*.
 
-- Multi-chain account management
-- Stake to any validator and claim rewards
-- Vote on governance proposals
+## What are Wallets?
 
-The **Keplr extension** supports transfers/staking for:
+Wallets are **addresses** generated from an initial secret. Wallets such as Keplr generate an initial secret from 12 or 24 words known as a mnemonic (taken from a standardised dictionary). This Mnemonic acts as a **Master Private Key**. 
 
-* Kava
-* Secret Network
-* Akash
-* Starname
-* Sifchain
-* CertiK
-* IRISnet
-* Regen Network
-* Cyber (beta)
-* Straightedge (beta)
+From this initial mnemonic, multiple key pairs can be derived with the Public key from each key pair used to derive an **address** (or multiple addresses).
 
-:::caution Keplr Mobile
-
-Currently, (as of July 2022) it is not possible to use **Keplr Mobile App** with the Cudos Network. This is due to the limited functionality of the **Keplr App**. Stay tuned in [Cudos Discord](https://discord.com/invite/t397SKqf4u) for any updates. 
 :::
+In this way, multiple accounts can be set up on a single Wallet.
+:::
+
+## Wallet Accounts
+
+A **Wallet Account** consists of an **Address**, **Public Key** and **Private Key**.
+
+Each Wallet address corresponds to a single key pair that can always be reproduced deterministically from a mnemonic by knowing its derivation path. There are a number of standards used to generate key pairs from the same mnemonic e.g. BIP 49 or BIP 44. 
+
+
+
+**Keplr** is an example of a Cosmos SDK wallet. 
+
+
 
