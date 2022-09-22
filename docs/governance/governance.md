@@ -29,8 +29,7 @@ When drafting a new proposal, you may want to consider using the [Proposal Templ
 
 2. Create a transaction with the title of your proposal and sign it with your Keplr wallet. 
 
-## 2. 
-
+## 2. Create a proposal
 
 you need 100 CUDOS tokens in your Keplr Wallet.
 
