@@ -5,7 +5,9 @@ id: governance
 
 Governance proposals are used for decision making on the Cudos Network.
 
-A proposal can be for an upgrade of the chain, a change of the parameters of the chain, a simple text proposal, or any other message type.
+To create a proposal, a 50000 CUDOS deposit is required. This deposit is returned if your proposal is successfully voted for by token holders. However, is NOT returned if the vote is unsuccessful. It's a good idea to share your proposal idea in the [Cudos Discord](https://discord.com/invite/cudos) group prior to submitting it.  
+
+A proposal can be submitted for a number of changes including an upgrade of the chain, a change of the parameters of the chain, a simple text proposal, or any other message type.
 
 Validators and token holders have the right to vote on proposals on a 1 token 1 vote basis. This includes any stake delegated to them by other CUDOS holders. 
 
@@ -13,7 +15,7 @@ The [Cudos Dashboard](https://dashboard.cudos.org/) allows anyone to easily chec
 
 ## How to create a draft proposal
 
-It's a good idea to share your proposal idea in the Cudos Discord group prior to submitting it. 
+
 
 1. Use `cudos-noded` CLI to submit a proposal. 
 
@@ -62,7 +64,7 @@ With a majority of Yes the proposal pass and its messages are executed. Abstain 
 4. Enter the proposal deposit
 
 ```shell
-✔ Enter proposal deposit: 10stake
+✔ Enter proposal deposit: 50000stake
 Your draft proposal has successfully been generated.
 Proposals should contain off-chain metadata, please upload the metadata JSON to IPFS.
 Then, replace the generated metadata field with the IPFS CID.
@@ -77,7 +79,7 @@ Then, replace the generated metadata field with the IPFS CID.
 ```json
 {
   "metadata": "ipfs://CID",
-  "deposit": "10stake"
+  "deposit": "50000stake"
 }
 ```
 
@@ -93,7 +95,7 @@ cudos-noded tx gov submit-proposal draft_proposal.json --from maya --keyring-bac
 2. A transaction hash confirms successful submittal.
 
 ```shell
-cudos-noded query tx D8F11234567788C590E60256ED9C9
+cudos-noded query tx D8F1123412345256ED9C9
 ```
 
 ## How to view proposals 
@@ -128,15 +130,13 @@ The example below has a proposal ID of `12` and an account user `dorothy-parker`
 $ cudos-noded tx gov vote 12 yes --from dorothy-parker --keyring-backend test 
 ```
 
-There is a waiting period before votes are determined. 
+:::info Voting period
+There is a **14 day voting period** before votes are determined. 
+:::
 
-## How to view proposal status 
+## How to view the voting outcome
 
-Run the following command to view the status of a specific proposal:
-
-```shell 
-cudos-noded query gov proposal <ID>
-```
+Use the same command for viewing proposals to view the voting outcome. 
 
 ## How to query your account balance as the proposal author
 

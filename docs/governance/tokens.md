@@ -7,9 +7,9 @@ id: tokens
 
 Validators and Delegators stake CUDOS onto the network to secure it and earn staking rewards.
 
-The **L1 Proof-of-Stake Cudos Network** uses CUDOS tokens to govern and secure the network, incentivise participants and provide a mechanism to store and exchange value.
+The **L1 - Consensus - Proof-of-Stake Cudos Network** uses CUDOS tokens to govern and secure the network, incentivise participants and provide a mechanism to store and exchange value.
 
-The **L2 Cudo Compute** platform (Q1 2023) will use CUDOS tokens to power the buying and selling of compute capacity on the network.
+The **L2 - Application - Cudo Compute** platform (Q1 2023) will use CUDOS tokens to power the buying and selling of compute capacity on the network.
 
 :::info CUDOS ERC-20 Contract Address
 
