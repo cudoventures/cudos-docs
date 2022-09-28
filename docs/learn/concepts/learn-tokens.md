@@ -3,16 +3,66 @@ title: Token types
 id: token-types
 ---
 
-This section explains fungible and non-fungible token types for inter-blockchain and Ethereum. 
+This section explains **fungible** and **non-fungible** token types for tokens based on CosmWasm and Ethereum. 
 
-## CW Tokens
+# CosmWasm
 
-**cw20** is a specification for fungible tokens based on CosmWasm. The name and design is loosely based on Ethereum's ERC20 standard. cw20 tokens can be imported by smart contracts that wish to implement this specification, or by contracts that call to any standard cw20 contract.
+## Fungible Tokens
 
-## NFT tokens
+### **CW20** - **Fungible Tokens** 
 
-See ERC-721 and 
-In order for a contract to be considered a NFT-contract it has to follow the NEP-171 and NEP-177 standards. The NEP-171 & NEP-177 standards explain the minimum interface required to be implemented, as well as the expected functionality.
+This is the specification for fungible tokens such as the Cosmos native coin ATOM [***View in Github***](https://github.com/CosmWasm/cw-plus/blob/main/packages/cw20/README.md)
+The name and design is based on the Ethereum ERC-20 standard. 
+CW20 tokens can be imported by smart contracts that wish to implement this specification, or by contracts that call to any standard CW20 contract.
+
+### **CW1155** - **Multiple Tokens** 
+
+This is a specification for managing multiple tokens based on CosmWasm. [***View in Github***](https://github.com/CosmWasm/cw-plus/tree/main/packages/cw1155) 
+The name and design is based  on Ethereum's ERC1155 standard.defines an interface for contracts to support managing multiple tokens.
+
+### **CW1** - **Proxy Contracts** 
+
+This is a specification for proxy contracts - where one contract is meant to hold assets (or rights) on behalf of other contracts. [***View in Github***](https://github.com/CosmWasm/cw-plus/tree/main/packages/cw1)
+
+### **CW2** - **Migrating Inspecting** 
+
+Enables migrating or inspecting of smart contract details. [***View in Github***](https://github.com/CosmWasm/cw-plus/tree/main/packages/cw2)
+
+### **CW3** - **MultiSig or Voting contracts** 
+
+Enables K of N immutable signatories, K of N mutable, flexible signature and can also be used to enable token weighted voting. [***View in Github***](https://github.com/CosmWasm/cw-plus/tree/main/packages/cw3)
+
+### **CW4** - **Storing of Group membership** 
+
+Stores a set of members or voters. [***View in Github***](https://github.com/CosmWasm/cw-plus/tree/main/packages/cw4)
+
+## Non-Fungible Tokens
+
+Cudos uses the Cosmos `x/NFT` module to enable the minting of non-fungible-tokens or NFTs.
+
+This allows for the storing and ownership tracking of NFTs and includes modules to transfer, mint and burn NFTs. 
+
+**NFT Class** - This is the smart contract address where NFTs can be created and managed in collections.  
+
+**NFT** - This is the general NFT model. It is composed of the following attributes:
+
+`class_id` - The class or collection to which it belongs.
+id - The unique identifier for the NFT as specified by its creator.
+
+`uri` - This is the URI for NFT metadata held as a JSON file. 
+
+`uri_hash` - OPTIONAL - hash of the document pointed by uri
+
+`data` - OPTIONAL - app specific data of the NFT. 
+
+## Interchain
+
+These are **Interchain Standards** as used by the **IBC** or inter-blockchain communication protocol.
+
+[***View in Github***](https://github.com/cosmos/ibc)
+
+View all Interchain coins in the Cosmos Ecosystem on [Mintscan](https://hub.mintscan.io/overview)
+
 
 ## ERC-tokens
 

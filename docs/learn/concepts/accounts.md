@@ -3,11 +3,15 @@ title: Accounts
 id: account
 ---
 
-A Cudos **account** is a pair of keys used to uniquely identify a user (or entity) and allow them to authenticate and verify transactions on the Cudos Network. 
+A **Cudos account** is a pair of keys used to uniquely identify a user (or entity) and allow them to authenticate and verify transactions on the Cudos Network. 
 
-An account is stored as an **account object**.
+:::info Wallet accounts
+There is a difference between a **wallet account** and a **Cudos account**. 
+:::
 
-## Account Key Pairs
+This section aims to explain Cudos accounts on the Cudos chain. 
+
+## Accounts on Cudos chain
 
 There are two keys: A **Public Key** and a **Private Key**. 
 
@@ -37,11 +41,30 @@ The Public Key - `PubKey` is safe to disclose and is used to verify a user or en
 
 ### Generation of Addresses
 
-`PubKey` is used to generate `Address` using algorithms. One or more unique addresses can be generated from the Public Key. 
+`PubKey` is used to generate `Address` using algorithms. This is the 'normal' account address associated with an account. 
+
+:::info Address Types
+Other address types can be generated from a single public, however, these are of different types and used for specific purposes.
+
+For example a **Validator node** can have two address types: 
+
+***Validator address***: This has the prefix `cudosvaloper` e.g. `cudosvaloper123456vn9muexdczyv3agc6kacx`
+
+***Normal address***: This has the prefix `cudos` e.g. `cudos1gj2xtqk66h123456zyv3ag9fcuem`. This is the 'self delegate' address used for staking funds to a validator node.
+
 
 `Addresses` are public and safe to share. These are also known as `Wallet Addresses`. 
 
 `Addresses` are also used to identify users or entities on the Cudos Network. For example as owners of a wallet or authorised signatories.  
+
+`Sequence` is used to prevent replay attacks. Each transaction contains the current sequence number for the signer. This number increments every time a transaction is signed, therefore, the sequence number must match the sequence number on the chain. 
+
+:::tip Replay Attack Prevention
+
+A replay attack occurs when a malicious actor intercepts a network and is able to delay or resend a transaction or even perform it in advance due to network congestion. 
+
+Cudos Network utilises the Cosmos SDK auth module to protect the network at the transaction level. Transactions are protected by private key signatures and the sequence value to prevent selective replaying of transactions.
+::: 
 
 ## Private Key
 
@@ -64,7 +87,7 @@ This forms the basis of **Authentication** and **Assurance** on the network.
 
 ### Authentication 
 
-Authentication of a message or user/entity is guaranteed by the use of asymmetric public key cryptography. This is a cryptographic system that uses key pairs. The asymmetry refers to the fact that parties are not required to use a secure channel to exchange keys for encryption and decryption.
+Authentication of a message or user/entity is guaranteed by the use of asymmetric public key cryptography. This is a cryptographic system that uses one key to encrypt and another key to decrypt. The parties are not required to use a secure channel to exchange keys.
 
 ### Assurance 
 
