@@ -117,6 +117,7 @@ module.exports = {
              'learn/concepts/transactions',
              'learn/concepts/fees',
              'learn/concepts/gas',
+             'glossary'
             ],
           },
       ],

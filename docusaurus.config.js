@@ -14,14 +14,13 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   plugins: [
-    // [require.resolve("@cmfcmf/docusaurus-search-local")],
     [
       '@docusaurus-terminology/parser',
-      { termsDir: '.docs/terms',
-        glossaryFilepath: '.docs/glossary.md',
+      { termsDir: 'docs/terms',
+        glossaryFilepath: 'docs/glossary.md',
       }
     ],
-    [require.resolve("@cmfcmf/docusaurus-search-local")],
+    "@cmfcmf/docusaurus-search-local",
   ],  
  
   
