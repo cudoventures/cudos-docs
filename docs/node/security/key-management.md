@@ -3,15 +3,19 @@ title: Key management
 id: key-management
 ---
 
-The Cudos Network uses **ECDSA (Elliptic Curve Digital Signature Algorithm)** public key cryptography. This is a cryptographically secure digital signature scheme, based on elliptic-curve cryptography (ECC). 
+## The Keyring
 
-In public key cryptography, each person has a pair of keys, a public key and a private key. The private key is derived from the public key using hashing algorithms in a way that cannot be reverse engineered.
+Cudos-noded CLI commands require a Cudos account controlled by a private key. Private keys must be stored securely without being exposed to a potential attacker.
 
-Anyone with a public key can verify a signature was created using the private key and the appropriate signature validation algorithm. A digital signature is a powerful tool because it allows you to publicly vouch for any message.
+The **keyring** is used to store and manage the keys used to interact with a node. The keyring can be configured with one of several backend implementations:
 
-`Ed25519` signatures are elliptic-curve signatures, carefully engineered at several levels of design and implementation to achieve very high speeds without compromising security.
 
-**Public keys** are used for identity and **Private keys** for signing transactions. 
+
+A validator key needs to be set up before running the blockchain node, so that blocks can be correctly signed. 
+
+The private key can be stored in different locations such as a file or the operating system's own key storage.
+
+
 
 ## Validator node security
 

@@ -5,8 +5,8 @@ id: build-binary-go
 
 This guide explains how to install the cudos-noded binary with Go. 
 
-These instructions are written based on a Google Cloud VM instance running on Ubuntu 20.04 LTS
-x86/64, amd64 focal image built on 2022-09-05, supports Shielded VM features.
+(These instructions are written based on a Google Cloud VM instance running on Ubuntu 20.04 LTS
+x86/64, amd64 focal image built on 2022-09-05, supports Shielded VM features.)
 
 ## Supported OS
 
