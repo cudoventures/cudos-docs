@@ -3,27 +3,85 @@ title: Key management
 id: key-management
 ---
 
-## The Keyring
+## 🔐 Keyring 
 
-Cudos-noded CLI commands require a Cudos account controlled by a private key. Private keys must be stored securely without being exposed to a potential attacker.
+### Node security
 
-The **keyring** is used to store and manage the keys used to interact with a node. The keyring can be configured with one of several backend implementations:
+The **keyring** is used to store and manage the keys used to interact with **Validator nodes** and other nodes. The keyring allows private keys to be stored securely without being exposed to a potential attacker. The keyring can be interacted with using the `cudos-noded` CLI tool.
+
+Several backend implementations can be configured as part of setting up the keyring to store private keys.
+
+:::tip Selecting a backend to store private keys
+
+### *The `os` backend (default)*
+
+***This is the backend chosen for the rest of this guide. ***
+
+`os` is the default option as OS credential managers are designed to meet most common needs and provide a streamlined experience without compromising on security.
+
+The `os` backend uses operating system-specific defaults to handle credentials and key storage securely. These include password prompts and user sessions according to user defined password policies. Here is a list of the most popular operating systems and their respective passwords manager.
+
+* macOS (since Mac OS 8.6): Keychain 
+[View details at external site](https://support.apple.com/en-gb/guide/keychain-access/welcome/mac)
+
+* Windows: Credentials Management API 
+[View details at external site](https://docs.microsoft.com/en-us/windows/win32/secauthn/credentials-management)
+
+* GNU/Linux:
+    * libsecret 
+    [View details at external site](https://gitlab.gnome.org/GNOME/libsecret)
+    * kwallet 
+    [View details at external site](https://api.kde.org/frameworks/kwallet/html/index.html)
+
+### *The `file` backend*
+
+***Recommended for a headless environment***.
+
+The `file` backend stores the keyring encrypted inside the application configuration directory. A password is requested each time the keyring is accessed.
+
+The first time you add a key to an empty keyring, you are prompted to type the password twice.
+
+### *The `pass` backend*
+
+***Recommended for a headless environment***.
+
+The `pass` backend uses the pass utility to manage on-disk encryption of keys' sensitive data and metadata. Keys are stored inside `gpg` encrypted files within app-specific directories. `pass` is available for the most popular UNIX operating systems as well as GNU/Linux distributions. 
+
+[**Find out more about `pass`**](https://www.passwordstore.org/)
+
+### *The `test` backend*
+
+The `test` backend is a password-less variation of the file backend. Keys are stored unencrypted on disk.
+
+**For testing purposes only.** 
+
+#The memory backend
+The memory backend stores keys in memory. The keys are immediately deleted after the program has exited.
+
+***For testing purposes only.***
+
+:::
+
+### How to add a new key to the keyring 
+
+In this example, we'll add a new key to a `test` backend and store it as a variable. 
+
+```shell
+$ cudosnoded keys add testytestkey --keyring-backend test 
+
+# Store the generated address as a variable
+
+TESTYTESTKEY_ADDRESS
+
+```
 
 
 
-A validator key needs to be set up before running the blockchain node, so that blocks can be correctly signed. 
-
-The private key can be stored in different locations such as a file or the operating system's own key storage.
-
-
-
-## Validator node security
+## Third party security options
 
 Validators must consider whether they want to be fully responsible for Key Management or if they want to leverage third-party infrastructure to do so. 
 
-The Cudos Network leverages the **Tendermint Key Management System** in order to ensure high availability access to signing keys as part of the Cudos Network’s block processing workflows.
-
-## Tendermint Key Management System (KMS) (Beta)
+### Tendermint Key Management System (KMS) (Beta)
 
 Validators can research the Key Management System intended for Cosmos Validators. 
 [Check it out](https://github.com/iqlusioninc/tmkms).
@@ -34,15 +92,11 @@ It provides isolated, optionally HSM-backed signing key management for transacti
 2. Double-signing prevention even in the event the validator process is compromised
 3. Hardware security module storage for validator keys which can survive host compromise
 
-## Hardware Security Modules
+### Hardware Security Modules
 
 :::caution
 Solutions for cloud-based infrastructure are still evolving. Check out discussions on [**Cosmos Hub Forum**](https://forum.cosmos.network/t/running-a-validator-in-a-cloud-environment/587) and in [**Validator Chat in Discord**](https://discord.com/channels/593796681103966208/849951329174421504).
 :::
-
-It is crucial that an attacker cannot steal a validator's key. 
-
-Key compromise puts the entire stake delegated to the compromised validator at risk. Hardware security modules are an important strategy for mitigating this risk.
 
 HSM modules must support `ed25519` signatures. The YubiHSM2 supports `ed25519`. 
 The following [Yubikey library is available](https://github.com/iqlusioninc/yubihsm.rs)

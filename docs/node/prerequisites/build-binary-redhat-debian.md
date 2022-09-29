@@ -5,12 +5,12 @@ id: build-redhat-debian
 
 ## Supported OS
 
-### Red Hat 
+### Red Hat/Fedora 
 
 * RHEL/CentOS/EL 8
 * Fedora 34 & 35
 
-### Debian 
+### Ubuntu/Debian 
 
 * Ubuntu 20.04
 * Debian 10

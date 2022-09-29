@@ -1,15 +1,9 @@
 ---
-title: Useful key CLI commands
+title: Useful CLI commands
 id: keys
 ---
 
 This guide explains CLI commands to manage your **local keys** and **wallet addresses** with the **keyring** manager.  
-
-:::tip key naming
-
-Be sure to name your key in a way that helps you identify it and its purpose later. 
-
-:::
 
 ## Key CLI
 
@@ -47,17 +41,22 @@ $ cudos-noded keys --help
 Use this command to list all local keys managed by `cudos-noded` key manager. 
 
 ```shell 
-cudos-noded keys list
+$ cudos-noded keys list
 
 ```
 
-## Create a new key
+## Add a new key
 
-Use this command to create a new key in the keyring.
+Use this command to add a new key in the keyring.
+
+:::caution Key naming
+***REMEMBER*** to use a name that helps you recall the key and its purpose later. 
+:::
+
+In this example, we are adding the key 'memorable-key-name' to the `keyring` with a backend configured to our `os`. 
 
 ```shell
-cudos-noded keys add `key-name`
-Enter keyring passphrase: 
+$ cudos-noded keys add memorable-key-name --keyring-backend os
 ```
 
 ### Example
