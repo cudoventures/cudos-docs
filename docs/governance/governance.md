@@ -13,9 +13,17 @@ Validators and token holders have the right to vote on proposals on a 1 token 1 
 
 The [Cudos Dashboard](https://dashboard.cudos.org/) allows anyone to easily check any live proposals. By connecting a valid wallet, token holders can create or vote on the outcome of any live proposal.
 
+## Things to know 
+
+* **Proposal submission**: Users can submit a proposal with a deposit of 50000 CUDOS. Once the minimum deposit is reached, the proposal enters a 14 day voting period.
+
+* **Vote**: Token holders can vote on proposals that have reached the minimum deposit.
+
+* **Inheritance and penalties**: Delegators can inherit their validator's vote if they don't vote themselves.
+
+* **Claiming deposit**: Users that deposited on proposals can recover their deposits if the proposal was accepted *OR* if the proposal never entered voting period.
+
 ## How to create a draft proposal
-
-
 
 1. Use `cudos-noded` CLI to submit a proposal. 
 
@@ -147,76 +155,3 @@ In the following example, the author is `maya`
 ```shell
 cudos-noded query bank balances $maya 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-* **Proposal submission**: Users can submit a proposal with a deposit. Once the minimum deposit is reached, the proposal enters voting period.
-
-* **Vote**: Participants can vote on proposals that have reached the minimum deposit.
-
-* **Inheritance and penalties**: Delegators inherit their validator's vote if they don't vote themselves.
-
-* **Claiming deposit**: Users that deposited on proposals can recover their deposits if the proposal was accepted *OR* if the proposal never entered voting period.
-
-The governance module inherited from CosmosSDK currently supports:
-
-- Proposal submission: Users can submit proposals with a deposit. Once the minimum deposit is reached, proposal enters voting period
-- Voting: Participants can vote on proposals that reached MinDeposit
-- Inheritance and penalties: Delegators inherit their validator's vote if they don't vote themselves.
-- Claiming deposit: Users that deposited on proposals can recover their deposits if the proposal was accepted OR if the proposal never entered voting period.
-
-Please visit the [Proposals page](https://explorer.cudos.org/proposals) to find out more on active proposals.
-
-For full guides on how this all works, please read [the latest CosmosSDK docs](https://docs.cosmos.network/master/modules/gov/#contents)
-
-**CUDOS** token holders can participate in network governance and vote on active proposals to shape the network's future.
-
-Creating a governance proposal takes place on [Cudos Dashboard](https://dashboard.cudos.org/).
-
-The steps involved in creating a governance proposal are as follows:
-
-## Prerequisites
-
-* A Keplr wallet with 100,000 CUDOS tokens plus transaction fees. 
-
-## How to write a Governance proposal
-
-When drafting a new proposal, you may want to consider using the [Proposal Template](proposal-template) for guidance. 
-
-## 1. Initiate a proposal
-
-1. On the [Cudos Dashboard](https://dashboard.cudos.org/) connect your wallet.
-
-2. Create a transaction with the title of your proposal and sign it with your Keplr wallet. 
-
-## 2. Create a proposal
-
-you need 100 CUDOS tokens in your Keplr Wallet.
-
-To create the proposal, you will need to connect the Keplr wallet to your Cudos Explorer
-
-If you don’t have a Cudos wallet set up already, you will need to create one using Keplr wallet Extension and the Cudos Explorer. You need the Keplr wallet to sign the transactions before the proposal is accepted.
-
-Once you are connected to the network, you will need to take the following steps:
-1. Create a new proposal: On the Cudos explorer, there is a proposal tab on the left sidebar menu. Click on it to open the proposal page. Click on the create proposal button and fill in the details about the proposal. Click on the Next button to confirm the transactions via the Keplr wallet.
-
-2. Deposit Cudos tokens into the proposal: Remember that the Cudos proposal needs to have tokens backing it before it can be voted for. Click on the proposals tab as you did previously but this time, you will see an active proposal because you created one and the status will be Deposit Period. Click on the deposit button to add the Cudos tokens to back the proposal. Again, click on the Next button to confirm the transaction on the Keplr wallet.
-
-3. Voting on a proposal: On the proposal tab, using the Cudos explorer, there is a voting butting that has a voting period status. Click on the vote button close to the deposit one and cast the vote by confirming using the Keplr wallet. Once the token is deducted, it will show on the cast votes for the proposal as shown below
-
-
-When the voting period ends, the community can determine if the proposal will pass or not and how community members voted will also become evident.
-
-
-
-
-
