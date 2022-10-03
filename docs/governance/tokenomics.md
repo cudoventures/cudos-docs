@@ -3,10 +3,35 @@ title: Tokenomics
 id: tokenomics
 ---
 
-Validators and delegators earn block rewards for keeping the blockchain operational and secure.
+The key aim of Cudos network tokenomics is to ensure that network participants are incentivised to work towards the greater good of the network. Specifically, with respect to ensuring the security integrity and longevity of the network.
+
+Tokenomics draws from game theory models that assume individual rational network participants are always working to maximise their own utility. The aim of tokenomics is to ensure that individual utility is best maximised by advancing overall network utility. From this perspective, the Cudos Network tackles this challenge in multiple ways. 
+
+First, the Cudos network uses Tendermint to provide a consensus layer and agree the state of the Cudos Blockchain. Byzantine Fault Tolerance (BFT) solves the [Byzantine Generals Problem](https://lamport.azurewebsites.net/pubs/byz.pdf).
+
+:::tip Byzantine Generals Problem 
+
+The **Byzantine Generals Problem** refers to a scenario where there are multiple divisions of a Byzantine army and each division is directed by its own general. There are **n** generals, some of which are **m** traitors. Each division of the army and its general is camped outside the enemy castle. Messages are sent between generals by lieutenant messengers. 
+
+At least 2 loyal generals are required to use the same messages to act on the same plan and attack. 
+
+Each general has lieutenants responsible for sending and receiving messages. However, Lieutenants may send traitor messages from a traitor general leading one general receiving the message to retreat. 
+
+If however, there are 3 Generals, but 2 Generals have **m** traitor Lieutenants passing traitor messages to those generals. This means that 1 General has **(m-1)** honourable Lieutenants passing accurate messages to that General.
+
+In short, Lamport, Shostak, and Pease found that no solution with fewer than 3m + 1 generals can cope with **m** traitors. In other words, consensus is impossible to achieve if a third or more of the generals are traitors.
+
+:::
+
+Use of Tendermint enables consensus to be achieved on the state of the blockchain even if up to ⅓ (~33%) of network machines are bad actors or fail in arbitrary ways.
+
+Second, incentivisation of Validator operators to cooperate behaviour on the Cudos network is built into the tokenomics model whereby those who secure the network by running a Validator are required to stake or self-delegate a minimum of 2M CUDOS in return for network rewards. Staking or self-delegating higher amounts increases the chances of that Validator being selected to conduct block validation as well as increasing their rewards as a proportion of the overall amount staked on the network. 
+
+Validators and Delegators earn block rewards for keeping the blockchain operational and secure.
 Block rewards consist of Staking rewards and Transaction fees.
 
 ## Staking
+
 The act of staking tokens is called delegating.
 
 A validator needs to self-delegate at least 2M CUDOS.
