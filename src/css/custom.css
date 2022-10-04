@@ -49,12 +49,12 @@ img[alt=sentry-node] { width: 100px; }
 
 /* unvisited link */
 a:link {
-  color: rgb(51, 0, 255);
+  color: #4D80E8;
 }
 
 /* visited link */
 a:visited {
-  color: green;
+  color: rgb(red, green, blue);
 }
 
 /* mouse over link */

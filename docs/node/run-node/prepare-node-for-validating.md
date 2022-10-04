@@ -3,15 +3,15 @@ title: Prepare node
 id: prepare-node-for-validating
 ---
 
-This guide explains how to prepare an existing full node to become a validator node.
+This guide explains how to prepare an existing **Full node** to become a **Validator node**.
 
-Outcomes:
+### Outcomes: 
 
-* Determine a backend to store **private keys**
+* Use default `OS` backend to store **private keys**
 * Securely add a wallet to a **keyring** 
-* Securely add a validator key to the ***keyring**
+* Securely add a validator key to the **keyring**
 
-If you want to add an existing wallet you must have its seed phrase.   
+If you want to add an existing wallet you must have its **mnemonic**.   
 
 ## 00 Prerequisites
 

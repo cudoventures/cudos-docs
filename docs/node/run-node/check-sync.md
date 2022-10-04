@@ -11,8 +11,6 @@ You can check the status of your node sync by running the following command:
 $ cudos-noded status
 ```
 
-
-
 ## Example Sync Status Check
 
 ```js
