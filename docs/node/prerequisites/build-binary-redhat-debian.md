@@ -57,9 +57,7 @@ yum-config-manager --enable cudos-1.0.0
 dnf install cudos-network-mainnet
 ```
 
-## Debian/Ubuntu
-
-These instructions are written from a Google Cloud VM instance running on **Debian 10**.
+## Ubuntu/Debian
 
 ### 00 Prerequisites
 
@@ -80,59 +78,62 @@ root@cudos-node:~# sudo apt-get install build-essential
 
 Run the following command according to your network choice.
 
-:::caution
-
-Some packages are cited individually
-
-:::
-
 ### Private Testnet
 
-1. Install binary packages
+1. Set up `apt` repo
+
 ```shell
 echo 'deb [trusted=yes] http://jenkins.gcp.service.cudo.org/cudos/0.8.0/debian stable main' > /etc/apt/sources.list.d/cudos.list
 ```
 
 2. Update the local package list
+
 ```shell
 apt update
 ```
 
 3. Install network and packages
+
 ```shell
 apt install cudos-network-private-testnet cosmovisor cudos-gex cudos-noded cudos-noded-v0.8.0 cudos-noded-v0.9.0 cudos-noded-v1.0.0 cudos-noded-v1.1.0 cudos-p2p-scan
 ```
 
 ### Public Testnet
 
-1. Configure repository
+1. Set up `apt` repo
+
 ```shell
 echo 'deb [trusted=yes] http://jenkins.gcp.service.cudo.org/cudos/0.9.0/debian stable main' > /etc/apt/sources.list.d/cudos.list
 ```
 
 2. Update the local package list
+
 ```shell
 apt update
 ```
 
 3. Install network package and its dependencies
+
 ```shell
 apt install cudos-network-public-testnet cosmovisor cudos-gex cudos-noded cudos-noded-v0.9.0 cudos-noded-v1.0.0 cudos-noded-v1.1.0 cudos-p2p-scan
 ```
 
 ### Mainnet
 
-1. Install source packages
+1. Set up `apt` repo
+
 ```shell
 echo 'deb [trusted=yes] http://jenkins.gcp.service.cudo.org/cudos/1.0.0/debian stable main' > /etc/apt/sources.list.d/cudos.list
 ```
 
 2. Update the local package list
+
 ```shell
 apt update
 ```
 
 3. Install binary and network
+
 ```shell
 apt install cudos-network-mainnet cosmovisor cudos-gex cudos-noded cudos-noded-v1.0.0 cudos-noded-v1.1.0 cudos-p2p-scan
 ```
@@ -149,26 +150,6 @@ cudos-noded version
 
 v0.8.0 
 ```
-
-:::tip `cudos-noded` versions
-
-`cudos-noded-v0.8.0`
-
-Private Testnet. This is the binary that is compatible with the historical chain state
-
-`cudos-noded-v0.9.0`
-
-Public Testnet. This is the binary compatible with the current chain state
-
-`cudos-noded-v1.0.0`
-
-Mainnet. This is the binary compatible with the next chain state and is the same as the mainnet state
-
-`cudos-noded-v1.1.0`
-
-is the binary for the final chain state after the step from 0.9.0 -> 1.0.0 and then the step 1.0.0 -> 1.1.0
-
-:::
 
 <!-- 
 ```shell

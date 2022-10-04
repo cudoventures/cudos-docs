@@ -41,13 +41,15 @@ The Validator Cluster is your implementation of **sentry node architecture**.
 
 It consists of:
 1. *Validator node* - one
-2. *Sentry node* - at least one. 
+2. *Sentry node* - one or many 
+3. *Seed node* - one or many
 
 The cluster can contain many of each node type for high availability and scaling.
 
 :::warning
 
 Additional Validator nodes in a cluster do not provide redundancy as there is an increased possibility of a double signing event and losing the stake.
+:::
 
 :::caution
 For security reasons, Cudos nodes are configured to reject connections from multiple peers with the same IP address. **Therefore each public facing node must have its own public IP address.**
@@ -63,21 +65,20 @@ Multiple **Sentry Nodes** provide protection against your validator from being a
 
 ### Validator Cluster Nodes
 
-A Full Node in a cluster can be configured with one of the following roles: 
+A **Validator Cluster node** comprises the following:
 
-**Validator (Clustered)** 
+1. A **Validator node** in a cluster is programmed to only connect to nodes in its address book. If an outside address is introduced it will connect to it. A **Validator node** within in a cluster is hard coded to connect only to the **Sentry node** or **Sentry nodes** guarding it. 
 
-A validator in a cluster is programmed to only connect to nodes in its address book. If an outside address is introduced it will connect to it. A Validator within in a cluster is hard coded to connect only the sentry or sentries guarding it. 
+    Assuming it has the minimum required stake and is in the active Validator list, the validator will assist with consensus activities on the Cudos network; voting on the validity of new blocks, and if chosen, proposing new blocks themselves. The validator will also take part in governance decisions. The Validator in a cluster has no direct connections to the outside Cudos network. 
 
-Assuming it has the minimum required stake and is in the active Validator list, the validator will assist with consensus activities on the Cudos network; voting on the validity of new blocks, and if chosen, proposing new blocks themselves. The validator will also take part in governance decisions. The Validator in a cluster has no direct connections to the outside Cudos network. 
+2. A **Seed node** generates a list of peers to which another node can connect. A **Seed node** is the first point of contact for a new node joining the network. The **Seed node** proactively learns about nodes on the external Cudos network by a process of ‘crawling’ whereby it connects to other nodes, learns their address book, then disconnects and repeats the process. The seed node is a *mandatory requirement* for a **Validator Cluster**. 
 
-**Seed node**  A seed node generates a list of peers to which another node can connect, so you can think of a seed node as the first point of contact for a new node joining the network. The seed node proactively learns about nodes on the external Cudos network by a process of ‘crawling’ whereby it connects to other nodes, learns their address book, then disconnects and repeats the process. The seed node is not a mandatory requirement for a Validator Cluster, as the Sentry can locate other nodes on the Cudos network.
+    The **Seed node** feeds the list of addresses to the **Sentry node**.
 
-**Sentry node**  The Sentry node is an application layer proxy for the validator nodes. Any communication the Validator or Full Node has with the outside Cudos network consists of application messages to/from the Sentry node, which then relays messages to/from nodes on the Cudos network. If a Seed Node is not present, the Sentry will be responsible for informing the validator about nodes on the external Cudos network.
-
+3. The **Sentry node** is an application layer proxy for the **Validator nodes**. Any communication the **Validator node** has with the outside Cudos network consists of application messages to/from the **Sentry node**. These are then relayed to/from nodes on the Cudos network. 
 
 ### Sentry node architecture
 
 A variety of node architectures can be explored and multiple distributed Sentry and Relay nodes can be deployed in cloud environments to prevent the possibility of DDoS attacks.
 
-Check out [Sentry Node Architecture reading](https://forum.cosmos.network/t/sentry-node-architecture-overview/454?u=suyu)
+[Further reading on Sentry Node Architecture](https://forum.cosmos.network/t/sentry-node-architecture-overview/454?u=suyu)

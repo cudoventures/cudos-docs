@@ -46,3 +46,23 @@ img[alt=seed-node] { width: 100px; }
 img[alt=validator-node] { width: 100px; }
 
 img[alt=sentry-node] { width: 100px; }
+
+/* unvisited link */
+a:link {
+  color: rgb(51, 0, 255);
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(105, 188, 255);
+}
+
+/* selected link */
+a:active {
+  color: rgb(0, 0, 255);
+}

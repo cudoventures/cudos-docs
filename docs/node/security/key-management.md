@@ -75,11 +75,9 @@ TESTYTESTKEY_ADDRESS
 
 ```
 
-
-
 ## Third party security options
 
-Validators must consider whether they want to be fully responsible for Key Management or if they want to leverage third-party infrastructure to do so. 
+**Validator Operators** must consider whether they want to be fully responsible for Key Management or if they want to leverage third-party infrastructure to do so. 
 
 ### Tendermint Key Management System (KMS) (Beta)
 

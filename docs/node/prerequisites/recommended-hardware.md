@@ -5,24 +5,19 @@ id: hw-req
 
 # Hardware Requirements
 
-The Cudos Network is composed of multiple node types and services.
-
 These specifications are provided for dedicated physical hardware nodes. They are based on performance and capacity monitoring of the Cudos **Testnet** and **Mainnet**. As such, they are liable to change as we respond to ongoing network monitoring. 
-
-However, Validator node operators are free to choose their own virtual equivalents. 
-
+ 
 This page describes the **recommended** system hardware requirements for running different types of nodes on the Cudos Network.
 
-  
 :::info
 
-At this time, we do not provide detailed storage IOPS/throughput or network PPS/bandwidth minimums. As the network evolves, we will share our observations of real-world statistics, to hopefully assist virtualised environment operators with right-sizing their deployments.
+At this time, we do not provide detailed storage IOPS/throughput or network PPS/bandwidth minimums. As the network evolves, we will share our observations of real-world statistics, to assist **Node Operators** with optimising their deployments.
 :::
 
 :::caution 
-If you configure a system with slower resources than the recommended values, you run the risk of being under-resourced, causing node timeouts and synchronization delays.
+If you configure a system with slower resources than the recommended values, you run the risk of being under-resourced leading to synchronisation delays. On a slow hard drive, there is a risk that your node may never catch up with the head of the chain.
     
-If you run out of memory or storage, the Cudos node sync process will be forcefully killed potentially leading to state corruption, losing stake and not participating in committees.
+If you run out of memory or storage, the Cudos node sync process will be forcefully killed potentially leading to state corruption, losing stake and not participating in consensus.
 :::
 
 ## Cudos Mainnet Nodes
@@ -46,7 +41,7 @@ If you run out of memory or storage, the Cudos node sync process will be forcefu
 | Memory | ≥16GiB ECC system memory |
 | Storage | ≥1TB NVMe SSD - RAID1 or better resilience required |
 | Network | Private 1Gb/s or 10Gb/s internal network for peer node connections    1Gb/s internet connection (≥2.5Gb/s preferred)   Publicly accessible IPv4 address (additionally IPv6 recommended)     |
-|OS | Linux Debian 10 recommended |
+|OS | Linux Ubuntu/Debian recommended |
 |Additional | Anti-DDoS protection strongly recommended  'Four‑nines' availability target or better  Redundancy of server power and cooling components strongly recommended      |
 
 ### Cudos mainnet ("Ingenii") Seed node
@@ -57,7 +52,7 @@ If you run out of memory or storage, the Cudos node sync process will be forcefu
 |Memory |≥16GiB ECC system memory |
 |Storage |≥1TB NVMe SSD - RAID1 or better resilience required |
 |Network | Private 1Gb/s or 10Gb/s internal network for peer node connections |
-|OS | Linux Debian 10 recommended
+|OS | Linux Ubuntu/Debian recommended
 | Additional |Redundancy of server power and cooling components strongly recommended 'Four‑nines' availability target or better  |
 
 ## Ethereum Nodes
@@ -70,7 +65,7 @@ If you run out of memory or storage, the Cudos node sync process will be forcefu
 |Memory |≥16GiB ECC system memory |
 |Storage |≥2TB NVMe SSD - RAID1 or better resilience required |
 |Network | Private 1Gb/s or 10Gb/s internal network for peer node connections |
-|OS | Linux Debian 10 recommended
+|OS | Linux Ubuntu/Debian recommended
 | Additional |Redundancy of server power and cooling components strongly recommended   <'Four‑nines' availability target or better   |
 
 ## Cudo Testnet Nodes
@@ -83,7 +78,7 @@ If you run out of memory or storage, the Cudos node sync process will be forcefu
 | Memory | 32GiB ECC system memory |
 | Storage | ≥1TB NVMe SSD|
 |Network |Private 1Gb/s or 10Gb/s internal network for peer node connections|
-| OS|Linux Debian 10 recommended |
+| OS|Linux Ubuntu/Debian recommended |
 
 ### Cudos Testnet ("Somniorum") Sentry node
 
@@ -93,5 +88,5 @@ If you run out of memory or storage, the Cudos node sync process will be forcefu
 | Memory | ≥16GiB ECC system memory |
 | Storage | ≥500GB NVMe SSD |
 | Network | Private 1Gb/s or 10Gb/s internal network for peer node connections    100Mb/s **minimum** 1Gb/s internet connection **recommended**   Publicly accessible IPv4 address (additionally IPv6 recommended)     |
-|OS | Linux Debian 10 recommended |
+|OS | Linux Ubuntu/Debian recommended |
 
