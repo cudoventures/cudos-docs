@@ -17,7 +17,7 @@ If you want to add an existing wallet you must have its seed phrase.
 
 * A machine to run your validator node
 * An existing full node that is **fully synced**. [see ***Run a Full Node***](run-full-node-redhat-debian)
-* Familiarity with [**keyring backend options**](/node/security/key-management) 
+* Familiarity with [**keyring backend options**](/docs/node/security/key-management) 
 
 ## 01 Add a new wallet key to the keyring
 
