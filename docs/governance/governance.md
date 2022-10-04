@@ -21,7 +21,7 @@ The [**Cudos Dashboard**](https://dashboard.cudos.org/) is the easiest way to cr
 
 ## Things to know
 
-* **Proposal submission**: Users can submit a proposal with a deposit of 50000 CUDOS. Once the minimum deposit is reached, the proposal enters a 14 day voting period.
+* **Proposal submission**: Users can submit a proposal with a deposit of 50000 CUDOS. Once the minimum deposit is reached, the proposal enters a 5 day voting period.
 
 * **Vote**: Token holders can vote on proposals that have reached the minimum deposit.
 
