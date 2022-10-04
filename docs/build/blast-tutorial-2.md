@@ -13,7 +13,7 @@ Cudos Blast uses Rust Optimiser under the hood to compile contracts ready for de
 
 ### Check you are at Project root
 
-First, let's make sure we are at the project root with only one `Cargo.toml` file.
+First, let's make sure we are at the project root.
 
 ```shell
 counter username$ ls

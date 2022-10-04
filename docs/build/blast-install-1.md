@@ -29,28 +29,40 @@ Checkout [Setup Rust](/docs/build/setup-rust)
 
 ## 02 Install Cudos Blast
 
-Install Cudos Blast into a 'counter' project as follows:
+### Globally
+
+Use `npm` to install Cudos Blast CLI tool globally. This means you can create a new project anywhere. 
+
+:::info
+
+This project needs to run as root using `sudo` 
+:::
+
+```bash
+sudo npm install cudos-blast -g
+
+# confirm installation
+blast --version
+```
+:::info TIP
+
+Use `npx cudos-blast` to run commands. This ensures you are always using the latest version. 
+:::
+
+### Locally - Add to a single project
+
+If you only want to install Cudos Blast into a single project then do the following:
 
 ```bash
 # Create a folder for your project
-
-mkdir counter
-cd counter
+mkdir myproject
+cd myproject
 
 # Initialise a project and follow the prompts
-
-npm init 
-
-# Install Cudos Blast 
-
-npm install cudos-blast
+blast init
 
 # Confirm installation
-
 blast --version
-
-# Example response
-2.0.0
 ```
 
 :::success Congratulations 🎉
@@ -59,5 +71,4 @@ If a blast version is returned, you have **successfully** installed Cudos Blast.
 
 :::
 
-Now try out the **Counter project tutorial**. 
 

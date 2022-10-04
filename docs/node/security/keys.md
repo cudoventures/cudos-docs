@@ -1,35 +1,69 @@
 ---
-title: Useful key CLI commands
+title: Useful CLI commands
 id: keys
 ---
 
-This guide explains how to manage your local keys and wallet addresses for the Cudos network using the `cudos-noded` CLI.
+This guide explains CLI commands to manage your **local keys** and **wallet addresses** with the **keyring** manager.  
 
-You can use `cudos-noded` keys for help about the keys command and cudos-noded keys [command] --help for more information about a particular subcommand.
+## Key CLI
 
-We will use backend `os`
+In general, the format of commands is:
+
+```shell
+$ cudos-noded keys [command]
+```
+
+The following commands are available:
+
+|Command | Description |
+|-------|--------|
+|  add   |      Add an encrypted private key (either newly generated or recovered), encrypt it, and save to `YOUR-FILE-NAME` |
+|  delete  |    Delete the given keys |
+|  export   |   Export private keys |
+| import   |   Import private keys into the local keybase |
+|  list    |    List all keys |
+|  migrate   |  Migrate keys from the legacy (db-based) Keybase |
+|  mnemonic  |  Compute the bip39 mnemonic for some input entropy |
+|  parse   |    Parse address from hex to bech32 and vice versa |
+|  show    |    Retrieve key information by name or address |
+
+
+## Keys Help 
+
+Use the following command to get detailed information on all available `key` commands. 
+
+```shell
+$ cudos-noded keys --help
+```
 
 ## List all keys
 
 Use this command to list all local keys managed by `cudos-noded` key manager. 
 
 ```shell 
-cudos-noded keys list
+$ cudos-noded keys list
+
 ```
 
-## Create a new key
+## Add a new key
 
-Use this command to create a new key in the keyring.
+Use this command to add a new key in the keyring.
+
+:::caution Key naming
+***REMEMBER*** to use a name that helps you recall the key and its purpose later. 
+:::
+
+In this example, we are adding the key 'memorable-key-name' to the `keyring` with a backend configured to our `os`. 
 
 ```shell
-cudos-noded keys add <key_name>
+$ cudos-noded keys add memorable-key-name --keyring-backend os
 ```
 
 ### Example
 
 ```shell
-$ cudos-noded keys add myKey
-- name: myKey
+$ cudos-noded keys add salsa
+- name: salsa
   type: local
   address: cudos1qr5rt72yf7s340123456dne7dd5n3
   pubkey: cudospub1addwnpep1234abcdefg540ftuz8x6tsqdct05k
@@ -43,20 +77,11 @@ It is the only way to recover your account if you ever forget your password.
 random words there are twelve or twenty-four
 ```
 
-The key comes with a "mnemonic phrase", which is serialized into a human-readable 24-word mnemonic. User can recover their associated addresses with the mnemonic phrase.
-
 :::warning
 
 It is important that you keep the mnemonic for address secure, as there is no way to recover it. You would not be able to recover and access the funds in the wallet if you forget the mnemonic phrase.
 :::
 
-# Restore a key from seed phrase
-
-```shell
-$ cudos-noded keys add <key_name> --recover
-```
-
-You are prompted to enter your seed phrase (BIP 39 Mnemonic). 
 
 
  
