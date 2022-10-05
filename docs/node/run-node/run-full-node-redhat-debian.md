@@ -5,7 +5,7 @@ id: run-full-node-redhat-debian
 
 This guide explains how to initialise and start a **Full Node**. 
 
-It follows on from the prerequisites section and assumes that you have built your environment by following the [**Build Environment**](/docs/node/prerequisites/build-redhat-debian). 
+It follows on from the prerequisites section and assumes that you have built your environment by following the [**Build Environment**](/docs/node/prerequisites/build-redhat-debian) instructions. 
 
 A Full node has the addresses of 3 **Seed nodes** pre-configured to allow it to connect to the Cudos network. 
 

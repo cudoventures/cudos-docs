@@ -19,8 +19,6 @@ If you want to be part of the active validator set, you need enough CUDOS staked
 
 Check out the current top Validators on the [**Cudos Mainnet explorer**](https://explorer.cudos.org/).
 
-## How to add Stake
 
-You can stake from the CLI, a Keplr wallet or the Dashboard. 
 
 

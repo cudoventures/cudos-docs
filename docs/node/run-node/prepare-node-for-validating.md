@@ -3,7 +3,7 @@ title: Prepare node
 id: prepare-node-for-validating
 ---
 
-This guide explains how to prepare an existing **Full node** to become a **Validator node**.
+This guide explains how to prepare an existing **Full node** to become a **Validator node**. It assumes that you have already built a **Full node**. 
 
 ### Outcomes: 
 
