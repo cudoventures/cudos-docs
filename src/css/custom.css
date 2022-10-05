@@ -66,3 +66,7 @@ a:hover {
 a:active {
   color: rgb(0, 0, 255);
 }
+
+
+img[alt=token-distribution] { width: 900px; }
+
