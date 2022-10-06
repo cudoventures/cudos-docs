@@ -5,7 +5,7 @@ id: run-seed-node
 
 This guide explains how to initialise and start a **Seed Node**. 
 
-It follows on from the prerequisites section and assumes that you have built your environment by following the [**Build Environment**](/docs/node/prerequisites/build-redhat-debian). 
+It follows on from the prerequisites section and assumes that you have built your environment by following the [**Build Environment**](/docs/node/prerequisites/build-redhat-debian) instructions. 
 
 A Seed Node crawls the Cudos network and generates a list of peers for a new node to connect to. 
 
@@ -19,16 +19,21 @@ A Seed Node crawls the Cudos network and generates a list of peers for a new nod
 Your network was selected at the **Build Environment** stage.
 :::
 
-<!-- 
-| **Hardware** 	| **Specification**           	|
+# 00 Prerequisites
+
+1. Check Hardware requirements.
+2. Build your environment.
+
+
+<!-- | **Hardware** 	| **Specification**           	|
 |------	|-------------------------------	|
-| CPU   | At least 2 cores.                |
+| CPU   | At least 4 cores.                |
 | RAM  	| 16 GB (Windows), 8 GB (Linux) 	|
 | Disk 	| An SSD drive                  	|
-| OS | Redhat/Fedora/CentOs/Debian/Ubuntu   | -->
+| OS | Redhat/Fedora/CentOs/Debian/Ubuntu   |  -->
 
 
-## 01 Configure a seed node
+## 01 Run Seed node initialisation script
 
 The following script can be run to automatically configure a **Seed Node**
 
@@ -44,7 +49,7 @@ su - cudos
 ```
 
 ```shell
-$ cudos-init-node.sh seed-node
+cudos-init-node.sh seed-node
 ```
 
 ### Cudos Daemon Configuration tool
@@ -111,7 +116,7 @@ cudos-noded-ctl set minimum-gas-prices "5000000000000acudos"
 
 :::
 
-## 02 Run a seed node using cosmovisor
+## 02 Run a Seed node using cosmovisor
 
 It is recommended to use cosmovisor to run your node. 
 

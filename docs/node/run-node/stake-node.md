@@ -1,6 +1,6 @@
 ---
 title: Stake node
-id: stake
+id: stake-node
 ---
 
 This guide explains how to stake funds to your node. 
@@ -10,11 +10,15 @@ At the end of this guide your staked node is converted to a Validator Node and i
 
 * You should have already prepared your node for validating. [see ***Prepare node***](docs/node/run-node/prepare-node-for-validating)
 
-* Ensure you have a small amount of CUDOS tokens on the wallet address in your keyring for the transaction. 
+* You should have 2,000,000 CUDOS tokens for your stake
+    + an extra 100 CUDOS for transaction fees
+    + additional stake in case of getting jailed and slashed
+ Sent to the wallet address on your keyring.
 
-* Send 2,000,000 CUDOS tokens to the wallet address on your keyring.
 
 :::info Network & Chain ID 
+
+**Network** and **Chain ID** are used interchangeably.
 
 ### Testnet: cudos-testnet-public-3
 ### Mainnet: cudos-1
@@ -25,25 +29,42 @@ At the end of this guide your staked node is converted to a Validator Node and i
 
 This step performs a transaction that adds the required stake in a specified wallet to a chosen node and converts it to a Validator node. 
 
-```shell
-cudos-noded tx staking create-validator --amount=$STAKE
-```
+:::note what are acudos?
+**acudos** are the smallest unit of **CUDOS** 
+:::
 
 Use the example below to configure and run the `create-validator` command using your own parameters.
+
 
 ### Parameters
 
 **`--from `**
 
-The new_wallet_keyname or existing_wallet_keyname added to your keyring.
+This is the `new_wallet_keyname` or `existing_wallet_keyname` added to your keyring.
 
-**`--pubkey`** 
+**`--pubkey`**  
 
-The validator key added to your keyring.
+## PLEASE DOUBLE CHECK THIS SECTION.
+
+ Validator operators can have different accounts for different purposes e.g. validating and holding funds. The `PubKey` submitted must be associated with the private key the validator will use to sign prevotes and precommits. It should begin as `cudovaloper`.
+
+To find this, run the following command:
+
+```shell
+cudos-noded tendermint show-validator
+```
+
+or 
+
+Use this command to list all local keys managed by `cudos-noded` key manager. 
+
+```shell 
+cudos-noded keys list
+```
 
 **`--moniker`** 
 
-The MONIKER assigned to your node.
+This is the name you assigned to your node to identify it easily e.g. Salsa. 
 
 **`--chain-id`** 
 
@@ -51,7 +72,8 @@ See above.
 
 **`--commission-rate`** 
 
-The commission rate on block rewards and fees charged to **delegators**.
+This is the commission fee charged to **delegators**. 
+This can change once every day up to its `commission-max-change-rate` and without exceeding the `commission-max-rate`.
 
 **`--commission-max-rate`**
 
@@ -62,11 +84,16 @@ The maximum commission rate that your validator can charge.
 The maximum daily increase of the validator commission. % point change over the `commission-rate`.
 
 **`--min-self-delegation`**
-Minimum amount of CUDOS the validator requires to have bonded at all time. If your validator node's self-delegated stake falls below this limit, it may be jailed and kicked out of the active validator set.
+
+This is the minimum amount of CUDOS the validator requires to have bonded at all time. i.e. 2M CUDOS. If your validator node's self-delegated stake falls below this limit, it may be jailed and kicked out of the active validator set.
+
+**`--gas-auto`**
+
+If you set `--gas=auto`, the gas fee is automatically estimated before executing the transaction.
 
 **`--gas-prices`**
 
-Amount to charge for transactions. 
+This is the amount to charge for transactions. 
 
 
 ```json

@@ -46,7 +46,7 @@ su - cudos
 ```
 
 ```shell
-$ cudos-init-node.sh sentry-node
+cudos-init-node.sh sentry-node
 ```
 
 ### Cudos Daemon Configuration tool

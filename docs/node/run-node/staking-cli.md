@@ -3,7 +3,7 @@ title: Useful staking CLI Commands
 id: staking-cli
 ---
 
-## Query
+## query
 
 The query commands allows users to query staking state.
 
@@ -11,7 +11,7 @@ The query commands allows users to query staking state.
 cudos-noded query staking --help
 ```
 
-## Delegation
+## delegation
 
 The delegation command allows users to query delegations for an individual delegator on an individual validator.
 
@@ -22,7 +22,7 @@ cudos-noded query staking delegation [delegator-addr] [validator-addr] [flags]
 ```
 
 
-## Delegations
+## delegations
 The delegations command allows users to query delegations for an individual delegator on all validators.
 
 Usage:

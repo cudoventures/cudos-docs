@@ -22,71 +22,69 @@ If you run out of memory or storage, the Cudos node sync process will be forcefu
 
 ## Cudos Mainnet Nodes
 
-### Cudos mainnet ("Ingenii") Validator node
+### Cudos Mainnet Validator node
 
-| Cudos Mainnet ("Ingenii")  |Validator node |
+| Cudos Mainnet  | Validator node |
 |---|---|
-| CPU | Intel Xeon ('Skylake-SP' or newer) processor ‑or‑ AMD Epyc ('Naples' or newer) processor – Requires SGX ‑or‑ SEV feature – Minimum model ≥8 cores at ≥2.0 GHz required (≥16 cores preferred)|
+| CPU | * Intel Xeon or AMD Epyc ***Minimum***  ≥8 cores at ≥2.0 GHz required ***Recommended*** ≥16 cores, <br /> * Requires SGX ‑or‑ SEV feature |
 | Memory | 32GiB ECC system memory (≥64GB preferred)|
 | Storage | ≥2TB NVMe SSD - RAID1 or better resilience required (RAID 1+0 performance preferred) – High DWPD/TBW endurance drives strongly recommended|
 |Network |Private 1Gb/s or 10Gb/s internal network for peer node connections|
-| OS|Linux Debian 10 recommended |
+| OS| Ubuntu 20.04 <br /> Debian 10 <br /> RHEL/CentOS/Enterprise Linux 8 <br /> Fedora 34 & 35  |
 | Additional | Redundancy of server power and cooling components strongly recommended   'Four‑nines' availability target or better   
 
-### Cudos mainnet ("Ingenii") Sentry node
+### Cudos Mainnet Sentry node
 
-| Cudos Mainnet ("Ingenii")  | Sentry node |
+| Cudos Mainnet | Sentry node |
 |---|---|
 | CPU | Intel Xeon ('Haswell' or newer) processor ‑or‑ AMD Opteron/Epyc ('Toronto' or newer) processor – Minimum model ≥4 cores at ≥2.0 GHz required (≥8 cores preferred)|
 | Memory | ≥16GiB ECC system memory |
 | Storage | ≥1TB NVMe SSD - RAID1 or better resilience required |
 | Network | Private 1Gb/s or 10Gb/s internal network for peer node connections    1Gb/s internet connection (≥2.5Gb/s preferred)   Publicly accessible IPv4 address (additionally IPv6 recommended)     |
-|OS | Linux Ubuntu/Debian recommended |
+|OS | Ubuntu 20.04, Debian 10,  RHEL/CentOS/Enterprise Linux 8, Fedora 34 & 35  |
 |Additional | Anti-DDoS protection strongly recommended  'Four‑nines' availability target or better  Redundancy of server power and cooling components strongly recommended      |
 
-### Cudos mainnet ("Ingenii") Seed node
+### Cudos Mainnet Seed node
 
-| Cudos mainnet ("Ingenii") | Seed node |
+| Cudos Mainnet | Seed node |
 |---|---|
 |CPU| Intel Xeon ('Haswell' or newer) processor ‑or‑ AMD Opteron/Epyc ('Toronto' or newer) processor – Minimum model ≥4 cores at ≥2.0 GHz required (≥8 cores preferred)|
 |Memory |≥16GiB ECC system memory |
 |Storage |≥1TB NVMe SSD - RAID1 or better resilience required |
 |Network | Private 1Gb/s or 10Gb/s internal network for peer node connections |
-|OS | Linux Ubuntu/Debian recommended
+|OS | Ubuntu 20.04, Debian 10,  RHEL/CentOS/Enterprise Linux 8, Fedora 34 & 35 
 | Additional |Redundancy of server power and cooling components strongly recommended 'Four‑nines' availability target or better  |
-
-## Ethereum Nodes
-
-### Cudos mainnet ("Ingenii") Ethereum node
-
-| Cudos mainnet ("Ingenii") |Ethereum node |
-|---|---|
-|CPU| Intel Xeon ('Haswell' or newer) processor ‑or‑ AMD Opteron/Epyc ('Toronto' or newer) processor – Minimum model ≥4 cores at ≥2.0 GHz required (≥8 cores preferred)|
-|Memory |≥16GiB ECC system memory |
-|Storage |≥2TB NVMe SSD - RAID1 or better resilience required |
-|Network | Private 1Gb/s or 10Gb/s internal network for peer node connections |
-|OS | Linux Ubuntu/Debian recommended
-| Additional |Redundancy of server power and cooling components strongly recommended   <'Four‑nines' availability target or better   |
 
 ## Cudo Testnet Nodes
 
-### Cudos Testnet ("Somniorum") Validator node
+### Cudos Testnet Validator node
 
-| Cudos Testnet ("Somniorum")  |Validator node |
+| Cudos Testnet  |Validator node |
 |---|---|
 | CPU | Intel Xeon ('Skylake-SP' or newer) processor ‑or‑ AMD Epyc ('Naples' or newer) processor – Requires SGX ‑or‑ SEV feature – Minimum model ≥8 cores at ≥2.0 GHz required (≥16 cores preferred)|
 | Memory | 32GiB ECC system memory |
 | Storage | ≥1TB NVMe SSD|
 |Network |Private 1Gb/s or 10Gb/s internal network for peer node connections|
-| OS|Linux Ubuntu/Debian recommended |
+| OS|Ubuntu 20.04, Debian 10,  RHEL/CentOS/Enterprise Linux 8, Fedora 34 & 35 |
 
-### Cudos Testnet ("Somniorum") Sentry node
+### Cudos Testnet Sentry node
 
-| Cudos Testnet ("Somniorum")  | Sentry node |
+| Cudos Testnet   | Sentry node |
 |---|---|
 | CPU | Intel Xeon ('Haswell' or newer) processor ‑or‑ AMD Opteron/Epyc ('Toronto' or newer) processor – Minimum model ≥4 cores at ≥2.0 GHz required (≥8 cores preferred)|
 | Memory | ≥16GiB ECC system memory |
 | Storage | ≥500GB NVMe SSD |
 | Network | Private 1Gb/s or 10Gb/s internal network for peer node connections    100Mb/s **minimum** 1Gb/s internet connection **recommended**   Publicly accessible IPv4 address (additionally IPv6 recommended)     |
+|OS | Ubuntu 20.04, Debian 10,  RHEL/CentOS/Enterprise Linux 8, Fedora 34 & 35  |
+
+
+### Cudos Testnet Seed node
+
+|Cudos Testnet | Seed node |
+|---|---|
+|CPU | Intel Xeon ('Haswell' or newer) processor ‑or‑ AMD Opteron/Epyc ('Toronto' or newer) processor – Minimum model ≥4 cores at ≥2.0 GHz required |
+|Memory | ≥16GiB ECC system memory |
+| Storage |* ≥500GB NVMe SSD |
+| Network | Private 1Gb/s internal network for peer node connections |
 |OS | Linux Ubuntu/Debian recommended |
 

@@ -5,22 +5,18 @@ id: start-validator-node
 
 This guide explains how to start a Validator node.
 
-## 01 Run a validator node using cosmovisor
+## 01 Start the node
 
-It is recommended to use cosmovisor to run your node. 
-
-`cosmovisor` monitors the governance module for incoming chain upgrade proposals. If it sees a proposal that gets approved, it can automatically download the new binary, stop the current binary, switch from the old binary to the new one and restart the node with the new binary.
-
-It automates chain upgrades to virtually zero downtime. 
+As **root** user
 
 ```shell
-root@cudos-node:~# systemctl enable --now cosmovisor@cudos
+systemctl enable --now cosmovisor@cudos
 ```
 
-Enable and start the service with Cosmovisor.
+### Example start node
 
 ```shell
-cudos@testnet:~# systemctl enable --now cosmovisor@cudos
+root@testnet:~# systemctl enable --now cosmovisor@cudos
 Created symlink /etc/systemd/system/multi-user.target.wants/cosmovisor@cudos.service → /lib/systemd/system/cosmovisor@.service.
 ```
 
