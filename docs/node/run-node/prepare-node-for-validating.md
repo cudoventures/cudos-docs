@@ -16,7 +16,7 @@ If you want to add an existing wallet you must have its **mnemonic**.
 ## 00 Prerequisites
 
 * A machine to run your validator node
-* An existing full node that is **fully synced**. [see ***Run a Full Node***](run-full-node-redhat-debian)
+* An existing full node that is **fully synced**. [see ***Run a Full Node***](run-full-node)
 * Familiarity with [**keyring backend options**](/docs/node/security/key-management) 
 
 ## 01 Add a new wallet key to the keyring
@@ -44,7 +44,7 @@ $ cudos-noded keys list
 
 Before you can initialise your Validator node you need to obtain the public key created when you first initialised the node i.e. the full node. 
 
-In the example in [Run a full node](/docs/node/run-node/run-full-node-redhat-debian), the Validator pubkey was `"8MECl86K55FL+s63L9wYGAyLXSPHrlHpcnE17rBm4vs="`
+In the example in [Run a full node](/docs/node/run-node/run-full-node), the Validator pubkey was `"8MECl86K55FL+s63L9wYGAyLXSPHrlHpcnE17rBm4vs="`
 
 To obtain your validator pubkey run the following command:
 

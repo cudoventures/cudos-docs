@@ -5,7 +5,7 @@ id: run-seed-node
 
 This guide explains how to initialise and start a **Seed Node**. 
 
-It follows on from the prerequisites section and assumes that you have built your environment by following the [**Build Environment**](/docs/node/prerequisites/build-redhat-debian) instructions. 
+It follows on from the prerequisites section and assumes that you have built your environment by following the **Build Environment** instructions for your selected network. 
 
 A Seed Node crawls the Cudos network and generates a list of peers for a new node to connect to. 
 

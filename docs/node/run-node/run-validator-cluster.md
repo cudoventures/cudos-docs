@@ -25,7 +25,7 @@ Your network was selected at the **Build Binary** stage.
 ## 00 Prerequisites
 
 1. This step assumes you have already built your environment and selected a network.
-[**Build Environment**](/docs/node/prerequisites/build-redhat-debian). 
+**Build Environment** instructions for your selected network. 
 
 2. You have already started and synchronised the required **Seed nodes** and **Sentry nodes** to be added to your cluster. 
 

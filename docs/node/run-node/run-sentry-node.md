@@ -5,7 +5,7 @@ id: run-sentry-node
 
 This guide explains how to initialise and start a **Sentry Node**. 
 
-It follows on from the prerequisites section and assumes that you have built your environment by following the [**Build Environment**](/docs/node/prerequisites/build-redhat-debian). 
+It follows on from the prerequisites section and assumes that you have built your environment by following the **Build Environment** instructions for your selected network. 
 
 A Sentry Node is used to isolate Validator nodes from public access. 
 
