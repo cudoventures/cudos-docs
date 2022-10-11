@@ -69,9 +69,18 @@ Your node starts to synchronise with the blockchain at approximately 13 blocks p
 
 ## 03 Check node sync status
 
+As **root user**
+
 ```shell
 cudos-noded status 2>&1 | jq -M 
 ```
+:::tip how do i know when my node is synced?
+Your node is fully synced when you see: 
+`"catching_up: false"` 
+and the latest block hash matches the network [Testnet Explorer](explorer.testnet.cudos.org) or [Mainnet Explorer](explorer.mainnet.cudos.org)
+:::
+
+![synced node](@site/static/img/node-sync.png)
 
 ### Example check node sync status
 
@@ -119,7 +128,7 @@ root@cudos-node:~# cudos-noded status 2>&1 | jq -M
 
 :::warning
 
-Be Aware: It will take time for the node to sync
+Be Aware: It will take time for the node to sync.
 
 :::
 

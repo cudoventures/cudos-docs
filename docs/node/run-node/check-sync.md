@@ -22,10 +22,18 @@ To get a live estimation,
 ## Checking sync status
 
 You can check the status of your node sync by running the following command:
+As **root user**
 
 ```shell
 cudos-noded status 2>&1 | jq -M 
 ```
+:::tip how do i know when my node is synced?
+Your node is fully synced when you see: 
+`"catching_up: false"` 
+and the latest `"block height"` matches the network [Testnet Explorer](explorer.testnet.cudos.org) or [Mainnet Explorer](explorer.mainnet.cudos.org)
+:::
+
+![synced-node](@site/static/img/node-sync.png)
 
 ## Example Sync Status Check
 

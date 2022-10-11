@@ -8,6 +8,7 @@ module.exports = {
         'node/overview/understanding-nodes',
         'node/overview/validating',
         'node/overview/delegators',
+        'node/overview/validator-mechanics',
       ],
     },
     {

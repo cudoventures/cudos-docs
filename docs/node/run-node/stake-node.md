@@ -10,11 +10,10 @@ At the end of this guide your staked node is converted to a Validator Node and i
 
 * You should have already prepared your node for validating. [see ***Prepare node***](docs/node/run-node/prepare-node-for-validating)
 
-* You should have 2,000,000 CUDOS tokens for your stake
-    + an extra 100 CUDOS for transaction fees
-    + additional stake in case of getting jailed and slashed
- Sent to the wallet address on your keyring.
-
+* You should have:
+    + 2M CUDOS tokens for your stake
+    + Additional 100 CUDOS for transaction fees
+    + Additional CUDOS reserve funds in case of being jailed and/or slashed
 
 :::info Network & Chain ID 
 
@@ -22,15 +21,19 @@ At the end of this guide your staked node is converted to a Validator Node and i
 
 ### Testnet: cudos-testnet-public-3
 ### Mainnet: cudos-1
-
 :::
+
 
 ## 01 Run `create-validator` transaction
 
-This step performs a transaction that adds the required stake in a specified wallet to a chosen node and converts it to a Validator node. 
+This step performs a transaction from a specified wallet to a chosen node and converts it to a Validator node. 
 
-:::note what are acudos?
-**acudos** are the smallest unit of **CUDOS** 
+:::info what are acudos?
+**acudos** are the smallest unit of **CUDOS**
+
+1 CUDOS = 1 x 10^18 acudos
+
+1 CUDOS = 1,000,000,000,000,000,000 acudos 
 :::
 
 Use the example below to configure and run the `create-validator` command using your own parameters.
@@ -96,10 +99,10 @@ If you set `--gas=auto`, the gas fee is automatically estimated before executing
 This is the amount to charge for transactions. 
 
 
-```json
+```shell
 // Example staking transaction setting environmental variables
 
-```shell
+
 export STAKE="2000000000000000000000000acudos"
 export CHAIN_ID="cudos-testnet-public-3" //Enter the CHAIN_ID for required network
 export MONIKER="Validator1"  // Enter your own Moniker
