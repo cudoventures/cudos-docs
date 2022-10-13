@@ -3,17 +3,7 @@ title: Cudos blast
 id: install-blast
 ---
 
-**Cudos Blast** is a CLI toolkit designed to make developing on the Cudos chain as simple as possible. You easily build a project ready to work with the Cudos chain. 
-
-You can use it to:
-
-1. **Scaffold**, **compile** and test **Rust** smart contracts. (You can test using JavaScript and Rust).
-
-2. **Deploy** smart contracts on a local, test or public network.
-
-3. **Interact** with smart contracts using `blast.config.js` on a specified network.
-
-4. **Spin up a local** [**`Cudos node`**](https://github.com/CudoVentures/cudos-node) to interact with. 
+**Cudos Blast** is an educational demo project to be used to understand more about smart contracts, compilation, deployment and interaction. 
 
 # 00 Prerequisites
 
@@ -39,15 +29,19 @@ Checkout [Setup Rust](/docs/build/setup-rust)
 
 ## 02 Install Cudos Blast
 
-### Globally - Create a new project anywhere
+### Globally
 
 Use `npm` to install Cudos Blast CLI tool globally. This means you can create a new project anywhere. 
 
+:::info
+
+This project needs to run as root using `sudo` 
+:::
+
 ```bash
-npm install cudos-blast -g
+sudo npm install cudos-blast -g
 
 # confirm installation
-
 blast --version
 ```
 :::info TIP
@@ -61,24 +55,14 @@ If you only want to install Cudos Blast into a single project then do the follow
 
 ```bash
 # Create a folder for your project
-
 mkdir myproject
 cd myproject
 
 # Initialise a project and follow the prompts
-
-npm init 
-
-# Install Cudos Blast 
-
-npm install cudos-blast
+blast init
 
 # Confirm installation
-
 blast --version
-
-# Example response
-2.0.0
 ```
 
 :::success Congratulations 🎉
@@ -87,33 +71,4 @@ If a blast version is returned, you have **successfully** installed Cudos Blast.
 
 :::
 
-## 03 Use Blast help. 
-
-You can run the following commands to get help on the command line at any time.
-
-```shell
-blast --help
-
-```
-
-```shell
-Usage: blast <command> [arguments] [command options]
-
-Commands:
-  blast init                  Create a sample project
-  blast compile               Compile the smart contracts in the workspace in
-                              alphabetical order
-  blast test                  Run the JavaScript tests
-  blast rusttest              Run smart contracts' rust tests
-  blast node                  Manage a local CUDOS node
-  blast run <scriptFilePath>  Run a single script
-  blast keys                  Manage node's accounts (keys)
-
-Options:
-  --version  Show version number                                       [boolean]
-  --help     Show help 
-```
-
-
-Now try out the Counter project tutorial. 
 

@@ -1,6 +1,6 @@
 ---
 title: Build environment (Docker)
-id: build-envt
+id: build-docker
 ---
 
 This guide explains how to set up your environment in preparation for running Cudos nodes using [Docker](https://docs.docker.com/engine/install/). 
