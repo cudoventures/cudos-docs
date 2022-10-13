@@ -67,16 +67,11 @@ sudo -i
 * Install network and packages
 
     ```shell
-    apt install cudos-network-mainnet cosmovisor cudos-gex cudos-noded cudos-noded-v1.0.0 cudos-p2p-scan
+    apt install cudos-network-mainnet
     ```
 
-3. Confirm connection to **Mainnet**
+3. Confirm installation
 
 ```shell
-cudos-noded status 2>&1 | jq -M 
+cudos-noded version
 ```
-:::tip Success!
-
-`"network": "cudos-1"` means you are successfully connected to Mainnet. 
-
-:::

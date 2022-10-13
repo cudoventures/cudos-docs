@@ -23,23 +23,24 @@ When you first start a node you must provide the address of one or more seed nod
 
 ## Validator cluster 
 
-The **Validator Cluster** is your implementation of **sentry node architecture**.
+The **Validator Cluster** is your implementation of **Sentry node architecture**.
 
 It consists of:
-1. *Validator node* - one
+1. *Validator node* - one 
 2. *Sentry node* - one or many 
 3. *Seed node* - one or many
 
-    ### Validator node
-    A **Validator node** within a cluster ***only*** connects to a **Seed node** and **Sentry node(s)**. It has no other connections. It can be run as a solo node but this is not advised except for test purposes. 
+### Validator node
+A **Validator node** within a cluster ***only*** connects to a **Sentry node(s)**. It has no other connections. It can be run as a solo node but this is not advised except for test purposes. 
 
-    ### Seed node
+### Seed node
 
-    A **Seed node** generates a list of peers to which the **Validator node** can connect to. It is the first point of contact for a new **Validator node** joining the network. The **Seed node** proactively learns about nodes on the external Cudos network by a process of ‘crawling’ whereby it connects to other nodes, learns their address book, then disconnects and repeats the process. The seed node is a *mandatory requirement* for a **Validator Cluster**.  The **Seed node** feeds the list of addresses to the **Sentry node(s)**.
+A **Seed node** generates a list of peers to which the **Sentry node** can connect to. The **Seed node** proactively learns about nodes on the external Cudos network by a process of ‘crawling’ whereby it connects to other nodes, learns their address book, then disconnects and repeats the process. The **Seed node** feeds the list of addresses to the **Sentry node(s)**.
+    The seed node is a *mandatory requirement* for a **Validator Cluster**. 
 
-    ### Sentry node
+### Sentry node
 
-    The **Sentry node** is an application layer proxy for the **Validator nodes**. Any communication the **Validator node** has with the outside Cudos network consists of application messages to/from the **Sentry node**. These are then relayed to/from nodes on the Cudos network. 
+The **Sentry node** is an application layer proxy for the **Validator nodes**. Any communication the **Validator node** has with the outside Cudos network consists of application messages to/from the **Sentry node**. These are then relayed to/from nodes on the Cudos network. 
 
 :::warning
 
@@ -58,5 +59,7 @@ Nodes use the following tcp ports:
 - 26656: P2P port used by transferring internal data between nodes.
 - 26657: Tendermint RPC server. Reference: https://docs.tendermint.com/master/rpc/
 - 26660: Port for Prometheus monitoring.
+
 **Full/Seed nodes** use the following ports: 26656, 26657, 26660.
+
 **Sentry nodes** use the following ports: 1317, 9090, 26656, 26657, 26660.

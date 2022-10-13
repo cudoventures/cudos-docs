@@ -3,11 +3,11 @@ title: Run seed node
 id: run-seed-node
 ---
 
-This guide explains how to initialise and start a **Seed Node**. 
+This guide explains how to initialise and start a **Seed node**. 
 
 It follows on from the prerequisites section and assumes that you have built your environment by following the **Build Environment** instructions for your selected network. 
 
-A Seed Node crawls the Cudos network and generates a list of peers for a new node to connect to. 
+A **Seed node** crawls the Cudos network and generates a list of peers for a new **Sentry node** to connect to. 
 
 ## Networks
 
@@ -52,6 +52,43 @@ su - cudos
 cudos-init-node.sh seed-node
 ```
 
+## 02 Start the node
+
+:::info cosmovisor
+
+Cosmovisor is used to ensure zero downtime when there are updates and hard forks.
+
+:::
+
+
+Switch back to **root user** (CTRL + D)
+
+```shell
+systemctl enable --now cosmovisor@cudos
+```
+
+### Example start node
+
+```shell
+root@cudos-node:~# systemctl enable --now cosmovisor@cudos
+Created symlink /etc/systemd/system/multi-user.target.wants/cosmovisor@cudos.service → /lib/systemd/system/cosmovisor@.service.
+```
+
+## 03 Check node sync status
+
+As **root user**
+
+```shell
+cudos-noded status 2>&1 | jq -M 
+```
+:::tip how do i know when my node is synced?
+Your node is fully synced when you see: 
+`"catching_up: false"` 
+and the latest block hash matches the network [Testnet Explorer](https://explorer.testnet.cudos.org) or [Mainnet Explorer](https://explorer.mainnet.cudos.org)
+:::
+
+![synced node](@site/static/img/node-sync.png)
+
 ### Cudos Daemon Configuration tool
 
 If you need to alter individual parameters, run `cudos-noded-ctl`. 
@@ -61,7 +98,7 @@ If you need to alter individual parameters, run `cudos-noded-ctl`.
 `cudos-noded-ctl` must be run as user cudos.
 
 ```shell
-root@debian:~# su - cudos
+cudos@node:~# su - cudos
 ```
 
 ```shell
@@ -70,7 +107,7 @@ cudos-noded-ctl [-h] <command> [command_options]
 
 Below are all available CTL commands
 
-BE AWARE: All modifications to `config.toml` must specify contents on a single line, comma separated list. 
+**BE AWARE: All modifications to `config.toml` must specify contents on a single line, comma separated list. **
 
 ```shell
 # Define seeds to connect to: 
@@ -116,26 +153,7 @@ cudos-noded-ctl set minimum-gas-prices "5000000000000acudos"
 
 :::
 
-## 02 Run a Seed node using cosmovisor
-
-It is recommended to use cosmovisor to run your node. 
-
-`cosmovisor` monitors the governance module for incoming chain upgrade proposals. If it sees a proposal that gets approved, it can automatically download the new binary, stop the current binary, switch from the old binary to the new one and restart the node with the new binary.
-
-It automates chain upgrades to virtually zero downtime. 
-
-```shell
-root@cudos-node:~# systemctl enable --now cosmovisor@cudos
-```
-
-Enable and start the service with Cosmovisor.
-
-```shell
-cudos@testnet:~# systemctl enable --now cosmovisor@cudos
-Created symlink /etc/systemd/system/multi-user.target.wants/cosmovisor@cudos.service → /lib/systemd/system/cosmovisor@.service.
-```
-
-## 03 Stop the node running
+## 04 Stop the node running
 
 ```shell
 root@cudos-node:~# systemctl disable --now cosmovisor@cudos

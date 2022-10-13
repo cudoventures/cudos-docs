@@ -5,11 +5,11 @@ id: check-sync
 
 :::tip ☕️ Node Sync Rate
 
-A node syncs at approximately 13 blocks per second and takes approximately 40 hours to fully sync with the network. 
-(Based on GCP e2-standard-4 4vCPU, 16 GB memory, 610 GB SSD, Ubuntu 20.04 LTS)
+Based on this GCP VM (e2-standard-4 4vCPU, 16 GB memory, 610 GB SSD, Ubuntu 20.04 LTS), a 
+test node will sync at approximately 13 blocks per second. If there are a million blocks, it will take approximately 21 hours per million blocks to catch up.
 
-To get a live estimation, 
-- Check the increase in block height over a 30s period on your node amd divide by 30 [blocks/sec].
+To get a live estimation: 
+- Check the increase in block height over a 30s period on your node and divide by 30 [blocks/sec].
 
 - Check the difference in height on the explorer compared to the node, to find the number of blocks needed to catch up [qty of blocks]
 
@@ -30,7 +30,7 @@ cudos-noded status 2>&1 | jq -M
 :::tip how do i know when my node is synced?
 Your node is fully synced when you see: 
 `"catching_up: false"` 
-and the latest `"block height"` matches the network [Testnet Explorer](explorer.testnet.cudos.org) or [Mainnet Explorer](explorer.mainnet.cudos.org)
+and the latest `"block height"` matches the network [Testnet Explorer](https://explorer.testnet.cudos.org) or [Mainnet Explorer](https://explorer.mainnet.cudos.org)
 :::
 
 ![synced-node](@site/static/img/node-sync.png)

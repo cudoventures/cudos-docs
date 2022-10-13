@@ -52,6 +52,13 @@ cudos-init-node.sh
 
 ## 02 Start the node
 
+:::info cosmovisor
+
+Cosmovisor is used to ensure zero downtime when there are updates and hard forks.
+
+:::
+
+
 Switch back to **root user** (CTRL + D)
 
 ```shell
@@ -65,8 +72,6 @@ root@cudos-node:~# systemctl enable --now cosmovisor@cudos
 Created symlink /etc/systemd/system/multi-user.target.wants/cosmovisor@cudos.service → /lib/systemd/system/cosmovisor@.service.
 ```
 
-Your node starts to synchronise with the blockchain at approximately 13 blocks per second. 
-
 ## 03 Check node sync status
 
 As **root user**
@@ -77,7 +82,7 @@ cudos-noded status 2>&1 | jq -M
 :::tip how do i know when my node is synced?
 Your node is fully synced when you see: 
 `"catching_up: false"` 
-and the latest block hash matches the network [Testnet Explorer](explorer.testnet.cudos.org) or [Mainnet Explorer](explorer.mainnet.cudos.org)
+and the latest block hash matches the network [Testnet Explorer](https://explorer.testnet.cudos.org) or [Mainnet Explorer](https://explorer.mainnet.cudos.org)
 :::
 
 ![synced node](@site/static/img/node-sync.png)

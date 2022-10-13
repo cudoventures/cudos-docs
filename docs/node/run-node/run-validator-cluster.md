@@ -3,14 +3,20 @@ title: Run a validator cluster
 id: run-validator-cluster
 ---
 
-This guide explains how to initialise and start a **Validator Cluster**. It walks you through configuring a Validator Cluster to work with Seed and Sentry nodes. 
+This guide explains how to configure and start a **Validator Cluster**.
 
-A **Validator Cluster** or **Clustered Node** is a **Validator** node surrounded by **Seed** and **Sentry** nodes.
+A **Validator Cluster** (or **Clustered Node**) is a **Validator** node surrounded by at least one **Seed** and **Sentry** node.
  
 Once this is completed, it can be staked. 
 
-:::note
-If a clustered-node is left to the default neighbour configuration it will not try and connect to any other node and will just stall indefinitely waiting for chain infomation. As soon as another node contacts it, the synchronisation process will being.
+:::info what is cudos-noded-CTL
+`cudos-noded-ctl` adds usability to configuration by creating a single file for a single configuration parameter.
+:::
+
+PUT THIS NEXT BIT LATER
+
+:::info note
+If a **Validator Cluster** is left to the default peer configuration it stalls without connecting. As soon as another node contacts it, the synchronisation process begins.
 :::
 
 ## Networks
@@ -19,19 +25,112 @@ If a clustered-node is left to the default neighbour configuration it will not t
 `Mainnet`
 
 :::tip
-Your network was selected at the **Build Binary** stage.
+Your network was selected at the **Build Environment** stage.
+:::
+
+:::info Cudos-noded commands
+
+```shell
+cudos-noded tendermint
+Tendermint subcommands
+
+Usage:
+  cudos-noded tendermint [command]
+
+Available Commands:
+  reset-state      Remove all the data and WAL
+  show-address     Shows this node's tendermint validator consensus address
+  show-node-id     Show this node's ID
+  show-validator   Show this node's tendermint validator info
+  unsafe-reset-all (unsafe) Remove all the data and WAL, reset this node's validator to genesis state
+  version          Print tendermint libraries' version
+
+Flags:
+  -h, --help   help for tendermint
+
+Global Flags:
+      --home string         directory for config and data (default "/var/lib/cudos/cudos-data")
+      --log_format string   The logging format (json|plain) (default "plain")
+      --log_level string    The logging level (trace|debug|info|warn|error|fatal|panic) (default "info")
+      --trace               print out full stack trace on errors
+```
 :::
 
 ## 00 Prerequisites
 
 1. This step assumes you have already built your environment and selected a network.
-**Build Environment** instructions for your selected network. 
+See the **Build Environment** instructions for your selected network. 
 
-2. You have already started and synchronised the required **Seed nodes** and **Sentry nodes** to be added to your cluster. 
+2. You have already built and synchronised the required **Seed node(s)** and **Sentry node(s)** to be added to your cluster. 
 
-## 01 Configure the daemon 
+3. Get a spreadsheet ready with names of your nodes, Internal IPs, External IPs and Tendermint-node IDs
 
-1. Make sure you run as user `Cudos`
+:::warning Sentry node architecture
+
+**A Validator node must only connect to one or more Sentry node(s)**
+
+:::
+
+## Validator node configuration 
+
+The following values can be configured using **cudos-noded-ctl**. 
+
+|Config Parameter | Value |
+|-------|------|
+|`pex` | `false` |
+|`persistent_peers` | list of **Sentry nodes** |
+|`private_peer_ids` | - |
+|`addr_book_strict` | `false` |
+
+
+### 01 Get Sentry node Tendermint ID
+
+1. Open a terminal for your **Sentry node**.
+
+2. As root user, run the following command:
+
+```shell
+cudos-noded tendermint show-node-id
+```
+
+3. Keep a note of the **Sentry node ID** in your spreadsheet.
+
+### Example show-node-id
+
+```shell
+root@testnet-sentry-node:~# cudos-noded tendermint show-node-id
+87d9f4b123456789abc08d6846b6076
+```
+4. Get the **IP address** of the Sentry node.
+
+
+
+
+<!-- 
+## Get Seed node Tendermint ID
+
+1. Open a terminal for your **Seed node**.
+
+2. As root user, run the following command:
+
+```shell
+cudos-noded tendermint show-node-id
+```
+
+3. Keep a note of the seed node ID in your spreadsheet.
+
+### Example show-node-id
+
+```shell
+root@testnet-seed-node-01:~# cudos-noded tendermint show-node-id
+87d9f4b98bd5c10286e7b187a4cc08d6846b6076
+```
+## Get the IP address of the Seed node 
+ -->
+
+### 02 Login to Validator Cluster 
+
+1. Login as **root** user then switch user to **Cudos**
 
 Inside the shell run the following command:
 
@@ -44,6 +143,105 @@ su - cudos
 ```shell
 cudos-init-node.sh clustered-node
 ```
+
+3. Configure connection to existing **Sentry node**
+
+- As user Cudos (su - cudos)
+
+- Run
+
+```shell 
+cudos-noded-ctl set persistent_peers persistent-peers.config
+```
+
+cudos-noded-ctl set seeds "$CUDOS_HOME"/config/seeds.config
+
+- navigate to `persistent-peers.config`.
+
+```shell
+root@testnet-validator-clustered-01:~/cudos-data# su - cudos
+cudos@testnet-validator-clustered-01:~$ ls
+cudos-data
+cudos@testnet-validator-clustered-01:~$ cd cudos=data
+-bash: cd: cudos=data: No such file or directory
+cudos@testnet-validator-clustered-01:~$ cd cudos-data
+cudos@testnet-validator-clustered-01:~/cudos-data$ ls
+config  cosmovisor  data  wasm
+cudos@testnet-validator-clustered-01:~/cudos-data$ cd config
+cudos@testnet-validator-clustered-01:~/cudos-data/config$ ls
+addrbook.json  node_key.json            seeds.config
+app.toml       persistent-peers.config  state-sync-rpc-servers.config
+config.toml    priv_validator_key.json  unconditional-peers.config
+genesis.json   private-peers.config
+```
+
+4. Edit persistent-peers.config
+
+```shell
+nano persistent-peers.config
+```
+
+5. Add new **Sentry node(s)** config at the beginning of the line:
+
+```shell
+ <tendermint ID>@<IP address or hostname>:<Port number>,<tendermint ID>@<IP address or hostname>:<Port number>
+```
+
+### Example Sentry node config
+
+```shell
+4d12abcdefghij123456519d462f0@34.136.0.236:26657
+```
+
+## 03 Check settings 
+
+```shell
+cat config.toml
+
+# Comma separated list of nodes to keep persistent connections to
+persistent_peers = "4d12abcdefghij123456519d462f0@34.136.0.236:26657"
+```
+
+
+
+
+- Run cudos-noded-ctl set seeds "$CUDOS_HOME"/config/seeds.config
+
+```shell
+cudos@testnet-validator-clustered-01:~$ ls
+cudos-data
+cudos@testnet-validator-clustered-01:~$ cd cudos-data
+cudos@testnet-validator-clustered-01:~/cudos-data$ ls
+config  cosmovisor  data  wasm
+cudos@testnet-validator-clustered-01:~/cudos-data$ ls config
+addrbook.json  node_key.json            seeds.config
+app.toml       persistent-peers.config  state-sync-rpc-servers.config
+config.toml    priv_validator_key.json  unconditional-peers.config
+genesis.json   private-peers.config
+```
+
+4. Edit seeds.config
+
+```shell
+nano seeds.config
+```
+
+Add new seed config at the beginning of the line:
+
+```shell
+ <tendermint ID>@<IP address or hostname>:<Port number>[,<tendermint ID>@<IP address or hostname>:<Port number>
+```
+
+### Example seed.config 
+
+```shell
+87d9f4b98bda1b1c1d1e1d6846b6076@34.68.4.230:26656,X86a2f5d72a1b2c3d2e2f123450bd3f@34.67.137.129:26656,a48e90ce5bda1b1c1d1e1d4f034880c2f2041@34.102.114.30:26656,f93e129bda1b1c1d1e1d76ae96af325dd@34.141.129.16:26656
+```
+
+cudos-noded-ctl set persistent_peers "$CUDOS_HOME"/config/persistent-peers.config
+cudos@testnet-validator-clustered-01:~/cudos-data/config$ cat config.toml | grep persistent
+
+(finds the line filtered by persisten)
 ### Cudos Daemon Configuration tool
 
 If you need to alter individual parameters, run `cudos-noded-ctl`. 
@@ -108,7 +306,7 @@ cudos-noded-ctl set minimum-gas-prices "5000000000000acudos"
 
 :::
 
-## 02 Stake the node
+## 02 
 
 Ensure that each node in the **Validator Cluster** has started and has synchronised. 
 Follow the instructions [**here**](/docs/node/run-node/stake-node.md) to stake the **Validator node** in the Cluster. 

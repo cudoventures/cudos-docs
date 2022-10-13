@@ -23,6 +23,6 @@ There is the possibility of slashing if a Validator has a downtime or double sig
 
 2. Monitor the Validator node including the commission rate.
 
-3. Delegators can switch to another Validator (Rebonding is immediate).
+3. Delegators can redelegate their tokens from Validator A to Validator B immediately and without incurring a penalty. However, if they want to further redelegate, they must wait a further 21 days. 
 
 :::

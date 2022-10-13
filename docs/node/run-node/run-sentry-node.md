@@ -3,13 +3,13 @@ title: Run sentry node
 id: run-sentry-node
 ---
 
-This guide explains how to initialise and start a **Sentry Node**. 
+This guide explains how to initialise and start a **Sentry node**. 
 
 It follows on from the prerequisites section and assumes that you have built your environment by following the **Build Environment** instructions for your selected network. 
 
-A Sentry Node is used to isolate Validator nodes from public access. 
+A **Sentry node** is used to isolate a **Validator node** from public access. A **Validator node** should only connect to other **Sentry nodes**. 
 
-It must be on its own machine. 
+***It must be on its own machine.*** 
 
 ## Networks
 
@@ -31,6 +31,13 @@ Your network was selected at the **Build Environment** stage.
 
 
 ## 01 Configure a sentry node
+
+|Config Parameter | Value |
+|-------|------|
+|`pex` | `true` |
+|`persistent_peers` | **Validator node** and **Sentry nodes** |
+|`private_peer_ids` | **Validator node id** |
+|`addr_book_strict` | `false` |
 
 The following script can be run to automatically configure a **Sentry Node**
 

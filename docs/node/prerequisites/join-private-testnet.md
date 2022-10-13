@@ -64,19 +64,14 @@ sudo -i
     apt update
     ```
 
-    * Install network and packages
+    * Install network
 
     ```shell
-    apt install cudos-network-private-testnet cosmovisor cudos-gex cudos-noded cudos-noded-v0.8.0 cudos-noded-v0.9.0 cudos-noded-v1.0.0 cudos-p2p-scan
+    apt install cudos-network-private-testnet
     ```
 
-3. Confirm connection to Private Testnet 
+3. Confirm installation
 
 ```shell
-cudos-noded status 2>&1 | jq -M 
+cudos-noded version
 ```
-:::tip Success!
-
-`"network": "cudos-network"` means you are successfully connected to Private Testnet. 
-
-:::
