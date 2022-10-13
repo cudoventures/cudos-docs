@@ -7,10 +7,12 @@ This guide explains CLI commands to manage your **local keys** and **wallet addr
 
 ## Key CLI
 
+Run the following commands in the shell. 
+
 In general, the format of commands is:
 
 ```shell
-$ cudos-noded keys [command]
+cudos-noded keys [command]
 ```
 
 The following commands are available:
@@ -33,7 +35,7 @@ The following commands are available:
 Use the following command to get detailed information on all available `key` commands. 
 
 ```shell
-$ cudos-noded keys --help
+cudos-noded keys --help
 ```
 
 ## List all keys
@@ -41,8 +43,7 @@ $ cudos-noded keys --help
 Use this command to list all local keys managed by `cudos-noded` key manager. 
 
 ```shell 
-$ cudos-noded keys list
-
+cudos-noded keys list
 ```
 
 ## Add a new key
@@ -56,7 +57,7 @@ Use this command to add a new key in the keyring.
 In this example, we are adding the key 'memorable-key-name' to the `keyring` with a backend configured to our `os`. 
 
 ```shell
-$ cudos-noded keys add memorable-key-name --keyring-backend os
+cudos-noded keys add memorable-key-name --keyring-backend os
 ```
 
 ### Example

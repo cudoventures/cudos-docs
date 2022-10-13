@@ -5,7 +5,10 @@ module.exports = {
       label: 'Overview',
       items: [
         'node/overview/introduction',
-        'node/overview/understanding-nodes'
+        'node/overview/understanding-nodes',
+        'node/overview/validating',
+        'node/overview/delegators',
+        'node/overview/validator-mechanics',
       ],
     },
     {
@@ -22,7 +25,11 @@ module.exports = {
       label: 'Prerequisites',
       items: [
         'node/prerequisites/hw-req',
-        'node/prerequisites/build-redhat-debian',
+        {
+          type: 'category',
+          label: 'Build Environment',
+          items: ['node/prerequisites/join-private-testnet', 'node/prerequisites/join-testnet', 'node/prerequisites/join-mainnet',],
+        },
         'node/prerequisites/stake-req'
       ],
     },
@@ -30,15 +37,20 @@ module.exports = {
       type: 'category',
       label: 'Run a node',
       items: [
-        'node/run-node/run-full-node-redhat-debian',
+        'node/run-node/run-full-node',
         {
           type: 'category',
           label: 'Run a validator node',
-          items: ['node/run-node/prepare-node-for-validating', 'node/run-node/stake', 'node/run-node/how-to'],
+          items: ['node/run-node/prepare-node-for-validating', 'node/run-node/stake-node', 'node/run-node/start-validator-node'],
         },
+        'node/run-node/run-seed-node',
+        'node/run-node/run-sentry-node',
+        'node/run-node/run-validator-cluster',
         'node/run-node/check-sync',
       ],
     },
+    'node/run-node/staking-cli',
+    'node/run-node/monitoring',
   ],
 
   buildSidebar: [
@@ -122,6 +134,7 @@ module.exports = {
       items: [
         'governance/tokens',
         'governance/buy-tokens',
+        'governance/governance',
       ],
     },
   ],

@@ -47,14 +47,18 @@ img[alt=validator-node] { width: 100px; }
 
 img[alt=sentry-node] { width: 100px; }
 
+img[alt=synced-node] { width: 800px; }
+
+img[alt=cudos-gex] { width: 800px; }
+
 /* unvisited link */
 a:link {
-  color: rgb(51, 0, 255);
+  color: #4D80E8;
 }
 
 /* visited link */
 a:visited {
-  color: green;
+  color: #4D80E8;;
 }
 
 /* mouse over link */
@@ -66,3 +70,7 @@ a:hover {
 a:active {
   color: rgb(0, 0, 255);
 }
+
+
+img[alt=token-distribution] { width: 900px; }
+

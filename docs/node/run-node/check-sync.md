@@ -3,20 +3,41 @@ title: Node sync status
 id: check-sync
 ---
 
+:::tip ☕️ Node Sync Rate
+
+Based on this GCP VM (e2-standard-4 4vCPU, 16 GB memory, 610 GB SSD, Ubuntu 20.04 LTS), a 
+test node will sync at approximately 13 blocks per second. If there are a million blocks, it will take approximately 21 hours per million blocks to catch up.
+
+To get a live estimation: 
+- Check the increase in block height over a 30s period on your node and divide by 30 [blocks/sec].
+
+- Check the difference in height on the explorer compared to the node, to find the number of blocks needed to catch up [qty of blocks]
+
+[qty of blocks] / [blocks/sec] = time remaining in seconds
+/3600 for time in hours
+
+:::
+
+
 ## Checking sync status
 
 You can check the status of your node sync by running the following command:
+As **root user**
 
 ```shell
-$ cudos-noded status
+cudos-noded status 2>&1 | jq -M 
 ```
+:::tip how do i know when my node is synced?
+Your node is fully synced when you see: 
+`"catching_up: false"` 
+and the latest `"block height"` matches the network [Testnet Explorer](https://explorer.testnet.cudos.org) or [Mainnet Explorer](https://explorer.mainnet.cudos.org)
+:::
 
-
+![synced-node](@site/static/img/node-sync.png)
 
 ## Example Sync Status Check
 
 ```js
-$ cudos-noded status
 {
   "NodeInfo": {
     "protocol_version": {
@@ -60,7 +81,7 @@ $ cudos-noded status
 
 In the above example,`"catching_up": false` and `"latest_block_time"` is a few seconds before current time. This indicates that the node is fully up to date. We can also compare the `"latest_block_height": "326283"` with the [Cudos explorer](https://explorer.cudos.org/) for confirmation. 
 
-In the Cudos Explorer, check **Average Block Time** if there is any discrepancy. 
+
 
 ### Syncing in progress
 
@@ -70,13 +91,7 @@ If your node is still syncing: `latest_block_height` and `latest_block_time` are
 
 If `"latest_block_height": "0"`, your node is not syncing. Try to add another seed (refer to Manually adding new seeds)
 
-:::warning
 
-`cudos-noded` may be unresponsive during the sync process. 
-
-In which case, view the **last block height** from the current **docker log** for your container. 
-
-:::
 
 
 
