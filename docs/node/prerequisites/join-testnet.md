@@ -28,16 +28,12 @@ yum-config-manager --enable cudos-testnet
 dnf install cudos-network-public-testnet
 ```
 
-3. Confirm connection to Testnet
+3. Confirm `cudos-noded` is present
 
 ```shell
-cudos-noded status 2>&1 | jq -M 
+cudos-noded version
 ```
-:::tip Success!
 
-`"network": "cudos-testnet-public-3"` means you are successfully connected to Testnet. 
-
-:::
 
 ## Ubuntu/Debian OS
 * Ubuntu 20.04
@@ -69,7 +65,7 @@ sudo -i
     apt install cudos-network-public-testnet
     ```
 
-3. Confirm installation
+3. Confirm `cudos-noded` is present
 
 ```shell
 cudos-noded version

@@ -4,7 +4,7 @@ id: stake-node
 ---
 
 This guide explains how to stake funds to your node. 
-At the end of this guide your staked node is converted to a Validator Node and is listed in the Testnet or Mainnet Explorer. 
+At the end of this guide your staked node is converted to a **Validator node** and is listed on the **Testnet Explorer** or **Mainnet Explorer**. 
 
 ## 00 Prerequisites
 

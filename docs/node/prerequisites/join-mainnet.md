@@ -28,16 +28,11 @@ yum-config-manager --enable cudos-mainnet
 dnf install cudos-network-mainnet
 ```
 
-3. Confirm connection to Mainnet
+3. Confirm `cudos-noded` is present
 
 ```shell
-cudos-noded status 2>&1 | jq -M 
+cudos-noded version
 ```
-:::tip Success!
-
-`"network": "cudos-1"` means you are successfully connected to Mainnet. 
-
-:::
 
 
 ## Ubuntu/Debian OS
@@ -70,7 +65,7 @@ sudo -i
     apt install cudos-network-mainnet
     ```
 
-3. Confirm installation
+3. Confirm `cudos-noded` is present
 
 ```shell
 cudos-noded version

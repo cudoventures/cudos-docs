@@ -3,7 +3,7 @@ title: Start validator node
 id: start-validator-node
 ---
 
-This guide explains how to start a Validator node.
+This guide explains how to start a **Standalone Validator node**. It follows on from [Stake node](/docs/node/run-node/stake-node). 
 
 ## 01 Start the node
 

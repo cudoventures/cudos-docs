@@ -29,16 +29,13 @@ yum-config-manager --enable cudos-prtn
 dnf install cudos-network-private-testnet
 ```
 
-3. Confirm connection to Private Testnet
+3. Confirm `cudos-noded` is present
 
 ```shell
-cudos-noded status 2>&1 | jq -M 
+cudos-noded version
 ```
-:::tip Success!
 
-`"network": "cudos-network"` means you are successfully connected to Private Testnet. 
 
-:::
 
 This step, confirms your installation has succeeded. 
 
@@ -70,7 +67,7 @@ sudo -i
     apt install cudos-network-private-testnet
     ```
 
-3. Confirm installation
+3. Confirm `cudos-noded` is present
 
 ```shell
 cudos-noded version

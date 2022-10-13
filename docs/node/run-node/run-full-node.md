@@ -21,8 +21,8 @@ Your network was selected at the **Build Environment** stage.
 
 ## 00 Prerequisites
 
-1. Check Hardware requirements.
-2. Build your environment. 
+1. Check [Hardware requirements](/docs/node/prerequisites/hw-req).
+2. Build your environment [Testnet](/docs/node/prerequisites/join-testnet) or [Mainnet](/docs/node/prerequisites/join-mainnet)
 
 
 <!-- | **Hardware** 	| **Specification**           	|

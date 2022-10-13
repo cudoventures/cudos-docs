@@ -25,15 +25,15 @@ Then progress to the **Public Testnet** and then **Mainnet**.
 At least 3 separate machines are required to run each node. **Validator**, **Sentry** (at least one) and **Seed** (at least one)
 
 #### 2. [Join Testnet](/docs/node/prerequisites/join-testnet)
-It is highly recommended that you set up a Private local testnet first to get familiar with the setup process, and provide an environment for testing. Proceeding to Public Testnet allows you to operate in an environment where critical changes are tested prior to deployment to Mainnet. 
+Joining Testnet allows you to operate in an environment without cost i.e. using CUDOS Testnet Tokens.
 
 #### 3. [Request 2M CUDOS Test tokens](/docs/node/prerequisites/stake-req)
 Join Cudos official Discord [#validator-chat channel](https://discord.com/channels/593796681103966208/849951329174421504) to get support and to request 2M CUDOS Test tokens. 
 
-### Create a Validator
+### Build a Standalone Validator (Testnet)
 
 #### 4. [Build a Full node](/docs/node/run-node/run-full-node)
-Start with a Full node which is converted to a Validator node at 6. 
+Start with a Full node which is converted to a Validator node. 
 
 #### 5. [Set up a Keyring](/docs/node/run-node/prepare-node-for-validating)
 This step allows the secure holding and management of keys.
@@ -41,14 +41,14 @@ This step allows the secure holding and management of keys.
 #### 6. [Stake node and create validator](/docs/node/run-node/stake-node)
 Perform the `create-validator` transaction. Assign a name to your Validator node, decide on commission fees for delegators and set gas prices. 
 
-### Sentry node architecture
+### Build a Validator Cluster (Mainnet)
 
-#### 7. [Build a Seed node](/docs/node/run-node/run-seed-node)
+#### 7. [Build a Seed node *ADVISED*](/docs/node/run-node/run-seed-node)
 Secure your Validator by specifying authorised nodes to connect to. 
 
 #### 8. [Build a Sentry node](/docs/node/run-node/run-sentry-node)
 Secure your Validator by only connecting it to one or more Sentry nodes. 
 
 #### 9. [Build a Validator Cluster](/docs/node/run-node/run-validator-cluster)
-This step launches a Validator node secured by a Sentry node architecture. 
+This step launches a Validator node interconnected with a Sentry node. 
 
