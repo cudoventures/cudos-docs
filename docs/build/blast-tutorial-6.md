@@ -28,7 +28,7 @@ This file should be at the root of your project.
 For example:
 
 ```shell
-myCudosDapp user$ ls
+counter user$ ls
 Cargo.lock              contracts               package-lock.json       scripts
 Cargo.toml              jsconfig.json           package.json            target
 artifacts               local-accounts.json     private-accounts.json   tests

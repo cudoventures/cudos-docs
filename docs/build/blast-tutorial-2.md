@@ -13,10 +13,10 @@ Cudos Blast uses Rust Optimiser under the hood to compile contracts ready for de
 
 ### Check you are at Project root
 
-First, let's make sure we are at the project root with only one `Cargo.toml` file.
+First, let's make sure we are at the project root.
 
 ```shell
-myCudosDapp username$ ls
+counter username$ ls
 Cargo.lock		jsconfig.json		scripts
 Cargo.toml		local-accounts.json	target
 blast.config.js		package.json		tests
@@ -28,11 +28,11 @@ contracts		schema
 Run the compile command
 
 ```shell
-myCudosDapp username$ blast compile
+counter username$ blast compile
 
 # Example response extract
 
-Compiling contracts at: "/Users/ad/projects/myCudosDapp/contracts" with 0.12.6 version
+Compiling contracts at: "/Users/ad/projects/counter/contracts" with 0.12.6 version
 Unable to find image 'cosmwasm/workspace-optimizer:0.12.6' locally
 0.12.6: Pulling from cosmwasm/workspace-optimizer
 df9b9388f04a: Already exists 
