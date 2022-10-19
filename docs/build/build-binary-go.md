@@ -60,8 +60,3 @@ cd cudos-node && make install
 cudos-noded version
 current version
 ```
-
-
-
-
-
