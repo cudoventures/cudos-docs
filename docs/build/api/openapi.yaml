@@ -1,10 +1,60 @@
-openapi: "3.0.0"
+openapi: 3.0.0
 info:
   title: Cudos RPC
   version: 1.0.0
-  description: REST interface for state queries and transactions. - >
-  
-   Supports URI over HTTP, JSON-RPC 2.0 over HTTP. Configure network and parameters in config.toml or using `--rpc.X` command line flag. 
+  description: |
+    REST interface for state queries and transactions.
+
+    ### Base URLs 
+
+    Cudos Mainnet RPC https://rpc.cudos.org
+
+    Cudos Testnet RPC https://sentry1.gcp-uscentral1.cudos.org:36657/
+
+    Cudos Localhost RPC https://localhost:26657
+
+    Supports the following RPC protocols:
+    
+    1. URI over HTTP, 
+    2. JSON-RPC over HTTP.
+    3. JSON-RPC over websockets
+    
+    ### How to configure?
+    
+    Configure network and parameters in config.toml or using `--rpc.X` command line flag. 
+
+    RPC can be configured by tuning parameters under `[rpc]` table in the
+    `$TMHOME/config/config.toml` file or by using the `--rpc.X` command-line
+    flags.
+    The default rpc listen address is `tcp://0.0.0.0:26657`.
+    To set another address, set the `laddr` config parameter to desired value.
+    CORS (Cross-Origin Resource Sharing) can be enabled by setting
+    `cors_allowed_origins`, `cors_allowed_methods`, `cors_allowed_headers`
+    config parameters.
+
+    ### Arguments 
+    Arguments which expect strings or byte arrays may be passed as quoted
+    strings, like `"abc"` or as `0x`-prefixed strings, like `0x616263`.
+
+    ### URI/HTTP
+    A REST like interface.
+
+        
+        curl localhost:26657/block?height=45
+        
+
+    ### JSONRPC/HTTP
+    POST JSONRPC requests to the root RPC endpoint via HTTP.
+
+        
+        curl --header "Content-Type: application/json" --request POST --data '{"method": "block", "params": ["5"], "id": 1}' localhost:26657
+      
+    ### JSONRPC/websockets
+    JSONRPC requests can be also made via websocket.
+    The websocket endpoint is at `/websocket`, e.g. `localhost:26657/websocket`.
+    Asynchronous RPC functions like event `subscribe` and `unsubscribe` are
+    only available via websockets.
+
 
 servers: 
   - url: https://rpc.cudos.org
@@ -15,33 +65,12 @@ servers:
     description: Interact with the Cudos RPC locally on your device  
 
 paths:
-  /websocket:
-   get:
-      summary: Node heartbeat
-      tags:
-        - Node
-      operationId: health
-      description: |
-        Get node health. Returns empty result (200 OK) on success, no response - in case of an error.
-      responses:
-        "200":
-          description: Gets Node Health
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/EmptyResponse"
-        "500":
-          description: empty error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
   /status:
     get:
       summary: Node Status
       operationId: status
       tags:
-        - Node
+        - Info
       description: |
         Get node status including node info, pubkey, latest block hash, app hash, block height and time.
       responses:
@@ -78,7 +107,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
-  
   /block:
     get:
       summary: Get block at a specified height
@@ -658,7 +686,7 @@ paths:
                 $ref: "#/components/schemas/ErrorResponse"
   /health:
     get:
-      summary: 
+      summary: Node health
       tags:
         - Info
       operationId: health
@@ -677,9 +705,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
-
-
-
   /abci_info:
     get:
       summary: Get some info about the application.
@@ -701,30 +726,252 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
-  
-  /broadcast_evidence:
+/blockchain:
     get:
-      summary: Broadcast evidence of misbehavior.
-      operationId: broadcast_evidence
+      summary: "Get block headers (max: 20) for minHeight <= height <= maxHeight."
+      operationId: blockchain
       parameters:
         - in: query
-          name: evidence
-          description: JSON evidence
-          required: true
+          name: minHeight
+          description: Minimum block height to return
           schema:
-            type: string
-            example: "JSON_EVIDENCE_encoded"
+            type: integer
+            example: 1
+        - in: query
+          name: maxHeight
+          description: Maximum block height to return
+          schema:
+            type: integer
+            example: 2
       tags:
         - Info
       description: |
-        Broadcast evidence of the misbehavior.
+        Get block headers for minHeight <= height maxHeight.
+        At most 20 items will be returned.
       responses:
         "200":
-          description: Broadcast evidence of the misbehavior.
+          description: Block headers, returned in descending order (highest first).
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/BroadcastEvidenceResponse"
+                $ref: "#/components/schemas/BlockchainResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+/header:
+    get:
+      summary: Get header at a specified height
+      operationId: header
+      parameters:
+        - in: query
+          name: height
+          schema:
+            type: integer
+            default: 0
+            example: 1
+          description: height to return. If no height is provided, it will fetch the latest header.
+      tags:
+        - Info
+      description: |
+        Get Header.
+      responses:
+        "200":
+          description: Header informations.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BlockHeader"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+/header_by_hash:
+    get:
+      summary: Get header by hash
+      operationId: header_by_hash
+      parameters:
+        - in: query
+          name: hash
+          description: header hash
+          required: true
+          schema:
+            type: string
+            example: "0xD70952032620CC4E2737EB8AC379806359D8E0B17B0488F627997A0B043ABDED"
+      tags:
+        - Info
+      description: |
+        Get Header By Hash.
+      responses:
+        "200":
+          description: Header informations.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BlockHeader"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+/block_by_hash:
+    get:
+      summary: Get block by hash
+      operationId: block_by_hash
+      parameters:
+        - in: query
+          name: hash
+          description: block hash
+          required: true
+          schema:
+            type: string
+            example: "0xD70952032620CC4E2737EB8AC379806359D8E0B17B0488F627997A0B043ABDED"
+      tags:
+        - Info
+      description: |
+        Get Block By Hash.
+      responses:
+        "200":
+          description: Block informations.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BlockResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+/commit:
+    get:
+      summary: Get commit results at a specified height
+      operationId: commit
+      parameters:
+        - in: query
+          name: height
+          description: height to return. If no height is provided, it will fetch commit informations regarding the latest block.
+          schema:
+            type: integer
+            default: 0
+            example: 1
+      tags:
+        - Info
+      description: |
+        Get Commit.
+      responses:
+        "200":
+          description: |
+            Commit results.
+            canonical switches from false to true for block H once block H+1 has been committed. Until then it's subjective and only reflects what this node has seen so far.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CommitResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+/tx_search:
+    get:
+      summary: Search for transactions
+      description: |
+        Search for transactions w/ their results.
+        See /subscribe for the query syntax.
+      operationId: tx_search
+      parameters:
+        - in: query
+          name: query
+          description: Query
+          required: true
+          schema:
+            type: string
+            example: "tx.height=1000"
+        - in: query
+          name: prove
+          description: Include proofs of the transactions inclusion in the block
+          required: false
+          schema:
+            type: boolean
+            default: false
+            example: true
+        - in: query
+          name: page
+          description: "Page number (1-based)"
+          required: false
+          schema:
+            type: integer
+            default: 1
+            example: 1
+        - in: query
+          name: per_page
+          description: "Number of entries per page (max: 100)"
+          required: false
+          schema:
+            type: integer
+            default: 30
+            example: 30
+        - in: query
+          name: order_by
+          description: Order in which transactions are sorted ("asc" or "desc"), by height & index. If empty, default sorting will be still applied.
+          required: false
+          schema:
+            type: string
+            default: "asc"
+            example: "asc"
+      tags:
+        - Transactions
+      responses:
+        "200":
+          description: List of unconfirmed transactions
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TxSearchResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+/tx:
+    get:
+      summary: Get transactions by hash
+      operationId: tx
+      parameters:
+        - in: query
+          name: hash
+          description: transaction Hash to retrive
+          required: true
+          schema:
+            type: string
+            example: "0xD70952032620CC4E2737EB8AC379806359D8E0B17B0488F627997A0B043ABDED"
+        - in: query
+          name: prove
+          description: Include proofs of the transactions inclusion in the block
+          required: false
+          schema:
+            type: boolean
+            example: true
+            default: false
+      tags:
+        - Transactions
+      description: |
+        Get a trasasction
+      responses:
+        "200":
+          description: Get a transaction`
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TxResponse"
         "500":
           description: Error
           content:
