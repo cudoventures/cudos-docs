@@ -95,6 +95,13 @@ Other penalties depends on the severity of the violation.
 ```shell
 cudos-noded tx slashing unjail --from mykey [flags]
 ```
+For example:
+
+```shell
+cudos-noded tx slashing unjail --chain-id="$CHAIN_ID" --from="$VALIDATOR_ADDRESS" --keyring-backend "os"
+```
+
+**CHAIN_ID="cudos-testnet-public-3"**
 
 A Validator is jailed if they miss 90% of the blocks in any interval of 19200 blocks. 
 
