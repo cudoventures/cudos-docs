@@ -12,32 +12,44 @@ x86/64, amd64 focal image built on 2022-09-05, supports Shielded VM features.)
 
 ### Go
 
-* Ubuntu 22.04 LTS 
+* Ubuntu 20.04 LTS 
 
 ## 00 Install prerequisites
 
 ### Install `build-essential`
 
+Run as normal user.
+
 ```shell
-root@instance-1:~# sudo apt update
-root@instance-1:~# sudo apt install build-essential
+sudo apt update
+sudo apt install build-essential
 ```
 
-### Install `Go`
+### Install git
 
-[Go installation instructions](https://go.dev/dl/)
+```shell
+sudo apt-get update
+sudo apt-get install git-all
+git version
+```
 
-Or using Snap 
+### Install Go
+
+[**Go installation instructions**](https://go.dev/dl/)
+
+Or using **Snap** 
 
 ```shell
 sudo snap install --classic --channel=latest/stable go
+echo 'PATH=$PATH:~/go/bin' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## 01 Install `cudos-node` binary and make
 
 ```shell
-root@instance-1:~# git clone https://github.com/CudoVentures/cudos-node.git
-root@instance-1:~# cd cudos-node && make install
+git clone https://github.com/CudoVentures/cudos-node.git
+cd cudos-node && make install
 ```
 
 ## 02 `cudos-node` Daemon
@@ -45,8 +57,8 @@ root@instance-1:~# cd cudos-node && make install
 `cudos-noded` is the CLI tool that enables you to interact with a node on the Cudos Network. 
 
 ```shell
-root@instance-1:~/cudos-node# cudos-noded version
-v1.1.0
+cudos-noded version
+current version
 ```
 
 
