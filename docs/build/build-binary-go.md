@@ -10,8 +10,6 @@ x86/64, amd64 focal image built on 2022-09-05, supports Shielded VM features.)
 
 ## Supported OS
 
-### Go
-
 * Ubuntu 20.04 LTS 
 
 ## 00 Install prerequisites
