@@ -59,7 +59,9 @@ module.exports = {
       label: 'Overview',
       items: [
         'build/intro',
-        'build/setup-rust'
+        'build/setup-rust',
+        'build/build-binary-go',
+        'build/set-up-envt',
       ]
     },
     {
@@ -78,7 +80,6 @@ module.exports = {
       label: 'Build dApp',
       items: [
         'build/dapp-structure',
-        'build/build-binary-go',
       ],
     },
     {
@@ -89,7 +90,8 @@ module.exports = {
                 type: 'link',
                 label: 'RPC API',
                 href: '/api/',
-              }
+              },
+              'build/install-blast',
              ]
     },
     {

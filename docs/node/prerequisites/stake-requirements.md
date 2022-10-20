@@ -39,7 +39,7 @@ To become a **Validator** on the Cudos Mainnet requires meeting the hardware req
 
 3. Copy the address and use it to buy or swap other assets for 2M CUDOS tokens. 
 
-:::tip View balanc
+:::tip View balance
 Be sure to select **Cudos-1** or **Cudos-Testnet-Public-v3** to view CUDOS balance in your wallet. 
 :::
 
