@@ -1,9 +1,9 @@
 ---
-title: Build Binary - Go 
+title: Build Binary 
 id: build-binary-go
 ---
 
-This guide explains how to install the `cudos-noded` binary and run a node on the Cudos mainnet with Go. 
+This guide explains how to install the `cudos-noded` binary. 
 
 (These instructions are written based on a Google Cloud VM instance running on Ubuntu 20.04 LTS
 x86/64, amd64 focal image built on 2022-09-05, supports Shielded VM features.)
@@ -28,7 +28,6 @@ sudo apt install build-essential
 ### Install git
 
 ```shell
-sudo apt-get update
 sudo apt-get install git-all
 git version
 ```
@@ -52,11 +51,38 @@ git clone https://github.com/CudoVentures/cudos-node.git
 cd cudos-node && make install
 ```
 
-## 02 `cudos-node` Daemon
-
-`cudos-noded` is the CLI tool that enables you to interact with a node on the Cudos Network. 
+### Example
 
 ```shell
-cudos-noded version
-current version
+user@node-go-01:~$ cd cudos-node && make install
+--> Installing cudos-noded
 ```
+
+## 02 `cudos-node` daemon
+
+`cudos-noded` provides the Command Line Interface and node daemon to interact with the Cudos blockchain.
+Check that it has successfully installed.
+
+```shell
+cudos-noded version --long
+```
+
+:::info 🎉 Success
+Successful installation is indicated by the presence of `cudos-noded` - The Cudos Node Daemon. 
+
+### Example
+
+```shell
+user@node-go-01:~$ cudos-noded version --long
+name: cudos-node
+server_name: cudos-noded
+version: v1.1.0.1
+commit: ed5a355b592ea93ce0cd35f2ef778a8cf18343a7
+build_tags: ""
+go: go version go1.18.5 linux/amd64
+build_deps:
+```
+
+
+
+

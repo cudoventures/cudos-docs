@@ -47,7 +47,7 @@ bid curtain behave object hip summer can escape dwarf gloom soccer empty under r
 
 
 
-2. You can then add this mnemonic to create a new account in Keplr wallet. 
+2. You can then add this mnemonic to create a new account in a Keplr wallet if you wish. 
 
 3. Verify it has been added by viewing it inside your Keplr wallet. 
 
