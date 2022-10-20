@@ -90,7 +90,8 @@ module.exports = {
                 type: 'link',
                 label: 'RPC API',
                 href: '/api/',
-              }
+              },
+              'build/install-blast',
              ]
     },
     {
