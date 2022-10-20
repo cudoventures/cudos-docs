@@ -113,7 +113,7 @@ module.exports = {
             type: 'category',
             label: 'Introduction',
             items: [
-              'learn/introduction/overview'
+              'learn/introduction/overview',           
             ],
           },
           {
@@ -121,7 +121,8 @@ module.exports = {
             label: 'Concepts',
             items: [
              'learn/concepts/account',
-              'learn/concepts/wallet'
+             'learn/concepts/wallet',
+             'learn/concepts/token-types',
             ],
           },
       ],
