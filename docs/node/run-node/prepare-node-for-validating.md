@@ -15,7 +15,7 @@ This guide explains how to prepare an existing **Full node** to become a **Valid
 
 * A machine to run your validator node
 * An existing full node that is **fully synced**. [see ***Run a Full Node***](run-full-node)
-* Familiarity with [**keyring backend options**](/docs/node/security/key-management) 
+* Default keyring backend is 'OS'. This means that the OS on your machine handles key storage.[**Check out keyring backend options**](/docs/node/security/key-management) 
 * Keplr Wallet or account with 2M CUDOS tokens. [see ***Stake Requirements***](/docs/node/prerequisites/stake-req)
 
 ## OPTION 1 Creating a new wallet
@@ -25,10 +25,10 @@ Let's use the `cudos-noded` CLI to add a new wallet key to our keyring
 1. Create new wallet key 
 
 ```shell
-cudos-noded keys add <your_new_wallet_keyname> --keyring-backend os
+cudos-noded keys add <your_new_wallet_keyname>
 ```
 ```shell
-cudos-noded keys add MyCudosKeplr --keyring-backend os
+cudos-noded keys add MyCudosKeplr
 Enter keyring passphrase:
 Re-enter keyring passphrase:
 
