@@ -32,7 +32,7 @@ To read a current balance, a **query** message can be sent to access the current
 
 Developing a smart contract mainly involves three key functions. 
 
-These constitute the interface of a smart contract:
+These constitute the interface or **entry points** of a smart contract:
 
 1. `instantiate()`: serves as the constructor during contract instantiation and provides the initial state.
 
@@ -40,9 +40,13 @@ These constitute the interface of a smart contract:
 
 3. `query()`: gets called when a user wants to request current-state related data from the smart contract.
 
-## In General
+## Smart contract structure 
 
-With all smart contracts, there are two main types of actions: mutating actions, which receive `DepsMut` and are able to modify the state of the blockchain, and `query` actions, which are run on a single node with read-only access to the data.
+* **state.rs** - This file contains the definition of the smart contracts data storage.
+
+* **msg.rs** - This file contains structures that define messages for mutating actions that can modify the state of the blockchain and query actions run on a single node with read-only access to the data. 
+
+* **contract.rs** - This file contains **entry points**. These are functions that handle the messages in a smart contract. 
 
 
 

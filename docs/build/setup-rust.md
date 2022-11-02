@@ -1,17 +1,18 @@
 ---
-title: Setup Rust
+title: Setting up
 id: setup-rust
 ---
 
 The Cudos Network uses **CosmWasm** as a framework for developing smart contracts and infrastructure to run them on chain. Smart contracts are written using Rust. 
 
-In order to develop smart contracts, you need the rust toolchain.
+In order to develop smart contracts, you need the **Rust toolchain**.
+
+:::info 🛠 About Rust toolchain
 
 ### About Rust
 Rust is a statically-typed programming language designed for **performance** and **safety**, especially safe concurrency and memory management. Its syntax is similar to that of C++. It is an open-source project developed originally at Mozilla Research.
 
 Rust design principles minimise smart contract vulnerabilities by using existing frameworks such as **WebAssembly** (wasm). 
-
 
 ### About Webassembly 
 **WebAssembly** is a small, fast, efficient and very secure, stack-based virtual machine that is CPU and OS neutral. It is designed to execute portable bytecode — compiled from code at near-native speed. Sandboxed environment means can run in any environment. WASM programming language support is extensive and growing.
@@ -22,6 +23,7 @@ Rust design principles minimise smart contract vulnerabilities by using existing
 
 CosmWasm provides API and library functions such as verifying addresses and more advanced storage items. These enable you to write powerful smart contracts. 
 
+:::
 
 ## Install Rust and WASM
 
@@ -60,5 +62,11 @@ cargo install cargo-run-script
 :::tip What is Cargo?
 **Cargo** is the Rust build system and package manager. It is a great tool to manage Rust projects because it builds your code, downloads the libraries your code depends on, and builds those libraries or dependencies.
 :::
+
+## Set up command-line tools
+
+```shell
+apt install jq curl
+```
 
 You are now ready build! 

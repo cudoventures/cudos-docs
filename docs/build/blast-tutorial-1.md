@@ -3,29 +3,18 @@ title: Create Counter project
 id: create-counter
 ---
 
-This short tutorial walks you through setting up your project and creating a simple counter that increments upon request using **Cudos Blast**.
+This short tutorial creates a simple counter that increments upon request using **Cudos Blast**.
 
-It assumes that you have installed **Cudos Blast** globally. 
+1. Create a new folder for the Counter project and initialise Blast.
 
-1. Create a new folder for the project and initialise Blast.
-
-```bash
-mkdir myCudosDapp
-cd myCudosDapp
+```shell
+mkdir Counter
+cd Counter
 blast init
 Success! Sample project initialized in /Users/username/projects/myCudosDapp
 ```
 
-:::note To specify where Blast should initialise
-
-Use the parameter `--dir` or `-d` to specify where Blast should initialise.
-
-```bash
-blast init --dir /Your/Location/Here
-```
-:::
-
-2. Open your project in your favourite IDE. (We're using Visual Studio Code on a Macbook for this tutorial)
+2. Open the project in your preferred IDE 
 
 ## Explore your project
 

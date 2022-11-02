@@ -3,7 +3,6 @@ title: Deploy your contract
 id: deploy-counter
 ---
 
-
 In this section, we're going to upload one of our optimised builds `alpha.wasm` to our local environment.
 
 1. First, check you are in the root of the project.

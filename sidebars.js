@@ -5,7 +5,10 @@ module.exports = {
       label: 'Overview',
       items: [
         'node/overview/introduction',
-        'node/overview/understanding-nodes'
+        'node/overview/understanding-nodes',
+        'node/overview/validating',
+        'node/overview/delegators',
+        'node/overview/validator-mechanics',
       ],
     },
     {
@@ -13,6 +16,7 @@ module.exports = {
       label: 'Security',
       items: [
         'node/security/key-management',
+        'node/security/keys',
         'node/security/sentry-node-arch'
       ],
     },
@@ -21,8 +25,11 @@ module.exports = {
       label: 'Prerequisites',
       items: [
         'node/prerequisites/hw-req',
-        'node/prerequisites/binary',
-        'node/prerequisites/build-envt',
+        {
+          type: 'category',
+          label: 'Build Environment',
+          items: ['node/prerequisites/join-private-testnet', 'node/prerequisites/join-testnet', 'node/prerequisites/join-mainnet',],
+        },
         'node/prerequisites/stake-req'
       ],
     },
@@ -30,15 +37,20 @@ module.exports = {
       type: 'category',
       label: 'Run a node',
       items: [
-        'node/run-node/full-node',
+        'node/run-node/run-full-node',
         {
           type: 'category',
           label: 'Run a validator node',
-          items: ['node/run-node/validator-node-1','node/run-node/validator-node-2', 'node/run-node/how-to'],
+          items: ['node/run-node/prepare-node-for-validating', 'node/run-node/stake-node', 'node/run-node/start-validator-node'],
         },
+        'node/run-node/run-seed-node',
+        'node/run-node/run-sentry-node',
+        'node/run-node/run-validator-cluster',
         'node/run-node/check-sync',
       ],
     },
+    'node/run-node/staking-cli',
+    'node/run-node/monitoring',
   ],
 
   buildSidebar: [
@@ -47,7 +59,9 @@ module.exports = {
       label: 'Overview',
       items: [
         'build/intro',
-        'build/setup-rust'
+        'build/setup-rust',
+        'build/build-binary-go',
+        'build/set-up-envt',
       ]
     },
     {
@@ -63,13 +77,6 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'RPC API',
-      items: [
-        'build/rpc-api',
-      ],
-    },
-    {
-      type: 'category',
       label: 'Build dApp',
       items: [
         'build/dapp-structure',
@@ -79,8 +86,13 @@ module.exports = {
       type: 'category',
       label: 'Tools',
       items: [
-        'build/install-blast',
-      ],
+              {
+                type: 'link',
+                label: 'RPC API',
+                href: '/api/',
+              },
+              'build/install-blast',
+             ]
     },
     {
       type: 'category',
@@ -101,7 +113,7 @@ module.exports = {
             type: 'category',
             label: 'Introduction',
             items: [
-              'learn/introduction/overview'
+              'learn/introduction/overview',           
             ],
           },
           {
@@ -109,7 +121,8 @@ module.exports = {
             label: 'Concepts',
             items: [
              'learn/concepts/account',
-              'learn/concepts/wallet'
+             'learn/concepts/wallet',
+             'learn/concepts/token-types',
             ],
           },
       ],
@@ -123,6 +136,7 @@ module.exports = {
         'governance/buy-tokens',
         'governance/governance',
         'governance/tokenomics',
+        'governance/governance',
       ],
     },
   ],
