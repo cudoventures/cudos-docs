@@ -7,25 +7,23 @@ The key aim of Cudos network tokenomics is to ensure that network participants a
 
 Tokenomics draws from game theory models that assume individual rational network participants are always working to maximise their own utility. The aim of tokenomics is to ensure that individual utility is best maximised by advancing overall network utility. From this perspective, the Cudos Network tackles this challenge in multiple ways. 
 
-First, the Cudos network uses Tendermint to provide a consensus layer and agree the state of the Cudos Blockchain. Byzantine Fault Tolerance (BFT) solves the [Byzantine Generals Problem](https://lamport.azurewebsites.net/pubs/byz.pdf) and enables consensus to be achieved on the state of the blockchain even if up to ⅓ (~33%) of network machines are bad actors or fail in arbitrary ways.
+First, the Cudos network uses Tendermint to provide a consensus layer and agree the state of the Cudos Blockchain. Tendermint is Byzantine Fault Tolerance (BFT) (solves the [Byzantine Generals Problem](https://lamport.azurewebsites.net/pubs/byz.pdf)) enabling consensus to be achieved on the state of the blockchain even if up to ⅓ (~33%) of network machines are bad actors or fail in arbitrary ways.
 
 :::tip Byzantine Generals Problem 
 
-The **Byzantine Generals Problem** refers to a scenario where a computer system must handle conflicting information to different parts of the system. This scenario is expressed abstractly as a group of generals camped outside an enemy castle. Communication is entirely by messenger and generals must agree on a common battle plan. One or more generals may be traitors and try to force a retreat. 
+The **Byzantine Generals Problem** is a scenario illustrating the difficulty in achieving consensus amongst decentralized parties. 
 
-The challenge is to find an algorithm to ensure the loyal generals can agree on a common battle plan.  
+The scenario describes several generals surrounding Byzantium and readying for an attack. In order to succeed, all the generals must attack at the same time. Therefore, they must agree a time to attack collectively. However, communication channels are insecure and messages may be intercepted by traitorous generals. Of **n** generals there are **m** traitors. The challenge is to find an algorithm that ensures a successfuly coordinated attack. 
 
-The problem is solved using oral messages if traitors do not exceed ⅓ and messages are signed and unforgeable.
-
-[**Lamport, Shostak, and Pease**](https://lamport.azurewebsites.net/pubs/byz.pdf).
+Various possibilities are considered and ruled out. In short, Lamport, Shostak, and Pease found that success was only assured when honest generals outnumbered traitors (**m**) by a number greater than **3m + 1** traitors. In other words, coordination or consensus is impossible to achieve if a third or more of the generals are traitors.
 
 :::
 
-
-Second, incentivisation of **Validator operators** to cooperate and work towards the integrity on the Cudos network is built into the tokenomics model whereby those who secure the network by running a **Validator node** are required to stake or self-delegate a minimum of 2M CUDOS in return for network rewards. Staking or self-delegating higher amounts increases the chances of that **Validator node** being selected to conduct block validation as well as increasing their rewards as a proportion of the overall amount staked on the network. 
+Second, incentivisation of Validator operators to cooperate and encourage good behaviour on the Cudos network is built into the tokenomics model. Those who secure the network by running a Validator are required to stake or self-delegate a minimum of 2M CUDOS in return for network rewards. Staking or self-delegating higher amounts increases the chances of that Validator being selected to conduct block validation as well as increasing their rewards as a proportion of the overall amount staked on the network. 
 
 Validators and Delegators earn block rewards for keeping the blockchain operational and secure.
-Block rewards consist of Staking rewards and Transaction fees.
+**Block rewards** consist of **Staking** rewards and **Transaction fees**.
+
 
 ## Staking
 
@@ -75,15 +73,18 @@ A validator can also have an **additional stake added** to it via the CLI to inc
 
 ## Block Rewards 
 
-The more tokens staked to your Validator node, the higher the likelihood of being chosen to propose and sign a block. 
+The more tokens staked to a **Validator node**, the higher the likelihood of it being chosen to propose and sign a block. 
 
-* **Block rewards** are calculated after each block, and is equal to the sum of the **staking rewards** and the **tx fees** for that block.
+* **Block rewards** are calculated after a block is issued. 
 
-* Staking rewards occur in a single pool. 
+:::info Block rewards
 
-* They are distributed as follows:  
+*Block rewards* =  *staking rewards* + *tx fees* 
+:::
 
-    1. Validators are assigned rewards proportional to their
+* Staking rewards occur in a **single pool** and are distributed as follows:  
+
+    1. Validators are assigned rewards proportional to their 
     
     2. Users who have delegated tokens are required to **actively** claim those rewards by sending appropriate txs to the blockchain.
 
