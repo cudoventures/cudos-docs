@@ -51,6 +51,10 @@ img[alt=synced-node] { width: 800px; }
 
 img[alt=cudos-gex] { width: 800px; }
 
+img[alt=osmosis-frontier] { width: 500px; }
+
+
+
 /* unvisited link */
 a:link {
   color: #4D80E8;

@@ -136,7 +136,6 @@ module.exports = {
         'governance/buy-tokens',
         'governance/governance',
         'governance/tokenomics',
-        'governance/governance',
       ],
     },
   ],
