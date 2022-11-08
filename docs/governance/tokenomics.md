@@ -44,6 +44,41 @@ Validators and Delegators earn **Block rewards** for keeping the blockchain oper
 Validators need to use the `--commission` flag in `cudos-noded CLI` in order to withdraw their commission.
 :::
 
+### Block Rewards 
+
+The more tokens delegated to a **Validator node**, the higher the likelihood of it being chosen to propose and sign a block. 
+
+* **Block rewards** are calculated after a block is issued. 
+
+:::info Block rewards
+
+*Block rewards* =  *staking rewards* + *tx fees* 
+:::
+
+### Staking rewards 
+
+Staking rewards occur in a **single pool** **Tx fees** should be the main source of revenue for **validators** and **delegators**. However, due to the expectation of low early engagement numbers on the **Cudos network**, additional rewards are provided to users. and are distributed as follows:  
+
+1. **Bonded validators** (including the **Block proposer**) are assigned rewards proportional to the amount they have staked relative to the entire network. 
+    
+2. Users who have delegated tokens are required to **actively** claim those rewards by sending appropriate txs to the blockchain.
+
+3. The **Block proposer** receives a bonus between 3.67% and 5% of the **total block rewards** depending on the number of validators signing that block.
+
+4. 20% goes to the **community pool**.
+
+## Distribution Schedule
+
+* A total of ~1,5 billion CUDOS tokens will be distributed as staking rewards in 10 years. The exact number of tokens is given by the formula 
+
+**f(x) = 1.8 x^2 - 53 x + 358** 
+
+**where *x* is in years and *f(x)* is in millions of CUDOS.**
+
+* Hence the amount to be distributed in any given time interval is obtained by integrating the above function over that interval.
+
+* Due to the assumption that tx fees will eventually be the main source of revenue, staking rewards start high and then decrease quadratically in time.
+
 ### Validator self-delegating
 
 A **Validator Operator** must **self-delegate** at least 2M CUDOS to their node in order to make it operational. They can increase their chances of attracting delegations from token holders by running a highly reliable node with excellent uptime. This in turn increases their chances of being selected to issue a block. 
@@ -64,12 +99,12 @@ Tokens delegated to a bonded validator can be **slashed** due to validator downt
 
 If a validator fails to sign 90%  of blocks within a 19200-block interval (i.e. 17280 blocks), then it is jailed and the following occurs:
 
-    1. It becomes not-bonded and begins unbonding
-    2. It stops signing and proposing blocks
-    3. It stops earning block rewards
-    4. Its stake gets slashed by 0.01%
+1. It becomes not-bonded and begins unbonding
+2. It stops signing and proposing blocks
+3. It stops earning block rewards
+4. Its stake gets slashed by 0.01%
 
-The validator must unjail itself as quickly as possible after an enforced 10-minute waiting period.
+The validator must unjail itself as quickly as possible after an ***enforced 10-minute waiting period***.
 
 #### Double signing event
  
@@ -134,40 +169,7 @@ The delegated stake on a Validator node must be at least 2M CUDOS to continue ru
 
 A **Delegator** can choose to **undelegate** their tokens at any time. 
 
-### Block Rewards 
 
-The more tokens delegated to a **Validator node**, the higher the likelihood of it being chosen to propose and sign a block. 
-
-* **Block rewards** are calculated after a block is issued. 
-
-:::info Block rewards
-
-*Block rewards* =  *staking rewards* + *tx fees* 
-:::
-
-### Staking rewards 
-
-Staking rewards occur in a **single pool** **Tx fees** should be the main source of revenue for **validators** and **delegators**. However, due to the expectation of low early engagement numbers on the **Cudos network**, additional rewards are provided to users. and are distributed as follows:  
-
-    1. **Bonded validators** (including the **Block proposer**) are assigned rewards proportional to the amount they have staked relative to the entire network. 
-    
-    2. Users who have delegated tokens are required to **actively** claim those rewards by sending appropriate txs to the blockchain.
-
-    3. The **Block proposer** receives a bonus between 3.67% and 5% of the **total block rewards** depending on the number of validators signing that block.
-
-    4. 20% goes to the **community pool**.
-
-## Distribution Schedule
-
-* A total of ~1,5 billion CUDOS tokens will be distributed as staking rewards in 10 years. The exact number of tokens is given by the formula 
-
-**f(x) = 1.8 x^2 - 53 x + 358** 
-
-**where *x* is in years and *f(x)* is in millions of CUDOS.**
-
-* Hence the amount to be distributed in any given time interval is obtained by integrating the above function over that interval.
-
-* Due to the assumption that tx fees will eventually be the main source of revenue, staking rewards start high and then decrease quadratically in time.
 
 
 
