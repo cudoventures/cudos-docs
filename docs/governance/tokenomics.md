@@ -67,7 +67,7 @@ Staking rewards occur in a **single pool** **Tx fees** should be the main source
 
 4. 20% goes to the **community pool**.
 
-## Distribution Schedule
+### Distribution Schedule
 
 * A total of ~1,5 billion CUDOS tokens will be distributed as staking rewards in 10 years. The exact number of tokens is given by the formula 
 
