@@ -141,7 +141,7 @@ cudos-noded query gov params --output json | jq .deposit_params.min_deposit
 The example below has a proposal ID of `12` and an account user `dorothy-parker`
 
 ```shell
-$ cudos-noded tx gov vote 12 yes --from dorothy-parker --keyring-backend test
+cudos-noded tx gov vote 12 yes --from dorothy-parker --keyring-backend test
 ```
 
 :::info Voting period
