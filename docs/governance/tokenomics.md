@@ -34,9 +34,15 @@ Various possibilities are considered and ruled out. In short, Lamport, Shostak, 
 
 Second, incentivisation is built in to the tokenomics model to encourage good behaviour. **Validator operators** who secure the network by running a **Validator node** are required to **self-delegate** a minimum of **2M CUDOS** in return for network rewards. Self-delegating higher amounts increases the chances of that Validator being selected to perform block validation as well as increasing their rewards (as a proportion of the overall amount staked on the network). 
 
-Validators and Delegators earn block rewards for keeping the blockchain operational and secure.
+Validators and Delegators earn **Block rewards** for keeping the blockchain operational and secure.
 **Block rewards** consist of **Staking rewards** and **Transaction fees**.
 
+**Tx fees** should be the main source of revenue for **Validators** and **Delegators**. However, due to the expectation of low early engagement numbers on the **Cudos network**, additional rewards are provided to users. 
+
+:::tip Validator commission
+
+Validators need to use the `--commission` flag in `cudos-noded CLI` in order to withdraw their commission.
+:::
 
 ### Validator self-delegating
 
@@ -108,19 +114,27 @@ Validator Operators are free to set their own **commission rate** to charge for 
 
 ![validator-details](@site/static/img/validator-details.png)
 
-## Redelegation
+### Redelegation
 
-A **Delegator** can **redelegate** tokens from **Validator A** to **Validator B** without any penalties or extra waiting times. However, there is a ***21 day waiting period*** if they want to further redelegate any amount of tokens from Validator B.
+1. A **Delegator** can **redelegate** tokens from **Validator A** to **Validator B** without incurring any penalties or extra waiting times. A redelegation maturation period now follows for 21 days. 
 
-To redelegate tokens from **Validator B** to **Validator C** there is a *21 day waiting period*.
+2. Following on from the above example, if a **Delegator** wishes to **redelegate** their tokens from **Validator B** to a hypothetical **Validator C** they must wait *21 days*.
 
-A **Validator** can only **self-delegate through `cudos-noded CLI`**. The more funds added, the greater the voting power. 
+3. A **Validator Operator** can redelegate funds to an *existing* node in two ways:
 
-## Undelegation
+- Connecting a wallet to the [**Cudos Dashboard**](https://dashboard.cudos.org/staking) and redelegating funds to a Validator node of their choice. 
+
+- Using `cudos-noded` CLI to redelegate funds. 
+
+:::Caution
+The delegated stake on a Validator node must be at least 2M CUDOS to continue running
+:::
+
+### Undelegation
 
 A **Delegator** can choose to **undelegate** their tokens at any time. 
 
-## Block Rewards 
+### Block Rewards 
 
 The more tokens delegated to a **Validator node**, the higher the likelihood of it being chosen to propose and sign a block. 
 
@@ -131,7 +145,9 @@ The more tokens delegated to a **Validator node**, the higher the likelihood of 
 *Block rewards* =  *staking rewards* + *tx fees* 
 :::
 
-* Staking rewards occur in a **single pool** and are distributed as follows:  
+### Staking rewards 
+
+Staking rewards occur in a **single pool** **Tx fees** should be the main source of revenue for **validators** and **delegators**. However, due to the expectation of low early engagement numbers on the **Cudos network**, additional rewards are provided to users. and are distributed as follows:  
 
     1. **Bonded validators** (including the **Block proposer**) are assigned rewards proportional to the amount they have staked relative to the entire network. 
     
@@ -143,8 +159,6 @@ The more tokens delegated to a **Validator node**, the higher the likelihood of 
 
 ## Distribution Schedule
 
-**Tx fees** should be the main source of revenue for **validators** and **delegators**. However, due to the expectation of low early engagement numbers on the **Cudos network**, additional rewards are provided to users. 
-
 * A total of ~1,5 billion CUDOS tokens will be distributed as staking rewards in 10 years. The exact number of tokens is given by the formula 
 
 **f(x) = 1.8 x^2 - 53 x + 358** 
@@ -155,10 +169,6 @@ The more tokens delegated to a **Validator node**, the higher the likelihood of 
 
 * Due to the assumption that tx fees will eventually be the main source of revenue, staking rewards start high and then decrease quadratically in time.
 
-:::tip Validator commission
-
-Important note: Validators need to use the `--commission` flag in `cudos-noded CLI` in order to withdraw their commission.
-:::
 
 
 
