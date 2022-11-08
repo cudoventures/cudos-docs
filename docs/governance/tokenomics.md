@@ -161,7 +161,8 @@ Validator Operators are free to set their own **commission rate** to charge for 
 
 - Using `cudos-noded` CLI to redelegate funds. 
 
-:::Caution
+:::caution
+
 The delegated stake on a Validator node must be at least 2M CUDOS to continue running
 :::
 
