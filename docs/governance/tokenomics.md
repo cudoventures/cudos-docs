@@ -7,7 +7,7 @@ id: tokenomics
 
 ## The key aim of Cudos network tokenomics is :
 
-***To ensure that network participants are incentivised to work towards the greater good of the network. Specifically,ensuring the security, integrity and longevity of the network.***
+***To ensure that network participants are incentivised to work towards the greater good of the network. Specifically, ensuring the security, integrity and longevity of the network.***
 :::
 
 Tokenomics draws from game theory models that assume individual rational network participants are always working to maximise their own utility. ***The aim of tokenomics is to ensure that individual utility is best maximised by advancing overall network utility***. 
@@ -35,20 +35,13 @@ Various possibilities are considered and ruled out. In short, Lamport, Shostak, 
 Second, incentivisation is built in to the tokenomics model to encourage good behaviour. **Validator operators** who secure the network by running a **Validator node** are required to **self-delegate** a minimum of **2M CUDOS** in return for network rewards. Self-delegating higher amounts increases the chances of that Validator being selected to perform block validation as well as increasing their rewards (as a proportion of the overall amount staked on the network). 
 
 Validators and Delegators earn **Block rewards** for keeping the blockchain operational and secure.
-**Block rewards** consist of **Staking rewards** and **Transaction fees**.
+**Block rewards** are calculated after a block is created. All transaction fees for a created block are distributed back to Validators and Delegators when the next block begins. 
 
-**Tx fees** should be the main source of revenue for **Validators** and **Delegators**. However, due to the expectation of low early engagement numbers on the **Cudos network**, additional rewards are provided to users. 
-
-:::tip Validator commission
-
-Validators need to use the `--commission` flag in `cudos-noded CLI` in order to withdraw their commission.
-:::
+**Transaction fees** should be the main source of revenue for **Validators** and **Delegators**. However, during the adoption period to incentivise new delegators we provide additional staking rewards to users. 
 
 ### Block Rewards 
 
 The more tokens delegated to a **Validator node**, the higher the likelihood of it being chosen to propose and sign a block. 
-
-* **Block rewards** are calculated after a block is issued. 
 
 :::info Block rewards
 
@@ -57,15 +50,15 @@ The more tokens delegated to a **Validator node**, the higher the likelihood of 
 
 ### Staking rewards 
 
-Staking rewards occur in a **single pool** **Tx fees** should be the main source of revenue for **validators** and **delegators**. However, due to the expectation of low early engagement numbers on the **Cudos network**, additional rewards are provided to users. and are distributed as follows:  
+Staking rewards occur in a **single pool** and are distributed as follows:  
 
-1. **Bonded validators** (including the **Block proposer**) are assigned rewards proportional to the amount they have staked relative to the entire network. 
+1. **Bonded Validators** and **Bonded Delegators** are assigned rewards proportional to the amount they have staked relative to the entire network. 
     
 2. Users who have delegated tokens are required to **actively** claim those rewards by sending appropriate txs to the blockchain.
 
 3. The **Block proposer** receives a bonus between 3.67% and 5% of the **total block rewards** depending on the number of validators signing that block.
 
-4. 20% goes to the **community pool**.
+4. The **Community Pool** receives 20% of rewards to distribute to projects that further the aims of the ecosystem in the form of grants. 
 
 ### Distribution Schedule
 
@@ -145,9 +138,13 @@ Slashing can still occur during the unbonding period if there is evidence of bad
 
 Anyone holding CUDOS tokens can delegate tokens to one or more **validator nodes** of their choice. Validators and Delegators then share rewards **based on the amounts they have contributed to the pool**.
 
-Validator Operators are free to set their own **commission rate** to charge for delegating. The **commission rate** can change at most once daily. However, a validator's **commission rate** CANNOT exceed the **maximum commission rate** set when the validator node was first initiated. Commission fees can be viewed under [Validator details in the Cudos Explorer](https://explorer.cudos.org/validators). 
+Validator Operators are free to set their own **commission rate** to charge for delegating. The **commission rate** can change at most by the **max commission change rate** once daily. However, a validator's **commission rate** CANNOT exceed the **maximum commission rate** set when the validator node was first initiated. Commission fees can be viewed under [Validator details in the Cudos Explorer](https://explorer.cudos.org/validators). 
 
 ![validator-details](@site/static/img/validator-details.png)
+
+:::tip Validator commission
+Validators can collect their commission by connecting their wallet to the Dashboard or use the `--commission` flag in `cudos-noded CLI` in order to withdraw their commission.
+:::
 
 ### Redelegation
 
@@ -155,20 +152,15 @@ Validator Operators are free to set their own **commission rate** to charge for 
 
 2. Following on from the above example, if a **Delegator** wishes to **redelegate** their tokens from **Validator B** to a hypothetical **Validator C** they must wait *21 days*.
 
-3. A **Validator Operator** can redelegate funds to an *existing* node in two ways:
+3. You can redelegate in two ways:
 
 - Connecting a wallet to the [**Cudos Dashboard**](https://dashboard.cudos.org/staking) and redelegating funds to a Validator node of their choice. 
 
 - Using `cudos-noded` CLI to redelegate funds. 
 
-:::caution
-
-The delegated stake on a Validator node must be at least 2M CUDOS to continue running
-:::
-
 ### Undelegation
 
-A **Delegator** can choose to **undelegate** their tokens at any time. 
+A **Delegator** can choose to **undelegate** their tokens at any time. Tokens can be accessed following the 21 day unbonding period. During the unbonding period, the tokens are in an unbonded state and do not contribute to earning rewards or voting power. 
 
 
 
