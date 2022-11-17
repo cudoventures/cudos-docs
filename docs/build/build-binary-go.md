@@ -3,18 +3,82 @@ title: Build Binary
 id: build-binary-go
 ---
 
+Get started by building the cudos-node binary and running the cudos-noded CLI.
+`cudos-noded` CLI allows you to interact with the Cudos network. 
+
+## MacOS
+
+1. Clone the Cudos node repository.
+
+```shell
+git clone https://github.com/CudoVentures/cudos-node.git
+```
+
+2. Build the binary
+
+```shell
+# Change into the Cudos node directory
+cd cudos-node
+
+# Build the binary
+make
+
+# Run 
+cudos-noded
+```
+
+3. You should see the following:
+
+```shell
+Cudos Node App
+
+Usage:
+  cudos-noded [command]
+
+Available Commands:
+  add-genesis-account      Add a genesis account to genesis.json
+  add-wasm-genesis-message Wasm genesis subcommands
+  collect-gentxs           Collect genesis txs and output a genesis.json file
+  debug                    Tool for helping with debugging your application
+  eth_keys                 Manage your application's ethereum keys
+  export                   Export state to JSON
+  gentx                    Generate a genesis tx carrying a self delegation, oracle key delegation and orchestrator key delegation
+  help                     Help about any command
+  init                     Initialize private validator, p2p, genesis, and application configuration files
+  keys                     Manage your application's keys
+  migrate                  Migrate genesis to a specified target version
+  query                    Querying subcommands
+  rollback                 rollback cosmos-sdk and tendermint state by one height
+  start                    Run the full node
+  status                   Query remote node for status
+  tendermint               Tendermint subcommands
+  tx                       Transactions subcommands
+  unsafe-reset-all         Resets the blockchain database, removes address book files, and resets data/priv_validator_state.json to the genesis state
+  validate-genesis         validates the genesis file at the default location or at the location passed as an arg
+  version                  Print the application binary version information
+
+Flags:
+  -h, --help                help for cudos-noded
+      --home string         directory for config and data (default "/Users/name/cudos-data")
+      --log_format string   The logging format (json|plain) (default "plain")
+      --log_level string    The logging level (trace|debug|info|warn|error|fatal|panic) (default "info")
+      --trace               print out full stack trace on errors
+
+Use "cudos-noded [command] --help" for more information about a command.
+```
+
+:::caution 
+`cudos-noded` should be copied to `$HOME/go/bin` by default. If you have any problems check your `PATH` and make sure it includes `$HOME/go/bin`.
+:::
+
+## Ubuntu 20.04 LTS 
+
 This guide explains how to install the `cudos-noded` binary. 
 
 (These instructions are written based on a Google Cloud VM instance running on Ubuntu 20.04 LTS
 x86/64, amd64 focal image built on 2022-09-05, supports Shielded VM features.)
 
-## Supported OS
-
-* Ubuntu 20.04 LTS 
-
-## 00 Install prerequisites
-
-### Install `build-essential`
+1. Install `build-essential`
 
 Run as normal user.
 
@@ -23,14 +87,14 @@ sudo apt update
 sudo apt install build-essential
 ```
 
-### Install git
+2. Install Git
 
 ```shell
 sudo apt-get install git-all
 git version
 ```
 
-### Install Go
+3. Install Go
 
 [**Go installation instructions**](https://go.dev/dl/)
 
@@ -42,7 +106,7 @@ echo 'PATH=$PATH:~/go/bin' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-## 01 Install `cudos-node` binary and make
+4. Install `cudos-node` binary and make
 
 ```shell
 git clone https://github.com/CudoVentures/cudos-node.git
@@ -56,7 +120,7 @@ user@node-go-01:~$ cd cudos-node && make install
 --> Installing cudos-noded
 ```
 
-## 02 `cudos-node` daemon
+5. `cudos-node` daemon
 
 `cudos-noded` provides the Command Line Interface and node daemon to interact with the Cudos blockchain.
 Check that it has successfully installed.
@@ -68,18 +132,7 @@ cudos-noded version --long
 :::info 🎉 Success
 Successful installation is indicated by the presence of `cudos-noded` - The Cudos Node Daemon. 
 
-### Example
 
-```shell
-user@node-go-01:~$ cudos-noded version --long
-name: cudos-node
-server_name: cudos-noded
-version: v1.1.0.1
-commit: ed5a355b592ea93ce0cd35f2ef778a8cf18343a7
-build_tags: ""
-go: go version go1.18.5 linux/amd64
-build_deps:
-```
 
 
 

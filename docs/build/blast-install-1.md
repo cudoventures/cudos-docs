@@ -1,9 +1,9 @@
 ---
-title: Cudos blast
+title: Cudos Blast
 id: install-blast
 ---
 
-**Cudos Blast** is an educational demo project to be used to understand more about smart contracts, compilation, deployment and interaction. 
+**Cudos Blast** is a useful tool to support smart contract compilation, deployment and interaction. 
 
 # 00 Prerequisites
 

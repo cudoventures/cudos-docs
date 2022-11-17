@@ -1,6 +1,6 @@
 ---
 title: Connect to local node
-id: blast-connect
+id: connect-node
 ---
 
 Test your contract on a **local** node before deploying on **testnet** or **mainnet**.
