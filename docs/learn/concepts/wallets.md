@@ -51,5 +51,12 @@ You can use **Keplr** and **Cosmostation** wallets on the Cudos network.
 
 [***Install Cosmostation as a Browser extension***](https://cosmostation.io/wallet/#extension)
 
+## Create an account/wallet to receive funds on CLI
+
+Initialise `cudos-noded CLI` to get started. 
+
+```shell
+cudos-noded keys add <INSERT-YOUR-WALLET-NAME>
+
 
 
