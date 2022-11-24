@@ -89,33 +89,6 @@ module.exports = {
               'build/cli',
              ]
     },
-    {
-      type: 'category',
-      label: 'Tutorials',
-      items: [
-        {
-          type: 'category',
-          label: 'Counter',
-          items: [
-            'build/tutorials/counter/create-counter',
-            'build/tutorials/counter/compile-contract',
-            'build/tutorials/counter/connect-node',
-            'build/tutorials/counter/deploy-counter',
-            'build/tutorials/counter/interact-counter',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Messaging dApp',
-          items: [
-            'build/tutorials/messaging/create-messaging',
-            'build/tutorials/messaging/compile-messaging',
-            'build/tutorials/messaging/connect-messaging-node',
-            'build/tutorials/messaging/deploy-messaging',
-          ],
-        },
-      ],
-    },
   ],
 
   learnSidebar: [
@@ -162,7 +135,6 @@ module.exports = {
         description: "Learn by building",
       },
       items: [
-        'build/tutorials/index',
         {
           type: 'category',
           label: 'Counter',

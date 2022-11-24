@@ -65,6 +65,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+      },
       navbar: {
         logo: {
           alt: 'Site Logo',
@@ -101,7 +104,7 @@ const config = {
                 position: "left",
               }, 
               {
-                label: '🔧 Tutorials',
+                label: '🚀 Tutorials',
                 to: 'docs/category/tutorials/',
                 position: "right",
               },           
