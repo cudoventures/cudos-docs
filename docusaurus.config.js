@@ -114,28 +114,6 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Social',
-            items: [
-              {
-                label: 'Telegram',
-                href: 'https://t.me/cudostelegram',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discord.com/invite/t397SKqf4u',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/CUDOS_',
-              },
-              {
-                label: 'Medium',
-                href: 'https://medium.com/cudos',
-              },
-              
-            ],
-          },
-          {
             title: 'Company',
             items: [
               {
@@ -175,6 +153,27 @@ const config = {
                 label: 'Blog',
                 href: 'https://www.cudos.org/about/',
               },
+            ],
+          },
+          {
+            title: 'Social',
+            items: [
+              {
+                label: 'Telegram',
+                href: 'https://t.me/cudostelegram',
+              },
+              {
+                label: 'Discord',
+                href: 'https://discord.com/invite/t397SKqf4u',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/CUDOS_',
+              },
+              {
+                label: 'Medium',
+                href: 'https://medium.com/cudos',
+              }, 
             ],
           },
         ],
