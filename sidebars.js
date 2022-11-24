@@ -152,4 +152,29 @@ module.exports = {
       ],
     },
   ],
+  tutorialSidebar: [
+    {
+      type: 'category',
+      label: 'Tutorials',
+      link: {
+        type: 'generated-index',
+        title: 'Tutorials',
+        description: "Learn by building",
+      },
+      items: [
+        'build/tutorials/index',
+        {
+          type: 'category',
+          label: 'Counter',
+          items: ['build/tutorials/counter/create-counter', 'build/tutorials/counter/compile-contract']
+        },
+        {
+          type: 'category',
+          label: 'MessagingdApp',
+          items: ['build/tutorials/messaging/create-messaging', 'build/tutorials/messaging/compile-messaging']
+        },
+      ]
+    }
+  ]
+
 };
