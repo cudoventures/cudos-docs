@@ -138,12 +138,12 @@ module.exports = {
         {
           type: 'category',
           label: 'Counter',
-          items: ['build/tutorials/counter/create-counter', 'build/tutorials/counter/compile-contract']
+          items: ['build/tutorials/counter/create-counter', 'build/tutorials/counter/compile-contract', 'build/tutorials/counter/connect-node', 'build/tutorials/counter/deploy-counter','build/tutorials/counter/interact-counter'], 
         },
         {
           type: 'category',
           label: 'MessagingdApp',
-          items: ['build/tutorials/messaging/create-messaging', 'build/tutorials/messaging/compile-messaging']
+          items: ['build/tutorials/messaging/create-messaging', 'build/tutorials/messaging/compile-messaging', 'build/tutorials/messaging/connect-messaging-node', 'build/tutorials/messaging/deploy-messaging'],
         },
       ]
     }
