@@ -4,6 +4,7 @@ id: create-messaging
 ---
 
 In this tutorial, we are going to build a simple ***messaging dApp*** created by Aishat Akinyemi. 
+This tutorial uses Cudos Blast.
 
 The messaging dApp will do the following: 
 
