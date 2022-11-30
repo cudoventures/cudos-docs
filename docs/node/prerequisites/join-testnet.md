@@ -10,8 +10,8 @@ NETWORK | ID | URL
 public testnet| cudos-testnet-public-3 |https://sentry1.gcp-uscentral1.cudos.org:36657/
 
 ## Red Hat/Fedora OS
-* RHEL/CentOS/EL 8
-* Fedora 34 & 35
+* RHEL/CentOS/EL 7 & 8
+* Fedora 34, 35 & 36
 
 1. Make sure you are in **root** by running the following command:
 
@@ -23,9 +23,9 @@ sudo -i
 
 ```shell
 dnf install -y yum-utils
-yum-config-manager --add-repo http://jenkins.gcp.service.cudo.org/cudos/cudos.repo
+dnf install -y http://jenkins.gcp.service.cudo.org/cudos/cudos-testnet/cudos-release.rpm
 yum-config-manager --enable cudos-testnet
-dnf install cudos-network-public-testnet
+dnf install -y cudos-network-public-testnet
 ```
 
 3. Confirm `cudos-noded` is present
@@ -36,8 +36,8 @@ cudos-noded version
 
 
 ## Ubuntu/Debian OS
-* Ubuntu 20.04
-* Debian 10
+* Debian 10 & 11
+* Ubuntu 20.04 & 22.04
 
 1. Make sure you are in **root** by running the following command:
 
@@ -47,23 +47,11 @@ sudo -i
 
 2. Run the following scripts to connect to the Testnet:
 
-    * Set up `apt` repo
-
-    ```shell
-    echo 'deb [trusted=yes] http://jenkins.gcp.service.cudo.org/cudos/cudos-testnet/debian stable main' > /etc/apt/sources.list.d/cudos.list
-    ```
-
-    * Update the local package list
-
-    ```shell
-    apt update
-    ```
-
-    * Install network package and its dependencies
-
-    ```shell
-    apt install cudos-network-public-testnet
-    ```
+```shell
+echo 'deb [trusted=yes] http://jenkins.gcp.service.cudo.org/cudos/cudos-testnet/debian stable main' > /etc/apt/sources.list.d/cudos.list
+apt update
+apt install cudos-network-public-testnet
+```
 
 3. Confirm `cudos-noded` is present
 
