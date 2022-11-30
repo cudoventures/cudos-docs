@@ -15,6 +15,10 @@ Mainnet| cudos-1     | https://rpc.cudos.org
 
 1. Make sure you are in `root` by running the following command:
 
+:::caution 
+Just putting "sudo" before some of these commands does not work.
+:::
+
 ```shell
 sudo -i
 ```
@@ -40,6 +44,10 @@ cudos-noded version
 * Ubuntu 20.04 & 22.04
 
 1. Make sure you are in `root` by running the following command:
+
+:::caution 
+Just putting "sudo" before some of these commands does not work.
+:::
 
 ```shell
 sudo -i

@@ -49,6 +49,10 @@ This step, confirms your installation has succeeded.
 
 1. Make sure you are in **root** by running the following command:
 
+:::caution 
+Just putting "sudo" before some of these commands does not work.
+:::
+
 ```shell
 sudo -i
 ```
