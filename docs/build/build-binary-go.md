@@ -68,7 +68,11 @@ Use "cudos-noded [command] --help" for more information about a command.
 ```
 
 :::caution 
-`cudos-noded` should be copied to `$HOME/go/bin` by default. If you have any problems check your `PATH` and make sure it includes `$HOME/go/bin`.
+If you run into errors, you may need to set your Go path.
+Amend .bashrc file to your 
+```shell
+export PATH=$PATH:$(go env GOPATH)/bin
+```
 :::
 
 ## Ubuntu 20.04 LTS 

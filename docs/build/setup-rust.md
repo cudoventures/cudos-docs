@@ -56,6 +56,7 @@ rustup target add wasm32-unknown-unknown
 
 // Install the following package to run custom cargo scripts:
 
+cargo install cargo-generate --features vendored-openssl
 cargo install cargo-run-script
 ```
 
