@@ -1,9 +1,19 @@
 ---
 title: Get started with CosmWasm
-id: beginning
+id: start-cosmwasm
 ---
 
-This tutorial gets you started with writing CosmWasm smart contracts.  
+This tutorial gets you started with writing CosmWasm smart contracts. Many thanks to [Callum-A](https://github.com/Callum-A/cosmwasm-zero-to-hero).
+
+## How to use CosmWasm
+
+CosmWasm is a Cosmos SDK module. This means that a binary is enough to start integrating it into your blockchain.
+
+`wasmd` is integrated into the `cudos-noded` binary provided when you follow the instructions to [**Build the binary**](docs/build/build-binary-go).
+
+Using wasmd it is possible to launch a new smart-contract enabled blockchain out of the box, using documented and tested tooling and the same security model as the Cosmos Hub.
+
+A running blockchain is needed to host and interact with the contracts. It can be either localhost, testnet, or a mainnet blockchain.
 
 ## 📌 Here's what you need
 
@@ -13,10 +23,10 @@ This tutorial gets you started with writing CosmWasm smart contracts.
 2. Understanding of **Git and Github**
 3. Comfort using **Terminal and/or CLI**
 4. Mac/Ubuntu work machine/Windows - WSL Ubuntu
-5. Text editor - **VSCode** or *IntelliJ with Rust Plugin*
+5. Text editor - **VSCode** or **IntelliJ with Rust Plugin**
 6. Ensure you have **Rustup**, **WASM target** and **Cargo Generate** installed. 
 
-    If you don't, follow the installation steps on this page: [**Setup Rust**](https://docs.cudos.org/docs/build/setup-rust#install-rust-and-wasm)
+If you don't, follow the installation steps on this page: [**Setup Rust**](https://docs.cudos.org/docs/build/setup-rust#install-rust-and-wasm)
 :::
 
 ## ✏️ 01 Generate boilerplate contract project
@@ -87,9 +97,33 @@ cw-starter/ # Root
 │   ├── msg.rs # Where we define our message types
 │   └── state.rs # Where we define any state variables
 └── target/ # Where unoptimised WASM files are outputted
+├── cargo.toml # Where dependencies are specified
 ```
 
+## 03 What we're going to build
 
+We're going to build and store polls on chain. 
+Here is how our app will work: 
+
+1. Any user can create a poll.
+2. Any user can vote on a poll.
+3. Polls can have different options.
+
+Let's imagine Dorothy Parker has created a poll. Here's an example of how it looks:
+
+:::note Example Poll
+
+What is your favourite Cosmos ecosystem project?
+a. Cudos
+b. Osmosis
+c. Cosmos Hub
+:::
+
+1. Dorothy can vote in her own poll. She votes for Cudos. 
+2. William Blake decides to vote for Cosmos Hub. 
+3. Dorothy decides to end the poll after 30 minutes.
+4. Rabindranath Tagore attempts to vote but is too late!
+5. Everyone can see the results of the poll.
 
 
 ## 02 Generate a WASM file

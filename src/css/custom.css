@@ -7,9 +7,12 @@
  
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+ @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
 
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-font-family-base: 'Lato';
   --ifm-color-primary: #1B2031;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
