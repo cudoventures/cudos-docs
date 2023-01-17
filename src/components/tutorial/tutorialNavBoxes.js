@@ -4,37 +4,27 @@ import styles from './tutorialNavBoxes.module.css';
 
 const FeatureList = [
   {
+    title: 'Build a simple poll',
+    icon: 'img/rocket.png',
+    items: [
+      {url: "docs/build/tutorials/simple-poll/build-poll", text: "Get Started"},
+    ]
+  },
+  {
     title: 'Build a messaging dApp',
-    image: 'img/rocket.png',
+    icon: 'img/messaging.svg',
     items: [
-      {url: "docs/getting-started/browser-extension-installation", text: "Browser extension installation"},
-      {url: "docs/getting-started/pwa", text: "Progressive web app"}
+      {url: "docs/build/tutorials/messaging/create-messaging", text: "Get Started"},
     ]
   },
   {
-    title: 'Setting up your feed',
-    icon: 'img/icons/messaging.svg',
+    title: 'Build a Counter with Cudos Blast',
+    icon: 'img/nft.svg',
     items: [
-      {url: "docs/settingyourfeed/filtering-content-feed", text: "Filtering content"},
-      {url: "docs/settingyourfeed/advanced-filtering-options", text: "Advanced filtering"},
-      {url: "docs/settingyourfeed/blocking-tags-sources", text: "Blocking tags and sources"},
+      {url: "docs/key-features/default-feeds", text: "Get Started"},
     ]
   },
-  {
-    title: 'Key features',
-    icon: 'img/icons/key-features.svg',
-    items: [
-      {url: "docs/key-features/default-feeds", text: "Feeds"},
-      {url: "docs/key-features/upvotes", text: "Upvotes"},
-      {url: "docs/key-features/discussions", text: "Discussions"},
-      {url: "docs/key-features/bookmarks", text: "Bookmarks"},
-      {url: "docs/key-features/search", text: "Search"},
-      {url: "docs/key-features/do-not-disturb", text: "Do not disturb"},
-      {url: "docs/key-features/the-companion", text: "The Companion Widget"},
-      {url: "docs/key-features/community-picks", text: "Community Picks"},
-    ]
-  },
-  {
+  /* {
     title: 'Your profile',
     icon: 'img/icons/your-profile.svg',
     items: [
@@ -89,7 +79,7 @@ const FeatureList = [
     items: [
       {url: "docs/for-oss-contributors/how-to%20contribute-to-daily-dev", text: "How to contribute to daily.dev"},
     ]
-  },
+  }, */
 ];
 
 function FeatureItem({url, text}){

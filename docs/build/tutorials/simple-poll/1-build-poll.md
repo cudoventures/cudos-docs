@@ -1,11 +1,36 @@
 ---
-title: Get started with CosmWasm
-id: start-cosmwasm
+title: Build a simple poll
+id: build-poll
 ---
 
 This tutorial gets you started with writing CosmWasm smart contracts. Many thanks to [Callum-A](https://github.com/Callum-A/cosmwasm-zero-to-hero).
 
-## How to use CosmWasm
+## 🛠 What we're going to build
+
+We're going to build and store polls on chain. 
+Here is how our app will work: 
+
+1. Any user can create a poll.
+2. Any user can vote on a poll.
+3. Polls can have different options.
+
+Let's imagine Dorothy Parker has created a poll. Here's an example of how it looks:
+
+:::note Example Poll
+
+What is your favourite Cosmos ecosystem project?
+a. Cudos
+b. Osmosis
+c. Cosmos Hub
+:::
+
+1. Dorothy Parker can vote in her own poll. She votes for Cudos. 
+2. William Blake decides to vote for Cosmos Hub. 
+3. Dorothy decides to end the poll after 30 minutes.
+4. Rabindranath Tagore attempts to vote but is too late!
+5. Everyone can see the results of the poll.
+
+## 👀 How to use CosmWasm
 
 CosmWasm is a Cosmos SDK module. This means that a binary is enough to start integrating it into your blockchain.
 
@@ -31,16 +56,20 @@ If you don't, follow the installation steps on this page: [**Setup Rust**](https
 
 ## ✏️ 01 Generate boilerplate contract project
 
-Think of a name for your project and enter it as your PROJECT_NAME. 
+In this section, we can use the **Interwasm** [CW-Template](https://github.com/InterWasm/cw-template) to set up a boilerplate contract project.
+
+Think of a name for your project and enter it as your PROJECT_NAME. Use the following command to generate a project. 
 
 ```shell
 cargo generate --git https://github.com/CosmWasm/cw-template.git --name <PROJECT_NAME>
 ```
 
-### Example - Generate wappy project
+You can generate a **full** or **minimal** project. In the example, we generate a full project with example content. 
+
+### Example - Generate kularing project
 
 ```shell
-cargo generate --git https://github.com/CosmWasm/cw-template.git --name wappy
+cargo generate --git https://github.com/CosmWasm/cw-template.git --name kularing
 🔧   Destination: /Users/adiamond/wappy ...
 🔧   project-name: wappy ...
 🔧   Generating template ...
@@ -72,12 +101,18 @@ The minimal template assumes you already know how to write your own logic, and d
 [21/24]   Done: src/lib.rs 
 [22/24]   Done: src/msg.rs
 [23/24]   Done: src/state.rs
-[24/24]   Done: src    🔧   Moving generated files into: `/Users/user/wappy`...
+[24/24]   Done: src    🔧   Moving generated files into: `/Users/user/kularing`...
 💡   Initializing a fresh Git repository
-✨   Done! New project created /Users/user/wappy
+✨   Done! New project created /Users/user/kularing
 ```
 
 ## 📂 02 Explore inside the project?
+
+Change directory into your newly created project.
+
+```shell
+cd PROJECT-NAME
+```
 
 ```shell
 cw-starter/ # Root
@@ -100,51 +135,26 @@ cw-starter/ # Root
 ├── cargo.toml # Where dependencies are specified
 ```
 
-## 03 What we're going to build
+##  ✅ 03 Verify the installation
 
-We're going to build and store polls on chain. 
-Here is how our app will work: 
-
-1. Any user can create a poll.
-2. Any user can vote on a poll.
-3. Polls can have different options.
-
-Let's imagine Dorothy Parker has created a poll. Here's an example of how it looks:
-
-:::note Example Poll
-
-What is your favourite Cosmos ecosystem project?
-a. Cudos
-b. Osmosis
-c. Cosmos Hub
-:::
-
-1. Dorothy can vote in her own poll. She votes for Cudos. 
-2. William Blake decides to vote for Cosmos Hub. 
-3. Dorothy decides to end the poll after 30 minutes.
-4. Rabindranath Tagore attempts to vote but is too late!
-5. Everyone can see the results of the poll.
-
-
-## 02 Generate a WASM file
-
-1. Change to the root directory of the project
+1. Run the following commands to check everything is set up okay. 
 
 ```shell
-cd project-name
-```
-
-2. Run command
-
-Build an unoptimised WASM file. 
-
-```shell
+# Change to the root directory of the project
+cd PROJECT_NAME
+# Run tests, currently there are no tests so output should display running 0 tests
+cargo test
+# Generate JSON schema, should generate a bunch of JSON files under the schema directory
+cargo schema
+# Build an unoptimised WASM file, will be located under
+# target/wasm32-unknown-unknown/release/cw_starter.wasm
 cargo wasm
 ```
 
-This file is located at **target/wasm32-unknown-unknown/release/cw_starter.wasm**
 
-## 03 Optimise the file
+
+
+
 
 
 
