@@ -2,12 +2,16 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './tutorialNavBoxes.module.css';
 
+
 const FeatureList = [
   {
     title: 'Build a simple poll',
     icon: 'img/rocket.png',
     items: [
-      {url: "docs/build/tutorials/simple-poll/build-poll", text: "Get Started"},
+      {
+      url: "docs/build/tutorials/simple-poll/build-poll", 
+      text: "Get Started",
+    },
     ]
   },
   {
@@ -21,7 +25,7 @@ const FeatureList = [
     title: 'Build a Counter with Cudos Blast',
     icon: 'img/nft.svg',
     items: [
-      {url: "docs/key-features/default-feeds", text: "Get Started"},
+      {url: "docs/build/tutorials/counter/create-counter", text: "Get Started"},
     ]
   },
   /* {

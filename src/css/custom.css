@@ -44,6 +44,10 @@
   width: 400px;
 }
 
+/* Styling for image size */
+
+img[alt=token-distribution] { width: 900px; }
+
 img[alt=instantiated] { width: 1200px; }
 
 img[alt=deployed] { width: 1200px; }
@@ -64,29 +68,43 @@ img[alt=messaging-dapp] { width: 800px; }
 
 img[alt=update-schema] { width: 800px; }
 
-/* unvisited link 
-a:link {
+/* Styling for links */
+
+/* LIGHT MODE */
+
+[data-theme='light'] a:link {
   color: #02102c;
 }
 
-
-a:visited {
+[data-theme='light'] a:visited {
   color: #011641;;
 }
 
-
-a:hover {
+[data-theme='light'] a:hover {
   color: rgb(105, 188, 255);
 }
 
-
-a:active {
+[data-theme='light'] a:active {
   color: rgb(0, 0, 255);
 }
-*/
 
+/* DARK MODE */
 
-img[alt=token-distribution] { width: 900px; }
+[data-theme='dark'] a:link {
+  color: #e9f1f7;
+}
+
+[data-theme='dark'] a:visited {
+  color: #76a1f5;;
+}
+
+[data-theme='dark'] a:hover {
+  color: rgb(105, 255, 240);
+}
+
+[data-theme='dark'] a:active {
+  color: rgb(0, 0, 255);
+}
 
 /* navbar */
 

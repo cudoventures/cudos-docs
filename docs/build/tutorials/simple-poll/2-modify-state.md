@@ -1,5 +1,5 @@
 ---
-title: 2. Modify state.rs
+title: Modify state.rs
 id: modify-state
 ---
 

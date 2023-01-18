@@ -125,28 +125,33 @@ module.exports = {
       ],
     },
   ],
-  tutorialSidebar: [
+
+  pollTutorialSidebar: [
     {
       type: 'category',
-      label: 'Tutorials',
-      link: {
-        type: 'generated-index',
-        title: 'Tutorials',
-        description: "Learn by building",
-      },
+      label: 'Simple Poll',
       items: [
+        'build/tutorials/simple-poll/build-poll', 'build/tutorials/simple-poll/modify-state',
+      ]
+    }
+
+  ],
+
+  counterTutorialSidebar: [
         {
           type: 'category',
           label: 'Counter',
-          items: ['build/tutorials/counter/create-counter', 'build/tutorials/counter/compile-contract', 'build/tutorials/counter/connect-node', 'build/tutorials/counter/deploy-counter','build/tutorials/counter/interact-counter'], 
+          items: [
+            'build/tutorials/counter/create-counter', 'build/tutorials/counter/compile-contract', 'build/tutorials/counter/connect-node', 'build/tutorials/counter/deploy-counter','build/tutorials/counter/interact-counter'
+         ], 
         },
+      ],
+  
+  messagingTutorialSidebar: [
         {
           type: 'category',
           label: 'MessagingdApp',
           items: ['build/tutorials/messaging/create-messaging', 'build/tutorials/messaging/compile-messaging', 'build/tutorials/messaging/connect-messaging-node', 'build/tutorials/messaging/deploy-messaging'],
         },
-      ]
-    }
-  ]
-
+      ],
 };
