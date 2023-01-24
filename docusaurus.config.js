@@ -91,10 +91,21 @@ const config = {
                 position: "left",
               },  
               {
-                type: 'doc',
+                type: 'dropdown',
                 label: '🛠 Build',
-                docId: 'build/intro',
                 position: "left",
+                items: 
+                [
+                  {
+                    type: 'doc',
+                    label: '🧳 Resources',
+                    docId: 'build/intro',
+                  },
+                  {
+                    label: '🚀 Tutorials',
+                    to: 'tutorials',
+                    },
+                ]
               }, 
               {
                 type: 'doc',
@@ -107,12 +118,7 @@ const config = {
                 label: '🏦 Governance',
                 docId: 'governance/tokens',
                 position: "left",
-              }, 
-              {
-                label: '🚀 Tutorials',
-                to: 'tutorials',
-                position: "right",
-              },           
+              },            
             ],
       },      
       footer: {

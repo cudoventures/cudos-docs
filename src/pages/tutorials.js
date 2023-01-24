@@ -37,7 +37,7 @@ function TutorialHeader() {
     
     <header className={clsx(styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">Super fun tutorials</h1>
+        <h1 className="hero__title">Tutorials</h1>
       </div>
     </header>
   );
