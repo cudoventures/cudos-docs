@@ -30,25 +30,48 @@ Various possibilities are considered and ruled out. In short, Lamport, Shostak, 
 
 :::
 
-### Incentivisation
+## Incentivisation
 
-Second, incentivisation is built in to the tokenomics model to encourage good behaviour. **Validator operators** who secure the network by running a **Validator node** are required to **self-delegate** a minimum of **2M CUDOS** in return for network rewards. Self-delegating higher amounts increases the chances of that Validator being selected to perform block validation as well as increasing their rewards (as a proportion of the overall amount staked on the network). 
+Second, incentivisation is built in to the tokenomics model to encourage good behaviour. 
 
-Validators and Delegators earn **Block rewards** for keeping the blockchain operational and secure.
-**Block rewards** are calculated after a block is created. All transaction fees for a created block are distributed back to Validators and Delegators when the next block begins. 
+**Validator operators** who secure the network by running **Validator nodes** are required to **Self-delegate** a minimum of **2M CUDOS** in return for a share of **Block rewards**. 
 
-**Transaction fees** should be the main source of revenue for **Validators** and **Delegators**. However, during the adoption period to incentivise new delegators we provide additional staking rewards to users. 
+Self-delegating ***higher*** amounts of CUDOS tokens has several benefits. 
 
-### Block Rewards 
+1. It increases the chances of a Validator node being selected to perform block validation.
 
-The more tokens delegated to a **Validator node**, the higher the likelihood of it being chosen to propose and sign a block. 
+2. It increases the proportion of rewards received in proportion to the overall amount staked on the network.
 
-:::info Block rewards
+3. It increases the chances of token holders choosing to delegate to a Validator node that has more 'skin in the game'. A higher self-delegation signifies trust and commitment to the network. 
 
-*Block rewards* =  *staking rewards* + *tx fees* 
+### Understanding rewards
+
+:::success What are Block rewards?
+
+Block rewards are equal to the sum of ***staking rewards*** and ***tx fees*** for a specific block.
+
+Rewards for a block are only distributed back to Validators and Delegators when the ***next*** block begins. 
 :::
 
+
+:::success What are Staking rewards?
+
+Staking rewards are additional rewards provided to Validators during the early and mid-stages of the network to support the growth of the Validator ecosystem. They comprise 10% of the total token supply. 
+
+:::
+
+:::success What is Bonding?
+
+**Bonding** is the process of locking tokens to the network for a specific period of time.
+
+:::
+
+
 ### Staking rewards 
+
+In order to cultivate and grow the node validators ecosystem during the early and mid-stages of the network,
+CUDOS will spend 10% of the funds to ensure that all node validators are rewarded for the contributions
+to the network. T
 
 Staking rewards occur in a **single pool** and are distributed as follows:  
 
@@ -56,21 +79,9 @@ Staking rewards occur in a **single pool** and are distributed as follows:
     
 2. Users who have delegated tokens are required to **actively** claim those rewards by sending appropriate txs to the blockchain.
 
-3. The **Block proposer** receives a bonus between 3.67% and 5% of the **total block rewards** depending on the number of validators signing that block.
+3. The **Block proposer** receives a bonus between 3.67% and 5% of the **Total Block Rewards** depending on the number of validators signing that block.
 
 4. The **Community Pool** receives 20% of rewards to distribute to projects that further the aims of the ecosystem in the form of grants. 
-
-### Distribution Schedule
-
-* A total of ~1,5 billion CUDOS tokens will be distributed as staking rewards in 10 years. The exact number of tokens is given by the formula 
-
-**f(x) = 1.8 x^2 - 53 x + 358** 
-
-**where *x* is in years and *f(x)* is in millions of CUDOS.**
-
-* Hence the amount to be distributed in any given time interval is obtained by integrating the above function over that interval.
-
-* Due to the assumption that tx fees will eventually be the main source of revenue, staking rewards start high and then decrease quadratically in time.
 
 ### Validator self-delegating
 
