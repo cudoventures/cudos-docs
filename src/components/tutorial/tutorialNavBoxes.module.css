@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
+
+.container2 {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: 'Nothing You Could Do', sans-serif;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+  
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+   
+.grid3col{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap:56px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  @media screen and (max-width: 1680px) {
+    .grid3col{
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap:56px;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (max-width: 1180px) {
+    .grid3col{
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap:56px;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .grid3col{
+      display: grid;
+      grid-template-columns: repeat(1,minmax(0,1fr));
+      gap:56px 0px;
+      margin: 0 auto;
+    }
+  }
+  
+  
+  .listContainer{
+    min-height: 17rem;
+  }
+  @media screen and (max-width: 768px) {
+    .listContainer{
+      min-height: 3rem;
+      padding-bottom: 1rem;
+    }
+  }
+  .listContainer li{
+    list-style-type: none;
+    position: relative;
+  }
+  
+  .listContainer li:before{
+    --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="white" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+    background: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem;
+    transform: rotate(90deg);
+      content: '';
+      position: absolute;
+      height: 1.25rem;
+      width: 1.25rem;
+      left: -1.5rem;
+      top: 0.5rem;
+    }
+
+  /* LIGHT MODE */
+
+    html[data-theme='light'] .homecard{
+    width: 320px;
+    height: 320px;
+    padding: 8px;
+    position: relative;
+    display: block;
+    border-radius: 16px;
+    border: 2px solid #0336b6ee;
+    box-shadow: -5px 10px 5px 0px #6E7B91;
+  }
+  
+  html[data-theme='light'] .homecard h2{
+    color: rgb(13, 181, 232);
+    font-size: 48px;
+    background-clip: text;
+    margin: 8px 16px;
+    min-height: 2.4rem;
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+  
+  html[data-theme='light'] .homecard a{
+     color: #000;
+     font-size: 24px;
+     text-decoration: underline;
+     line-height: 2rem;
+  }
+ 
+  html[data-theme='light'] .homeIcon{
+    filter: brightness(0.5);
+  }
+ 
+  html[data-theme='dark'] .homeIcon{
+    filter: brightness(0) invert(1);
+  }
+
+  html[data-theme='light'] .homeIcon{
+    width: 50px;
+    height: 50px;
+    /* border-radius: 0!important; */
+    margin: auto;
+    /* margin: 12px 0 4px 16px; */
+  }
+
+  /* DARK MODE */
+
+  html[data-theme='dark'] .homecard{
+    width: 320px;
+    height: 320px;
+    padding: 8px;
+    position: relative;
+    display: block;
+    border-radius: 16px;
+    border: 3px solid #b50397ee;
+    box-shadow: -5px 10px 5px 0px #03e60e;
+  }
+
+  html[data-theme='dark'] .homecard h2{
+    color: rgb(210, 232, 13);
+    font-size: 48px;
+    background-clip: text;
+    margin: 8px 16px;
+    min-height: 2.4rem;
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+  html[data-theme='dark'] .homecard a{
+      color: white;
+      font-size: 24px;
+      text-decoration: underline;
+      line-height: 2rem;
+   }
+
+  html[data-theme='dark'] .homeIcon{
+    width: 50px;
+    height: 50px;
+    border-radius: 1;
+    margin: auto;
+    /* margin: 12px 0 4px 16px; */
+  }

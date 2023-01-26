@@ -14,6 +14,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
+ 
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -35,6 +36,10 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          editUrl: ({versionDocsDirPath, docPath}) =>
+          `https://github.com/CudoVentures/cudos-docs/tree/main/${versionDocsDirPath}/${docPath}`,
           // Please change this to your repo.
         },
         theme: {
@@ -86,10 +91,21 @@ const config = {
                 position: "left",
               },  
               {
-                type: 'doc',
+                type: 'dropdown',
                 label: '🛠 Build',
-                docId: 'build/intro',
                 position: "left",
+                items: 
+                [
+                  {
+                    type: 'doc',
+                    label: '🧳 Resources',
+                    docId: 'build/intro',
+                  },
+                  {
+                    label: '🚀 Tutorials',
+                    to: 'tutorials',
+                    },
+                ]
               }, 
               {
                 type: 'doc',
@@ -102,12 +118,7 @@ const config = {
                 label: '🏦 Governance',
                 docId: 'governance/tokens',
                 position: "left",
-              }, 
-              {
-                label: '🚀 Tutorials',
-                to: 'docs/category/tutorials/',
-                position: "right",
-              },           
+              },            
             ],
       },      
       footer: {
