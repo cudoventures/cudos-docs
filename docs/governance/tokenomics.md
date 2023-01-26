@@ -32,60 +32,65 @@ Various possibilities are considered and ruled out. In short, Lamport, Shostak, 
 
 ## Incentivisation
 
-Second, incentivisation is built in to the tokenomics model to encourage good behaviour. 
-
-**Validator operators** who secure the network by running **Validator nodes** are required to **Self-delegate** a minimum of **2M CUDOS** in return for a share of **Block rewards**. 
-
-Self-delegating ***higher*** amounts of CUDOS tokens has several benefits. 
-
-1. It increases the chances of a Validator node being selected to perform block validation.
-
-2. It increases the proportion of rewards received in proportion to the overall amount staked on the network.
-
-3. It increases the chances of token holders choosing to delegate to a Validator node that has more 'skin in the game'. A higher self-delegation signifies trust and commitment to the network. 
+Second, incentivisation is built in to the tokenomics model to encourage good behaviour. Validators receive rewards in return for securing the network. Token holders can delegate CUDOS tokens to trusted Validators to also share in rewards.
 
 ### Understanding rewards
 
-:::success What are Block rewards?
+:::success Block rewards?
 
 Block rewards are equal to the sum of ***staking rewards*** and ***tx fees*** for a specific block.
 
 Rewards for a block are only distributed back to Validators and Delegators when the ***next*** block begins. 
 :::
 
-
-:::success What are Staking rewards?
+:::success Staking rewards?
 
 Staking rewards are additional rewards provided to Validators during the early and mid-stages of the network to support the growth of the Validator ecosystem. They comprise 10% of the total token supply. 
 
 :::
 
-:::success What is Bonding?
+## Terminology 
+
+### Bonding?
+
+The top 100 Validators are referred to as **bonded**.
 
 **Bonding** is the process of locking tokens to the network for a specific period of time.
 
+### Staking?
+
+Staking is the process of locking up CUDOS tokens to the Cudos network. 
+
+### Delegating?
+
+Delegating is the process of locking tokens to one or more Validator nodes.
+
+Self-delegating is the process of locking tokens to your own Validator node.
+
+:::info 
+
+NOTE: In practice, these terms are used interchangeably. 
+
 :::
 
+## Validators
 
-### Staking rewards 
+**Validator operators** who secure the network by running **Validator nodes** are required to **Self-delegate** a minimum of **2M CUDOS** in order to make it operational and receive a share of **Block rewards**. Validators can then perform a staking transaction to stake their node to the network. [Read more](docs/node/run-node/stake-node)
 
-In order to cultivate and grow the node validators ecosystem during the early and mid-stages of the network,
-CUDOS will spend 10% of the funds to ensure that all node validators are rewarded for the contributions
-to the network. T
 
-Staking rewards occur in a **single pool** and are distributed as follows:  
 
-1. **Bonded Validators** and **Bonded Delegators** are assigned rewards proportional to the amount they have staked relative to the entire network. 
-    
-2. Users who have delegated tokens are required to **actively** claim those rewards by sending appropriate txs to the blockchain.
 
-3. The **Block proposer** receives a bonus between 3.67% and 5% of the **Total Block Rewards** depending on the number of validators signing that block.
 
-4. The **Community Pool** receives 20% of rewards to distribute to projects that further the aims of the ecosystem in the form of grants. 
 
-### Validator self-delegating
+Self-delegating ***higher*** amounts of CUDOS tokens has several benefits. 
 
-A **Validator Operator** must **self-delegate** at least 2M CUDOS to their node in order to make it operational. They can increase their chances of attracting delegations from token holders by running a highly reliable node with excellent uptime. This in turn increases their chances of being selected to issue a block. 
+1. It increases the chances of a Validator node being selected to perform block validation.
+
+2. It increases rewards received in proportion to the overall amount staked on the network.
+
+3. It increases the chances of token holders choosing to delegate to a Validator node that has more 'skin in the game'. A higher self-delegation signifies trust and commitment to the network. 
+
+### Ranking
 
 Validators are ranked according to the amount of tokens that have been delegated to them, including self-delegations. 
 
@@ -94,6 +99,37 @@ At each block, the top 100 validators (who are not jailed) are said to be **bond
 - To propose or sign blocks.
 - To earn block rewards.
 - To be subject to slashing.
+
+
+
+
+
+
+### Staking rewards 
+
+In order to cultivate and grow the Validator ecosystem during the early and mid-stages of the network, Cudos has allocated 15% of funds to ensure that all Validators are rewarded for their contributions to the network. 
+
+Staking rewards occur in a **single pool** and are distributed as follows:  
+
+1. Validators receive a share of rewards based on the total amount of tokens delegated to them in proportion to the total amount staked on the network. 
+
+2. Delegators receive a share of the rewards allocated to their Validator based on the amount of their delegation in proportion to the total amount delegated to that Validator.
+
+:::caution 
+
+Validators and Delegators are required to **actively** claim rewards by sending appropriate transactions to the blockchain.
+
+Even as a Validator, commission is deducted from your rewards. You must explicitly request commission in another transaction by adding the commission flag. 
+
+ADD TRANSACTION. 
+:::
+
+3. The **Block proposer** receives a bonus between 3.67% and 5% of the **Total Block Rewards** depending on the number of validators signing that block.
+
+4. The **Community Pool** receives 20% of rewards to distribute to projects that further the aims of the ecosystem in the form of grants. 
+
+### Validator self-delegating
+
 
 ### Jailing/Slashing
 
