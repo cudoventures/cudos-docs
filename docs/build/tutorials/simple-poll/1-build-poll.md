@@ -34,7 +34,7 @@ c. Cosmos Hub
 
 CosmWasm is a Cosmos SDK module. This means that a binary is enough to start integrating it into your blockchain.
 
-`wasmd` is integrated into the `cudos-noded` binary provided when you follow the instructions to [**Build the binary**](docs/build/build-binary-go).
+`wasmd` is integrated into the `cudos-noded` binary provided when you follow the instructions to [**Build the binary**](https://docs.cudos.org/docs/build/build-binary-go).
 
 Using wasmd it is possible to launch a new smart-contract enabled blockchain out of the box, using documented and tested tooling and the same security model as the Cosmos Hub.
 
