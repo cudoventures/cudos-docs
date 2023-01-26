@@ -6,7 +6,7 @@ import styles from './tutorialNavBoxes.module.css';
 const FeatureList = [
   {
     title: 'Build a simple poll',
-    icon: '/rocket.png',
+    icon: 'img/rocket.png',
     items: [
       {
       url: "https://docs.cudos.org/docs/build/tutorials/simple-poll/build-poll", 
@@ -16,14 +16,14 @@ const FeatureList = [
   },
   {
     title: 'Build a messaging dApp',
-    icon: '/messaging.svg',
+    icon: 'img/messaging.svg',
     items: [
       {url: "https://docs.cudos.org/docs/build/tutorials/messaging/create-messaging", text: "Get Started"},
     ]
   },
   {
     title: 'Build a Counter with Cudos Blast',
-    icon: '/nft.svg',
+    icon: 'img/nft.svg',
     items: [
       {url: "https://docs.cudos.org/docs/build/tutorials/counter/create-counter", text: "Get Started"},
     ]
