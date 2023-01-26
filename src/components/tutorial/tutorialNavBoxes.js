@@ -6,26 +6,26 @@ import styles from './tutorialNavBoxes.module.css';
 const FeatureList = [
   {
     title: 'Build a simple poll',
-    icon: 'rocket.png',
+    icon: '/rocket.png',
     items: [
       {
-      url: "docs/build/tutorials/simple-poll/build-poll", 
+      url: "https://docs.cudos.org/docs/build/tutorials/simple-poll/build-poll", 
       text: "Get Started",
     },
     ]
   },
   {
     title: 'Build a messaging dApp',
-    icon: 'messaging.svg',
+    icon: '/messaging.svg',
     items: [
-      {url: "docs/build/tutorials/messaging/create-messaging", text: "Get Started"},
+      {url: "https://docs.cudos.org/docs/build/tutorials/messaging/create-messaging", text: "Get Started"},
     ]
   },
   {
     title: 'Build a Counter with Cudos Blast',
-    icon: 'nft.svg',
+    icon: '/nft.svg',
     items: [
-      {url: "docs/build/tutorials/counter/create-counter", text: "Get Started"},
+      {url: "https://docs.cudos.org/docs/build/tutorials/counter/create-counter", text: "Get Started"},
     ]
   },
   /* {
