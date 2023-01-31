@@ -120,7 +120,7 @@ module.exports = {
       label: 'Tokens & Governance',
       items: [
         'governance/tokens',
-        'governance/buy-tokens',
+        'governance/get-tokens/get-tokens',
         'governance/governance',
       ],
     },

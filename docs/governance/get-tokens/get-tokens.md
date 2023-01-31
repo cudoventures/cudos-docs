@@ -1,3 +1,8 @@
+---
+title: Get CUDOS
+id: get-tokens
+---
+
 # How to get the CUDOS token - All the Ways, and how to get them to the Native Cudos Blockchain!
 
 So you want some CUDOS tokens on Mainnet?
