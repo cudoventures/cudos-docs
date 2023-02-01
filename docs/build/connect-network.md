@@ -1,18 +1,45 @@
 ---
-title: Set up Environment
-id: set-up-envt
+title: Connect to network 
+id: connect-network
 ---
+ 
+The easiest way to connect to a Cudos environment is to connect to the Cudos Public testnet RPC. 
+This way you can deploy a contract and interact with it. 
 
 ## 00 Prerequisites
 
-1. Successful installation of `cudos-noded`.
-See [**Build Binary**](/docs/build/build-binary-go)
+This step assumes you have already built the binary and have cudos-noded CLI running.
+If not check out [**Build Binary**](/docs/build/build-binary-go)
 
-## 01 Connect to a node 
+### Testnet
 
-To query state and send transaction requires connection to a node. This is the access point to the Cudos network of peer connections. Connect to your preferred network. 
+| Chain ID               | URL                                            |
+| ---                    | ---                                            |
+| cudos-testnet-public-3 | http://sentry1.gcp-uscentral1.cudos.org:26657 |
 
-:::tip 💡 Connect to existing nodes
+### Mainnet
+
+| Chain ID       | URL                   |
+| ---            | ---                   |
+|    cudos-1     | https://rpc.cudos.org |
+
+
+## 01 Connect to Testnet RPC
+
+Run this command in the `cudos-noded` CLI to connect to the Testnet.
+
+```shell
+cudos-noded status --node http://sentry1.gcp-uscentral1.cudos.org:26657
+```
+
+### Example 
+
+```shell
+cudos-noded status --node http://sentry1.gcp-uscentral1.cudos.org:26657
+{"NodeInfo":{"protocol_version":{"p2p":"8","block":"11","app":"0"},"id":"cddc2c56c414f480ca9458db5d07820660953dc4","listen_addr":"35.232.27.92:26656","network":"cudos-testnet-public-3","version":"0.34.19","channels":"40202122233038606100","moniker":"cudos-sentry-node-01","other":{"tx_index":"on","rpc_address":"tcp://0.0.0.0:26657"}},"SyncInfo":{"latest_block_hash":"75DDF2F5DDAE725AA24A44E290A109E034A876051C1B793C2B23AE3F7DC4D6EB","latest_app_hash":"D292BB84351D3F7998B8C81E2F239B35EB973763B128A048DC921BB11E868174","latest_block_height":"6127539","latest_block_time":"2022-11-16T15:00:20.743120897Z","earliest_block_hash":"5FE3E88EFE9999C79B8D6271B56EE4349051FCEA290D5A512440B8BEB9662104","earliest_app_hash":"E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855","earliest_block_height":"3603400","earliest_block_time":"2021-08-25T08:21:32.483824849Z","catching_up":false},"ValidatorInfo":{"Address":"77588B190B245C6827EC5C9541C47A51DD15764D","PubKey":{"type":"tendermint/PubKeyEd25519","value":"P2D57QXFV6tgNoGiPohcPG9NmFOXmdoUmM+smA611/M="},"VotingPower":"0"}}
+```
+
+:::tip 💡 Connect to other existing nodes
 
 To connect to an existing node, you need an address in the `https://<host>:<port>` format. Choose your own or use the one's below:
 

@@ -11,10 +11,15 @@ private testnet| cudos-network |http://localhost:26657
 
 ## Red Hat/Fedora OS
 
-* RHEL/CentOS/EL 8
-* Fedora 34 & 35
+* RHEL/CentOS/EL 7 & 8
+* Fedora 34, 35 & 36
 
 1. Make sure you are in **root** by running the following command:
+
+:::caution 
+Just putting "sudo" before some of these commands does not work.
+:::
+
 
 ```shell
 sudo -i
@@ -24,9 +29,9 @@ sudo -i
 
 ```shell
 dnf install -y yum-utils
-yum-config-manager --add-repo http://jenkins.gcp.service.cudo.org/cudos/cudos.repo
+dnf install -y http://jenkins.gcp.service.cudo.org/cudos/cudos-prtn/cudos-release.rpm
 yum-config-manager --enable cudos-prtn
-dnf install cudos-network-private-testnet
+dnf install -y cudos-network-private-testnet
 ```
 
 3. Confirm `cudos-noded` is present
@@ -35,13 +40,18 @@ dnf install cudos-network-private-testnet
 cudos-noded version
 ```
 
-
-
 This step, confirms your installation has succeeded. 
 
 ## Ubuntu/Debian 
 
+* Debian 10 & 11
+* Ubuntu 20.04 & 22.04
+
 1. Make sure you are in **root** by running the following command:
+
+:::caution 
+Just putting "sudo" before some of these commands does not work.
+:::
 
 ```shell
 sudo -i
@@ -49,23 +59,11 @@ sudo -i
 
 2. Run the following scripts to connect to Private Testnet:
 
-    * Set up `apt` repo
-
-    ```shell
-    echo 'deb [trusted=yes] http://jenkins.gcp.service.cudo.org/cudos/cudos-prtn/debian stable main' > /etc/apt/sources.list.d/cudos.list
-    ```
-
-    * Update the local package list
-
-    ```shell
-    apt update
-    ```
-
-    * Install network
-
-    ```shell
-    apt install cudos-network-private-testnet
-    ```
+```shell
+echo 'deb [trusted=yes] http://jenkins.gcp.service.cudo.org/cudos/cudos-prtn/debian stable main' > /etc/apt/sources.list.d/cudos.list
+apt update
+apt install cudos-network-private-testnet
+```
 
 3. Confirm `cudos-noded` is present
 

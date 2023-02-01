@@ -14,6 +14,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
+ 
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -35,10 +36,11 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          editUrl: ({versionDocsDirPath, docPath}) =>
+          `https://github.com/CudoVentures/cudos-docs/tree/main/${versionDocsDirPath}/${docPath}`,
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Cudo-ventures/cudo-docs/tree/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -68,10 +70,18 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+      },
       navbar: {
         logo: {
-          alt: 'Cudos Logo',
-          src: 'img/logo.svg',
+          alt: 'Site Logo',
+          src: 'img/logo.png',
+          srcDark: 'img/logo-dark.png',
+          target: '_self',
+          width: 150,
+          height: 32,
+          className: 'custom-navbar-logo-class',
         },
         items: [
               {
@@ -81,10 +91,21 @@ const config = {
                 position: "left",
               },  
               {
-                type: 'doc',
+                type: 'dropdown',
                 label: '🛠 Build',
-                docId: 'build/intro',
                 position: "left",
+                items: 
+                [
+                  {
+                    type: 'doc',
+                    label: '🧳 Resources',
+                    docId: 'build/intro',
+                  },
+                  {
+                    label: '🚀 Tutorials',
+                    to: 'tutorials',
+                    },
+                ]
               }, 
               {
                 type: 'doc',
@@ -99,12 +120,54 @@ const config = {
                 position: "left",
               },            
             ],
-      },
+      },      
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Community',
+            title: 'Company',
+            items: [
+              {
+                label: 'About us',
+                href: 'https://www.cudos.org/about/',
+              },
+              {
+                label: 'Careers',
+                href: 'https://cudoventures.teamtailor.com/',
+              },
+              {
+                label: 'Blog',
+                href: 'https://www.cudos.org/blog/',
+              },
+              {
+                label: 'Terms of Service',
+                href: 'https://www.cudos.org/terms-and-conditions/',
+              },
+            ],
+          },
+          {
+            title: 'Developers',
+            items: [
+              {
+                href: 'https://github.com/CudoVentures',
+                label: 'Github',
+              },
+              {
+                label: 'Grant Program',
+                href: 'https://cudos.foundation/grants/',
+              },
+              {
+                label: 'Cudo Foundation',
+                href: 'https://cudos.foundation/about/',
+              },
+              {
+                label: 'Blog',
+                href: 'https://www.cudos.org/about/',
+              },
+            ],
+          },
+          {
+            title: 'Social',
             items: [
               {
                 label: 'Telegram',
@@ -120,8 +183,8 @@ const config = {
               },
               {
                 label: 'Medium',
-                href: 'https://medium.com/cudos'
-              },
+                href: 'https://medium.com/cudos',
+              }, 
             ],
           },
         ],

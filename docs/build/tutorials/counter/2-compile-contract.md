@@ -1,6 +1,6 @@
 ---
 title: Compile contract
-id: blast-tutorial-2
+id: compile-contract
 ---
 
 Before a contract can be used, it must be compiled into `wasm` bytecode or artefacts that can be stored on chain.

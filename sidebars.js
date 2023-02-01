@@ -61,7 +61,7 @@ module.exports = {
         'build/intro',
         'build/setup-rust',
         'build/build-binary-go',
-        'build/set-up-envt',
+        'build/connect-network',
       ]
     },
     {
@@ -75,13 +75,7 @@ module.exports = {
         'build/entry-points',
       ],
     },
-    {
-      type: 'category',
-      label: 'Build dApp',
-      items: [
-        'build/dapp-structure',
-      ],
-    },
+    
     {
       type: 'category',
       label: 'Tools',
@@ -92,19 +86,8 @@ module.exports = {
                 href: '/api/',
               },
               'build/install-blast',
+              'build/cli',
              ]
-    },
-    {
-      type: 'category',
-      label: 'Counter Tutorial',
-      items: [
-        'build/create-counter',
-        'build/blast-tutorial-2',
-        'build/blast-connect',
-        'build/deploy-counter',
-        'build/interact-counter',
-        'build/deploy-testnet-mainnet',
-      ],
     },
   ],
 
@@ -118,11 +101,15 @@ module.exports = {
           },
           {
             type: 'category',
+            collapsed: false,
             label: 'Concepts',
             items: [
              'learn/concepts/account',
              'learn/concepts/wallet',
              'learn/concepts/token-types',
+             'learn/concepts/transactions',
+             'learn/concepts/gas',
+             'learn/concepts/cryptography',
             ],
           },
       ],
@@ -139,4 +126,33 @@ module.exports = {
       ],
     },
   ],
+
+  pollTutorialSidebar: [
+    {
+      type: 'category',
+      label: 'Simple Poll',
+      items: [
+        'build/tutorials/simple-poll/build-poll', 'build/tutorials/simple-poll/modify-state',
+      ]
+    }
+
+  ],
+
+  counterTutorialSidebar: [
+        {
+          type: 'category',
+          label: 'Counter',
+          items: [
+            'build/tutorials/counter/create-counter', 'build/tutorials/counter/compile-contract', 'build/tutorials/counter/connect-node', 'build/tutorials/counter/deploy-counter','build/tutorials/counter/interact-counter'
+         ], 
+        },
+      ],
+  
+  messagingTutorialSidebar: [
+        {
+          type: 'category',
+          label: 'MessagingdApp',
+          items: ['build/tutorials/messaging/create-messaging', 'build/tutorials/messaging/compile-messaging', 'build/tutorials/messaging/connect-messaging-node', 'build/tutorials/messaging/deploy-messaging'],
+        },
+      ],
 };
