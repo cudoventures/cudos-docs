@@ -205,7 +205,7 @@ Validator Operators are free to set their own **commission rate** to charge for 
 
 ![Validator Details](@site/static/img/validator-details.png)
 
-### Choosing a validator to delegate to
+### Choosing a validator
 
 There are a number of considerations to bear in mind when deciding which validator or validators to delegate to. Check out [**How to choose a Validator**](docs/node/overview/delegators). 
 
