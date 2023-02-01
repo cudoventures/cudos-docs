@@ -203,6 +203,8 @@ Anyone holding CUDOS tokens can delegate tokens to one or more **validator nodes
 
 Validator Operators are free to set their own **commission rate** to charge for delegating. The **commission rate** can change at most by the **max commission change rate** once daily. However, a validator's **commission rate** CANNOT exceed the **maximum commission rate** set when the validator node was first initiated. Commission fees can be viewed under [Validator details in the Cudos Explorer](https://explorer.cudos.org/validators). 
 
+![Validator Details](@site/static/img/validator-details.png)
+
 ### Choosing a validator to delegate to
 
 There are a number of considerations to bear in mind when deciding which validator or validators to delegate to. Check out [**How to choose a Validator**](docs/node/overview/delegators). 
