@@ -13,16 +13,25 @@ Tokens remain on the Delegator's wallets but can only be accessed again once **u
 
 Delegators can also participate in governance. Voting Power is proportional to the amount staked.
 
-:::caution Risks
+## How to choose a validator to delegate to
 
-Sharing rewards also means sharing risks. 
+Deciding on a validator to delegate to can be a tricky decision.
 
-There is the possibility of slashing if a Validator has a downtime or double signing event. It is therefore important to carefully select Validators based on their **uptime**, **reliability** and **participation** in governance. 
+It is essential to DYOR (Do Your Own Research) and to continue to monitor the validator(s) you have chosen. If your active validator misbehaves there is the possibility of losing delegated funds due to slashing. Sharing rewards also means sharing risks so it is important to carefully select validators based on criteria such as: **uptime**, **reliability** and **participation** in governance. 
+
+* Check out useful metrics about uptime and participation for individual validators on [Mintscan](https://www.mintscan.io/cudos/validators). 
+
+* Check commission fees. Some validators offer zero commission to attract new delegators but these can change. 
+The **max commission rate** is the upper bound of fees the validator can define, and the **max change rate** is the maximum fee they can change daily. 
+
+* Check whether the validator has a public website and contact information available
+whether email, Twitter or Telegram. 
+
+* Choose more than one validator to delegate to. This increases the chances of one of your chosen validators being selected to validate and for you to receive rewards. 
+
+## Key tips
 
 1. Perform due diligence on Validators before committing funds. 
 
 2. Monitor the Validator node including the commission rate.
 
-3. Delegators can redelegate their tokens from Validator A to Validator B immediately and without incurring a penalty. However, if they want to further redelegate, they must wait a further 21 days. 
-
-:::

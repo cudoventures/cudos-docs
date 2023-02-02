@@ -122,6 +122,7 @@ module.exports = {
         'governance/tokens',
         'governance/get-tokens/get-tokens',
         'governance/governance',
+        'governance/tokenomics',
       ],
     },
   ],

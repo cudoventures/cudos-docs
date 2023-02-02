@@ -2,200 +2,253 @@
 title: Tokenomics
 id: tokenomics
 ---
+ 
+:::tip ✅ Cudos Tokenomics
 
-The key aim of Cudos network tokenomics is to ensure that network participants are incentivised to work towards the greater good of the network. Specifically, with respect to ensuring the security integrity and longevity of the network.
+## The key aim of Cudos network tokenomics is :
 
-Tokenomics draws from game theory models that assume individual rational network participants are always working to maximise their own utility. The aim of tokenomics is to ensure that individual utility is best maximised by advancing overall network utility. From this perspective, the Cudos Network tackles this challenge in multiple ways. 
+***To ensure that network participants are incentivised to work towards the greater good of the network. Specifically, ensuring the security, integrity and longevity of the network.***
+:::
 
-First, the Cudos network uses Tendermint to provide a consensus layer and agree the state of the Cudos Blockchain. Byzantine Fault Tolerance (BFT) solves the [Byzantine Generals Problem](https://lamport.azurewebsites.net/pubs/byz.pdf).
+Tokenomics draws from game theory models that assume individual rational network participants are always working to maximise their own utility. ***The aim of tokenomics is to ensure that individual utility is best maximised by advancing overall network utility***. 
 
-:::tip Byzantine Generals Problem 
+From this perspective, the **Cudos Network** tackles this challenge in multiple ways. 
 
-The **Byzantine Generals Problem** refers to a scenario where there are multiple divisions of a Byzantine army and each division is directed by its own general. There are **n** generals, some of which are **m** traitors. Each division of the army and its general is camped outside the enemy castle. Messages are sent between generals by lieutenant messengers. 
+### Consensus layer
 
-At least 2 loyal generals are required to use the same messages to act on the same plan and attack. 
+First, the Cudos network uses **Tendermint** to provide a **consensus layer** and agree the state of the Cudos chain. Tendermint is **Byzantine Fault Tolerant (BFT)** (solves the [Byzantine Generals Problem](https://lamport.azurewebsites.net/pubs/byz.pdf)) enabling consensus to be achieved on the state of the blockchain even if up to ⅓ (~33%) of network machines are bad actors or fail in arbitrary ways.
 
-Each general has lieutenants responsible for sending and receiving messages. However, Lieutenants may send traitor messages from a traitor general leading one general receiving the message to retreat. 
+:::info ䷆ Byzantine Generals Problem 
 
-If however, there are 3 Generals, but 2 Generals have **m** traitor Lieutenants passing traitor messages to those generals. This means that 1 General has **(m-1)** honourable Lieutenants passing accurate messages to that General.
+The **Byzantine Generals Problem** is a scenario illustrating the difficulty in achieving consensus amongst decentralized parties. 
 
-In short, Lamport, Shostak, and Pease found that no solution with fewer than 3m + 1 generals can cope with **m** traitors. In other words, consensus is impossible to achieve if a third or more of the generals are traitors.
+The scenario describes several generals surrounding the city of Byzantium and readying for an attack.
+
+In order to succeed, all the generals must attack at the same time. Therefore, they must agree a time to attack collectively. However, communication channels are insecure and messages may be intercepted by traitorous generals. Of **n** generals there are **m** traitors. The challenge is to find an algorithm that ensures a successfuly coordinated attack. 
+
+Various possibilities are considered and ruled out. In short, Lamport, Shostak, and Pease found that success was only assured when honest generals outnumbered traitors (**m**) by a number greater than **3m + 1** traitors. In other words, coordination or consensus is impossible to achieve if a third or more of the generals are traitors.
 
 :::
 
-Use of Tendermint enables consensus to be achieved on the state of the blockchain even if up to ⅓ (~33%) of network machines are bad actors or fail in arbitrary ways.
+## Incentivisation
 
-Second, incentivisation of Validator operators to cooperate behaviour on the Cudos network is built into the tokenomics model whereby those who secure the network by running a Validator are required to stake or self-delegate a minimum of 2M CUDOS in return for network rewards. Staking or self-delegating higher amounts increases the chances of that Validator being selected to conduct block validation as well as increasing their rewards as a proportion of the overall amount staked on the network. 
+Second, incentivisation is built in to the tokenomics model to encourage good behaviour. Validators receive rewards in return for securing the network. Token holders can delegate CUDOS tokens to trusted Validators to also share in rewards.
 
-Validators and Delegators earn block rewards for keeping the blockchain operational and secure.
-Block rewards consist of Staking rewards and Transaction fees.
+### Understanding rewards
 
-## Staking
+:::success Block rewards?
 
-The act of staking tokens is called delegating.
+Block rewards are equal to the sum of ***staking rewards*** and ***tx fees*** for a specific block.
 
-A validator needs to self-delegate at least 2M CUDOS.
-
-A delegator is someone who delegates any amount of tokens to one or more validators.
-
-Tokens delegated to a validator, including its self-delegated tokens, are taken out of the delegator’s account and kept in a pool.
-
-The validator and its delegators share the rewards based on the amounts they have contributed to this pool.
-
-A validator can additionally collect a commission fee from its delegators.
-
-At start, a validator defines a commission rate, a max change rate, and a max commission rate.
-
-Then it can change its commission rate once every day by at most its max change rate as long as the commision rate doesn’t become greater than the max commission rate.
-
-Validators are ranked based on the amount of tokens that have been delegated to them, including their self-delegations.
-
-At each block, the top 100 validators who are not jailed are said to be bonded.
-
-If, for any reason, a validator goes outside the bonded validators set, it enters an unbonding period.
-A validator that has failed to get itself back into the bonded validators set within 21 days is said to be unbonded.
-The number 100 can be updated via a simple governance proposal. – Need testing and verification.
-
-**Only bonded validators can propose or sign blocks.
-Only bonded validators can earn block rewards.
-Only bonded validators’ tokens are subject to slashing.**
-
-Although the actual act of slashing might occur during the unbonding period.
-
-## Redelegation 
-
-A **delegator** can choose to undelegate their tokens at any time.
-
-A **delegator** can redelegate their tokens from **Validator A** to **Validator B** without any penalties or extra waiting times. 
-
-To redelegate tokens from **Validator B** to **Validator C** you must wait 21 days. 
-
-However, they need to wait for 21 days if they want to further redelegate any amount of tokens from Validator B – irrespective of how much they redelegated to Validator B initially.
-
-A validator can **self-delegate only through the CLI** – explorer v1 doesn’t provide this functionality.
-
-A validator can also have an **additional stake added** to it via the CLI to increase its voter power.
-
-## Block Rewards 
-
-The more tokens staked to your Validator node, the higher the likelihood of being chosen to propose and sign a block. 
-
-* **Block rewards** are calculated after each block, and is equal to the sum of the **staking rewards** and the **tx fees** for that block.
-
-* Staking rewards occur in a single pool. 
-
-* They are distributed as follows:  
-
-    1. Validators are assigned rewards proportional to their
-    
-    2. Users who have delegated tokens are required to **actively** claim those rewards by sending appropriate txs to the blockchain.
-
-    3. The **block proposer** gets a base bonus as 1% of the block rewards
-    * In addition, it gets (4*P)% percent of the block rewards where P=(total power of validators with included precommits / total bonded validator power)
-    * This means it gets an additional bonus between 2.67% and 4%
-    * This means the block proposer’s bonus is between 3.67% and 5% of the total block rewards.
-
-    4. 20% goes to the community pool
-    5. The rest is distributed to all of the bonded validators (including the block proposer) proportional to their voting power, regardless of them signing the block.
-
-
-(In addition, it gets (4*P)% percent of the block rewards where P=(total power of validators with included precommits / total bonded validator power)
-This means it gets an additional bonus between 2.67% and 4%
-This means the block proposer’s bonus is between 3.67% and 5% of the total block rewards.)
-
-## Distribution Schedule
-
-**Tx fees** are ideally the main source of revenue for validators and delegators. However, due to the expectation of low early engagement numbers on the Cudos blockchain, we will also provide staking rewards to users.
-
-* We will distribute a total of ~1,5 billion tokens as staking rewards in ~10 years.
-
-* The exact number of tokens is given by the formula 
-
-**f(x) = 1.8 x^2 - 53 x + 358** 
-
-**where *x* is in years and *f(x)* is in millions of CUDOS.**
-
-* Hence the amount to be distributed in a given time interval is obtained by integrating the above function over that interval.
-
-* Due to the assumption that tx fees will eventually be the main source of revenue, staking rewards start high and then decrease quadratically in time.
-
-:::tip Important
-
-Important note: Validators need to use the --commission flag in the CLI in order to withdraw their commission.
+Rewards for a block are only distributed back to Validators and Delegators when the ***next*** block begins. 
 :::
 
-## Jailing/Slashing
+:::success Staking rewards?
 
-* Tokens delegated to a bonded validator is slashed if there is evidence of the validator misbehaving.
+Staking rewards are additional rewards provided to Validators during the early and mid-stages of the network to support the growth of the Validator ecosystem. They comprise 10% of the total token supply. 
 
-* This means that when a validator’s tokens are slashed by a certain percentage, so are it delegators’.
+:::
 
-* If a validator fails to sign 90% of the blocks within a 19200-block interval (i.e. 17280 blocks), then it is jailed:
+## Terminology 
 
-    * It becomes not-bonded and begins unbonding
-    * It stops signing and proposing blocks
-    * It stops earning block rewards
-    * It’s stake gets slashed by 0.01%
+### Bonding
 
-* The validator needs to unjail itself after at least 600 seconds of being jailed. There is an unjail transaction that can be sent via the CLI from within the Validator account/node. 
+The top 100 Validators are referred to as **bonded**.
 
-```shell
-cudos-noded tx slashing unjail --from mykey [flags]
+**Bonding** is the process of locking tokens to the network for a specific period of time.
+
+### Staking
+
+Staking is the process of locking up CUDOS tokens to the Cudos network. 
+
+### Delegating
+
+Delegating is the process of locking tokens to one or more Validator nodes.
+
+Self-delegating is the process of locking tokens to your own Validator node.
+
+:::info 
+
+NOTE: In practice, these terms are used interchangeably. 
+
+:::
+
+## Validators
+
+**Validator operators** who secure the network by running **Validator nodes** are required to **Self-delegate** a minimum of **2M CUDOS** in order to make it operational and receive a share of **Block rewards**. Validators can then perform a staking transaction to stake their node to the network. [Read more](docs/node/run-node/stake-node)
+
+Self-delegating ***higher*** amounts of CUDOS tokens has several benefits. 
+
+1. It increases the chances of a Validator node being selected to perform block validation.
+
+2. It increases rewards received in proportion to the overall amount staked on the network.
+
+3. It increases the chances of token holders choosing to delegate to a Validator node that has more 'skin in the game'. A higher self-delegation signifies trust and commitment to the network. 
+
+### Ranking
+
+Validators are ranked according to the amount of tokens that have been delegated to them, including self-delegations. 
+
+At each block, the top 100 validators (who are not jailed) are said to be **bonded** and have the following rights: 
+
+- To propose or sign blocks.
+- To earn block rewards.
+- To be subject to slashing.
+
+:::info
+
+**Query the list of active Validators**
+
+This query shows information about all validators in the validator set.
+
+```bash
+cudo-noded query tendermint-validator-set
+```
+:::
+
+### Staking rewards 
+
+In order to cultivate and grow the Validator ecosystem during the early and mid-stages of the network, Cudos has allocated 15% of funds to ensure that all Validators are rewarded for their contributions to the network. 
+
+Staking rewards occur in a **single pool** and are distributed as follows:  
+
+1. Validators receive a share of rewards based on the total amount of tokens delegated to them in proportion to the total amount staked on the network. 
+
+2. Delegators receive a share of the rewards allocated to their Validator based on the amount of their delegation in proportion to the total amount delegated to that Validator.
+
+3. The **Block proposer** receives a bonus between 3.67% and 5% of the **Total Block Rewards** depending on the number of validators signing that block.
+
+4. The **Community Pool** receives 20% of rewards to distribute to projects that further the aims of the ecosystem in the form of grants. 
+
+#### Claiming rewards
+
+Validators and Delegators are required to **actively** claim rewards by sending appropriate transactions to the blockchain.
+
+Even as a Validator, `commission` is deducted from your rewards. You must explicitly add the `--commission` flag to withdraw your commisions as well. 
+
+:::info
+
+**To claim rewards only:**
+
+```bash
+cudos-noded tx distribution withdraw-rewards <validator-address> --from <address>
 ```
 
+**To claim rewards and commission:** 
 
-For each validator, jailing starts after signed_blocks_window + start_height many blocks.
-We have signed_blocks_window = 19200.
+```bash
+cudos-noded tx distribution withdraw-rewards <validator-address> --from <address> --commission
+```
 
-This means that the earliest a validator can be jailed is 19200 blocks after they join the network.
+By default, reward withdrawals are sent to the source address. This default can be modified with the following command:
 
-Afterwards, they will get jailed as soon as they miss 17280 blocks in any interval of 19200 blocks.
+```bash
+cudos-noded tx distribution set-withdraw-addr <address> --from <address>
+```
+:::
 
-If a validator signs more than one block at the same height, that's also an offence punishable by slashing 5% of their tokens.
+### Jailing/Slashing
 
-This could be the case if someone duplicates their validator and try to double their voting power.
+Tokens delegated to a bonded validator can be **slashed** due to validator downtime, a double signing event or other bad behaviour. 
+
+#### Downtime event
+
+If a validator fails to sign 90% of blocks within a 19200-block interval (i.e. 17280 blocks), then it is jailed and the following occurs:
+
+1. It becomes not-bonded and begins unbonding
+2. It stops signing and proposing blocks
+3. It stops earning block rewards
+4. Its stake gets slashed by 0.01%
+
+The validator must unjail itself as quickly as possible after an ***enforced 10-minute waiting period***.
+
+:::info 
+
+**Unjailing transaction**
+
+***NOTE: There is a 10-minute waiting period before a validator can unjail itself.***
+
+```bash
+cudos-noded tx slashing unjail \
+ --from=<key_name> \
+ --chain-id=<chain_id>
+```
+:::
+
+#### Double signing event
+ 
+If a validator signs more than one block at the same height then 5% of their tokens are slashed. 
+
+This could be the case if someone duplicates their validator and tries to double their voting power.
+
+#### What happens to slashed tokens?
 
 Slashed tokens are sent to the community pool.
 
-
-## Transactions 
-
-How to view the mempool? Or pending transactions 
-If you're a validator you can keep your mempool to yourself when it is your turn to propose a block then you can submit your own transactions. 
-
-If you sync your own node with other nodes then you can view pending transactions.
-
-* Tx fees are calculated based on the **gas_wanted value rather than gas_used**. Therefore users need to be aware of this and should not provide extra gas_wanted values “just in case”.
-
-* We have a min-gas-price parameter set at 0.000005 CUDOS below which txs won’t be accepted into mempools
-
-    This parameter is local to each node on the network, can be changed off-chain, and cannot be queried on-chain.
-
-    Hence we must rely on the community for this implementation to work properly.
-
-* Full-nodes that keep these mempools must have a mechanism to protect themselves from over-usage.
-
-:::warning 
-Default `gas-wanted on the CLI is 200,000`. Hence the fee is calculated based on this. Users must be aware of this. Be careful to specify this as what you are prepared to pay. 
-
-Hence most transactions cost 1 CUDOS
+:::warning Slashing
+When a validator’s tokens are slashed by a certain percentage, so are its delegators.
 :::
 
-* Sometimes the CLI throws the “Error: RPC error -32603 - Internal error: timed out waiting for tx to be included in a block” error. In this case, the tx is most likely successful, and can be found in the Transactions tab on the explorer page.
+### Unbonding period
 
-One workaround is to use the `--broadcast-mode` flag that returns only a tx hash once a tx is submitted.
+If a validator is jailed or leaves the bonded validators set, it enters an **unbonding period**. A validator that has failed to get itself back into the bonded validators set *within 21 days* is said to be **unbonded**.
 
-There was a ticket on making this the default behaviour, but looks like it has been discarded.
+:::caution 
+Slashing can still occur during the unbonding period if there is evidence of bad behaviour during the period when a Validator was bonded.
+:::
 
-Fees on the Keplr extension might be wrong the first time due to some left over data, but this is probably only for the public testnet and NOT for the mainnet.
+## Delegators
 
-This can be resolved by deleting the chain and reconnecting.
+Anyone holding CUDOS tokens can delegate tokens to one or more **validator nodes** of their choice. Validators and Delegators then share rewards **based on the amounts they have contributed to the pool**.
 
-There might be a need to sign out and back in to Keplr/Explorer.
+Validator Operators are free to set their own **commission rate** to charge for delegating. The **commission rate** can change at most by the **max commission change rate** once daily. However, a validator's **commission rate** CANNOT exceed the **maximum commission rate** set when the validator node was first initiated. Commission fees can be viewed under [Validator details in the Cudos Explorer](https://explorer.cudos.org/validators). 
 
-Each validator can dynamically determine their gas price threshold, and will accept only the txs whose gas prices are above it.
+![Validator Details](@site/static/img/validator-details.png)
 
-Again, validators are expected to set this value to 0.000005 CUDOS, but we don’t have control over this.
+### Choosing a validator
+
+There are a number of considerations to bear in mind when deciding which validator or validators to delegate to. Check out [**How to choose a Validator**](docs/node/overview/delegators). 
+
+:::info
+
+**Delegation transaction**
+
+```bash
+cudos-noded tx staking delegate [destination-validator-addr] [amount] [flags]
+```
+:::
+
+### Redelegation
+
+1. A **Delegator** can **redelegate** tokens from **Validator A** to **Validator B** without incurring any penalties or extra waiting times. A redelegation maturation period now follows for 21 days. 
+
+2. Following on from the above example, if a **Delegator** wishes to **redelegate** their tokens from **Validator B** to a hypothetical **Validator C** they must wait *21 days*.
+
+3. Redelegation can work through the Cudos Dashboard as well as using the CLI.
+
+- Connect a wallet to the [**Cudos Dashboard**](https://dashboard.cudos.org/staking) and redelegate funds to a Validator node of choice. 
+
+- Using `cudos-noded` CLI to redelegate funds. 
+
+:::info
+
+**Redelegation transaction**
+
+```bash
+cudos-noded tx staking redelegate [src-validator-addr] [destination-validator-addr] [amount] [flags]
+```
+
+### Undelegation
+
+A **Delegator** can choose to **undelegate** their tokens at any time. Tokens can be accessed following the 21 day unbonding period. During the unbonding period, the tokens are in an unbonded state and do not contribute to earning rewards or voting power. 
+
+
+
+
+
+
+
+
 
 
 
