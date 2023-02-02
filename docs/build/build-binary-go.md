@@ -6,6 +6,31 @@ id: build-binary-go
 Get started by building the cudos-node binary and running the cudos-noded CLI.
 `cudos-noded` CLI allows you to interact with the Cudos network. 
 
+:::warning 
+
+If you get the following error:
+
+```bash
+# runtime/cgo
+ld: unknown option: -rpath=$ORIGIN/../
+```
+
+Then edit `Makefile` line 17 
+
+from:
+
+```bash
+install: export CGO_LDFLAGS="-Wl,-rpath=$$ORIGIN/../"
+```
+
+to
+
+```bash
+install: export CGO_LDFLAGS="-Wl,-rpath,$$ORIGIN/../"
+```
+
+:::
+
 ## MacOS
 
 1. Clone the Cudos node repository.
