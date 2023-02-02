@@ -82,7 +82,7 @@ cudos-noded status 2>&1 | jq -M
 :::tip how do i know when my node is synced?
 Your node is fully synced when you see: 
 `"catching_up: false"` 
-and the latest block hash matches the network [Testnet Explorer](https://explorer.testnet.cudos.org) or [Mainnet Explorer](https://explorer.mainnet.cudos.org)
+and the latest block hash matches the network [Testnet Explorer](https://explorer.testnet.cudos.org) or [Mainnet Explorer](https://explorer.cudos.org)
 :::
 
 ![synced node](@site/static/img/node-sync.png)
