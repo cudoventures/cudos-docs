@@ -1,3 +1,7 @@
+---
+title: Centralised Exchange with ERC-20 CUDOS Tokens
+id: cex-erc
+---
 # Centralised Exchange with ERC-20 CUDOS Tokens
 
 :::tip
@@ -16,7 +20,7 @@ Once you have traded for CUDOS on the platform, the next steps are: withdraw the
 Your Ethereum address will begin with `0x` - most people use Metamask for their Ethereum wallet.
 :::
 
-2. Create a Cudos address if you don't have one already. A Cudos address will begin with `cudos1`. To create a new address, [these instructions](../minidoc/keplr-create.md) will help you get set up with Keplr wallet. 
+2. Create a Cudos address if you don't have one already. A Cudos address will begin with `cudos1`. To create a new address, [these instructions](../../learn/concepts/wallets/keplr-create.md) will help you get set up with Keplr wallet. 
 :::info
 The Cosmos ecosystem, which Cudos is a part of, uses different wallets to Ethereum, Keplr and Cosmostation are the most common.
 :::
