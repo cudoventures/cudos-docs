@@ -26,7 +26,7 @@ import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './video.module.css';
+import styles from './tutorials.module.css';
 import TutorialNavBoxes from '../components/tutorial/tutorialNavBoxes';
 
 import { Redirect } from '@docusaurus/router';

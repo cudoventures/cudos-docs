@@ -131,7 +131,7 @@ module.exports = {
       type: 'category',
       label: 'Simple Poll',
       items: [
-        'build/tutorials/simple-poll/build-poll', 'build/tutorials/simple-poll/modify-state',
+        'build/tutorials/simple-poll/build-poll', 'build/tutorials/simple-poll/modify-state', 'build/tutorials/simple-poll/modify-schema',
       ]
     }
 
