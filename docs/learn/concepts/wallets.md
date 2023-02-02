@@ -45,6 +45,8 @@ You can use **Keplr** and **Cosmostation** wallets on the Cudos network.
 
 ### Keplr Wallet 
 
+See how to create a Keplr wallet [***here***](./wallets/keplr-create.md)
+
 [***Install Keplr as a Browser extension***](https://www.keplr.app/download) 
 
 ### Cosmostation Wallet
