@@ -6,6 +6,10 @@ id: rust-solidity
 ## Why Rust? 
 As a Web3 Developer just starting out you may be wondering why you should get started with **Rust** instead of **Solidity**. 
 
+Rust is a low-level, general-purpose language that can be used to write smart contracts as well as to build operating systems, web development, kernels and games. 
+
+Solidity is an object-oriented, high-level language for implementing smart contracts specifically on the Ethereum Virtual Machine. 
+
 Frequently, Rust is thought to be a steeper learning curve than Solidity. However, there are a number of important reasons why Rust is excellent for building smart contracts.
 
 ## Simplified Deploy and Execute Process
@@ -32,13 +36,14 @@ Enables the signer to send some tokens to the contract as well as a message.
 1. Upload Code
 
 2. Execute Contract
+   
 Sending tokens directly to a contract via `SendMsg` for example does not trigger any contract code. This reduces possible attack vectors as all code execution must be explicitly requested.
 
 ## Rust Contract Security
 
 The avoidance of smart contract bugs is paramount to prevent unintended consequences. Rust limits the possible attack surface with strong in-built unit testing capabilities to prevent bugs prior to deployment.
 
-### Avoidance of reentrancy
+### Avoidance of reentrancy attacks
 
 A large number of Ethereum exploits have used reentrancy attacks. In simple terms, a reentrancy attack occurs between two smart contracts, where an attacking smart contract exploits the code in a vulnerable contract to drain it of its funds. The exploit works by having the attacking smart contract repeatedly call the withdraw function before the vulnerable smart contract has had time to update the balance. 
 

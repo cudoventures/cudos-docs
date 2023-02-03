@@ -8,6 +8,8 @@ id: dapp-structure
 In traditional Web 2.0 application structure, a front-end application (like a webpage or an app) interacts with a back-end application (like an API or a database server). 
 
 
+
+
 ## Web 3.0 Apps
 
 In Web 3.0 blockchain infrastructure, a front-end interacts directly with a blockchain network, reading the state of the chain or interacts with a back-end that connects directly to a blockchain network.

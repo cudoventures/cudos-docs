@@ -59,20 +59,20 @@ module.exports = {
       label: 'Overview',
       items: [
         'build/intro',
-        'build/setup-rust',
-        'build/build-binary-go',
-        'build/connect-network',
+        'build/overview/setup-rust',
+        'build/overview/build-binary-go',
+        'build/overview/connect-network',
       ]
     },
     {
       type: 'category',
       label: 'Smart Contracts',
       items: [
-        'build/contract-basics',
-        'build/contract-execution',
-        'build/messages',
-        'build/state',
-        'build/entry-points',
+        'build/smart-contracts/contract-basics',
+        'build/smart-contracts/contract-execution',
+        'build/smart-contracts/contract-messages',
+        'build/smart-contracts/contract-state',
+        'build/smart-contracts/contract-entrypoints',
       ],
     },
     
@@ -85,8 +85,8 @@ module.exports = {
                 label: 'RPC API',
                 href: '/api/',
               },
-              'build/install-blast',
-              'build/cli',
+              'build/tools/install-blast',
+              'build/tools/cli',
              ]
     },
   ],
