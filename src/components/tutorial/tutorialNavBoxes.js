@@ -5,6 +5,13 @@ import styles from './tutorialNavBoxes.module.css';
 
 const FeatureList = [
   {
+    title: 'Build a Counter with Cudos Blast',
+    icon: '../img/nft.svg',
+    items: [
+      {url: "../docs.cudos.org/docs/build/tutorials/counter/create-counter", text: "Get Started"},
+    ]
+  },
+  {
     title: 'Build a simple poll',
     icon: '../img/rocket.png',
     items: [
