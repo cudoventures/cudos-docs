@@ -28,13 +28,7 @@ const FeatureList = [
       {url: "../tutorials/counter/create-counter", text: "Get Started"},
     ]
   },
-  {
-    title: 'Build a dApp on CudoCompute',
-    icon: '../img/nft.svg',
-    items: [
-      {url: "https://docs.cudos.org/docs/build/tutorials/compute-dapp", text: "Get Started"},
-    ]
-  },
+  
 
   
 ];
