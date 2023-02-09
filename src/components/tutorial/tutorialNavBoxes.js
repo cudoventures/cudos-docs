@@ -5,10 +5,10 @@ import styles from './tutorialNavBoxes.module.css';
 
 const FeatureList = [
   {
-    title: 'Build a Counter with Cudos Blast',
+    title: 'Build a dApp on CudoCompute',
     icon: '../img/nft.svg',
     items: [
-      {url: "../docs.cudos.org/docs/build/tutorials/counter/create-counter", text: "Get Started"},
+      {url: "../docs.cudos.org/docs/build/tutorials/compute-dapp", text: "Get Started"},
     ]
   },
   {

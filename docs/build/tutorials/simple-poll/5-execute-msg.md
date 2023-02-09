@@ -1,5 +1,5 @@
 ---
-title: modify ExecuteMsg
+title: Modify ExecuteMsg
 id: modify-executemsg
 ---
 
