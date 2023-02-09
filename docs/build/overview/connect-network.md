@@ -9,7 +9,7 @@ This way you can deploy a contract and interact with it.
 ## 00 Prerequisites
 
 This step assumes you have already built the binary and have cudos-noded CLI running.
-If not check out [**Build Binary**](/docs/build/build-binary-go)
+If not check out [**Build Binary**](/docs/build/overview/build-binary-go)
 
 ### Testnet
 

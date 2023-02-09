@@ -1,6 +1,6 @@
 ---
 title: Messages
-id: messages
+id: contract-messages
 ---
 
 **Messages** are how you interact with a **Cudos** smart contract. If you look inside most contracts, there will be a `msg.rs` file that defines the messages.

@@ -1,6 +1,6 @@
 ---
 title: Entry Points
-id: entry-points
+id: contract-entrypoints
 ---
 
 **Entry points** are where messages or queries are handled by the contract.

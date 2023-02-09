@@ -1,6 +1,6 @@
 ---
 title: State
-id: state
+id: contract-state
 ---
 
 **State** is where a smart contract works with saving and retrieving data. 

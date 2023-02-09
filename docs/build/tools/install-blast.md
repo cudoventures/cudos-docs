@@ -25,7 +25,7 @@ Before you get started with **Cudos Blast**, ensure you have met the following p
 
 The Cudos chain works with Rust
 
-Checkout [Setup Rust](/docs/build/setup-rust)
+Checkout [Setup Rust](/docs/build/overview/setup-rust)
 
 ## 02 Install Cudos Blast
 
