@@ -38,59 +38,7 @@ Your network was selected at the **Build Environment** stage.
 | OS | Redhat/Fedora/CentOs/Debian/Ubuntu   | -->
 
 
-## 01 Modify config files  
-
-
-:::info what is cudos-noded-CTL
-`cudos-noded-ctl` adds usability to configuration by creating a single file for a single configuration parameter.
-:::
-
-Let's add the **Validator node** to the **Sentry node** configuration. 
-
-1. Enable modification of **persistent-peers.config** file as follows:
-
-```shell
-cudos-noded-ctl set persistent_peers "$CUDOS_HOME"/config/persistent-peers.config
-```
-
-2. Now edit the file: 
-
-```shell 
-nano /var/lib/cudos/cudos-data/config/persistent-peers.config
-```
-
-3. Add the **Validator node** settings
-
-:::tip CUDOS-noded commands
-Run the following inside the **Validator node** you want to connect to to get the Tendermint node ID:
-```shell
-cudos-noded tendermint show-node-id
-```
-:::
-
-```shell
-<tendermint ID>@<IP address or hostname>:<Port number>,<tendermint ID>@<IP address or hostname>:<Port number>
-```
-
-**Example configuration**
-
-```shell
-e8cffde0187ea6e73525c50a739c62707cfa7b50@34.173.231.187:26656
-```
-
-4. Modify **seeds.config** file
-
-```shell
-cudos-noded-ctl set seeds "$CUDOS_HOME"/config/seeds.config
-``` 
-
-5. Edit the file by deleting all existing seeds. 
-
-```shell 
-nano /var/lib/cudos/cudos-data/config/seeds.config
-```
-
-## 02 Run Sentry node initialisation script
+## 01 Run Sentry node initialisation script
 
 You **must** run the script as user `cudos` or you will see error messages. 
 
@@ -99,7 +47,7 @@ su - cudos
 cudos-init-node.sh sentry-node
 ```
 
-## 03 Start the node
+## 02 Start the node
 
 :::info cosmovisor
 
@@ -126,7 +74,7 @@ root@cudos-node:~# systemctl enable --now cosmovisor@cudos
 Created symlink /etc/systemd/system/multi-user.target.wants/cosmovisor@cudos.service → /lib/systemd/system/cosmovisor@.service.
 ```
 
-## 04 Check node sync status
+## 03 Check node sync status
 
 As **root user** run the following command:
 
