@@ -30,7 +30,7 @@ const FeatureList = [
   },
   {
     title: 'Build a Counter with Cudos Blast',
-    icon: '../img/nft.svg',
+    icon: '../img/counter.png',
     items: [
       {url: "../docs/build/tutorials/counter/create-counter", text: "Get Started"},
     ]
