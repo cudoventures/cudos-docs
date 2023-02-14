@@ -8,7 +8,7 @@ const FeatureList = [
     title: 'Build a dApp on CudoCompute',
     icon: '../img/nft.svg',
     items: [
-      {url: "../docs.cudos.org/docs/build/tutorials/compute-dapp", text: "Get Started"},
+      {url: "../docs/build/tutorials/compute-dapp", text: "Get Started"},
     ]
   },
   {
@@ -25,14 +25,14 @@ const FeatureList = [
     title: 'Build a messaging dApp',
     icon: '../img/messaging.svg',
     items: [
-      {url: "../docs.cudos.org/docs/build/tutorials/messaging/create-messaging", text: "Get Started"},
+      {url: "../docs/build/tutorials/messaging/create-messaging", text: "Get Started"},
     ]
   },
   {
     title: 'Build a Counter with Cudos Blast',
     icon: '../img/nft.svg',
     items: [
-      {url: "../docs.cudos.org/docs/build/tutorials/counter/create-counter", text: "Get Started"},
+      {url: "../docs/build/tutorials/counter/create-counter", text: "Get Started"},
     ]
   },
  
