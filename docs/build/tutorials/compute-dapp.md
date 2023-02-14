@@ -3,9 +3,11 @@ title: Build a dApp on CudoCompute
 id: compute-dapp
 ---
 
-In this tutorial, you have the chance to set up a simple dApp on CudoCompute using [**create-cosmos-app**](https://github.com/cosmology-tech/create-cosmos-app) created by Cosmology. 
+In this tutorial, we're going to set up a simple dApp on CudoCompute using [**create-cosmos-app**](https://github.com/cosmology-tech/create-cosmos-app) created by Cosmology. 
 
-## Let's get set up on CudoCompute
+![CudoCompute](@site/static/img/cudocompute.png)
+
+## 01 Get started on CudoCompute
 
 1. Register an account at [CudoCompute](https://accounts.cudo.org/sign-up?redirect_url=https://compute.cudo.org&_gl=1*frw7tz*_ga*MTIwMjEwMjIxMS4xNjY5MzE0MTM3*_ga_KFR6C2NZHG*MTY3NTM1NzA0Ny4xMS4xLjE2NzUzNTcwNjAuNDcuMC4w&_ga=2.262274639.2133021104.1675357047-1202102211.1669314137)
    
@@ -25,7 +27,7 @@ Be sure to select **Ubuntu Minimal 20.04**
 Let us know your thoughts by leaving feedback on the CudoCompute platform
 :::
 
-## Install create-cosmos-app on Ubuntu 20.04
+## 02 Install create-cosmos-app on Ubuntu 20.04
 
 1. Update the package manager (press 1 when prompted to):
 
