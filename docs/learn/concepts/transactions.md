@@ -74,10 +74,10 @@ In the example below, the following data has been used:
 
 `type` = **hash**
 `hash` = **2CC4F15A23122F209B9209EAD1D7C37B84ADF5E37BE78234386FBDBB8AD3C788**
-`flag` = **--node http://sentry1.gcp-uscentral1.cudos.org:26657**
+`flag` = **--node https://rpc.testnet.cudos.org:443**
 
 ```shell
-cudos-noded query tx --type=hash 2CC4F15A23122F209B9209EAD1D7C37B84ADF5E37BE78234386FBDBB8AD3C788 --node http://sentry1.gcp-uscentral1.cudos.org:26657
+cudos-noded query tx --type=hash 2CC4F15A23122F209B9209EAD1D7C37B84ADF5E37BE78234386FBDBB8AD3C788 --node https://rpc.testnet.cudos.org:443
 code: 0
 codespace: ""
 data: 0A260A242F636F736D7761736D2E7761736D2E76312E4D736745786563757465436F6E7472616374

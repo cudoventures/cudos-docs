@@ -20,7 +20,7 @@ cudos-noded config node <host>:<port>
 Connect to network 
 
 ```shell
-cudos-noded status --node http://sentry1.gcp-uscentral1.cudos.org:26657
+cudos-noded status --node https://rpc.testnet.cudos.org:443
 ```
 
 ## Account/Keys
