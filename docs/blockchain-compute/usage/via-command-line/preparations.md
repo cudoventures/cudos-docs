@@ -29,18 +29,9 @@ You will need to have the `cudos-noded` CLI installed which you can install from
 
 `cudos-noded` can be used to set up your own full node to make interactions with the chain from, or you can use `cudos-noded` to interact via another node using RPC.
 
-You will notice we use *a lot* of environment variables for all the flags of the CLI to keep things structured and avoid repetition. We use `_TN` at the end of any flags to denote "testnet". Here is an example list of flags:
+You will notice we use *a lot* of environment variables for all the flags of the CLI to keep things structured and avoid repetition.
 
 ```console
-# environment variables for testnet, ending with "TN"
-export RPC_NODE_TN="https://rpc.testnet.cudos.org:443"
-export CHAIN_ID_TN=cudos-testnet-public-3
-export GAS_TN=auto
-export GAS_PRICES_TN=5000000000000acudos
-export GAS_ADJUSTMENT_TN=1.3
-export KEYRING_TN=os
-export CONTRACT_ADDRESS_TN=cudos1nzu5uq00dny8fjs83eerjfv8l9qnntd9h03ag9hcl9tpf9upr0fshnafnk
-
 # environment variables for mainnet
 export RPC_NODE="https://rpc.cudos.org:443"
 export CHAIN_ID=cudos-1
@@ -50,9 +41,7 @@ export GAS_ADJUSTMENT=1.3
 export KEYRING=os
 export CONTRACT_ADDRESS=cudos1gn59sajfpqdlzxwmnnl69r7k2rxdt52l0nwwgalaa8nn2h8vrjzss2gz08
 
-# the TX_FLAGS variables combines a number of the above testnet variables
-export TX_FLAGS_TN="--node=$RPC_NODE_TN --gas=$GAS_TN --gas-adjustment=$GAS_ADJUSTMENT_TN --gas-prices=$GAS_PRICES_TN --chain-id=$CHAIN_ID_TN --keyring-backend=$KEYRING_TN"
-
+# the TX_FLAGS variables combines a number of the above variables
 export TX_FLAGS="--node=$RPC_NODE --gas=$GAS --gas-adjustment=$GAS_ADJUSTMENT --gas-prices=$GAS_PRICES --chain-id=$CHAIN_ID --keyring-backend=$KEYRING"
 ```
 
@@ -67,7 +56,7 @@ source vars.sh
 
 ### Create a wallet address and add it to the CLI instance
 
-Create a Cudos wallet address if you haven't already by following the instructions [here](../../../learn/concepts/wallets/keplr-create.md), then add your mnemonic to your `cudos-noded` instance to make transactions on the chain with your private key *(remove the `_TN` from the end of any flags if you are working with the mainnet)*:
+Create a Cudos wallet address if you haven't already by following the instructions [here](../../../learn/concepts/wallets/keplr-create.md), then add your mnemonic to your `cudos-noded` instance to make transactions on the chain with your private key:
 
 ```console
 cudos-noded keys add <your-wallet-name> --keyring-backend $KEYRING --recover
@@ -84,8 +73,8 @@ OWNER=$( cudos-noded keys show -a <your-wallet-name> --keyring-backend "$KEYRING
 :::warning Stay Safe
 As always, keep your mnemonic phrase safe and secret.
 :::
-> Your wallet will also need funds to pay for gas fees, you can add testnet funds via the faucet icon on the bottom left of [the testnet Cudos Dashboard](http://dashboard.testnet.cudos.org/). Mainnet funds you will need to purchase on an exchange and either send to your address or [bridge](https://bridge.cudos.org/) from the Ethereum ERC-20 version of the token once in your Ethereum wallet. Feel free to message in the [Cudos Discord](https://discord.gg/cudos/) if you need help.
-For mainnet funds, [this guide](../../../governance/get-tokens/get-tokens.md) is helpful. To pay for computing on Blockchain Compute, you will obviously need Mainnet tokens 😊.
+> Your wallet will Cudos tokens to pay for gas fees, and the costs associated with accessing services on Blockchain Compute. You will need to them purchase on an exchange and either transfer to your address or [bridge](https://bridge.cudos.org/) from the Ethereum ERC-20 version of the token once in your Ethereum wallet. Feel free to message in the [Cudos Discord](https://discord.gg/cudos/) if you need assistance.
+[This guide](../../../governance/get-tokens/get-tokens.md) is also helpful. 
 
 ### Structuring Commands
 
