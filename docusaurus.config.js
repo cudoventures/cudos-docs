@@ -96,7 +96,7 @@ const config = {
               },  
               {
                 type: 'dropdown',
-                label: '🛠 Build',
+                label: '⚒️ Build',
                 position: "left",
                 items: 
                 [
@@ -121,6 +121,12 @@ const config = {
                 type: 'doc',
                 label: '🏦 Governance',
                 docId: 'governance/tokens',
+                position: "left",
+              },            
+               {
+                type: 'doc',
+                label: '☁️ Blockchain Compute',
+                docId: 'blockchain-compute/introduction/overview',
                 position: "left",
               },            
             ],
