@@ -22,4 +22,4 @@ The Cudos Blockchain Compute contract has different addresses on different netwo
 Network | Address | Denom
 ---|---|---
 Cudos Public Testnet | `cudos1nzu5uq00dny8fjs83eerjfv8l9qnntd9h03ag9hcl9tpf9upr0fshnafnk` | CUDOS
-Cudos Mainnet |`TBA` | CUDOS
+Cudos Mainnet |`cudos1gn59sajfpqdlzxwmnnl69r7k2rxdt52l0nwwgalaa8nn2h8vrjzss2gz08` | CUDOS
