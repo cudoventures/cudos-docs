@@ -75,44 +75,87 @@ module.exports = {
         'build/smart-contracts/contract-entrypoints',
       ],
     },
-    
+
     {
       type: 'category',
       label: 'Tools',
       items: [
-              {
-                type: 'link',
-                label: 'RPC API',
-                href: '/api/',
-              },
-              'build/tools/install-blast',
-              'build/tools/cli',
-             ]
+        {
+          type: 'link',
+          label: 'RPC API',
+          href: '/api/',
+        },
+        'build/tools/install-blast',
+        'build/tools/cli',
+      ]
     },
   ],
 
   learnSidebar: [
-          {
-            type: 'category',
-            label: 'Introduction',
-            items: [
-              'learn/introduction/overview',           
-            ],
-          },
-          {
-            type: 'category',
-            collapsed: false,
-            label: 'Concepts',
-            items: [
-             'learn/concepts/account',
-             'learn/concepts/wallet',
-             'learn/concepts/token-types',
-             'learn/concepts/transactions',
-             'learn/concepts/gas',
-             'learn/concepts/cryptography',
-            ],
-          },
+    {
+      type: 'category',
+      label: 'Introduction',
+      items: [
+        'learn/introduction/overview',
       ],
+    },
+    {
+      type: 'category',
+      collapsed: false,
+      label: 'Concepts',
+      items: [
+        'learn/concepts/account',
+        'learn/concepts/wallet',
+        'learn/concepts/token-types',
+        'learn/concepts/transactions',
+        'learn/concepts/gas',
+        'learn/concepts/cryptography',
+      ],
+    },
+  ],
+  bccSidebar: [
+    {
+      type: 'category',
+      label: 'Introduction',
+      items: [
+        'blockchain-compute/introduction/overview',
+        'blockchain-compute/introduction/getting-started',
+        'blockchain-compute/introduction/airdrop',
+      ],
+    },
+    {
+      type: 'category',
+      collapsed: false,
+      label: 'Usage',
+      items: [
+        
+        {
+          type: 'category',
+          collapsed: false,
+          label: 'Via User Interface',
+          items: [
+            'blockchain-compute/usage/via-user-interface/signing-in',
+            'blockchain-compute/usage/via-user-interface/creating-an-ssh-key',
+            'blockchain-compute/usage/via-user-interface/creating-a-virtual-machine',
+            'blockchain-compute/usage/via-user-interface/viewing-your-machines',
+          ]
+        },
+        {
+          type: 'category',
+          collapsed: false,
+          label: 'Via Command Line',
+          items: [
+            'blockchain-compute/usage/via-command-line/introduction',
+            'blockchain-compute/usage/via-command-line/preparations',
+            'blockchain-compute/usage/via-command-line/queries',
+            'blockchain-compute/usage/via-command-line/messages',
+            'blockchain-compute/usage/via-command-line/data',
+            
+          ]
+        },
+      ],
+    },
+  ],
 
   governanceSidebar: [
     {
@@ -132,27 +175,27 @@ module.exports = {
       type: 'category',
       label: 'Simple Poll',
       items: [
-        'build/tutorials/simple-poll/build-poll', 'build/tutorials/simple-poll/modify-state', 'build/tutorials/simple-poll/modify-schema', 'build/tutorials/simple-poll/modify-contract', 'build/tutorials/simple-poll/modify-executemsg','build/tutorials/simple-poll/execute', 'build/tutorials/simple-poll/querymsg', 'build/tutorials/simple-poll/query',
+        'build/tutorials/simple-poll/build-poll', 'build/tutorials/simple-poll/modify-state', 'build/tutorials/simple-poll/modify-schema', 'build/tutorials/simple-poll/modify-contract', 'build/tutorials/simple-poll/modify-executemsg', 'build/tutorials/simple-poll/execute', 'build/tutorials/simple-poll/querymsg', 'build/tutorials/simple-poll/query',
       ]
     }
 
   ],
 
   counterTutorialSidebar: [
-        {
-          type: 'category',
-          label: 'Counter',
-          items: [
-            'build/tutorials/counter/create-counter', 'build/tutorials/counter/compile-contract', 'build/tutorials/counter/connect-node', 'build/tutorials/counter/deploy-counter','build/tutorials/counter/interact-counter'
-         ], 
-        },
+    {
+      type: 'category',
+      label: 'Counter',
+      items: [
+        'build/tutorials/counter/create-counter', 'build/tutorials/counter/compile-contract', 'build/tutorials/counter/connect-node', 'build/tutorials/counter/deploy-counter', 'build/tutorials/counter/interact-counter'
       ],
-  
+    },
+  ],
+
   messagingTutorialSidebar: [
-        {
-          type: 'category',
-          label: 'MessagingdApp',
-          items: ['build/tutorials/messaging/create-messaging', 'build/tutorials/messaging/compile-messaging', 'build/tutorials/messaging/connect-messaging-node', 'build/tutorials/messaging/deploy-messaging'],
-        },
-      ],
+    {
+      type: 'category',
+      label: 'MessagingdApp',
+      items: ['build/tutorials/messaging/create-messaging', 'build/tutorials/messaging/compile-messaging', 'build/tutorials/messaging/connect-messaging-node', 'build/tutorials/messaging/deploy-messaging'],
+    },
+  ],
 };
