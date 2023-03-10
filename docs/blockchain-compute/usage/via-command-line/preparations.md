@@ -68,7 +68,7 @@ source vars.sh
 
 ### Create a wallet address and add it to the CLI instance
 
-Create a Cudos wallet address if you haven't already by following the instructions [here](keplr-create.md), then add your mnemonic to your `cudos-noded` instance to make transactions on the chain with your private key *(remove the `_TN` from the end of any flags if you are working with the mainnet)*:
+Create a Cudos wallet address if you haven't already by following the instructions [here](../../../learn/concepts/wallets/keplr-create.md), then add your mnemonic to your `cudos-noded` instance to make transactions on the chain with your private key *(remove the `_TN` from the end of any flags if you are working with the mainnet)*:
 
 ```console
 cudos-noded keys add <your-wallet-name> --keyring-backend $KEYRING --recover
