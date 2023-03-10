@@ -43,7 +43,7 @@ export KEYRING_TN=os
 export CONTRACT_ADDRESS_TN=cudos1nzu5uq00dny8fjs83eerjfv8l9qnntd9h03ag9hcl9tpf9upr0fshnafnk
 
 # environment variables for mainnet
-export RPC_NODE="https://rpc.cudos.org"
+export RPC_NODE="https://rpc.cudos.org:443"
 export CHAIN_ID=cudos-1
 export GAS=auto
 export GAS_PRICES=5000000000000acudos
