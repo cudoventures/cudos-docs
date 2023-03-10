@@ -19,7 +19,7 @@ The contract supports other queries, but only those documented here are official
 
 Returns an array of the available machine types.
 
-The result is returned as JSON, as an array of [MachineType](/contract/consumer/data#machinetype) objects.
+The result is returned as JSON, as an array of [MachineType](data#machinetype) objects.
 
 ## `machine_type`
 
@@ -33,7 +33,7 @@ The result is returned as JSON, as an array of [MachineType](/contract/consumer/
 
 Returns the machine type with the specified ID.
 
-The result is returned as JSON, as a [MachineType](/contract/consumer/data#machinetype) object.
+The result is returned as JSON, as a [MachineType](data#machinetype) object.
 
 ## `image_list`
 
@@ -45,7 +45,7 @@ The result is returned as JSON, as a [MachineType](/contract/consumer/data#machi
 
 Returns an array of the available images.
 
-The result is returned as JSON, as an array of [Image](/contract/consumer/data#image) objects.
+The result is returned as JSON, as an array of [Image](data#image) objects.
 
 ## `image`
 
@@ -59,7 +59,7 @@ The result is returned as JSON, as an array of [Image](/contract/consumer/data#i
 
 Returns the image with the specified ID.
 
-The result is returned as JSON, as an [Image](/contract/consumer/data#image) object.
+The result is returned as JSON, as an [Image](data#image) object.
 
 ## `machine_list`
 
@@ -76,7 +76,7 @@ Returns an array of VMs, optionally filtered by owner, provider, or both.
 
 Note that without filtering this returns all VMs.
 
-The result is returned as JSON, as an array of [Machine](/contract/consumer/data#machine) objects.
+The result is returned as JSON, as an array of [Machine](data#machine) objects.
 
 ## `machine`
 
@@ -90,4 +90,4 @@ The result is returned as JSON, as an array of [Machine](/contract/consumer/data
 
 Returns the VM with the specified ID.
 
-The result is returned as JSON, as a [Machine](/contract/consumer/data#machine) object.
+The result is returned as JSON, as a [Machine](data#machine) object.
