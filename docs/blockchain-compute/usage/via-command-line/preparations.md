@@ -73,14 +73,14 @@ OWNER=$( cudos-noded keys show -a <your-wallet-name> --keyring-backend "$KEYRING
 :::warning Stay Safe
 As always, keep your mnemonic phrase safe and secret.
 :::
-> Your wallet will Cudos tokens to pay for gas fees, and the costs associated with accessing services on Blockchain Compute. You will need to them purchase on an exchange and either transfer to your address or [bridge](https://bridge.cudos.org/) from the Ethereum ERC-20 version of the token once in your Ethereum wallet. Feel free to message in the [Cudos Discord](https://discord.gg/cudos/) if you need assistance.
+> Your wallet will need Native Cudos tokens to pay for gas fees as well as the costs associated with accessing services on Blockchain Compute. You will need to purchase them on an exchange and either transfer to your address or [bridge](https://bridge.cudos.org/) from the Ethereum ERC-20 version of the token, if you get that, once in your Ethereum wallet. Feel free to message in the [Cudos Discord](https://discord.gg/cudos/) if you need assistance.
 [This guide](../../../governance/get-tokens/get-tokens.md) is also helpful. 
 
 ### Structuring Commands
 
 The following pages of these docs all show the JSON payload that will be sent as part of the commands starting with `cudos-noded`.
 
-We will look at two main commands, `query` and `execute`. Querying doesn't cost any gas fees, similar to Ethereum. Execute commands will cost gas fees.
+We will look at two main commands, `query` and `execute`. Querying doesn't cost any gas fees, similar to Ethereum. Executing commands will cost gas fees.
 
 For the JSON payloads, we want to set them as environment variables as well so that they are easy to add to the commands, [`jquery`](https://github.com/jquery/jquery) is helpful here for structuring our JSON payloads.
 
