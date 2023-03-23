@@ -31,19 +31,9 @@ You will need to have the `cudos-noded` CLI installed which you can install from
 
 You will notice we use *a lot* of environment variables for all the flags of the CLI to keep things structured and avoid repetition.
 
-```console
-# environment variables for mainnet
-export RPC_NODE="https://rpc.cudos.org:443"
-export CHAIN_ID=cudos-1
-export GAS=auto
-export GAS_PRICES=5000000000000acudos
-export GAS_ADJUSTMENT=1.3
-export KEYRING=os
-export CONTRACT_ADDRESS=cudos1gn59sajfpqdlzxwmnnl69r7k2rxdt52l0nwwgalaa8nn2h8vrjzss2gz08
+import MainnetVarsSh from '@site/src/components/variables';
 
-# the TX_FLAGS variables combines a number of the above variables
-export TX_FLAGS="--node=$RPC_NODE --gas=$GAS --gas-adjustment=$GAS_ADJUSTMENT --gas-prices=$GAS_PRICES --chain-id=$CHAIN_ID --keyring-backend=$KEYRING"
-```
+<MainnetVarsSh />
 
 :::info
 It can be helpful to store this in a `vars.sh` file and then to run:
