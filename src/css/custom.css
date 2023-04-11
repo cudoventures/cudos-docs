@@ -7,6 +7,8 @@
  
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
  @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
@@ -14,7 +16,11 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-font-family-base: 'Lato';
+  /* --ifm-font-family-base: 'Lato'; */
+  --ifm-font-family-base: 'Open Sans';
+  --ifm-font-weight-normal: 400;
+  --ifm-font-weight-bold: 700;
+  --ifm-font-weight-semibold: 600;
   --ifm-color-primary: #1B2031;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -153,7 +159,8 @@ img[alt=bcc-ssh-key-input] { width: 60%; }
 /* fonts */
 
 .markdown h1,h2,h3 {
-  font: "montserrat";
+  /* font: "montserrat"; */
+  font: "Open Sans";
 }
 
 /* search box */

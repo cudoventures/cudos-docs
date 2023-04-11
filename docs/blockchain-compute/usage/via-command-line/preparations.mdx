@@ -3,6 +3,8 @@ title: Preparations
 id: preparations
 ---
 
+import { MainnetVarsSh, TestnetVarsSh, VarsSh } from '@site/src/components/variables';
+
 # Preparations
 
 ## Requirements
@@ -30,8 +32,6 @@ You will need to have the `cudos-noded` CLI installed which you can install from
 `cudos-noded` can be used to set up your own full node to make interactions with the chain from, or you can use `cudos-noded` to interact via another node using RPC.
 
 You will notice we use *a lot* of environment variables for all the flags of the CLI to keep things structured and avoid repetition.
-
-import MainnetVarsSh from '@site/src/components/variables';
 
 <MainnetVarsSh />
 
@@ -93,13 +93,13 @@ Now to run a `cudos-noded` command with the payload:
 1. For queries:
 
     ```console
-    cudos-noded query wasm contract-state smart $CONTRACT_ADDRESS "$JSON" --node $RPC_NODE
+    cudos-noded query wasm contract-state smart $CBC_ADDRESS "$JSON" --node $RPC_NODE
     ```
 
 2. For execute:
 
     ```console
-    cudos-noded tx wasm execute --from $OWNER $CONTRACT_ADDRESS $JSON $TX_FLAGS
+    cudos-noded tx wasm execute --from $OWNER $CBC_ADDRESS $JSON $TX_FLAGS
     ```
 
 These will be the two structures of commands you will use throughout the rest of the process via the CLI. Good Luck!
