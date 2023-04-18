@@ -5,7 +5,7 @@ id: airdrop
 
 # Airdrop & Snapshot
 
-We will be performing a snapshot **(between 13/03/2022 and the end of April)** to reward users of our early release .
+We will be performing a snapshot **(between 13/03/2023 and the end of April)** to reward users of our early release .
 
 In order to qualify, users must: 
 
