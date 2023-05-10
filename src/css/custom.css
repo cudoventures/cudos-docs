@@ -3,8 +3,8 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
- 
- @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 /* You can override the default Infima variables here. */
 :root {
@@ -33,19 +33,30 @@
   --ifm-color-primary-lighter: #ffffff;
   --ifm-color-primary-lightest: #ffffff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --aa-primary-color-rgb: #6DD0F1;
+
+  /* algolia search box colours */
+  --aa-primary-color-rgb: 109, 208, 241 !important;
+  --aa-muted-color-rgb: 109, 208, 241 !important;
+  --aa-input-border-color-rgb: 109, 208, 241 !important;
+  --aa-background-color-rgb: 27, 32, 49 !important;
 }
 
 [data-theme='light'] {
   --ifm-color-primary: #6DD0F1;
-  --ifm-color-primary-dark: #1B2031 ;
+  --ifm-color-primary-dark: #1B2031;
   --ifm-color-primary-darker: #b5d5de;
   --ifm-color-primary-darkest: #83bac9;
   --ifm-color-primary-light: #6DD0F1;
   --ifm-color-primary-lighter: #ffffff;
   --ifm-color-primary-lightest: #ffffff;
+  --ifm-card-background-color: #f6f6f6;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --aa-primary-color-rgb: #6DD0F1;
+
+  /* algolia search box colours */
+  --aa-primary-color-rgb: 109, 208, 241 !important;
+  --aa-muted-color-rgb: 109, 208, 241 !important;
+  --aa-input-border-color-rgb: 109, 208, 241 !important;
+  --aa-background-color-rgb: 255, 255, 255 !important;
 }
 
 .markdown img {
@@ -55,34 +66,66 @@
 }
 
 /* Styling for image size */
+img[alt=token-distribution] {
+  width: 900px;
+}
 
-img[alt=token-distribution] { width: 900px; }
+img[alt=instantiated] {
+  width: 1200px;
+}
 
-img[alt=instantiated] { width: 1200px; }
+img[alt=deployed] {
+  width: 1200px;
+}
 
-img[alt=deployed] { width: 1200px; }
+img[alt=full-node] {
+  width: 100px;
+}
 
-img[alt=full-node] { width: 100px; }
+img[alt=seed-node] {
+  width: 100px;
+}
 
-img[alt=seed-node] { width: 100px; }
+img[alt=validator-node] {
+  width: 100px;
+}
 
-img[alt=validator-node] { width: 100px; }
+img[alt=sentry-node] {
+  width: 100px;
+}
 
-img[alt=sentry-node] { width: 100px; }
+img[alt=synced-node] {
+  width: 800px;
+}
 
-img[alt=synced-node] { width: 800px; }
+img[alt=cudos-gex] {
+  width: 800px;
+}
 
-img[alt=cudos-gex] { width: 800px; }
+img[alt=messaging-dapp] {
+  width: 800px;
+}
 
-img[alt=messaging-dapp] { width: 800px; }
-
-img[alt=update-schema] { width: 800px; }
+img[alt=update-schema] {
+  width: 800px;
+}
 
 /* bcc images */
-img[alt=bcc-create-vm] { width: 80%; }
-img[alt=bcc-running-vm] { width: 80%; }
-img[alt=bcc-my-vms] { width: 80%; }
-img[alt=bcc-ssh-key-input] { width: 60%; }
+img[alt=bcc-create-vm] {
+  width: 80%;
+}
+
+img[alt=bcc-running-vm] {
+  width: 80%;
+}
+
+img[alt=bcc-my-vms] {
+  width: 80%;
+}
+
+img[alt=bcc-ssh-key-input] {
+  width: 60%;
+}
 
 /* Styling for links */
 
@@ -107,7 +150,7 @@ img[alt=bcc-ssh-key-input] { width: 60%; }
 /* DARK MODE */
 
 [data-theme='dark'] a:link {
-  color:  #6DD0F1;
+  color: #6DD0F1;
 }
 
 [data-theme='dark'] a:visited {
@@ -136,49 +179,37 @@ img[alt=bcc-ssh-key-input] { width: 60%; }
 }
 
 .navbar__link {
-  font-size: 18px;  
+  font-size: 18px;
 }
 
-
 /* footer */
-
 .footer__links {
   margin: auto;
   width: 50%;
 }
 
-.footer {
+[data-theme='light'] .footer {
   padding-left: 10px;
-  --ifm-footer-title-color: rgb(66, 64, 64);
-  --ifm-footer-link-color: rgb(116, 113, 113);
+  --ifm-footer-title-color: #1B2031;
 }
 
 [data-theme='dark'] .footer {
   padding-left: 10px;
   --ifm-footer-title-color: rgb(252, 251, 251);
-  --ifm-footer-link-color: rgb(253, 252, 252);
-  
+
 }
 
 /* fonts */
-
-.markdown h1,h2,h3 {
+.markdown h1,
+h2,
+h3 {
   font: "Open Sans";
 }
 
 /* search box */
-
-
-/* button.aa-DetachedSearchButton {
+button.aa-DetachedSearchButton {
   border-radius: 30px;
-  border-color: #6DD0F1;
-  color: #6DD0F1
 }
-
-.aa-DetachedSearchButtonIcon {
-  fill:#6DD0F1;
-} */
-
 
 /* buttons */
 [data-theme='dark'] a.button--secondary {
@@ -186,11 +217,10 @@ img[alt=bcc-ssh-key-input] { width: 60%; }
   border-color: #6DD0F1;
 }
 
-/* .aa-DetachedSearchButtonPlaceholder {
-  text
-} */
+[data-theme='dark'] .clean-btn {
+  color: var(--ifm-color-primary-lightest);
+}
 
-/* <div class="aa-DetachedFormContainer"><form class="aa-Form" action="" novalidate="" role="search"><div class="aa-InputWrapperPrefix"><label class="aa-Label" for="autocomplete-0-input" id="autocomplete-0-label"><button class="aa-SubmitButton" type="submit" title="Submit"><svg class="aa-SubmitIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path></svg></button></label><div class="aa-LoadingIndicator" hidden=""><svg class="aa-LoadingIcon" viewBox="0 0 100 100" width="20" height="20"><circle cx="50" cy="50" fill="none" r="35" stroke="currentColor" stroke-dasharray="164.93361431346415 56.97787143782138" stroke-width="6">
-  <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;90 50 50;180 50 50;360 50 50" keyTimes="0;0.40;0.65;1"></animateTransform>
-</circle></svg></div></div><div class="aa-InputWrapper"><input class="aa-Input" aria-autocomplete="both" aria-labelledby="autocomplete-0-label" id="autocomplete-0-input" autocomplete="off" autocorrect="off" autocapitalize="off" enterkeyhint="search" spellcheck="false" placeholder="Search..." maxlength="512" type="search"></div><div class="aa-InputWrapperSuffix"><button class="aa-ClearButton" type="reset" title="Clear" hidden=""><svg class="aa-ClearIcon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path></svg></button></div></form><button type="button" class="aa-DetachedCancelButton">Cancel</button></div> */
-
+[data-theme='light'] .clean-btn {
+  color: var(--ifm-color-primary);
+}
