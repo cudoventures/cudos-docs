@@ -32,6 +32,7 @@
   --ifm-color-primary-light: #ffffff;
   --ifm-color-primary-lighter: #ffffff;
   --ifm-color-primary-lightest: #ffffff;
+  --ifm-breadcrumb-color-active: #6DD0F1;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
   /* algolia search box colours */
@@ -50,6 +51,7 @@
   --ifm-color-primary-lighter: #ffffff;
   --ifm-color-primary-lightest: #ffffff;
   --ifm-card-background-color: #f6f6f6;
+  --ifm-breadcrumb-color-active: #6DD0F1;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
   /* algolia search box colours */
