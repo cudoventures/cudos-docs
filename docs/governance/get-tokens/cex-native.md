@@ -11,6 +11,8 @@ This exchange already supports the native CUDOS token for the Cudos blockchain.
 You should be able to find the CUDOS token in the "Swap" or "Trade" section of this exchange application.
 Once you have traded for CUDOS on the platform, the next steps are: withdraw the tokens to your own Cudos address, and then be able to interact with dApps and features on the Cudos blockchain.
 
+To acquire native CUDOS via this exchange, ensure you have an active account on the exchange platform and liquidity in your wallet.
+
 1. Make sure you have a Cudos address available, this is your public address that will begin with `cudos1` - if you don't have one yet, follow [this guide](../../learn/concepts/wallets/keplr-create.md) to create a new one with Keplr Wallet.
 :::info
 In the same way an Ethereum address is stored within Metamask Wallet (or others) in the Ethereum world, Cosmos-based blockchains, like Cudos have their own addresses that are stored in wallets such as Keplr Wallet and Cosmostation Wallet.
