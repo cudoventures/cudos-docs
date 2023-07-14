@@ -50,7 +50,7 @@ This section does not constitute financial advice, please do your own research o
   - [Platform](https://www.gate.io/)
 - [Huobi Global - Get CUDOS](./cex-erc.md)
   - [Create Account](https://www.huobi.com/support/en-us/detail/94923603139807)
-  - [Pltaform](https://www.huobi.com/en-us/)
+  - [Platform](https://www.huobi.com/en-us/)
 - [KuCoin - Get CUDOS](./cex-erc.md)
   - [Beginner's Guide](https://www.kucoin.com/support/categories/360001255374)
   - [Platform](https://www.kucoin.com/)
@@ -64,7 +64,7 @@ This section does not constitute financial advice, please do your own research o
 ---
 **Native Token Decentralised Exchanges:**
 
-- [Osmosis (Frontier - Get CUDOS)](./dex-native.md)
+- [Osmosis (Frontier) - Get CUDOS](./dex-native.md)
   - [Support](https://support.osmosis.zone/)
   - [Platform](https://frontier.osmosis.zone/)
 
