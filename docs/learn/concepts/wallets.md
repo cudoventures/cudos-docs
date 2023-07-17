@@ -5,29 +5,29 @@ id: wallet
 
 **Wallets** provide a convenient way to generate and store **key pairs** and perform various basic activities such as:
 
-*creating transactions*, 
+*creating transactions*,
 
-*signing messages*, 
+*signing messages*,
 
-*interacting with applications*, 
+*interacting with applications*,
 
 *communicating with the blockchain*.
 
 ## What are Wallets?
 
-Wallets are **addresses** generated from an initial secret. Wallets such as **Keplr** generate an initial secret from 12 or 24 words known as a mnemonic (taken from a standardised dictionary). This mnemonic acts as a **Master Private Key**. 
+Wallets are **addresses** generated from an initial secret. Wallets such as **Keplr** generate an initial secret from 12 or 24 words known as a mnemonic (taken from a standardised dictionary). This mnemonic acts as a **Master Private Key**.
 
 From this initial mnemonic, multiple key pairs can be derived with the Public key from each key pair used to derive an **address**.
 
 ## Wallet Accounts
 
-A **Wallet Account** consists of: 
+A **Wallet Account** consists of:
 
 1. **Private Key**
 2. **Public Key**
-3. **Address** 
+3. **Address**
 
-Each Wallet address corresponds to a single key pair that can always be reproduced deterministically from a mnemonic by knowing its derivation path. So, a mnemonic phrase is turned into a seed or master private key using [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki). This master private key is used to compute a public key, an address is then generated from the public key.  
+Each Wallet address corresponds to a single key pair that can always be reproduced deterministically from a mnemonic by knowing its derivation path. So, a mnemonic phrase is turned into a seed or master private key using [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki). This master private key is used to compute a public key, an address is then generated from the public key.
 
 This means that for a single account there is a single address.
 
@@ -37,25 +37,27 @@ Other standards such as [BIP 44](https://github.com/bitcoin/bips/blob/6a5c99fcc9
 
 A Cudos account is created from a wallet address when a signed transaction that references that wallet address is performed.
 
-For example, when CUDOS tokens are transfered to a wallet account. This first transaction sets the `Address` field to the **wallet Address** and the `AccountNumber` field is set to the number of accounts held in that wallet. So if this is the 4th account in your wallet, the `AccountNumber` is set to 4. 
+For example, when CUDOS tokens are transfered to a wallet account. This first transaction sets the `Address` field to the **wallet Address** and the `AccountNumber` field is set to the number of accounts held in that wallet. So if this is the 4th account in your wallet, the `AccountNumber` is set to 4.
 
-## Cudos Compatible Wallets 
+## CUDOS Compatible Wallets
 
-You can use **Keplr** and **Cosmostation** wallets on the Cudos network. 
+You can use **Keplr** and **Cosmostation** wallets on the Cudos network.
 
-### Keplr Wallet 
+### Keplr Wallet
 
 See how to create a Keplr wallet [***here***](./wallets/keplr-create.md)
 
-[***Install Keplr as a Browser extension***](https://www.keplr.app/download) 
+[***Install Keplr as a Browser extension***](https://www.keplr.app/download)
 
 ### Cosmostation Wallet
+
+See how to create a Cosmostation wallet [***here***](./wallets/cosmostation-create.md)
 
 [***Install Cosmostation as a Browser extension***](https://cosmostation.io/wallet/#extension)
 
 ## Create an account/wallet to receive funds on CLI
 
-Initialise `cudos-noded CLI` to get started. 
+Initialise `cudos-noded CLI` to get started.
 
 ```shell
 cudos-noded keys add <INSERT-YOUR-WALLET-NAME>

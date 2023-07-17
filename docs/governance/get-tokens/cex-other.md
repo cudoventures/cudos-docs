@@ -11,6 +11,10 @@ This exchange doesn't directly support the CUDOS token, but this guide will stil
 We suggest using a computer for this, some of the steps are unsupported on mobile.
 :::
 
+:::tip
+This section does not constitute financial advice, please do your own research on the platforms you choose to trade on.
+:::
+
 You should be able to find either the ATOM (Cosmos Hub) or OSMO (Osmosis) token in the "Swap" or "Trade" section of this exchange application.  
 Once you have traded for ATOM or OSMO on the platform, the next steps are: withdraw the tokens to your Cosmos/Osmosis address held within Keplr/Cosmostation wallet, use the Osmosis Frontier DEX to trade them for CUDOS mainnet tokens, withdraw them to your Cudos address on the Cudos Blockchain, and then be able to interact with dApps and features on the Cudos blockchain.
 

@@ -69,6 +69,7 @@ module.exports = {
       label: 'Smart Contracts',
       items: [
         'build/smart-contracts/contract-basics',
+        'build/smart-contracts/contract-deployment',
         'build/smart-contracts/contract-execution',
         'build/smart-contracts/contract-messages',
         'build/smart-contracts/contract-state',
