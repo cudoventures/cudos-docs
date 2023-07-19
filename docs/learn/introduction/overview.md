@@ -46,9 +46,8 @@ The design of the Cudos network enables the following advantages:
 - Scalability
 - Ability to deploy inter-chain smart contracts and build cross-chain applications.
 
-
 ### Developer Friendly
 
-Cudos Network supports smart contract development that compiles to Web Assembly. Rust developers can quickly set up a local and test network to build on.  
+Cudos Network supports smart contract development that compiles to Web Assembly, using the [CosmWasm](https://cosmwasm.com) module.
 
-[CosmWasm](https://docs.cosmwasm.com/docs/1.0/) - a library of modular code needed for building a contract is a helpful resource.  
+Rust developers can quickly set up a local and test network to build on.  
