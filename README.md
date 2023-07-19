@@ -12,8 +12,6 @@ Cudos Docs is built using [Docusaurus 2](https://docusaurus.io/), a static websi
 
 - If you're interested in contributing to this repo, feel free to clone the repo, make changes and open a PR.
 
-- Be sure to checkout the `.contributing.md` file before making any changes. (TO BE DONE)
-
 - You can also open an issue.
 
 ## Preview changes locally
