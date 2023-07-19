@@ -4,7 +4,7 @@ id: build-binary-go
 ---
 
 Get started by building the cudos-node binary and running the cudos-noded CLI.
-`cudos-noded` CLI allows you to interact with the Cudos network. 
+`cudos-noded` CLI allows you to interact with the CUDOS network. 
 
 :::warning 
 
@@ -33,7 +33,7 @@ install: export CGO_LDFLAGS="-Wl,-rpath,$$ORIGIN/../"
 
 ## MacOS
 
-1. Clone the Cudos node repository.
+1. Clone the CUDOS node repository.
 
 ```shell
 git clone https://github.com/CudoVentures/cudos-node.git
@@ -42,7 +42,7 @@ git clone https://github.com/CudoVentures/cudos-node.git
 2. Build the binary
 
 ```shell
-# Change into the Cudos node directory
+# Change into the CUDOS node directory
 cd cudos-node
 
 # Build the binary
@@ -151,7 +151,7 @@ user@node-go-01:~$ cd cudos-node && make install
 
 5. `cudos-node` daemon
 
-`cudos-noded` provides the Command Line Interface and node daemon to interact with the Cudos blockchain.
+`cudos-noded` provides the Command Line Interface and node daemon to interact with the CUDOS blockchain.
 Check that it has successfully installed.
 
 ```shell
@@ -159,7 +159,7 @@ cudos-noded version --long
 ```
 
 :::info 🎉 Success
-Successful installation is indicated by the presence of `cudos-noded` - The Cudos Node Daemon. 
+Successful installation is indicated by the presence of `cudos-noded` - The CUDOS Node Daemon. 
 
 
 

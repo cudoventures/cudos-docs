@@ -4,7 +4,7 @@ id: create-messaging
 ---
 
 In this tutorial, we are going to build a simple ***messaging dApp*** created by Aishat Akinyemi. 
-This tutorial uses Cudos Blast.
+This tutorial uses CUDOS Blast.
 
 The messaging dApp will do the following: 
 
@@ -24,9 +24,9 @@ Here's what it looks like:
 * Node.js min 14.15.0 max 16.10.0
 * Docker 
 
-## 01 Install Cudos Blast
+## 01 Install CUDOS Blast
 
-1. Run the following command to install Cudos Blast. 
+1. Run the following command to install CUDOS Blast. 
 
 ```shell
 npm install cudos-blast -g

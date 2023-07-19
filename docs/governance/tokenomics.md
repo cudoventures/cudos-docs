@@ -3,20 +3,20 @@ title: Tokenomics
 id: tokenomics
 ---
  
-:::tip ✅ Cudos Tokenomics
+:::tip ✅ CUDOS Tokenomics
 
-## The key aim of Cudos network tokenomics is :
+## The key aim of CUDOS network tokenomics is :
 
 ***To ensure that network participants are incentivised to work towards the greater good of the network. Specifically, ensuring the security, integrity and longevity of the network.***
 :::
 
 Tokenomics draws from game theory models that assume individual rational network participants are always working to maximise their own utility. ***The aim of tokenomics is to ensure that individual utility is best maximised by advancing overall network utility***. 
 
-From this perspective, the **Cudos Network** tackles this challenge in multiple ways. 
+From this perspective, the **CUDOS Network** tackles this challenge in multiple ways. 
 
 ### Consensus layer
 
-First, the Cudos network uses **Tendermint** to provide a **consensus layer** and agree the state of the Cudos chain. Tendermint is **Byzantine Fault Tolerant (BFT)** (solves the [Byzantine Generals Problem](https://lamport.azurewebsites.net/pubs/byz.pdf)) enabling consensus to be achieved on the state of the blockchain even if up to ⅓ (~33%) of network machines are bad actors or fail in arbitrary ways.
+First, the CUDOS network uses **Tendermint** to provide a **consensus layer** and agree the state of the CUDOS chain. Tendermint is **Byzantine Fault Tolerant (BFT)** (solves the [Byzantine Generals Problem](https://lamport.azurewebsites.net/pubs/byz.pdf)) enabling consensus to be achieved on the state of the blockchain even if up to ⅓ (~33%) of network machines are bad actors or fail in arbitrary ways.
 
 :::info ䷆ Byzantine Generals Problem 
 
@@ -59,7 +59,7 @@ The top 100 Validators are referred to as **bonded**.
 
 ### Staking
 
-Staking is the process of locking up CUDOS tokens to the Cudos network. 
+Staking is the process of locking up CUDOS tokens to the CUDOS network. 
 
 ### Delegating
 
@@ -108,7 +108,7 @@ cudo-noded query tendermint-validator-set
 
 ### Staking rewards 
 
-In order to cultivate and grow the Validator ecosystem during the early and mid-stages of the network, Cudos has allocated 15% of funds to ensure that all Validators are rewarded for their contributions to the network. 
+In order to cultivate and grow the Validator ecosystem during the early and mid-stages of the network, CUDOS has allocated 15% of funds to ensure that all Validators are rewarded for their contributions to the network. 
 
 Staking rewards occur in a **single pool** and are distributed as follows:  
 
@@ -201,7 +201,7 @@ Slashing can still occur during the unbonding period if there is evidence of bad
 
 Anyone holding CUDOS tokens can delegate tokens to one or more **validator nodes** of their choice. Validators and Delegators then share rewards **based on the amounts they have contributed to the pool**.
 
-Validator Operators are free to set their own **commission rate** to charge for delegating. The **commission rate** can change at most by the **max commission change rate** once daily. However, a validator's **commission rate** CANNOT exceed the **maximum commission rate** set when the validator node was first initiated. Commission fees can be viewed under [Validator details in the Cudos Explorer](https://explorer.cudos.org/validators). 
+Validator Operators are free to set their own **commission rate** to charge for delegating. The **commission rate** can change at most by the **max commission change rate** once daily. However, a validator's **commission rate** CANNOT exceed the **maximum commission rate** set when the validator node was first initiated. Commission fees can be viewed under [Validator details in the CUDOS Explorer](https://explorer.cudos.org/validators). 
 
 ![Validator Details](@site/static/img/validator-details.png)
 
@@ -224,9 +224,9 @@ cudos-noded tx staking delegate [destination-validator-addr] [amount] [flags]
 
 2. Following on from the above example, if a **Delegator** wishes to **redelegate** their tokens from **Validator B** to a hypothetical **Validator C** they must wait *21 days*.
 
-3. Redelegation can work through the Cudos Dashboard as well as using the CLI.
+3. Redelegation can work through the CUDOS Dashboard as well as using the CLI.
 
-- Connect a wallet to the [**Cudos Dashboard**](https://dashboard.cudos.org/staking) and redelegate funds to a Validator node of choice. 
+- Connect a wallet to the [**CUDOS Dashboard**](https://dashboard.cudos.org/staking) and redelegate funds to a Validator node of choice. 
 
 - Using `cudos-noded` CLI to redelegate funds. 
 

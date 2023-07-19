@@ -1,13 +1,13 @@
 ---
-title: Cudos Blast
+title: CUDOS Blast
 id: install-blast
 ---
 
-**Cudos Blast** is a useful tool to support smart contract compilation, deployment and interaction. 
+**CUDOS Blast** is a useful tool to support smart contract compilation, deployment and interaction. 
 
 # 00 Prerequisites
 
-Before you get started with **Cudos Blast**, ensure you have met the following prerequisites:
+Before you get started with **CUDOS Blast**, ensure you have met the following prerequisites:
 
 | Prerequisite   | Minimum version | Recommended version |
 | ---            | ---             | ---                 |
@@ -23,15 +23,15 @@ Before you get started with **Cudos Blast**, ensure you have met the following p
 
 ## 01 Setup Rust
 
-The Cudos chain works with Rust
+The CUDOS chain works with Rust
 
 Checkout [Setup Rust](/docs/build/overview/setup-rust)
 
-## 02 Install Cudos Blast
+## 02 Install CUDOS Blast
 
 ### Globally
 
-Use `npm` to install Cudos Blast CLI tool globally. This means you can create a new project anywhere. 
+Use `npm` to install CUDOS Blast CLI tool globally. This means you can create a new project anywhere. 
 
 :::info
 
@@ -51,7 +51,7 @@ Use `npx cudos-blast` to run commands. This ensures you are always using the lat
 
 ### Locally - Add to a single project
 
-If you only want to install Cudos Blast into a single project then do the following:
+If you only want to install CUDOS Blast into a single project then do the following:
 
 ```bash
 # Create a folder for your project
@@ -67,7 +67,7 @@ blast --version
 
 :::success Congratulations 🎉
 
-If a blast version is returned, you have **successfully** installed Cudos Blast.
+If a blast version is returned, you have **successfully** installed CUDOS Blast.
 
 :::
 

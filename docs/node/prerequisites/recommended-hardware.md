@@ -5,9 +5,9 @@ id: hw-req
 
 # Hardware Requirements
 
-These specifications are provided for dedicated physical hardware nodes. They are based on performance and capacity monitoring of the Cudos **Testnet** and **Mainnet**. As such, they are liable to change as we respond to ongoing network monitoring. 
+These specifications are provided for dedicated physical hardware nodes. They are based on performance and capacity monitoring of the CUDOS **Testnet** and **Mainnet**. As such, they are liable to change as we respond to ongoing network monitoring. 
  
-This page describes the **recommended** system hardware requirements for running different types of nodes on the Cudos Network.
+This page describes the **recommended** system hardware requirements for running different types of nodes on the CUDOS Network.
 
 :::info
 
@@ -17,14 +17,14 @@ At this time, we do not provide detailed storage IOPS/throughput or network PPS/
 :::caution 
 If you configure a system with slower resources than the recommended values, you run the risk of being under-resourced leading to synchronisation delays. On a slow hard drive, there is a risk that your node may never catch up with the head of the chain.
     
-If you run out of memory or storage, the Cudos node sync process will be forcefully killed potentially leading to state corruption, losing stake and not participating in consensus.
+If you run out of memory or storage, the CUDOS node sync process will be forcefully killed potentially leading to state corruption, losing stake and not participating in consensus.
 :::
 
-## Cudos Mainnet Nodes
+## CUDOS Mainnet Nodes
 
-### Cudos Mainnet Validator node
+### CUDOS Mainnet Validator node
 
-| Cudos Mainnet  | Validator node |
+| CUDOS Mainnet  | Validator node |
 |---|---|
 | CPU | * Intel Xeon or AMD Epyc ***Minimum***  ≥8 cores at ≥2.0 GHz required ***Recommended*** ≥16 cores, <br /> * Requires SGX ‑or‑ SEV feature |
 | Memory | 32GiB ECC system memory (≥64GB preferred)|
@@ -33,9 +33,9 @@ If you run out of memory or storage, the Cudos node sync process will be forcefu
 | OS| Ubuntu 20.04 <br /> Debian 10 <br /> RHEL/CentOS/Enterprise Linux 8 <br /> Fedora 34 & 35  |
 | Additional | Redundancy of server power and cooling components strongly recommended   'Four‑nines' availability target or better   
 
-### Cudos Mainnet Sentry node
+### CUDOS Mainnet Sentry node
 
-| Cudos Mainnet | Sentry node |
+| CUDOS Mainnet | Sentry node |
 |---|---|
 | CPU | Intel Xeon ('Haswell' or newer) processor ‑or‑ AMD Opteron/Epyc ('Toronto' or newer) processor – Minimum model ≥4 cores at ≥2.0 GHz required (≥8 cores preferred)|
 | Memory | ≥16GiB ECC system memory |
@@ -44,9 +44,9 @@ If you run out of memory or storage, the Cudos node sync process will be forcefu
 |OS | Ubuntu 20.04, Debian 10,  RHEL/CentOS/Enterprise Linux 8, Fedora 34 & 35  |
 |Additional | Anti-DDoS protection strongly recommended  'Four‑nines' availability target or better  Redundancy of server power and cooling components strongly recommended      |
 
-### Cudos Mainnet Seed node
+### CUDOS Mainnet Seed node
 
-| Cudos Mainnet | Seed node |
+| CUDOS Mainnet | Seed node |
 |---|---|
 |CPU| Intel Xeon ('Haswell' or newer) processor ‑or‑ AMD Opteron/Epyc ('Toronto' or newer) processor – Minimum model ≥4 cores at ≥2.0 GHz required (≥8 cores preferred)|
 |Memory |≥16GiB ECC system memory |
@@ -57,9 +57,9 @@ If you run out of memory or storage, the Cudos node sync process will be forcefu
 
 ## Cudo Testnet Nodes
 
-### Cudos Testnet Validator node
+### CUDOS Testnet Validator node
 
-| Cudos Testnet  |Validator node |
+| CUDOS Testnet  |Validator node |
 |---|---|
 | CPU | Intel Xeon ('Skylake-SP' or newer) processor ‑or‑ AMD Epyc ('Naples' or newer) processor – Requires SGX ‑or‑ SEV feature – Minimum model ≥8 cores at ≥2.0 GHz required (≥16 cores preferred)|
 | Memory | 32GiB ECC system memory |
@@ -67,9 +67,9 @@ If you run out of memory or storage, the Cudos node sync process will be forcefu
 |Network |Private 1Gb/s or 10Gb/s internal network for peer node connections|
 | OS|Ubuntu 20.04, Debian 10,  RHEL/CentOS/Enterprise Linux 8, Fedora 34 & 35 |
 
-### Cudos Testnet Sentry node
+### CUDOS Testnet Sentry node
 
-| Cudos Testnet   | Sentry node |
+| CUDOS Testnet   | Sentry node |
 |---|---|
 | CPU | Intel Xeon ('Haswell' or newer) processor ‑or‑ AMD Opteron/Epyc ('Toronto' or newer) processor – Minimum model ≥4 cores at ≥2.0 GHz required (≥8 cores preferred)|
 | Memory | ≥16GiB ECC system memory |
@@ -78,9 +78,9 @@ If you run out of memory or storage, the Cudos node sync process will be forcefu
 |OS | Ubuntu 20.04, Debian 10,  RHEL/CentOS/Enterprise Linux 8, Fedora 34 & 35  |
 
 
-### Cudos Testnet Seed node
+### CUDOS Testnet Seed node
 
-|Cudos Testnet | Seed node |
+|CUDOS Testnet | Seed node |
 |---|---|
 |CPU | Intel Xeon ('Haswell' or newer) processor ‑or‑ AMD Opteron/Epyc ('Toronto' or newer) processor – Minimum model ≥4 cores at ≥2.0 GHz required |
 |Memory | ≥16GiB ECC system memory |

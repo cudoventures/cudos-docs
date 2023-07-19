@@ -24,7 +24,7 @@ Once this is completed, it can be staked.
 Your network was selected at the **Build Environment** stage.
 :::
 
-:::info Cudos-noded commands
+:::info cudos-noded commands
 
 ```shell
 cudos-noded tendermint

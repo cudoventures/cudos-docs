@@ -5,10 +5,10 @@ id: compile-contract
 
 Before a contract can be used, it must be compiled into `wasm` bytecode or artefacts that can be stored on chain.
 
-**Cudos Blast** makes compilation easy with a single command.
+**CUDOS Blast** makes compilation easy with a single command.
 
 :::tip Rust optimiser
-Cudos Blast uses Rust Optimiser under the hood to compile contracts ready for deployment.
+CUDOS Blast uses Rust Optimiser under the hood to compile contracts ready for deployment.
 :::
 
 ### Check you are at Project root

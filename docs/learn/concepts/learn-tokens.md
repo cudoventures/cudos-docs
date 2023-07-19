@@ -38,7 +38,7 @@ Stores a set of members or voters. [***View in Github***](https://github.com/Cos
 
 ## Non-Fungible Tokens
 
-Cudos uses the Cosmos `x/NFT` module to enable the minting of non-fungible-tokens or NFTs.
+CUDOS uses the Cosmos `x/NFT` module to enable the minting of non-fungible-tokens or NFTs.
 
 This allows for the storing and ownership tracking of NFTs and includes modules to transfer, mint and burn NFTs. 
 

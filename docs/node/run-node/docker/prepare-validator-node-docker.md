@@ -43,9 +43,9 @@ Ensure you keep your 12 word **Keplr Mnemonic** to hand as you will need it to a
 Your **Keplr Wallet** is loaded with your **Stake**.
 
 **Testnet** requires 2 million CUDOS Testnet tokens.
-It is recommended that you test your setup on Cudos Testnet prior to joining the Mainnet. 
+It is recommended that you test your setup on CUDOS Testnet prior to joining the Mainnet. 
 
-If you want to run a validator node on **Testnet**, join '#Validator Chat' in the [Cudos Discord](https://discord.com/invite/t397SKqf4u) to request the required number of CUDOS testnet tokens.
+If you want to run a validator node on **Testnet**, join '#Validator Chat' in the [CUDOS Discord](https://discord.com/invite/t397SKqf4u) to request the required number of CUDOS testnet tokens.
 
 **Mainnet** requires 2 million CUDOS Mainnet tokens. 
 See how to get [**CUDOS Mainnet tokens**](/docs/governance/get-tokens/get-tokens.md). 

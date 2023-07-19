@@ -89,7 +89,7 @@ This is the validator's Protobuf JSON encoded public key.
 
 **`--moniker`** 
 
-You can assign a name for your Validator node. This is the name that will appear in the Cudos Explorer and be available for others to delegate CUDOS to.  
+You can assign a name for your Validator node. This is the name that will appear in the CUDOS Explorer and be available for others to delegate CUDOS to.  
 
 **`--chain-id`** 
 

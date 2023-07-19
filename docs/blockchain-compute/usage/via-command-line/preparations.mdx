@@ -9,7 +9,7 @@ import { MainnetVarsSh } from '@site/src/components/variables';
 
 ## Requirements
 
-To be a consumer, you only need access to the Cudos blockchain, an SSH key, and some CUDOS tokens.
+To be a consumer, you only need access to the CUDOS blockchain, an SSH key, and some CUDOS tokens.
 
 :::info
 If you simply want to purchase a VM, and would prefer to use a UI, you can use the [website](https://compute.cudos.org).
@@ -19,11 +19,11 @@ This documentation is only needed if you want to create your own integration wit
 
 ## Contract Addresses
 
-The Cudos Blockchain Compute contract has different addresses on different networks.
+The CUDOS Blockchain Compute contract has different addresses on different networks.
 
 Network | Address | Denom
 ---|---|---
-Cudos Mainnet |`cudos1gn59sajfpqdlzxwmnnl69r7k2rxdt52l0nwwgalaa8nn2h8vrjzss2gz08` | CUDOS
+CUDOS Mainnet |`cudos1gn59sajfpqdlzxwmnnl69r7k2rxdt52l0nwwgalaa8nn2h8vrjzss2gz08` | CUDOS
 
 ### Setting Up
 
@@ -46,7 +46,7 @@ source vars.sh
 
 ### Create a wallet address and add it to the CLI instance
 
-Create a Cudos wallet address if you haven't already by following the instructions [here](../../../learn/concepts/wallets/keplr-create.md), then add your mnemonic to your `cudos-noded` instance to make transactions on the chain with your private key:
+Create a CUDOS wallet address if you haven't already by following the instructions [here](../../../learn/concepts/wallets/keplr-create.md), then add your mnemonic to your `cudos-noded` instance to make transactions on the chain with your private key:
 
 ```console
 cudos-noded keys add <your-wallet-name> --keyring-backend $KEYRING --recover
@@ -63,7 +63,7 @@ OWNER=$( cudos-noded keys show -a <your-wallet-name> --keyring-backend "$KEYRING
 :::warning Stay Safe
 As always, keep your mnemonic phrase safe and secret.
 :::
-> Your wallet will need Native Cudos tokens to pay for gas fees as well as the costs associated with accessing services on Blockchain Compute. You will need to purchase them on an exchange and either transfer to your address or [bridge](https://bridge.cudos.org/) from the Ethereum ERC-20 version of the token, if you get that, once in your Ethereum wallet. Feel free to message in the [Cudos Discord](https://discord.gg/cudos/) if you need assistance.
+> Your wallet will need Native CUDOS tokens to pay for gas fees as well as the costs associated with accessing services on Blockchain Compute. You will need to purchase them on an exchange and either transfer to your address or [bridge](https://bridge.cudos.org/) from the Ethereum ERC-20 version of the token, if you get that, once in your Ethereum wallet. Feel free to message in the [CUDOS Discord](https://discord.gg/cudos/) if you need assistance.
 [This guide](../../../governance/get-tokens/get-tokens.md) is also helpful. 
 
 ### Structuring Commands

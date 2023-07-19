@@ -3,11 +3,11 @@ title: Build environment (Docker)
 id: build-docker
 ---
 
-This guide explains how to set up your environment in preparation for running Cudos nodes using [Docker](https://docs.docker.com/engine/install/). 
+This guide explains how to set up your environment in preparation for running CUDOS nodes using [Docker](https://docs.docker.com/engine/install/). 
 
-The `cudos-builders` project contains a set of building scripts for the Cudos Network. It depends on the `cudos-node` and `cudos-gravity-bridge` projects. 
+The `cudos-builders` project contains a set of building scripts for the CUDOS Network. It depends on the `cudos-node` and `cudos-gravity-bridge` projects. 
 
-The `cudos-node` project is the blockchain binary whilst the `cudos-gravity-bridge` allows the transfer of ERC-20 assets between Ethereum and Cudos. 
+The `cudos-node` project is the blockchain binary whilst the `cudos-gravity-bridge` allows the transfer of ERC-20 assets between Ethereum and CUDOS. 
 
 ## 00 Prerequisites
 

@@ -79,7 +79,7 @@ and the latest `"block height"` matches the network [Testnet Explorer](https://e
 ```
 ### Fully synced
 
-In the above example,`"catching_up": false` and `"latest_block_time"` is a few seconds before current time. This indicates that the node is fully up to date. We can also compare the `"latest_block_height": "326283"` with the [Cudos explorer](https://explorer.cudos.org/) for confirmation. 
+In the above example,`"catching_up": false` and `"latest_block_time"` is a few seconds before current time. This indicates that the node is fully up to date. We can also compare the `"latest_block_height": "326283"` with the [CUDOS explorer](https://explorer.cudos.org/) for confirmation. 
 
 
 

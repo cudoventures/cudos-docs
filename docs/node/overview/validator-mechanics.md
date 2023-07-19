@@ -3,9 +3,9 @@ title: Validator mechanics
 id: validator-mechanics
 ---
 
-The current maximum number of Validators is 100. We are actively recruiting Validators to the Cudos network. Increasing the number of Validators increases decentralisation, security and integrity of the network.  
+The current maximum number of Validators is 100. We are actively recruiting Validators to the CUDOS network. Increasing the number of Validators increases decentralisation, security and integrity of the network.  
 
-You can view current Validators on the [**Cudos Mainnet explorer**](https://explorer.cudos.org/).
+You can view current Validators on the [**CUDOS Mainnet explorer**](https://explorer.cudos.org/).
 Validators are ranked based on the amount of tokens delegated to them including self-delegations.
 
 ## Increasing self-delegated or delegated stake
@@ -105,7 +105,7 @@ cudos-noded tx slashing unjail --chain-id="$CHAIN_ID" --from="$VALIDATOR_ADDRESS
 
 A Validator is jailed if they miss 90% of the blocks in any interval of 19200 blocks. 
 
-A good Cudos validator needs to aim for 99.99% uptime and <0.01% missed blocks.
+A good CUDOS validator needs to aim for 99.99% uptime and <0.01% missed blocks.
  
 :::tip Reliability
 
@@ -116,7 +116,7 @@ To ensure maximum uptime and availability
 
 ## Validator states
 
-After a Validator is setup and officially added to the Cudos Network with a `create-validator` transaction, it can be in the following states:
+After a Validator is setup and officially added to the CUDOS Network with a `create-validator` transaction, it can be in the following states:
 
 - `in validator set`: Validator is in the active set and participates in consensus. Validator is earning rewards and can be slashed for misbehaviour.
 - `jailed`: Validator misbehaved and is in jail, i.e. outside of the validator set. If the jailing is due to being offline for too long, the validator can send an `unjail` transaction in order to re-enter the validator set. If the jailing is due to double signing, the validator cannot unjail.

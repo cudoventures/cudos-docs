@@ -5,7 +5,7 @@ id: signing-in
 
 # Signing In
 
-When first visiting the [Cudos Blockchain Compute homepage](https://compute.cudos.org/), you’ll be greeted by a landing page. This page sets out what we’re seeking to achieve and is also your gateway to the dApp. Take a second to familiarise yourself if you haven’t already. Also, of note is the Survey link at the bottom of the page **which must be completed to be eligible for the airdrop. **
+When first visiting the [CUDOS Blockchain Compute homepage](https://compute.cudos.org/), you’ll be greeted by a landing page. This page sets out what we’re seeking to achieve and is also your gateway to the dApp. Take a second to familiarise yourself if you haven’t already. Also, of note is the Survey link at the bottom of the page **which must be completed to be eligible for the airdrop. **
 
 In the top right corner, you’ll find a ‘Connect Wallet’ button. Click this and hit ‘Connect Keplr’. 
 

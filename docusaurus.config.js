@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Welcome to Cudos Docs',
-  tagline: 'Single source of truth for Cudos products and services',
+  title: 'Welcome to CUDOS Docs',
+  tagline: 'Single source of truth for CUDOS products and services',
   url: 'https://docs.cudos.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
