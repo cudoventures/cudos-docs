@@ -38,22 +38,9 @@ Stores a set of members or voters. [***View in Github***](https://github.com/Cos
 
 ## Non-Fungible Tokens
 
-Cudos uses the Cosmos `x/NFT` module to enable the minting of non-fungible-tokens or NFTs.
+CUDOS uses its proprietary `x/nft` module to enable the minting of non-fungible-tokens or NFTs.
 
 This allows for the storing and ownership tracking of NFTs and includes modules to transfer, mint and burn NFTs. 
-
-**NFT Class** - This is the smart contract address where NFTs can be created and managed in collections.  
-
-**NFT** - This is the general NFT model. It is composed of the following attributes:
-
-`class_id` - The class or collection to which it belongs.
-id - The unique identifier for the NFT as specified by its creator.
-
-`uri` - This is the URI for NFT metadata held as a JSON file. 
-
-`uri_hash` - OPTIONAL - hash of the document pointed by uri
-
-`data` - OPTIONAL - app specific data of the NFT. 
 
 ## Interchain
 
@@ -62,7 +49,6 @@ These are **Interchain Standards** as used by the **IBC** or inter-blockchain co
 [***View in Github***](https://github.com/cosmos/ibc)
 
 View all Interchain coins in the Cosmos Ecosystem on [Mintscan](https://hub.mintscan.io/overview)
-
 
 ## ERC-tokens
 
