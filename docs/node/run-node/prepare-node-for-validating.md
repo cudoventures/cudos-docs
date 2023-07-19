@@ -90,13 +90,13 @@ cudos-noded keys add tango --recover
 ```shell
 cudos-noded keys add tango --recover
 > Enter your bip39 mnemonic
-ostrich, panda, random, word, ostrich, zebra, leg
+ordinary witness such toddler tag mouse helmet perfect venue eyebrow upgrade rabbit
 Enter keyring passphrase:
 
 - name: tango
   type: local
-  address: cudos1ayq6mrlk5neyuugv7u0wt2tn8zf7e6dx2jyevh
-  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A1CClZ6+tue9SUZaSX3X/JjWN7XCWgYYeh58RtPki+aP"}'
+  address: cudos1yvtuaadhfhxf8ke7zm902z4rj382a8ayymq32s
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A+UyzMtIA1iDdDDVjz/AMv7AxzhsgbypkHSB5+fJlBpt"}'
   mnemonic: ""
 ```
 
