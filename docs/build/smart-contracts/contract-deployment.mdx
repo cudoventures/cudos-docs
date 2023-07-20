@@ -7,12 +7,12 @@ import { VarsSh } from '@site/src/components/variables';
 
 # Deployment
 
-## How to Deploy a Smart Contract on Cudos using `cudos-noded` - Fully Explained!
+## How to Deploy a Smart Contract on CUDOS using `cudos-noded` - Fully Explained!
 >**NOTE:** As always, if you see angle brackets surrounding text, eg: `<your-wallet-name>`, you need to fill in your own variable name.
 
-1. **Install the Cudos node**
+1. **Install the CUDOS node**
 
-    The Cudos node daemon, `cudos-noded`, can be installed from here: [`cudos-noded`](https://github.com/CudoVentures/cudos-node/).
+    The CUDOS node daemon, `cudos-noded`, can be installed from here: [`cudos-noded`](https://github.com/CudoVentures/cudos-node/).
     > This will install the blockchain node daemon binary which will allow you to either run your own node locally or on the chain, or interact with other nodes via RPC using the same CLI.
 
 2. **Compile your rust source files down to `.wasm`**
@@ -37,13 +37,13 @@ import { VarsSh } from '@site/src/components/variables';
     :::
 
     :::info
-    For up to date flags for Cudos (and other Cosmos blockchains), you can refer to the [Cosmos Chain Registry](https://github.com/cosmos/chain-registry). Cudos testnet is [here](https://github.com/cosmos/chain-registry/tree/master/testnets/cudostestnet), and mainnet is [here](https://github.com/cosmos/chain-registry/tree/master/cudos). *(It's often good practice when building frontends to pull the chain info automatically from the `chain-registry` repo so that your configuration stays up-to-date).*
+    For up to date flags for CUDOS (and other Cosmos blockchains), you can refer to the [Cosmos Chain Registry](https://github.com/cosmos/chain-registry). CUDOS testnet is [here](https://github.com/cosmos/chain-registry/tree/master/testnets/cudostestnet), and mainnet is [here](https://github.com/cosmos/chain-registry/tree/master/cudos). *(It's often good practice when building frontends to pull the chain info automatically from the `chain-registry` repo so that your configuration stays up-to-date).*
     :::
 
 
 4. **Create a wallet address and add it to the CLI instance.**
 
-    Create a Cudos wallet address if you haven't already by following the instructions [here](../../learn/concepts/wallets/keplr-create.md), then add your mnemonic to your `cudos-noded` instance to make transactions on the chain with your private key *(remove the `_TN` from the end of any flags if you are working with the mainnet)*:
+    Create a CUDOS wallet address if you haven't already by following the instructions [here](../../learn/concepts/wallets/keplr-create.md), then add your mnemonic to your `cudos-noded` instance to make transactions on the chain with your private key *(remove the `_TN` from the end of any flags if you are working with the mainnet)*:
     ```console
     cudos-noded keys add <your-wallet-name> --keyring-backend $KEYRING_TN --recover
     ```
@@ -56,10 +56,10 @@ import { VarsSh } from '@site/src/components/variables';
 
     >:warning: As always, keep your mnemonic phrase safe and secret.
 
-    > Your wallet will also need funds to pay for gas fees, you can add testnet funds via the faucet icon on the bottom left of [the testnet Cudos Dashboard](http://dashboard.testnet.cudos.org/). Mainnet funds you will need to purchase on an exchange and either send to your address or [bridge](https://bridge.cudos.org/) from the Ethereum ERC-20 version of the token once in your Ethereum wallet. Feel free to message in the [Cudos Discord](https://discord.gg/cudos/) if you need help, we may even send you a few cents worth of CUDOS to get you on your way with your first transaction on mainnet.
+    > Your wallet will also need funds to pay for gas fees, you can add testnet funds via the faucet icon on the bottom left of [the testnet CUDOS Dashboard](http://dashboard.testnet.cudos.org/). Mainnet funds you will need to purchase on an exchange and either send to your address or [bridge](https://bridge.cudos.org/) from the Ethereum ERC-20 version of the token once in your Ethereum wallet. Feel free to message in the [CUDOS Discord](https://discord.gg/cudos/) if you need help, we may even send you a few cents worth of CUDOS to get you on your way with your first transaction on mainnet.
 
 
-5. **Deploy your compiled `.wasm` contract from before to the Cudos blockchain.**
+5. **Deploy your compiled `.wasm` contract from before to the CUDOS blockchain.**
 
      To do this we use the `cudos-noded` CLI to run the `tx wasm store` command which uploads the contract file to the chain. We set the output of that command to the `$RESULT` environment variable:
     ```console
@@ -111,8 +111,8 @@ import { VarsSh } from '@site/src/components/variables';
     ```console
     CONTRACT_ADDRESS=$(echo $INST_RESPONSE | jq -r '.logs[0].events[0].attributes[0].value' | tee /dev/tty | tail -1 | tr -d '\r')
     ```
-    **You have successfully deployed and instantiated a smart contract on Cudos! Congratulations!**
-    >Having deployed and retrieved the contract address, you can now interact with the contract on the chain, you can do this with a frontend to build your project into a full decentralised application (dApp). Take a look at `create-cosmos-app` to get going, it's a simple way of scaffolding a React frontend within the Cosmos ecosystem - Cudos included. [This YouTube video](https://www.youtube.com/live/hPec5D_lI1A?feature=share&t=1880) helps use `create-cosmos-app` for Cudos.
+    **You have successfully deployed and instantiated a smart contract on CUDOS! Congratulations!**
+    >Having deployed and retrieved the contract address, you can now interact with the contract on the chain, you can do this with a frontend to build your project into a full decentralised application (dApp). Take a look at `create-cosmos-app` to get going, it's a simple way of scaffolding a React frontend within the Cosmos ecosystem - CUDOS included. [This YouTube video](https://www.youtube.com/live/hPec5D_lI1A?feature=share&t=1880) helps use `create-cosmos-app` for CUDOS.
 
 9. **BONUS: Execute functions on the contract from the CLI**
 

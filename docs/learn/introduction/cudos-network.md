@@ -1,5 +1,5 @@
 ---
-title: Cudos Network
+title: CUDOS Network
 id: cudos-network
 ---
 
@@ -7,14 +7,14 @@ id: cudos-network
 
 Visual + Design Principles
 
-## Cudos Bridge (AKA Gravity Bridge)
+## CUDOS Bridge (AKA Gravity Bridge)
 
 EVM compatibility connect to Ethereum, Algorand, Polkadot, and Cosmos
 
 ## Consensus layer	
 Tendermint
 
-## Cudos.js? (Cosm.js)	
+## cudos.js? (Cosm.js)	
 interface with web3 libraries?
 
 ## IBC Inter-Blockchain Protocol

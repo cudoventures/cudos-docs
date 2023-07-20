@@ -3,13 +3,13 @@ title: Accounts
 id: account
 ---
 
-A **Cudos account** is a pair of keys used to uniquely identify a user (or entity) and allow them to authenticate and verify transactions on the Cudos Network. 
+A **CUDOS account** is a pair of keys used to uniquely identify a user (or entity) and allow them to authenticate and verify transactions on the CUDOS Network. 
 
 :::info Wallet accounts
-There is a difference between a **wallet account** and a **Cudos account**. 
+There is a difference between a **wallet account** and a **CUDOS account**. 
 :::
 
-## Accounts on Cudos chain
+## Accounts on CUDOS chain
 
 There are two keys: A **Public Key** and a **Private Key**. 
 
@@ -56,7 +56,7 @@ For example a **Validator node** can have two address types:
 
 `Addresses` are public and safe to share. These are also known as `Wallet Addresses`. 
 
-`Addresses` are also used to identify users or entities on the Cudos Network. For example as owners of a wallet or authorised signatories.  
+`Addresses` are also used to identify users or entities on the CUDOS Network. For example as owners of a wallet or authorised signatories.  
 
 `Sequence` is used to prevent replay attacks. Each transaction contains the current sequence number for the signer. This number increments every time a transaction is signed, therefore, the sequence number must match the sequence number on the chain. 
 
@@ -64,7 +64,7 @@ For example a **Validator node** can have two address types:
 
 A replay attack occurs when a malicious actor intercepts a network and is able to delay or resend a transaction or even perform it in advance due to network congestion. 
 
-Cudos Network utilises the Cosmos SDK auth module to protect the network at the transaction level. Transactions are protected by private key signatures and the **sequence** value to prevent selective replaying of transactions.
+CUDOS Network utilises the Cosmos SDK auth module to protect the network at the transaction level. Transactions are protected by private key signatures and the **sequence** value to prevent selective replaying of transactions.
 ::: 
 
 ## Create a new account
@@ -140,17 +140,17 @@ Transactions are formatted with the `PubKey`as part of the message.
 `AccountNumber`
 `Sequence`
 
-1. Connecting a **Keplr wallet** to the Cudos Network.
+1. Connecting a **Keplr wallet** to the CUDOS Network.
 
 2. On the command line using the `cudosnoded` binary.
 
 :::note
-When setting up nodes on the Cudos Network, each node has an **account** and **wallet**. 
+When setting up nodes on the CUDOS Network, each node has an **account** and **wallet**. 
 
 You can also use the **mnemonic** from your Keplr wallet.
 :::
 
-Creating a Cudos account designates a **key pair**.
+Creating a CUDOS account designates a **key pair**.
 
 **Public key** (PubKey) and **Private key** (PrivKey). 
 

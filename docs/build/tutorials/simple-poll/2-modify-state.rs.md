@@ -48,7 +48,7 @@ Now let's create a Poll `struct`
 This allows us to store the address of the Poll Creator, the question and the options as a a Vector (list) of pairs (tuples of length 2).
 
 For the poll example above the options vector will look like this:
-[("Osmosis", 2), ("Cudos", 1), ("Cosmos Hub", 3)]
+[("Osmosis", 2), ("CUDOS", 1), ("Cosmos Hub", 3)]
 
 The first element of each tuple is the option, and the second element is the count.
 

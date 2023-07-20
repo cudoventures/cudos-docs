@@ -3,7 +3,7 @@ title: Create Counter project
 id: create-counter
 ---
 
-This short tutorial walks you through a simple **counter project** that increments upon request using **Cudos Blast**.
+This short tutorial walks you through a simple **counter project** that increments upon request using **CUDOS Blast**.
 
 1. Create a new folder for the Counter project and initialise Blast.
 
