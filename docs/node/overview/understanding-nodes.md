@@ -3,7 +3,7 @@ title: Understanding nodes
 id: understanding-nodes
 ---
 
-This section describes the multiple node types on the Cudos network and the Ports used by them.  
+This section describes the multiple node types on the CUDOS network and the Ports used by them.  
 
 |-|**NODE TYPE**|**DESCRIPTION**|
 |-|:-----:|:-----:|
@@ -35,12 +35,12 @@ A **Validator node** within a cluster ***only*** connects to a **Sentry node(s)*
 
 ### Seed node
 
-A **Seed node** generates a list of peers to which the **Sentry node** can connect to. The **Seed node** proactively learns about nodes on the external Cudos network by a process of ‘crawling’ whereby it connects to other nodes, learns their address book, then disconnects and repeats the process. The **Seed node** feeds the list of addresses to the **Sentry node(s)**.
+A **Seed node** generates a list of peers to which the **Sentry node** can connect to. The **Seed node** proactively learns about nodes on the external CUDOS network by a process of ‘crawling’ whereby it connects to other nodes, learns their address book, then disconnects and repeats the process. The **Seed node** feeds the list of addresses to the **Sentry node(s)**.
     The seed node is a *mandatory requirement* for a **Validator Cluster**. 
 
 ### Sentry node
 
-The **Sentry node** is an application layer proxy for the **Validator nodes**. Any communication the **Validator node** has with the outside Cudos network consists of application messages to/from the **Sentry node**. These are then relayed to/from nodes on the Cudos network. 
+The **Sentry node** is an application layer proxy for the **Validator nodes**. Any communication the **Validator node** has with the outside CUDOS network consists of application messages to/from the **Sentry node**. These are then relayed to/from nodes on the CUDOS network. 
 
 :::warning
 
@@ -48,7 +48,7 @@ Additional **Validator nodes** in a cluster do not provide redundancy as there i
 :::
 
 :::caution
-For security reasons, Cudos nodes are configured to reject connections from multiple peers with the same IP address. **Therefore each public facing node must have its own public IP address.**
+For security reasons, CUDOS nodes are configured to reject connections from multiple peers with the same IP address. **Therefore each public facing node must have its own public IP address.**
 :::
 
 ## Ports

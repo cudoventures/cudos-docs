@@ -3,17 +3,17 @@ title: Tokens
 id: tokens
 ---
 
-**CUDOS** are the **native**, **utility** token powering the **Cudos Network**.
+**CUDOS** are the **native**, **utility** token powering the **CUDOS Network**.
 
 Validators and Delegators stake CUDOS onto the network to secure it and earn staking rewards.
 
-The **L1 - Consensus - Proof-of-Stake Cudos Network** uses CUDOS tokens to govern and secure the network, incentivise participants and provide a mechanism to store and exchange value.
+The **L1 - Consensus - Proof-of-Stake CUDOS Network** uses CUDOS tokens to govern and secure the network, incentivise participants and provide a mechanism to store and exchange value.
 
 The **L2 - Application - Cudo Compute** platform (Q1 2023) will use CUDOS tokens to power the buying and selling of compute capacity on the network.
 
 :::info CUDOS ERC20 Contract Address
 
-CUDOS is also bridged to Ethereum via Cudos Bridge, the ERC20 token contract address is:
+CUDOS is also bridged to Ethereum via CUDOS Bridge, the ERC20 token contract address is:
 **0x817bbdbc3e8a1204f3691d14bb44992841e3db35**
 
 :::
@@ -67,13 +67,13 @@ CUDOS tokens have a 10 year release plan until 100% of the total 10 billion have
 
 ### Token utility
 
-The CUDOS token is used to pay transaction fees, stake and delegate in the Cudos network.
+The CUDOS token is used to pay transaction fees, stake and delegate in the CUDOS network.
 
-**Cudos Network**
+**CUDOS Network**
 
 Key token functions are:
 
-1. Earning the right to validate and secure the Cudos network requires a stake of 2,000,000 CUDOS.
+1. Earning the right to validate and secure the CUDOS network requires a stake of 2,000,000 CUDOS.
 
 2. Rewards are allocated as CUDOS in return for securing the network.
 

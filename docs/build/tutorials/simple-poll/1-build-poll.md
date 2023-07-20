@@ -19,12 +19,12 @@ Let's imagine Dorothy Parker has created a poll. Here's an example of how it loo
 :::note Example Poll
 
 What is your favourite Cosmos ecosystem project?
-a. Cudos
+a. CUDOS
 b. Osmosis
 c. Cosmos Hub
 :::
 
-1. Dorothy Parker can vote in her own poll. She votes for Cudos. 
+1. Dorothy Parker can vote in her own poll. She votes for CUDOS. 
 2. William Blake decides to vote for Cosmos Hub. 
 3. Dorothy decides to end the poll after 30 minutes.
 4. Rabindranath Tagore attempts to vote but is too late!

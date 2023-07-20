@@ -28,7 +28,7 @@ At least 3 separate machines are required to run each node. **Validator**, **Sen
 Joining Testnet allows you to operate in an environment without cost i.e. using CUDOS Testnet Tokens.
 
 #### 3. [Request 2M CUDOS Test tokens](/docs/node/prerequisites/stake-req)
-Join Cudos official Discord [#validator-chat channel](https://discord.com/channels/593796681103966208/849951329174421504) to get support and to request 2M CUDOS Test tokens. 
+Join CUDOS official Discord [#validator-chat channel](https://discord.com/channels/593796681103966208/849951329174421504) to get support and to request 2M CUDOS Test tokens. 
 
 ### Build a Standalone Validator (Testnet)
 

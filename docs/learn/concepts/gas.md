@@ -9,7 +9,7 @@ Any transaction that changes the state of the network charges you a gas fee. See
 
 This fee is used to incentivise and reward validators and delegators for keeping the network infrastructure secure.
 
-Gas fees are proportional to the number of computational operations in a transaction. They are designed to reflect the amount of 'effort'. Fortunately gas fees on Cudos are extremely low. 
+Gas fees are proportional to the number of computational operations in a transaction. They are designed to reflect the amount of 'effort'. Fortunately gas fees on CUDOS are extremely low. 
 
 :::tip Queries
 Queries do not incur fees as these simply read the state of the blockchain

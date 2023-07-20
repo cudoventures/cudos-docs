@@ -1,17 +1,17 @@
 openapi: 3.0.0
 info:
-  title: Cudos RPC
+  title: CUDOS RPC
   version: 1.0.0
   description: |
     REST interface for state queries and transactions.
 
     ### Base URLs 
 
-    Cudos Mainnet RPC https://rpc.cudos.org
+    CUDOS Mainnet RPC https://rpc.cudos.org
 
-    Cudos Testnet RPC https://sentry1.gcp-uscentral1.cudos.org:36657/
+    CUDOS Testnet RPC https://sentry1.gcp-uscentral1.cudos.org:36657/
 
-    Cudos Localhost RPC https://localhost:26657
+    CUDOS Localhost RPC https://localhost:26657
 
     Supports the following RPC protocols:
     
@@ -58,11 +58,11 @@ info:
 
 servers: 
   - url: https://rpc.cudos.org
-    description: Interact with the Cudos Mainnet with the RPC
+    description: Interact with the CUDOS Mainnet with the RPC
   - url: https://sentry1.gcp-uscentral1.cudos.org:36657/
-    description: Interact with the Cudos Testnet with the RPC
+    description: Interact with the CUDOS Testnet with the RPC
   - url: https://localhost:26657
-    description: Interact with the Cudos RPC locally on your device  
+    description: Interact with the CUDOS RPC locally on your device  
 
 paths:
   /status:

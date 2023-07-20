@@ -2,13 +2,13 @@
 
 Introduction 
 
-This is the user guide for Cudos Blockchain Compute’s technical preview. Cudos Blockchain Compute is an innovative service that allows users to access computing resources via Smart Contract, permissionlessly. For the duration of the technical preview, users are able to call Virtual Machines by interacting directly with the Smart Contract, via CLI, or, if you prefer, via a user interface. 
+This is the user guide for CUDOS Blockchain Compute’s technical preview. CUDOS Blockchain Compute is an innovative service that allows users to access computing resources via Smart Contract, permissionlessly. For the duration of the technical preview, users are able to call Virtual Machines by interacting directly with the Smart Contract, via CLI, or, if you prefer, via a user interface. 
 
 Getting started
 
 The first thing you’ll need to do is get yourself a Keplr wallet. The guide on how to do so can be found here. 
 
-Once you’ve done that, you’ll need to fund your wallet with Cudos tokens - here is another guide on how to get them. 
+Once you’ve done that, you’ll need to fund your wallet with CUDOS tokens - here is another guide on how to get them. 
 
 
 Usage
@@ -17,7 +17,7 @@ Via User Interface
 
 Signing In
 
-When first visiting the Cudos Blockchain Compute homepage, you’ll be greeted by a landing page. This page sets out what we’re seeking to achieve and is also your gateway to the dApp. Take a second to familiarise yourself if you haven’t already. Also, of note is the Survey link at the bottom of the page which must be completed to be eligible for the airdrop. 
+When first visiting the CUDOS Blockchain Compute homepage, you’ll be greeted by a landing page. This page sets out what we’re seeking to achieve and is also your gateway to the dApp. Take a second to familiarise yourself if you haven’t already. Also, of note is the Survey link at the bottom of the page which must be completed to be eligible for the airdrop. 
 
 In the top right corner, you’ll find a ‘Connect Wallet’ button. Click this and hit ‘Connect Keplr’. 
 

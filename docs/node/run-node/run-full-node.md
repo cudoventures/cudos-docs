@@ -7,7 +7,7 @@ This guide explains how to initialise and start a **Full Node**.
 
 It follows on from the prerequisites section and assumes that you have built your environment by following the **Build Environment** instructions for your selected network. 
 
-On Testnet and Mainnet, a Full node has the addresses of 3 **Seed nodes** pre-configured to allow it to connect to the Cudos network. 
+On Testnet and Mainnet, a Full node has the addresses of 3 **Seed nodes** pre-configured to allow it to connect to the CUDOS network. 
 
 ## Networks
 
@@ -157,7 +157,7 @@ This step allows you to set up parameters to run a **Full node**.
 The following script can be run to automatically configure a **Full node** and the **Seed nodes** to connect with on the network you selected at the Build Environment stage.
 
 
-:::info How to use Cudos Daemon Configuration Tool
+:::info How to use CUDOS Daemon Configuration Tool
 
 `cudos-noded-ctl` must be run as user cudos.
 

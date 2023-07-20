@@ -3,7 +3,7 @@ title: Run a full node (Docker)
 id: full-docker
 ---
 
-This guide explains how to initialise and start a **Full node** using Docker. A Full node has the addresses of 3 **Seed nodes** pre-configured to allow it to connect to the Cudos network. 
+This guide explains how to initialise and start a **Full node** using Docker. A Full node has the addresses of 3 **Seed nodes** pre-configured to allow it to connect to the CUDOS network. 
 
 It follows on from the [build environment instructions](/docs/node/prerequisites/build-docker) which is a prerequisite for this step. 
 

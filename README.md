@@ -1,12 +1,12 @@
-# Documentation for Cudos Network
+# Documentation for CUDOS Network
 
-This repository contains documentation for Cudos Network, a special purpose network that is part of the Cosmos Ecosystem and built on Tendermint. Here, you'll find high-level and technical information for developers, validators, token holders and community members interested in governance and anyone interested in finding out more about the Cudos Network. 
+This repository contains documentation for CUDOS Network, a special purpose network that is part of the Cosmos Ecosystem and built on Tendermint. Here, you'll find high-level and technical information for developers, validators, token holders and community members interested in governance and anyone interested in finding out more about the CUDOS Network. 
 
-You are welcome to join the Cudos Community and contribute to the docs and to the Cudos project. 
+You are welcome to join the CUDOS Community and contribute to the docs and to the CUDOS project. 
 
-## About Cudos Docs
+## About CUDOS Docs
 
-Cudos Docs is built using [Docusaurus 2](https://docusaurus.io/), a static website generator.
+CUDOS Docs is built using [Docusaurus 2](https://docusaurus.io/), a static website generator.
 
 ## How to contribute
 

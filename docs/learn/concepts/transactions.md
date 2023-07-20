@@ -3,7 +3,7 @@ title: Transactions & Queries
 id: transactions
 ---
 
-A **Transaction** is any action that changes the state of the Cudos blockchain. 
+A **Transaction** is any action that changes the state of the CUDOS blockchain. 
 
 Each computational operation that creates, stores or updates data is a transaction and incurs a gas fee. 
 

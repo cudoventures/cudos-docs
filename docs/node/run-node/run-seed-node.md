@@ -91,9 +91,9 @@ and the latest block hash matches the network [Testnet Explorer](https://explore
 
 ![synced-node](@site/static/img/node-sync.png)
 
-<!-- :::info How to use Cudos Daemon Configuration Tool
+<!-- :::info How to use CUDOS Daemon Configuration Tool
 
-If you need to alter individual parameters, run the **Cudos Daemon Configuration tool** `cudos-noded-ctl`. 
+If you need to alter individual parameters, run the **CUDOS Daemon Configuration tool** `cudos-noded-ctl`. 
 
 `cudos-noded-ctl` must be run as user cudos.
 

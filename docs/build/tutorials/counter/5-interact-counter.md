@@ -40,7 +40,7 @@ Count after increment: 14
 ```
 
 The following information is returned:
-`height` of the latest block on the Cudos network.
+`height` of the latest block on the CUDOS network.
 `transactionHash`: 
 
 
