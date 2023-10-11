@@ -16,7 +16,7 @@ This section does not constitute financial advice, please do your own research o
 :::
 
 You should be able to find either the ATOM (Cosmos Hub) or OSMO (Osmosis) token in the "Swap" or "Trade" section of this exchange application.  
-Once you have traded for ATOM or OSMO on the platform, the next steps are: withdraw the tokens to your Cosmos/Osmosis address held within Keplr/Cosmostation wallet, use the Osmosis Frontier DEX to trade them for CUDOS mainnet tokens, withdraw them to your CUDOS address on the CUDOS Blockchain, and then be able to interact with dApps and features on the CUDOS blockchain.
+Once you have traded for ATOM or OSMO on the platform, the next steps are: withdraw the tokens to your Cosmos/Osmosis address held within Keplr/Cosmostation wallet, use the Osmosis DEX to trade them for CUDOS mainnet tokens, withdraw them to your CUDOS address on the CUDOS Blockchain, and then be able to interact with dApps and features on the CUDOS blockchain.
 
 1. If you don't already have a wallet for Cosmos-based blockchains (such as Cosmos Hub, Osmosis, and CUDOS), you can create one with [this link](../../learn/concepts/wallets/keplr-create.md) using Keplr Wallet, which you can think of as MetaMask for the Cosmos ecosystem.
 
@@ -25,7 +25,7 @@ Once you have traded for ATOM or OSMO on the platform, the next steps are: withd
 Your Cosmos and Osmosis address will begin with `cosmos1` and `osmo1` respectively - most people use Keplr or Cosmostation Wallet for their Cosmos-ecosystem wallet, CUDOS is also a Cosmos-based blockchain.
 :::
 
-3. Swap the ATOM/OSMO tokens on Osmosis Frontier: [frontier.osmosis.zone](https://frontier.osmosis.zone/) - (If you have chosen to use ATOM, you may need to use the deposit feature within Osmosis Frontier first). Find the swap screen and select how many tokens you want to swap for CUDOS tokens. Sign the transaction with your wallet.  
+3. Swap the ATOM/OSMO tokens on Osmosis : [app.osmosis.zone](https://app.osmosis.zone/) - (If you have chosen to use ATOM, you may need to use the deposit feature within Osmosis first). Find the swap screen and select how many tokens you want to swap for CUDOS tokens. Sign the transaction with your wallet.  
 
 4. Withdraw the tokens from the exchange's blockchain to your CUDOS address via IBC: find the withdraw option in the application and enter your CUDOS address. Also add the amount you wish to withdraw.
 :::info
