@@ -64,9 +64,9 @@ This section does not constitute financial advice, please do your own research o
 ---
 **Native Token Decentralised Exchanges:**
 
-- [Osmosis (Frontier - Get CUDOS)](./dex-native.md)
+- [Osmosis - Get CUDOS](./dex-native.md)
   - [Support](https://support.osmosis.zone/)
-  - [Platform](https://frontier.osmosis.zone/)
+  - [Platform](https://app.osmosis.zone/)
 
 ---
 **ERC-20 Token Decentralised Exchanges:**

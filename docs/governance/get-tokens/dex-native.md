@@ -2,12 +2,14 @@
 title: Decentralised Exchange with Native CUDOS Tokens
 id: dex-native
 ---
+
 # Decentralised Exchange with Native CUDOS Tokens
+
 :::tip
 This exchange already supports the native CUDOS token for the CUDOS blockchain.
 :::
 
-You should be able to find the CUDOS token in the "Swap" or "Trade" section of this exchange application. (For Osmosis, make sure you are on [frontier.osmosis.zone](https://frontier.osmosis.zone/) rather than the core Osmosis).  
+You should be able to find the CUDOS token in the "Swap" or "Trade" section of this exchange application.
 Once you have traded for CUDOS on the platform, the next steps are: send the tokens over IBC to the CUDOS Blockchain, and then be able to interact with dApps and features on the CUDOS blockchain.
 
 1. Make sure you have a CUDOS address available, this is your public address that will begin with `cudos1` - if you don't have one yet, follow [this guide](../../learn/concepts/wallets/keplr-create.md) to create a new one with Keplr Wallet.
@@ -19,7 +21,6 @@ You likely have a Keplr or Cosmostation Wallet already, you may just need to add
 :::info
 Your CUDOS address will begin with `cudos1`.
 :::
-
 
 3. Once the withdrawal transaction has completed, you will now see your funds sitting in your Keplr/Cosmostation wallet when the `CudosNetwork` is selected.
 
