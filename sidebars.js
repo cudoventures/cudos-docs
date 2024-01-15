@@ -121,7 +121,6 @@ module.exports = {
       items: [
         'blockchain-compute/introduction/overview',
         'blockchain-compute/introduction/getting-started',
-        'blockchain-compute/introduction/airdrop',
       ],
     },
     {
@@ -139,21 +138,11 @@ module.exports = {
             'blockchain-compute/usage/via-user-interface/creating-an-ssh-key',
             'blockchain-compute/usage/via-user-interface/creating-a-virtual-machine',
             'blockchain-compute/usage/via-user-interface/viewing-your-machines',
+            'blockchain-compute/usage/via-user-interface/my-identities',
+            'blockchain-compute/usage/via-user-interface/payments',
           ]
         },
-        {
-          type: 'category',
-          collapsed: false,
-          label: 'Via Command Line',
-          items: [
-            'blockchain-compute/usage/via-command-line/introduction',
-            'blockchain-compute/usage/via-command-line/preparations',
-            'blockchain-compute/usage/via-command-line/queries',
-            'blockchain-compute/usage/via-command-line/messages',
-            'blockchain-compute/usage/via-command-line/data',
-            
-          ]
-        },
+        'blockchain-compute/usage/interact-via-cli',
       ],
     },
   ],
