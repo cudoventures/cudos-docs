@@ -119,8 +119,8 @@ module.exports = {
       type: 'category',
       label: 'Introduction',
       items: [
-        'blockchain-compute/introduction/overview',
-        'blockchain-compute/introduction/getting-started',
+        'cudos-intercloud/introduction/overview',
+        'cudos-intercloud/introduction/getting-started',
       ],
     },
     {
@@ -134,15 +134,15 @@ module.exports = {
           collapsed: false,
           label: 'Via User Interface',
           items: [
-            'blockchain-compute/usage/via-user-interface/signing-in',
-            'blockchain-compute/usage/via-user-interface/creating-an-ssh-key',
-            'blockchain-compute/usage/via-user-interface/creating-a-virtual-machine',
-            'blockchain-compute/usage/via-user-interface/viewing-your-machines',
-            'blockchain-compute/usage/via-user-interface/my-identities',
-            'blockchain-compute/usage/via-user-interface/payments',
+            'cudos-intercloud/usage/via-user-interface/signing-in',
+            'cudos-intercloud/usage/via-user-interface/creating-an-ssh-key',
+            'cudos-intercloud/usage/via-user-interface/creating-a-virtual-machine',
+            'cudos-intercloud/usage/via-user-interface/viewing-your-machines',
+            'cudos-intercloud/usage/via-user-interface/identities',
+            'cudos-intercloud/usage/via-user-interface/payments',
           ]
         },
-        'blockchain-compute/usage/interact-via-cli',
+        'cudos-intercloud/usage/interact-via-cli',
       ],
     },
   ],

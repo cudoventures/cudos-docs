@@ -1,6 +1,6 @@
 ---
 title: My Identities
-id: my-identities
+id: identities
 ---
 
 # Viewing Your Blockchain Identities
