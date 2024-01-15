@@ -3,19 +3,19 @@ title: Governance
 id: governance
 ---
 
-On-chain governance proposals are used for decentralised decision making on the Cudos Network.
+On-chain governance proposals are used for decentralised decision making on the CUDOS Network.
 
 To create a proposal, a **50000 CUDOS** deposit is required. This deposit is returned if your proposal is successfully voted for by token holders.
 
-However, if your vote is unsuccessful, your deposit is **NOT** returned. It's a good idea to share your proposal idea in the [**Cudos Discord**](https://discord.com/invite/cudos) group prior to submitting it to ensure partipation and buy-in.
+However, if your vote is unsuccessful, your deposit is **NOT** returned. It's a good idea to share your proposal idea in the [**CUDOS Discord**](https://discord.com/invite/cudos) group prior to submitting it to ensure partipation and buy-in.
 
 A proposal can be submitted for a number of changes including an upgrade of the chain, parameters of the chain, a simple text proposal, or any other message type.
 
 **Validator operators** and **token holders** have the right to vote on proposals on a **1 token 1 vote** basis. This includes any stake delegated to them by other CUDOS holders.
 
-:::tip Cudos Dashboard
+:::tip CUDOS Dashboard
 
-The [**Cudos Dashboard**](https://dashboard.cudos.org/) is the easiest way to create a proposal. It also allows anyone to easily check any live proposals. By connecting a valid wallet, token holders can create or vote on the outcome of any live proposal.
+The [**CUDOS Dashboard**](https://dashboard.cudos.org/) is the easiest way to create a proposal. It also allows anyone to easily check any live proposals. By connecting a valid wallet, token holders can create or vote on the outcome of any live proposal.
 
 :::
 

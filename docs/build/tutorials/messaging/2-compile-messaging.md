@@ -5,7 +5,7 @@ id: compile-messaging
 
 Before a contract can be used, it must be compiled into `wasm` bytecode or artefacts that can be stored on chain.
 
-**Cudos Blast** makes compilation easy with a single command.
+**CUDOS Blast** makes compilation easy with a single command.
 
 ## 01 Modify files 
 

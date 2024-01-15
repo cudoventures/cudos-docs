@@ -89,11 +89,11 @@ and the latest block hash matches the network [Testnet Explorer](https://explore
 
 ![synced-node](@site/static/img/node-sync.png)
 
-<!-- ### Cudos Daemon Configuration tool
+<!-- ### CUDOS Daemon Configuration tool
 
 If you need to alter individual parameters, run `cudos-noded-ctl`. 
 
-:::info How to use Cudos Daemon Configuration Tool
+:::info How to use CUDOS Daemon Configuration Tool
 
 `cudos-noded-ctl` must be run as user cudos.
 

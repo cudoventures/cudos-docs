@@ -5,14 +5,14 @@ id: get-tokens
 
 # Get CUDOS
 
-## How to get the CUDOS token - All the Ways, and how to get them to the Native Cudos Blockchain!
+## How to get the CUDOS token - All the Ways, and how to get them to the Native CUDOS Blockchain!
 
 So you want some CUDOS tokens on Mainnet?
 This interactive guide is here to help!
 
 An important thing to understand is that there are two types of CUDOS token:
 
-1. The native CUDOS token on the Cudos blockchain, and
+1. The native CUDOS token on the CUDOS blockchain, and
 2. The ERC-20 CUDOS token on the Ethereum blockchain.
 
 Below is a list of exchanges that facilitate a platform for acquiring CUDOS. This list is a suggestion, and other options could become available in the future. Get in touch with our community for further information.
