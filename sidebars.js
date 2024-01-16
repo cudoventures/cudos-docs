@@ -145,6 +145,14 @@ module.exports = {
         'cudos-intercloud/usage/interact-via-cli',
       ],
     },
+    {
+      type: 'category',
+      label: 'Support',
+      items: [
+        'cudos-intercloud/support/general-support',
+        'cudos-intercloud/support/faqs',
+      ],
+    },
   ],
 
   governanceSidebar: [
