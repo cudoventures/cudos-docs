@@ -13,9 +13,9 @@ const Quickstarts = [
   },
   {
     name: '2. Cloud Infrastructure ⛅',
-    url: '../../../docs/blockchain-compute/introduction/overview',
+    url: '../../../docs/cudos-intercloud/introduction/overview',
     description: (
-      <p>Learn to spin up cloud infrastructure via CUDOS Blockchain Compute (CBC) to power your applications with computing resources.</p>
+      <p>Learn to spin up cloud infrastructure via CUDOS Intercloud (CIC) to power your applications with computing resources.</p>
     ),
   },
 ];

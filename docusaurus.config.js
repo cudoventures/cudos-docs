@@ -126,8 +126,8 @@ const config = {
               },            
                {
                 type: 'doc',
-                label: '☁️ Blockchain Compute',
-                docId: 'blockchain-compute/introduction/overview',
+                label: '☁️ CUDOS Intercloud',
+                docId: 'cudos-intercloud/introduction/overview',
                 position: "left",
               },            
             ],
