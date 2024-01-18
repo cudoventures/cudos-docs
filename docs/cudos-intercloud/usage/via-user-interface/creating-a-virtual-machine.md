@@ -15,7 +15,7 @@ You can choose these properties of your virtual machine:
 
 -  Operating System Distribution and Version: this is the operating system that will be pre-installed on your virtual machine.
 -  Region: this is the region in which your virtual machine will be deployed.
--  Machine: this is the specification of CPUs, RAM, GPUs, Storage of your virtual machine. Each specification configuration has the cost per hour which allows you to estimate the cost of running your virtual machine. 
+-  Machine: this is the specification of CPUs, RAM, GPUs, Storage of your virtual machine. Each specification configuration has a cost per hour which allows you to estimate the cost of running your virtual machine. 
 
 :::info
 
