@@ -90,6 +90,14 @@ module.exports = {
         'build/tools/cli',
       ]
     },
+    {
+      type: 'category',
+      label: 'Indexers',
+      items: [
+        'build/indexers/overview',
+        'build/indexers/subquery',
+      ]
+    },
   ],
 
   learnSidebar: [
