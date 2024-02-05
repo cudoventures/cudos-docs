@@ -46,7 +46,7 @@ from - this is the name of the wallet used.
 
 ```shell
 cudos-noded tx staking create-validator --amount="2000000000000000000000000acudos" \
-    --from="tango" \ 
+    --from="tango" \
     --pubkey=$(cudos-noded tendermint show-validator) \
     --moniker="apollo-validator" \
     --chain-id="cudos-testnet-public-3" \
