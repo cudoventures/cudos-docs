@@ -19,7 +19,7 @@ At the end of this guide your staked node is converted to a **Validator node** a
 
 **Network** and **Chain ID** are used interchangeably.
 
-### Testnet: cudos-testnet-public-3
+### Testnet: cudos-testnet-public-4
 ### Mainnet: cudos-1
 :::
 
@@ -119,7 +119,7 @@ If you set `--gas=auto`, the gas fee is automatically estimated before executing
 
 **`--gas-prices`**
 
-Gas prices in decimal format to determine the transaction fee (e.g. 0.1uatom)
+Gas prices in decimal format to determine the transaction fee (_e.g._ 5000000000000acudos)
 This is the amount to charge for transactions. 
 
 **`--gas-adjustment`**
@@ -127,7 +127,7 @@ This is the amount to charge for transactions.
 This is the adjustment factor to be multiplied against the estimate returned by the tx simulation.
 
 
-## 02 Enter your keyring passphrase
+## 03 Enter your keyring passphrase
 
 Authenticate and authorize the transaction by entering your **keyring passphrase**.
 
