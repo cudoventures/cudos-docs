@@ -29,12 +29,6 @@ Use `cudos-noded CLI` with several flags to determine fees:
 
 The ultimate value of the fees paid is equal to the ***gas multiplied by the gas price***. 
 
-$$
-fees = (gas \cdot gasPrices).
-$$
-
-Fees can be calculated using gas prices and vice versa.
-
 :::caution
 
 Validators can decide whether or not to include a transaction in their block by comparing the given or calculated `gas-prices` to their local `min-gas-prices`. The transaction is rejected if its `gas-prices ` are not high enough, so users are incentivized to pay more.
