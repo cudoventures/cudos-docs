@@ -90,6 +90,14 @@ module.exports = {
         'build/tools/cli',
       ]
     },
+
+    {
+      type: 'category',
+      label: 'External Resources',
+      items: [
+        'build/external-resources/index-cudos',
+      ]
+    },
   ],
 
   learnSidebar: [
