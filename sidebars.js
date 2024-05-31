@@ -145,6 +145,7 @@ module.exports = {
         'cudos-intercloud/usage/interact-via-cli',
       ],
     },
+    'cudos-intercloud/chains-currencies',
     {
       type: 'category',
       label: 'Support',

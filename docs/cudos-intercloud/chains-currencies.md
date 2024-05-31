@@ -1,5 +1,5 @@
 ---
-title: Supported Chains and Currencies
+title: Chains and Currencies
 id: chains-currencies
 ---
 
