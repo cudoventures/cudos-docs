@@ -140,6 +140,7 @@ module.exports = {
             'cudos-intercloud/usage/via-user-interface/viewing-your-machines',
             'cudos-intercloud/usage/via-user-interface/identities',
             'cudos-intercloud/usage/via-user-interface/payments',
+            'cudos-intercloud/usage/via-user-interface/private-networks',
           ]
         },
         'cudos-intercloud/usage/interact-via-cli',
