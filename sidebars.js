@@ -162,7 +162,26 @@ module.exports = {
       label: 'Tokens & Governance',
       items: [
         'governance/tokens',
-        'governance/get-tokens/get-tokens',
+        {
+          type: 'category',
+          collapsed: false,
+          label: 'Get Tokens',
+          items: [
+            'governance/get-tokens/listings-summary',
+            {
+              type: 'category',
+              label: 'Exchanging guides',
+              items: [
+                'governance/get-tokens/cex-native',
+                'governance/get-tokens/cex-erc',
+                'governance/get-tokens/dex-native',
+                'governance/get-tokens/dex-erc',
+                'governance/get-tokens/cex-other',
+              ],
+            },
+
+          ],
+        },
         'governance/governance',
         'governance/tokenomics',
       ],
