@@ -31,7 +31,7 @@ You have already set up a **Full node** and have its `MONIKER` to hand e.g. Tang
 
 You have a **Keplr Wallet**.
 
-If you don't already have a Keplr wallet, follow the instructions to **Install a Keplr wallet**(https://www.cudos.org/blog/how-to-create-a-keplr-wallet-a-complete-step-by-step-guide/)
+If you don't already have a Keplr wallet, follow the instructions to [**Install a Keplr wallet**](https://www.cudos.org/blog/how-to-create-a-keplr-wallet-a-complete-step-by-step-guide/)
 
 
 ### 3. Keplr Mnemonic
@@ -48,7 +48,7 @@ It is recommended that you test your setup on CUDOS Testnet prior to joining the
 If you want to run a validator node on **Testnet**, join '#Validator Chat' in the [CUDOS Discord](https://discord.com/invite/t397SKqf4u) to request the required number of CUDOS testnet tokens.
 
 **Mainnet** requires 2 million CUDOS Mainnet tokens. 
-See how to get [**CUDOS Mainnet tokens**](/docs/governance/get-tokens/get-tokens.md). 
+See how to get [**CUDOS Mainnet tokens**](/docs/governance/get-tokens/listings-summary). 
 
 :::tip Key terminology
 
