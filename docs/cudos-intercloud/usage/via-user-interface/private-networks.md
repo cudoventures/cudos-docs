@@ -17,7 +17,7 @@ Creating a private network with CUDOS Intercloud is very simple.
 3. Choose the details of your private network.
     - **Location**: private networks are not shared between datacentres, so you need to choose in which datacentre you want to create your private network.
     - **Name**: a unique identifier for your private network.
-    - **Subnet**: the address range for the private network. If you are unsure about what should go in here, you can learn more for example [here](https://www.ripe.net/about-us/press-centre/understanding-ip-addressing/).
+    - **Subnet**: the address range for the private network. If you are unsure about what should go in here, you can learn more [here](https://en.wikipedia.org/wiki/Private_network#Private_IPv4_addresses) for example.
 
 :::note
 CUDOS Intercloud's suppliers all use IPv4 at the moment.
