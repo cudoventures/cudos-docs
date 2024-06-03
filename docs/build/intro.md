@@ -9,13 +9,13 @@ ___
 ___
 **A Decentralised Application, or dApp, usually consists of two main components:**
 
-1. The consensus-driven business logic and representation of value using tokens - this is built with **Smart Contracts**.
-2. The powerful stuff like web frontends, real-time 3D, rendering, model training - this is built with **Cloud Infrastructure**.
+1. The consensus-driven business logic and representation of value using tokens - this is built with **Smart Contracts** on chain.
+2. The other component includes web frontends, game-rendering, blockchain data caching and indexing, AI model training etc. 
 
 **CUDOS provides a one-stop-shop for both components:**
 
 1. **CUDOS Network** is a Layer-1, CosmosSDK-based blockchain, with [CosmWasm](https://book.cosmwasm.com/) smart contracts written in [Rust](https://doc.rust-lang.org/book/).
-2. **CUDOS Blockchain Compute ([CBC](https://compute.cudos.org/))** is a permissionless infrastructure for provisioning cloud resources from the Blockchain.
+2. [CUDOS Intercloud](https://intercloud.cudos.org/) is a permissionless infrastructure for provisioning cloud resources from the Blockchain.
 
 ___
 
