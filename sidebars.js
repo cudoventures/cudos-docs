@@ -140,11 +140,13 @@ module.exports = {
             'cudos-intercloud/usage/via-user-interface/viewing-your-machines',
             'cudos-intercloud/usage/via-user-interface/identities',
             'cudos-intercloud/usage/via-user-interface/payments',
+            'cudos-intercloud/usage/via-user-interface/private-networks',
           ]
         },
         'cudos-intercloud/usage/interact-via-cli',
       ],
     },
+    'cudos-intercloud/chains-currencies',
     {
       type: 'category',
       label: 'Support',
@@ -161,7 +163,26 @@ module.exports = {
       label: 'Tokens & Governance',
       items: [
         'governance/tokens',
-        'governance/get-tokens/get-tokens',
+        {
+          type: 'category',
+          collapsed: false,
+          label: 'Get Tokens',
+          items: [
+            'governance/get-tokens/listings-summary',
+            {
+              type: 'category',
+              label: 'Exchanging guides',
+              items: [
+                'governance/get-tokens/cex-native',
+                'governance/get-tokens/cex-erc',
+                'governance/get-tokens/dex-native',
+                'governance/get-tokens/dex-erc',
+                'governance/get-tokens/cex-other',
+              ],
+            },
+
+          ],
+        },
         'governance/governance',
         'governance/tokenomics',
       ],
