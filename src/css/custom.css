@@ -225,3 +225,9 @@ button.aa-DetachedSearchButton {
 [data-theme='light'] .clean-btn {
   color: var(--ifm-color-primary);
 }
+
+table {
+  display: table;
+  width: initial;
+  margin: 0 auto;
+}

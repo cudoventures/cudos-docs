@@ -147,6 +147,7 @@ module.exports = {
       ],
     },
     'cudos-intercloud/chains-currencies',
+    'cudos-intercloud/discounts-and-bonuses',
     {
       type: 'category',
       label: 'Support',
