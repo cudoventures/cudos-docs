@@ -138,7 +138,7 @@ module.exports = {
             'cudos-intercloud/usage/via-user-interface/creating-an-ssh-key',
             'cudos-intercloud/usage/via-user-interface/creating-a-virtual-machine',
             'cudos-intercloud/usage/via-user-interface/viewing-your-machines',
-            'cudos-intercloud/usage/via-user-interface/identities',
+            'cudos-intercloud/usage/via-user-interface/profile',
             'cudos-intercloud/usage/via-user-interface/payments',
             'cudos-intercloud/usage/via-user-interface/private-networks',
           ]
@@ -147,6 +147,7 @@ module.exports = {
       ],
     },
     'cudos-intercloud/chains-currencies',
+    'cudos-intercloud/discounts-and-bonuses',
     {
       type: 'category',
       label: 'Support',
