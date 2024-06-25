@@ -5,7 +5,7 @@ id: discounts-and-bonuses
 
 # Time-limited Promotions
 Between June 25, 2024 and August 26, 2024 CUDOS Intercloud offers all its users different discounts and bonuses on all its offerings.
-While this initial promotion is limited in time, after it finishes there will be similar reward programs in the platform for longer periods of time, which will be communicated in due time.
+While this initial promotion is limited in time, after it finishes there will be similar reward programs in the platform for longer periods which will be communicated around the end of this initial promotion.
 
 ## Staking Discounts
 Any users staking CUDOS tokens in the CUDOS Network will now get up to 5% off on any services purchased within Intercloud.

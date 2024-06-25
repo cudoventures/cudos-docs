@@ -34,7 +34,7 @@ An additional identity has been successfully added to your CUDOS Intercloud acco
 
 :::note
 
-Keplr and MetaMask are currently supported. Cosmostation and more will follow shortly.
+Keplr and MetaMask are currently supported. Other wallets will follow shortly.
 
 :::
 
