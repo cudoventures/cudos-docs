@@ -27,6 +27,6 @@ Any discounts that may apply to your account will be shown on the pricing summar
 
 :::caution
 
-Please back up any critical and sensitive data that you store in a Virtual Machine, following the best practice guidlines of VM usage.
+Please back up any critical and sensitive data that you store in a Virtual Machine, following the best practice guidelines of VM usage.
 
 :::

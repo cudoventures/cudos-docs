@@ -6,7 +6,7 @@ id: payments
 # Managing Your Payments
 
 On this page you can top up your account balance, from which all VMs take payments from.
-Any promotions applied to any payment methids will be displayed here.
+Any promotions applied to any payment methods will be displayed here.
 
 ![cic-payments](@site/static/img/cic-payments.png)
 

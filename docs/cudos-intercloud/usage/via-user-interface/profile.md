@@ -40,5 +40,5 @@ Keplr and MetaMask are currently supported. Cosmostation and more will follow sh
 
 ## Discounts and Bonuses
 
-View all currently active promotions and permanent dicsounts that apply to the platform, and track your progress agains the ones you're eligible for.
+View all currently active promotions and permanent discounts that apply to the platform, and track your progress against the ones you're eligible for.
 To view all currently active discounts and promotions please see the [discounts and bonuses page](/docs/cudos-intercloud/discounts-and-bonuses.md).
