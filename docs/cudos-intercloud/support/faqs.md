@@ -5,6 +5,9 @@ id: faqs
 
 # Frequently Asked Questions
 
+### I have a problem I can't figure out. What do I do?
+Please reach out to us and ask for help in the [`intercloud-support` channel in the CUDOS Discord server](https://discord.com/invite/cudos).
+
 ### Why can’t I find Windows in the list of images?
 Windows is currently not supported due to technical limitations. Make sure you follow our socials for updates on changes and new features.
 
@@ -25,6 +28,9 @@ Fiat payments are not currently supported, but be sure to follow our socials for
 
 ### Is there a minimum amount I need to top up with?
 Yes. For most currencies it's $5.00 but it may be lower for some. You can view that on the payments tab. This ensures fees can be covered, and there’s still enough money to be used as credit under most market conditions.
+
+### I've made a payment but my balance has not updated after a few minutes. What should I do?
+Please reach out to us the [`intercloud-support` channel in the CUDOS Discord server](https://discord.com/invite/cudos) and we will help you.
 
 ### Is there a minimum amount of time I need to rent the VM?
 You are billed for the whole first hour of a VM’s life, and while you may stop using and terminating it at any point during that hour, you will not be reimbursed for the remaining time.
