@@ -213,9 +213,9 @@ const config = {
         ],
       },
       announcementBar: {
-        id: "support_us",
+        id: "announcement-bar",
         content:
-          'CUDOS & ASI propose a token merger to propel AI research & development. <a target="_blank" rel="noopener noreferrer" href="https://www.cudos.org/blog/artificial-superintelligence-alliance-proposes-addition-of-cloud-compute">Click to read more.</a>',
+          'CUDOS Completes Token Merger with ASI Alliance. <a target="_blank" rel="noopener noreferrer" href="https://www.cudos.org/blog/cudos-completes-token-merger-with-asi-alliance">Click to read more.</a>',
         backgroundColor: "#1b1b1d",
         textColor: "#fff",
         isCloseable: true,
