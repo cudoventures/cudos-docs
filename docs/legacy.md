@@ -8,6 +8,6 @@ This page contains a list of links to several legacy CUDOS docs pages, that we h
 Please be mindful that these may be out of date.
 
 - [Node operations](/docs/node/overview/understanding-nodes.md)
-- [Cosmos concepts](/docs/learn/introduction/overview)
+- [Cosmos concepts](/docs/learn/concepts/learn-tokens.md)
 - [Developer resources](docs/build/overview/setup-rust.md)
 - [Tutorials](/tutorials)

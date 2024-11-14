@@ -29,4 +29,4 @@ While CUDOS used to have an ERC-20 token and its own Cosmos chain, it [merged bo
 
 Below there are links to some legacy documentation and tutorials that might still be useful for aspiring Cosmos developers and enthusiasts.
 - [Legacy docs](/docs/legacy).
-- [Legacy tutorials](/docs/legacy/tutorials).
+- [Legacy tutorials](/tutorials).
