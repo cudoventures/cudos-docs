@@ -12,7 +12,7 @@ Run the following commands in the shell.
 In general, the format of commands is:
 
 ```shell
-cudos-noded keys [command]
+fetchd keys [command]
 ```
 
 The following commands are available:
@@ -35,15 +35,15 @@ The following commands are available:
 Use the following command to get detailed information on all available `key` commands. 
 
 ```shell
-cudos-noded keys --help
+fetchd keys --help
 ```
 
 ## List all keys
 
-Use this command to list all local keys managed by `cudos-noded` key manager. 
+Use this command to list all local keys managed by `fetchd` key manager. 
 
 ```shell 
-cudos-noded keys list
+fetchd keys list
 ```
 
 ## Add a new key
@@ -57,17 +57,17 @@ Use this command to add a new key in the keyring.
 In this example, we are adding the key 'memorable-key-name' to the `keyring` with a backend configured to our `os`. 
 
 ```shell
-cudos-noded keys add memorable-key-name --keyring-backend os
+fetchd keys add memorable-key-name --keyring-backend os
 ```
 
 ### Example
 
 ```shell
-$ cudos-noded keys add salsa
+$ fetchd keys add salsa
 - name: salsa
   type: local
-  address: cudos1qr5rt72yf7s340123456dne7dd5n3
-  pubkey: cudospub1addwnpep1234abcdefg540ftuz8x6tsqdct05k
+  address: fetch1qr5rt72yf7s340123456dne7dd5n3
+  pubkey: fetchpub1addwnpep1234abcdefg540ftuz8x6tsqdct05k
   mnemonic: ""
   threshold: 0
   pubkeys: []

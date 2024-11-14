@@ -3,16 +3,11 @@ title: Validator mechanics
 id: validator-mechanics
 ---
 
-The current maximum number of Validators is 100. We are actively recruiting Validators to the CUDOS network. Increasing the number of Validators increases decentralisation, security and integrity of the network.  
-
-You can view current Validators on the [**CUDOS Mainnet explorer**](https://explorer.cudos.org/).
-Validators are ranked based on the amount of tokens delegated to them including self-delegations.
-
 ## Increasing self-delegated or delegated stake
 
-Increasing the amount of CUDOS staked to a node increases its **Voting Power**. Increasing Voting Power increases the likelihood of being selected by the consensus process to propose blocks and hence **earn the most rewards**.
+Increasing the amount of tokens staked to a node increases its **Voting Power**. Increasing Voting Power increases the likelihood of being selected by the consensus process to propose blocks and hence **earn the most rewards**.
 
-A Validator can collect a `commission fee` from its Delegators. The parameters for this can be set when a staking transaction is performed at Step 6 above and using `cudos-noded`.
+A Validator can collect a `commission fee` from its Delegators.
 
 ## Block proposer selection
 
@@ -68,7 +63,7 @@ The Validator with the highest priority at the start of a new block has their pr
 
 ## Slashing and penalties
 
-A slashing event occurs if two **Validator nodes** sign the same block with the same key (double signing) or if the Validator becomes unavailable. A Validator's staked CUDOS (including CUDOS of users that delegated to them) can then be slashed. 
+A slashing event occurs if two **Validator nodes** sign the same block with the same key (double signing) or if the Validator becomes unavailable. A Validator's staked tokens (including tokens of users that delegated to them) can then be slashed. 
 
 Other penalties depends on the severity of the violation.
 
@@ -78,7 +73,7 @@ Other penalties depends on the severity of the violation.
 
 ## Jailing
 
-* If a validator fails to sign 90% of the blocks within a 19200-block interval (i.e. 17280 blocks), then it is jailed. Tokens are slashed immediately at that point. (This equates to approximately 336 hours depending on the current block time in the network)
+* If a validator fails to sign enough the blocks within a predefined block interval, then it is jailed. Tokens are slashed immediately at that point. 
 
     * It becomes not-bonded and begins unbonding
 
@@ -86,26 +81,15 @@ Other penalties depends on the severity of the violation.
 
     * It stops earning block rewards
 
-    * It’s stake gets slashed by 0.01%
+    * It’s stake gets slashed
 
 ## Unjailing
 
-* The Validator needs to unjail itself after at least 600 seconds of being jailed. There is an unjail transaction that can be sent via `cudos-noded` from within the Validator account/node. 
+* The Validator needs to unjail itself after being jailed. There is an unjail transaction that can be sent via `fetchd` from within the Validator account/node. 
 
 ```shell
-cudos-noded tx slashing unjail --from mykey [flags]
+fetchd tx slashing unjail --from mykey [flags]
 ```
-For example:
-
-```shell
-cudos-noded tx slashing unjail --chain-id="$CHAIN_ID" --from="$VALIDATOR_ADDRESS" --keyring-backend "os"
-```
-
-**CHAIN_ID="cudos-testnet-public-3"**
-
-A Validator is jailed if they miss 90% of the blocks in any interval of 19200 blocks. 
-
-A good CUDOS validator needs to aim for 99.99% uptime and <0.01% missed blocks.
  
 :::tip Reliability
 
@@ -116,12 +100,12 @@ To ensure maximum uptime and availability
 
 ## Validator states
 
-After a Validator is setup and officially added to the CUDOS Network with a `create-validator` transaction, it can be in the following states:
+After a Validator is setup and officially added to a Cosmos chain with a `create-validator` transaction, it can be in the following states:
 
 - `in validator set`: Validator is in the active set and participates in consensus. Validator is earning rewards and can be slashed for misbehaviour.
 - `jailed`: Validator misbehaved and is in jail, i.e. outside of the validator set. If the jailing is due to being offline for too long, the validator can send an `unjail` transaction in order to re-enter the validator set. If the jailing is due to double signing, the validator cannot unjail.
-- `unbonding`: If the Validator is no longer `in validator set` it enters an unbonding period. It remains in this state for up to 21 days. Slashing can still occur during this period. 
-- `unbonded`: If the Validator is not `in validator set`for 21 days or more it is unbonded. It cannot sign blocks or be slashed, and does not earn any rewards. However, It is still possible to delegate to this validator. Un-delegating from an unbonded validator is immediate.
+- `unbonding`: If the Validator is no longer `in validator set` it enters an unbonding period. It remains in this state for up to usually 21 days. Slashing can still occur during this period. 
+- `unbonded`: If the Validator is not `in validator set`for usually 21 days or more it is unbonded. It cannot sign blocks or be slashed, and does not earn any rewards. However, It is still possible to delegate to this validator. Un-delegating from an unbonded validator is immediate.
 
 ## Bonded Validators 
 

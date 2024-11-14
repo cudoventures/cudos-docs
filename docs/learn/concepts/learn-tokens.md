@@ -36,12 +36,6 @@ Enables K of N immutable signatories, K of N mutable, flexible signature and can
 
 Stores a set of members or voters. [***View in Github***](https://github.com/CosmWasm/cw-plus/tree/main/packages/cw4)
 
-## Non-Fungible Tokens
-
-CUDOS uses its proprietary `x/nft` module to enable the minting of non-fungible-tokens or NFTs.
-
-This allows for the storing and ownership tracking of NFTs and includes modules to transfer, mint and burn NFTs. 
-
 ## Interchain
 
 These are **Interchain Standards** as used by the **IBC** or inter-blockchain communication protocol.

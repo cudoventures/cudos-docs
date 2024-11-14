@@ -3,7 +3,7 @@ title: Cryptography
 id: cryptography
 ---
 
-The following cryptography is used on the CUDOS network. 
+The following cryptography is used on the ASI Alliance network. 
 
 ## Digital Signatures
 
@@ -17,7 +17,7 @@ Digital signatures provide:
 
 3. **Non-repudiation** - The signer cannot deny signing the document after the signature is created. Anyone can verify the digital signature by computing a hash of the data and checking whether the decryption of the digital signature results in the same hash. 
 
-CUDOS uses the [**ECDSA Elliptic Curve Digital Signature scheme**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). This is a cryptographically secure digital signature scheme based on elliptic-curve cryptography. 
+ASI Alliance uses the [**ECDSA Elliptic Curve Digital Signature scheme**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). This is a cryptographically secure digital signature scheme based on elliptic-curve cryptography. 
 
 * The elliptic curve is `sepc2561k`
 * The **private key** for signing messages is a random integer within the curve key length.
@@ -50,7 +50,7 @@ Hash functions transform input data of any size to a results of a fixed size. Th
 
 ## BIP 39
 
-When you create a new wallet on CUDOS using the CLI, you are given a BIP39 mnemonic. 
+When you create a new wallet on ASI Alliance using the CLI, you are given a BIP39 mnemonic. 
 BIP39 describes the implementation of a mnemonic code for the generation of deterministic wallets. 
 
 It consists of two parts: 

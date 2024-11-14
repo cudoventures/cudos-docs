@@ -7,7 +7,7 @@ id: key-management
 
 ### Node security
 
-The **keyring** is used to store and manage the keys used to interact with **Validator nodes** and other nodes. The keyring allows private keys to be stored securely without being exposed to a potential attacker. The keyring can be interacted with using the `cudos-noded` CLI tool.
+The **keyring** is used to store and manage the keys used to interact with **Validator nodes** and other nodes. The keyring allows private keys to be stored securely without being exposed to a potential attacker. The keyring can be interacted with using the `fetchd` CLI tool.
 
 Several backend implementations can be configured as part of setting up the keyring to store private keys.
 
@@ -67,7 +67,7 @@ The memory backend stores keys in memory. The keys are immediately deleted after
 In this example, we'll add a new key to a `test` backend and store it as a variable. 
 
 ```shell
-$ cudosnoded keys add testytestkey --keyring-backend test 
+$ fetchd keys add testytestkey --keyring-backend test 
 
 # Store the generated address as a variable
 

@@ -3,7 +3,7 @@ title: Setting up
 id: setup-rust
 ---
 
-The CUDOS Network uses **CosmWasm** as a framework for developing smart contracts and infrastructure to run them on chain. Smart contracts are written using Rust. 
+The ASI Alliance Network uses **CosmWasm** as a framework for developing smart contracts and infrastructure to run them on chain. Smart contracts are written using Rust. 
 
 In order to develop smart contracts, you need the **Rust toolchain**.
 
@@ -19,7 +19,7 @@ Rust design principles minimise smart contract vulnerabilities by using existing
 
 
 ### About CosmWasm
-**CosmWasm** is a smart contract platform built for the **Cosmos** ecosystem (of which CUDOS is a member). It is the ***Cosmos (Cosm) way of using WebAssembly (Wasm)*** hence the name.
+**CosmWasm** is a smart contract platform built for the **Cosmos** ecosystem. It is the ***Cosmos (Cosm) way of using WebAssembly (Wasm)*** hence the name.
 
 CosmWasm provides API and library functions such as verifying addresses and more advanced storage items. These enable you to write powerful smart contracts. 
 

@@ -3,7 +3,7 @@ title: Understanding nodes
 id: understanding-nodes
 ---
 
-This section describes the multiple node types on the CUDOS network and the Ports used by them.  
+This section describes the multiple node types on a Cosmos network and the Ports used by them.  
 
 |-|**NODE TYPE**|**DESCRIPTION**|
 |-|:-----:|:-----:|
@@ -35,12 +35,12 @@ A **Validator node** within a cluster ***only*** connects to a **Sentry node(s)*
 
 ### Seed node
 
-A **Seed node** generates a list of peers to which the **Sentry node** can connect to. The **Seed node** proactively learns about nodes on the external CUDOS network by a process of ‘crawling’ whereby it connects to other nodes, learns their address book, then disconnects and repeats the process. The **Seed node** feeds the list of addresses to the **Sentry node(s)**.
+A **Seed node** generates a list of peers to which the **Sentry node** can connect to. The **Seed node** proactively learns about nodes on the external Cosmos chain by a process of ‘crawling’ whereby it connects to other nodes, learns their address book, then disconnects and repeats the process. The **Seed node** feeds the list of addresses to the **Sentry node(s)**.
     The seed node is a *mandatory requirement* for a **Validator Cluster**. 
 
 ### Sentry node
 
-The **Sentry node** is an application layer proxy for the **Validator nodes**. Any communication the **Validator node** has with the outside CUDOS network consists of application messages to/from the **Sentry node**. These are then relayed to/from nodes on the CUDOS network. 
+The **Sentry node** is an application layer proxy for the **Validator nodes**. Any communication the **Validator node** has with the outside Cosmos chain consists of application messages to/from the **Sentry node**. These are then relayed to/from nodes on the Cosmos chain. 
 
 :::warning
 
@@ -48,7 +48,7 @@ Additional **Validator nodes** in a cluster do not provide redundancy as there i
 :::
 
 :::caution
-For security reasons, CUDOS nodes are configured to reject connections from multiple peers with the same IP address. **Therefore each public facing node must have its own public IP address.**
+For security reasons, Cosmos nodes are configured to reject connections from multiple peers with the same IP address. **Therefore each public facing node must have its own public IP address.**
 :::
 
 ## Ports
@@ -57,7 +57,7 @@ Nodes use the following tcp ports:
 - 1317: API port.
 - 9090: gRPC port.
 - 26656: P2P port used by transferring internal data between nodes.
-- 26657: Tendermint RPC server. Reference: https://docs.tendermint.com/master/rpc/
+- 26657: Tendermint RPC server. Reference: https://docs.tendermint.com/master/rpc/ (see now [CometBFT](https://docs.cometbft.com/v0.38/) for up-to-date chains)
 - 26660: Port for Prometheus monitoring.
 
 **Full/Seed nodes** use the following ports: 26656, 26657, 26660.

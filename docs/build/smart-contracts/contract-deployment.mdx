@@ -7,12 +7,12 @@ import { VarsSh } from '@site/src/components/variables';
 
 # Deployment
 
-## How to Deploy a Smart Contract on CUDOS using `cudos-noded` - Fully Explained!
+## How to Deploy a Smart Contract on fetch using `fetchd` - Fully Explained!
 >**NOTE:** As always, if you see angle brackets surrounding text, eg: `<your-wallet-name>`, you need to fill in your own variable name.
 
-1. **Install the CUDOS node**
+1. **Install the fetch node**
 
-    The CUDOS node daemon, `cudos-noded`, can be installed from here: [`cudos-noded`](https://github.com/CudoVentures/cudos-node/).
+    The fetch node daemon, `fetchd`, can be installed from here: [`fetchd`](https://github.com/fetchai/fetchd/).
     > This will install the blockchain node daemon binary which will allow you to either run your own node locally or on the chain, or interact with other nodes via RPC using the same CLI.
 
 2. **Compile your rust source files down to `.wasm`**
@@ -37,33 +37,33 @@ import { VarsSh } from '@site/src/components/variables';
     :::
 
     :::info
-    For up to date flags for CUDOS (and other Cosmos blockchains), you can refer to the [Cosmos Chain Registry](https://github.com/cosmos/chain-registry). CUDOS testnet is [here](https://github.com/cosmos/chain-registry/tree/master/testnets/cudostestnet), and mainnet is [here](https://github.com/cosmos/chain-registry/tree/master/cudos). *(It's often good practice when building frontends to pull the chain info automatically from the `chain-registry` repo so that your configuration stays up-to-date).*
+    For up to date flags for fetch (and other Cosmos blockchains), you can refer to the [Cosmos Chain Registry](https://github.com/cosmos/chain-registry). *(It's often good practice when building frontends to pull the chain info automatically from the `chain-registry` repo so that your configuration stays up-to-date).*
     :::
 
 
 4. **Create a wallet address and add it to the CLI instance.**
 
-    Create a CUDOS wallet address if you haven't already by following the instructions [here](../../learn/concepts/wallets/keplr-create.md), then add your mnemonic to your `cudos-noded` instance to make transactions on the chain with your private key *(remove the `_TN` from the end of any flags if you are working with the mainnet)*:
+    Create a fetch wallet address, then add your mnemonic to your `fetchd` instance to make transactions on the chain with your private key *(remove the `_TN` from the end of any flags if you are working with the mainnet)*:
     ```console
-    cudos-noded keys add <your-wallet-name> --keyring-backend $KEYRING_TN --recover
+    fetchd keys add <your-wallet-name> --keyring-backend $KEYRING_TN --recover
     ```
     This will ask you to type your BIP-39 mnemonic phrase which will be secured using your operating system keyring which you set with the flag.
 
     We now add this wallet to an environment variable as well, we call it `$OWNER_TN` for testnet:
     ```console
-    OWNER_TN=$( cudos-noded keys show -a <your-wallet-name> --keyring-backend "$KEYRING_TN" | tee /dev/tty | tail -1 | tr -d '\r' )
+    OWNER_TN=$( fetchd keys show -a <your-wallet-name> --keyring-backend "$KEYRING_TN" | tee /dev/tty | tail -1 | tr -d '\r' )
     ```
 
     >:warning: As always, keep your mnemonic phrase safe and secret.
 
-    > Your wallet will also need funds to pay for gas fees, you can add testnet funds via the faucet icon on the bottom left of [the testnet CUDOS Dashboard](http://dashboard.testnet.cudos.org/). Mainnet funds you will need to purchase on an exchange and either send to your address or [bridge](https://bridge.cudos.org/) from the Ethereum ERC-20 version of the token once in your Ethereum wallet. Feel free to message in the [CUDOS Discord](https://discord.gg/cudos/) if you need help, we may even send you a few cents worth of CUDOS to get you on your way with your first transaction on mainnet.
+    > Your wallet will also need funds to pay for gas fees, you can add testnet funds via the faucet.
 
 
-5. **Deploy your compiled `.wasm` contract from before to the CUDOS blockchain.**
+5. **Deploy your compiled `.wasm` contract from before to the fetch blockchain.**
 
-     To do this we use the `cudos-noded` CLI to run the `tx wasm store` command which uploads the contract file to the chain. We set the output of that command to the `$RESULT` environment variable:
+     To do this we use the `fetchd` CLI to run the `tx wasm store` command which uploads the contract file to the chain. We set the output of that command to the `$RESULT` environment variable:
     ```console
-    STORE_RESULT=$(cudos-noded tx wasm store ./<path-to>/artifacts/<name-of-wasm-file.wasm> --from $OWNER_TN `echo $TX_FLAGS_TN`)
+    STORE_RESULT=$(fetchd tx wasm store ./<path-to>/artifacts/<name-of-wasm-file.wasm> --from $OWNER_TN `echo $TX_FLAGS_TN`)
     ```
 
 6. **Get the index of the contract file from the chain.**
@@ -102,7 +102,7 @@ import { VarsSh } from '@site/src/components/variables';
 
     :rocket: Now we instantiate! This calls the `instantiate` method on the stored contract and passes in the JSON from the `$INST` variable we set above. This gets stored in it's own `$INST_RESPONSE` variable:
     ```console
-    INST_RESPONSE=$(cudos-noded tx wasm instantiate $CONTRACT_INDEX "$INST" --from $OWNER_TN --label $CONTRACT_LABEL `echo $TX_FLAGS_TN` $ADMIN)
+    INST_RESPONSE=$(fetchd tx wasm instantiate $CONTRACT_INDEX "$INST" --from $OWNER_TN --label $CONTRACT_LABEL `echo $TX_FLAGS_TN` $ADMIN)
     ```
 
 8. **Get the contract address.**
@@ -111,19 +111,19 @@ import { VarsSh } from '@site/src/components/variables';
     ```console
     CONTRACT_ADDRESS=$(echo $INST_RESPONSE | jq -r '.logs[0].events[0].attributes[0].value' | tee /dev/tty | tail -1 | tr -d '\r')
     ```
-    **You have successfully deployed and instantiated a smart contract on CUDOS! Congratulations!**
-    >Having deployed and retrieved the contract address, you can now interact with the contract on the chain, you can do this with a frontend to build your project into a full decentralised application (dApp). Take a look at `create-cosmos-app` to get going, it's a simple way of scaffolding a React frontend within the Cosmos ecosystem - CUDOS included. [This YouTube video](https://www.youtube.com/live/hPec5D_lI1A?feature=share&t=1880) helps use `create-cosmos-app` for CUDOS.
+    **You have successfully deployed and instantiated a smart contract on fetch! Congratulations!**
+    >Having deployed and retrieved the contract address, you can now interact with the contract on the chain, you can do this with a frontend to build your project into a full decentralised application (dApp). Take a look at `create-cosmos-app` to get going, it's a simple way of scaffolding a React frontend within the Cosmos ecosystem - fetch included. [This YouTube video](https://www.youtube.com/live/hPec5D_lI1A?feature=share&t=1880) helps use `create-cosmos-app` for fetch.
 
 9. **BONUS: Execute functions on the contract from the CLI**
 
-    While most end users will interact with the smart contract via a dApp frontend, you can also interact and execute functions on the contact with the `cudos-noded` CLI. Here's an example using the CW20 standard token contract again:
+    While most end users will interact with the smart contract via a dApp frontend, you can also interact and execute functions on the contact with the `fetchd` CLI. Here's an example using the CW20 standard token contract again:
 
     We start by also creating our JSON payload, this is structured to map to the parameters of the type defined within `ExecuteMsg` found via the `contract.rs` file. In the case of the CW20 standard token contract, we can see [here](https://github.com/CosmWasm/cw-plus/blob/4da476f9e426fb87689b6f0c3398ff08a65248d1/contracts/cw20-base/src/contract.rs#L195) that the parameters for a `Transfer` are the `recipient` and the `amount`.
     > `Transfer` is a base message to move tokens to another account without triggering actions. It is similar but different to `TransferFrom` and `Send`. You can see more in the `msg.rs` file for the standard CW20 token [here](https://github.com/CosmWasm/cw-plus/blob/main/packages/cw20/src/msg.rs).
 
     For our JSON payload, we need an address to send to so we set an environment variable for `$OLLIE`:
     ```console
-    OLLIE="cudos1d7jw3ply86e4kcudmlv78ask32kdp7r2usf8xn"
+    OLLIE="fetch1d7jw3ply86e4kcudmlv78ask32kdp7r2usf8xn"
     ```
     Now we structure our payload, again using `jq`:
     ```console
@@ -131,7 +131,7 @@ import { VarsSh } from '@site/src/components/variables';
     ```
     Then we execute this on chain:
     ```console
-    cudos-noded tx wasm execute $CONTRACT_ADDRESS "$TRANSFER_TO_OLLIE" --from $OWNER_TN `echo $TX_FLAGS_TN`
+    fetchd tx wasm execute $CONTRACT_ADDRESS "$TRANSFER_TO_OLLIE" --from $OWNER_TN `echo $TX_FLAGS_TN`
     ```
 
 10. **BONUS 2: Query the contract state from the CLI**
@@ -144,12 +144,11 @@ import { VarsSh } from '@site/src/components/variables';
     ```
     And we run it as a query from the CLI:
     ```console
-    cudos-noded query wasm contract-state smart $CONTRACT_ADDRESS "$BALANCE_OF_OLLIE" --node $RPC_NODE_TN
+    fetchd query wasm contract-state smart $CONTRACT_ADDRESS "$BALANCE_OF_OLLIE" --node $RPC_NODE_TN
     ```
     Where we should get back the balance of the `$OLLIE` address.
 
 ## Congratulations on getting this far! You've done a lot!
-Feel free to reach out on [Discord](https://discord.gg/cudos) if you have any questions, click the :computer: icon in the `#role-assignment` channel there to get access to the dev channels.
 
 Now your next step, build that dApp frontend to interact with your contract from a great UI! Check the README for info on `create-cosmos-app` for more information!
 

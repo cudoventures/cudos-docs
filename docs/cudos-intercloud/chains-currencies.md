@@ -7,7 +7,7 @@ id: chains-currencies
 You can add balance to your Intercloud account using a wide range of currencies, with more to come soon.
 
 ## IBC tokens
-- CUDOS in CUDOS and Osmosis
+- FET in ASI Alliance
 - ARCH in Archway
 - ATOM in Cosmos Hub
 - OSMO in Osmosis
@@ -16,4 +16,6 @@ You can add balance to your Intercloud account using a wide range of currencies,
 
 ## EVM tokens
 - USDC in Ethereum
+- USDT in Ethereum
 - USDC in Polygon
+- USDT in Polygon
