@@ -54,25 +54,6 @@ const config = {
         },
       },
     ],
-    // Redocusaurus config
-    [
-      "redocusaurus",
-      {
-        // Plugin Options for loading OpenAPI files
-        specs: [
-          {
-            spec: "docs/build/api/openapi.yaml",
-            route: "/api",
-          },
-        ],
-        // Theme Options for modifying how redoc renders them
-        theme: {
-          // Change with your site colors
-          // primaryColor: '#1890ff',
-          primaryColor: "#6DD0F1",
-        },
-      },
-    ],
   ],
 
   stylesheets: [
@@ -104,40 +85,6 @@ const config = {
         items: [
           {
             type: "doc",
-            label: "💻 Node",
-            docId: "node/overview/introduction",
-            position: "left",
-          },
-          {
-            type: "dropdown",
-            label: "⚒️ Build",
-            position: "left",
-            items: [
-              {
-                type: "doc",
-                label: "🧳 Resources",
-                docId: "build/intro",
-              },
-              {
-                label: "🚀 Tutorials",
-                to: "tutorials",
-              },
-            ],
-          },
-          {
-            type: "doc",
-            label: "📚 Learn",
-            docId: "learn/introduction/overview",
-            position: "left",
-          },
-          {
-            type: "doc",
-            label: "🏦 Governance",
-            docId: "governance/tokens",
-            position: "left",
-          },
-          {
-            type: "doc",
             label: "☁️ CUDOS Intercloud",
             docId: "cudos-intercloud/introduction/overview",
             position: "left",
@@ -146,6 +93,7 @@ const config = {
       },
       footer: {
         // style: 'dark',
+        copyright: "ASI Alliance Member",
         links: [
           {
             title: "Company",

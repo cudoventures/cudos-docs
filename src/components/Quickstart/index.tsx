@@ -5,17 +5,17 @@ import Heading from '@theme/Heading';
 
 const Quickstarts = [
   {
-    name: '1. Smart Contracts 📝',
-    url: '../../../docs/build/smart-contracts/contract-deployment',
+    name: '1. Cloud Infrastructure',
+    url: '../../../docs/cudos-intercloud/introduction/overview',
     description: (
-      <p>Learn to write and deploy Smart Contracts on the CUDOS Blockchain to implement the business and value logic of your application.</p>
+      <p>Deploy high-performance cloud GPUs on-demand and at scale for AI, machine learning, web3 dapps and more.</p>
     ),
   },
   {
-    name: '2. Cloud Infrastructure ⛅',
-    url: '../../../docs/cudos-intercloud/introduction/overview',
+    name: '2. ASI Merger',
+    url: '../../../docs/asi-merge/asi-merge-intro',
     description: (
-      <p>Learn to spin up cloud infrastructure via CUDOS Intercloud (CIC) to power your applications with computing resources.</p>
+      <p>Navigate the CUDOS merger with ASI and find a guide to help you use your new FET tokens.</p>
     ),
   },
 ];
