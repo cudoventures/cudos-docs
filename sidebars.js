@@ -55,6 +55,7 @@ module.exports = {
       ],
     },
     'cudos-intercloud/chains-currencies',
+    'cudos-intercloud/referral-system',
     'cudos-intercloud/discounts-and-bonuses',
     {
       type: 'category',
