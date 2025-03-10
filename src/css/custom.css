@@ -4,230 +4,413 @@
  * work well for content-centric websites.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-font-family-base: 'Open Sans';
-  --ifm-font-weight-normal: 400;
-  --ifm-font-weight-bold: 700;
-  --ifm-font-weight-semibold: 600;
-  --ifm-color-primary: #1B2031;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #4D80E8;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #6DD0F1;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-}
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #6DD0F1;
-  --ifm-color-primary-dark: #c5dfe6;
-  --ifm-color-primary-darker: #b5d5de;
-  --ifm-color-primary-darkest: #83bac9;
-  --ifm-color-primary-light: #ffffff;
-  --ifm-color-primary-lighter: #ffffff;
-  --ifm-color-primary-lightest: #ffffff;
-  --ifm-breadcrumb-color-active: #6DD0F1;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
-  /* algolia search box colours */
-  --aa-primary-color-rgb: 109, 208, 241 !important;
-  --aa-muted-color-rgb: 109, 208, 241 !important;
-  --aa-input-border-color-rgb: 109, 208, 241 !important;
-  --aa-background-color-rgb: 27, 32, 49 !important;
-}
-
-[data-theme='light'] {
-  --ifm-color-primary: #6DD0F1;
-  --ifm-color-primary-dark: #1B2031;
-  --ifm-color-primary-darker: #b5d5de;
-  --ifm-color-primary-darkest: #83bac9;
-  --ifm-color-primary-light: #6DD0F1;
-  --ifm-color-primary-lighter: #ffffff;
-  --ifm-color-primary-lightest: #ffffff;
-  --ifm-card-background-color: #f6f6f6;
-  --ifm-breadcrumb-color-active: #6DD0F1;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-
-  /* algolia search box colours */
-  --aa-primary-color-rgb: 109, 208, 241 !important;
-  --aa-muted-color-rgb: 109, 208, 241 !important;
-  --aa-input-border-color-rgb: 109, 208, 241 !important;
-  --aa-background-color-rgb: 255, 255, 255 !important;
-}
-
-.markdown img {
-  margin: auto;
-  display: block;
-}
-
-/* Styling for image size */
-img[alt=token-distribution] {
-  width: 900px;
-}
-
-img[alt=instantiated] {
-  width: 1200px;
-}
-
-img[alt=deployed] {
-  width: 1200px;
-}
-
-img[alt=full-node] {
-  width: 100px;
-}
-
-img[alt=seed-node] {
-  width: 100px;
-}
-
-img[alt=validator-node] {
-  width: 100px;
-}
-
-img[alt=sentry-node] {
-  width: 100px;
-}
-
-img[alt=synced-node] {
-  width: 800px;
-}
-
-img[alt=cudos-gex] {
-  width: 800px;
-}
-
-img[alt=messaging-dapp] {
-  width: 800px;
-}
-
-img[alt=update-schema] {
-  width: 800px;
-}
-
-/* bcc images */
-img[alt=bcc-create-vm] {
-  width: 80%;
-}
-
-img[alt=bcc-running-vm] {
-  width: 80%;
-}
-
-img[alt=bcc-my-vms] {
-  width: 80%;
-}
-
-img[alt=bcc-ssh-key-input] {
-  width: 60%;
-}
-
-/* Styling for links */
-
-/* LIGHT MODE */
-
-[data-theme='light'] a:link {
-  color: var(--ifm-color-primary-light);
-}
-
-[data-theme='light'] a:visited {
-  color: var(--ifm-color-primary-light);
-}
-
-[data-theme='light'] a:hover {
-  color: var(--ifm-color-primary-dark);
-}
-
-[data-theme='light'] a:active {
-  color: var(--ifm-color-primary-dark);
-}
-
-/* DARK MODE */
-
-[data-theme='dark'] a:link {
-  color: #6DD0F1;
-}
-
-[data-theme='dark'] a:visited {
-  color: #6DD0F1;
-}
-
-[data-theme='dark'] a:hover {
-  color: #6D9DF1;
-
-}
-
-[data-theme='dark'] a:active {
-  color: #FFF;
-}
-
-/* navbar */
-
-[data-theme='dark'] .navbar {
-  padding-left: 10px;
-  --logo: (img/dark-logo.svg) no-repeat;
-}
-
-.navbar {
-  padding-left: 10px;
-  color: #FFF;
-}
-
-.navbar__link {
-  font-size: 18px;
-}
-
-/* footer */
-.footer__links {
-  margin: auto;
-  width: 50%;
-}
-
-[data-theme='light'] .footer {
-  padding-left: 10px;
-  --ifm-footer-title-color: #1B2031;
-}
-
-[data-theme='dark'] .footer {
-  padding-left: 10px;
-  --ifm-footer-title-color: rgb(252, 251, 251);
-
-}
-
-/* fonts */
-.markdown h1,
-h2,
-h3 {
-  font: "Open Sans";
-}
-
-/* search box */
-button.aa-DetachedSearchButton {
-  border-radius: 30px;
-}
-
-/* buttons */
-[data-theme='dark'] a.button--secondary {
-  background-color: #1c1e21;
-  border-color: #6DD0F1;
-}
-
-[data-theme='dark'] .clean-btn {
-  color: var(--ifm-color-primary-lightest);
-}
-
-[data-theme='light'] .clean-btn {
-  color: var(--ifm-color-primary);
-}
-
-table {
-  display: table;
-  width: initial;
-  margin: 0 auto;
-}
+ /* You can override the default Infima variables here. */
+ :root {
+   --ifm-font-family-base: 'Open Sans';
+   --ifm-font-weight-normal: 400;
+   --ifm-font-weight-bold: 700;
+   --ifm-font-weight-semibold: 600;
+   --ifm-color-primary: #5d9ef9;
+   --ifm-color-primary-dark: #3c8af8;
+   --ifm-color-primary-darker: #2c80f7;
+   --ifm-color-primary-darkest: #0965e7;
+   --ifm-color-primary-light: #7eb2fa;
+   --ifm-color-primary-lighter: #8ebcfb;
+   --ifm-color-primary-lightest: #c0d9fd;
+   --ifm-code-font-size: 95%;
+   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+ }
+ 
+ /* For readability concerns, you should choose a lighter palette in dark mode. */
+ 
+ /* For readability concerns, you should choose a lighter palette in dark mode. */
+ [data-theme='dark'] {
+   --ifm-background-color: #070E1D!important;
+   --ifm-background-surface-color: #000!important;
+     --ifm-color-primary: #5d9ef9;
+     --ifm-color-primary-dark: #3c8af8;
+     --ifm-color-primary-darker: #2c80f7;
+     --ifm-color-primary-darkest: #0965e7;
+     --ifm-color-primary-light: #7eb2fa;
+     --ifm-color-primary-lighter: #8ebcfb;
+     --ifm-color-primary-lightest: #c0d9fd;
+   --ifm-breadcrumb-color-active: #BAE9FF;
+   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+   --aa-primary-color-rgb: 109, 208, 241 !important;
+   --aa-muted-color-rgb: 109, 208, 241 !important;
+   --aa-input-border-color-rgb: 109, 208, 241 !important;
+   --aa-background-color-rgb: 27, 32, 49 !important;
+ 
+   /* algolia search box colours */
+   --aa-primary-color-rgb: 109, 208, 241 !important;
+   --aa-muted-color-rgb: 109, 208, 241 !important;
+   --aa-input-border-color-rgb: 109, 208, 241 !important;
+   --aa-background-color-rgb: 27, 32, 49 !important;
+ }
+ 
+ [data-theme='light'] {
+   --ifm-color-primary: #BAE9FF;
+   --ifm-color-primary-dark: #1B2031;
+   --ifm-color-primary-darker: #b5d5de;
+   --ifm-color-primary-darkest: #83bac9;
+   --ifm-color-primary-light: #BAE9FF;
+   --ifm-color-primary-lighter: #ffffff;
+   --ifm-color-primary-lightest: #ffffff;
+   --ifm-card-background-color: #f6f6f6;
+   --ifm-breadcrumb-color-active: #BAE9FF;
+   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+   --aa-primary-color-rgb: 109, 208, 241 !important;
+   --aa-muted-color-rgb: 109, 208, 241 !important;
+   --aa-input-border-color-rgb: 109, 208, 241 !important;
+   --aa-background-color-rgb: 255, 255, 255 !important;
+ 
+   /* algolia search box colours */
+   --aa-primary-color-rgb: 109, 208, 241 !important;
+   --aa-muted-color-rgb: 109, 208, 241 !important;
+   --aa-input-border-color-rgb: 109, 208, 241 !important;
+   --aa-background-color-rgb: 255, 255, 255 !important;
+ }
+ 
+ /* Global Styles */
+ .markdown img {
+   margin: auto;
+   display: block;
+ }
+ 
+ /* Image Styles */
+ img[alt=token-distribution] {
+   width: 900px;
+ }
+ 
+ img[alt=instantiated] {
+   width: 1200px;
+ }
+ 
+ img[alt=deployed] {
+   width: 1200px;
+ }
+ 
+ img[alt=full-node] {
+   width: 100px;
+ }
+ 
+ img[alt=seed-node] {
+   width: 100px;
+ }
+ 
+ img[alt=validator-node] {
+   width: 100px;
+ }
+ 
+ img[alt=sentry-node] {
+   width: 100px;
+ }
+ 
+ img[alt=synced-node] {
+   width: 800px;
+ }
+ 
+ img[alt=cudos-gex] {
+   width: 800px;
+ }
+ 
+ img[alt=messaging-dapp] {
+   width: 800px;
+ }
+ 
+ img[alt=update-schema] {
+   width: 800px;
+ }
+ 
+ /* BCC Images */
+ img[alt=bcc-create-vm] {
+   width: 80%;
+ }
+ 
+ img[alt=bcc-running-vm] {
+   width: 80%;
+ }
+ 
+ img[alt=bcc-my-vms] {
+   width: 80%;
+ }
+ 
+ img[alt=bcc-ssh-key-input] {
+   width: 60%;
+ }
+ 
+ /* Link Styles */
+ 
+ /* Light Mode */
+ [data-theme='light'] a:link {
+   color: var(--ifm-color-primary-light);
+ }
+ 
+ [data-theme='light'] a:visited {
+   color: var(--ifm-color-primary-light);
+ }
+ 
+ [data-theme='light'] a:hover {
+   color: var(--ifm-color-primary-dark);
+ }
+ 
+ [data-theme='light'] a:active {
+   color: var(--ifm-color-primary-dark);
+ }
+ 
+ /* Dark Mode */
+ /* [data-theme='dark'] a:link {
+   color: #fff;
+ }
+ 
+ [data-theme='dark'] a:visited {
+   color: #5e97ff;
+ }
+ 
+ [data-theme='dark'] a:hover {
+   color: #4484FF;
+ }
+ 
+ [data-theme='dark'] a:active {
+   color: #FFF;
+ } */
+ 
+ /* Navbar Styles */
+ [data-theme='dark'] .navbar {
+   padding-left: 10px;
+   --logo: (img/dark-logo.svg) no-repeat;
+ }
+ 
+ .navbar {
+   padding-left: 10px;
+   color: #FFF;
+ }
+ 
+ .navbar__link {
+   font-size: 18px;
+ }
+ 
+ /* Footer Styles */
+ .footer__links {
+   margin: auto;
+   width: 50%;
+ }
+ 
+ [data-theme='light'] .footer {
+   padding-left: 10px;
+   --ifm-footer-title-color: #1B2031;
+ }
+ 
+ [data-theme='dark'] .footer {
+   padding-left: 10px;
+   --ifm-footer-title-color: rgb(252, 251, 251);
+ }
+ 
+ /* Font Styles */
+ .markdown h1,
+ h2,
+ h3 {
+   font: "Open Sans";
+ }
+ 
+ /* Search Box Styles */
+ button.aa-DetachedSearchButton {
+   border-radius: 30px;
+ }
+ 
+ /* Button Styles */
+ [data-theme='dark'] a.button--secondary {
+   background-color: #1c1e21;
+   border-color: var(--ifm-color-primary);
+ }
+ 
+ [data-theme='dark'] .clean-btn {
+   color: var(--ifm-color-primary-lightest);
+ }
+ 
+ [data-theme='light'] .clean-btn {
+   color: var(--ifm-color-primary);
+ }
+ 
+ /* Table Styles */
+ table {
+   display: table;
+   width: initial;
+   margin: 0 auto;
+ }
+ 
+ 
+ .markdown img {
+   margin: auto;
+   display: block;
+ }
+ 
+ /* Styling for image size */
+ img[alt=token-distribution] {
+   width: 900px;
+ }
+ 
+ img[alt=instantiated] {
+   width: 1200px;
+ }
+ 
+ img[alt=deployed] {
+   width: 1200px;
+ }
+ 
+ img[alt=full-node] {
+   width: 100px;
+ }
+ 
+ img[alt=seed-node] {
+   width: 100px;
+ }
+ 
+ img[alt=validator-node] {
+   width: 100px;
+ }
+ 
+ img[alt=sentry-node] {
+   width: 100px;
+ }
+ 
+ img[alt=synced-node] {
+   width: 800px;
+ }
+ 
+ img[alt=cudos-gex] {
+   width: 800px;
+ }
+ 
+ img[alt=messaging-dapp] {
+   width: 800px;
+ }
+ 
+ img[alt=update-schema] {
+   width: 800px;
+ }
+ 
+ /* bcc images */
+ img[alt=bcc-create-vm] {
+   width: 80%;
+ }
+ 
+ img[alt=bcc-running-vm] {
+   width: 80%;
+ }
+ 
+ img[alt=bcc-my-vms] {
+   width: 80%;
+ }
+ 
+ img[alt=bcc-ssh-key-input] {
+   width: 60%;
+ }
+ 
+ /* Styling for links */
+ 
+ /* LIGHT MODE */
+ 
+ [data-theme='light'] a:link {
+   color: var(--ifm-color-primary-light);
+ }
+ 
+ [data-theme='light'] a:visited {
+   color: var(--ifm-color-primary-light);
+ }
+ 
+ [data-theme='light'] a:hover {
+   color: var(--ifm-color-primary-dark);
+ }
+ 
+ [data-theme='light'] a:active {
+   color: var(--ifm-color-primary-dark);
+ }
+ 
+ /* DARK MODE */
+ 
+ [data-theme='dark'] a:link {
+   color: #fff;
+ }
+ 
+ [data-theme='dark'] a:visited {
+   color: #5e97ff;
+ }
+ 
+ [data-theme='dark'] a:hover {
+   color: #4484FF;
+ 
+ }
+ 
+ [data-theme='dark'] a:active {
+   color: #FFF;
+ }
+ 
+ /* navbar */
+ 
+ [data-theme='dark'] .navbar {
+   padding-left: 10px;
+   --logo: (img/dark-logo.svg) no-repeat;
+ }
+ 
+ .navbar {
+   padding-left: 10px;
+   color: #FFF;
+ }
+ 
+ .navbar__link {
+   font-size: 18px;
+ }
+ 
+ /* footer */
+ .footer__links {
+   margin: auto;
+   width: 50%;
+ }
+ 
+ [data-theme='light'] .footer {
+   padding-left: 10px;
+   --ifm-footer-title-color: #1B2031;
+ }
+ 
+ [data-theme='dark'] .footer {
+   padding-left: 10px;
+   --ifm-footer-title-color: rgb(252, 251, 251);
+ 
+ }
+ 
+ /* fonts */
+ .markdown h1,
+ h2,
+ h3 {
+   font: "Open Sans";
+ }
+ 
+ /* search box */
+ button.aa-DetachedSearchButton {
+   border-radius: 30px;
+ }
+ 
+ /* buttons */
+ [data-theme='dark'] a.button--secondary {
+   background-color: #1c1e21;
+   border-color: #76C1E6;
+ }
+ 
+ [data-theme='dark'] .clean-btn {
+   color: var(--ifm-color-primary-lightest);
+ }
+ 
+ [data-theme='light'] .clean-btn {
+   color: var(--ifm-color-primary);
+ }
+ 
+ table {
+   display: table;
+   width: initial;
+   margin: 0 auto;
+ }
