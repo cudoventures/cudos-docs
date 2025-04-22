@@ -5,8 +5,8 @@ id: creating-a-virtual-machine
 
 # Creating a Virtual Machine
 
-To reach the VM creation page, first click on the **Machines** tab in the top navigation menu.
-Then, click on **Create a virtual machine** at the top right of that page.
+To reach the VM creation page, first click on the **Deploy** tab in the top navigation menu and select **Machines**.
+Then, click on **Create**.
 
 ![cic-create-vm-button](@site/static/img/cic-create-vm-button.png)
 
