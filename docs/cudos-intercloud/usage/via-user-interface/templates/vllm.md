@@ -34,14 +34,13 @@ When you deploy the VM you will be shown the VM information page. For VLLM we ca
 ```
 CUDO_HF_TOKEN   hf_xxxxxxx  
 CUDO_MODEL  mistralai/Mistral-7B-v0.1
-CUDO_TOKEN  cudo_gjusyaoesy
 appId   vllm
 port    8000
 ```
 
 - `CUDO_HF_TOKEN` the HuggingFace token you provided
 - `CUDO_MODEL` the HuggingFace model you provided
-- `CUDO_TOKEN` the token generated to act as your API key / password
+- `SECURE_TOKEN` the unique token that was displayed during the VM creation process
 - `port` the port to connect to your VLLM instance on
 
 Additionally, you will need your VM IP address from the VM information page.
@@ -57,12 +56,12 @@ Now the model is ready, you can use openai python library:
 pip install openai
 ```
 
-Make sure to replace CUDO_TOKEN and VM-IP-ADDRESS with the data from the previous step.
+Make sure to replace SECURE_TOKEN and VM-IP-ADDRESS with the data from the previous step.
 ```python
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="CUDO_TOKEN",
+    api_key="SECURE_TOKEN",
     base_url="http://VM-IP-ADDRESS:8000/v1",
 )
 

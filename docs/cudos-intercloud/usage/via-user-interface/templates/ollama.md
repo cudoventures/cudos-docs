@@ -97,18 +97,24 @@ Note: OpenAI compatibility is experimental and is subject to major adjustments i
 pip install openai
 ```
 
-Get your IP address from the VM info page and the port and the secure token from the VM creation. Replace the script below with the right ip address and secure token.
+Get your IP address from the VM info page and the port and the secure token from the VM creation. 
+> 🔐 Secure Token:
+This is the unique token that was displayed during the VM creation process.
+Please make sure to copy and save it securely at that time.
+You will not be able to view it again after the VM is created.
+
+Replace the script below with the right ip address and secure token.
 
 Using python you can write:
 ```python
 ip  = "192.0.0.0"
 port = 8080
-cudo_token = "cudo_8c744hxyo2"
+secure_token = "cudo_8c744hxyo2"
 from openai import OpenAI
     
 client = OpenAI(
     base_url=f"http://{ip}:{port}/v1/",
-    api_key=cudo_token,  
+    api_key=secure_token,  
     timeout=60
 )
 

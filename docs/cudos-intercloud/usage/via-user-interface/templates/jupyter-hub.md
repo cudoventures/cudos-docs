@@ -16,7 +16,7 @@ A GPU is automatically selected by clicking small, medium or large, however you 
 Having a large number of users may require larger system memory and vCPU allocations. [Read this](https://tljh.jupyter.org/en/latest/howto/admin/resource-estimation.html) for more information.
 
 ## Using JupyterHub
-When you deploy the VM you will be shown the VM information page. Find the public IP address and paste it into your browser using **http** (**https** is not supported) e.g. `http://192.1.3.4.5`
+When you deploy the VM you will be shown the VM information page. Find the public IP address and paste it into your browser using **http** (**https** is not supported) e.g. `http://192.2.3.4`
 ![jupyterhub-login](@site/static/img/jupyterhub-login.png)
 
 Use the username `admin` and create a password to sign in. The first user to sign in will have an account created for them and become the administrator.
