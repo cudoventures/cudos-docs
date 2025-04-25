@@ -10,7 +10,7 @@ When first visiting the [CUDOS Intercloud homepage](https://intercloud.cudos.org
 In the top right corner, you’ll find a ‘Log in’ button.
 You can currently log in with Keplr or MetaMask. 
 
-If you chose Keplr, a window will then pop up prompting you to add the fetchhub chain network to your Keplr Wallet if you didn't have it already, and another one to prove ownership and verify you are trying to connect to CUDOS Intercloud.
+If you chose Keplr, a window will then pop up prompting you to add the fetchhub network to your Keplr Wallet if you didn't have it already, and another one to prove ownership and verify you are trying to connect to CUDOS Intercloud.
 Please accept both.
 
 With that, you’re all set up and ready to make some machines!
