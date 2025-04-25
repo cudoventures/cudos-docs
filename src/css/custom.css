@@ -231,3 +231,7 @@ table {
   width: initial;
   margin: 0 auto;
 }
+
+.hash-link {
+  display: none;
+}

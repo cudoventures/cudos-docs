@@ -13,8 +13,8 @@ If your setup permits this can lead to significant savings when deploying many m
 
 Creating a private network with CUDOS Intercloud is very simple.
 
-1. Navigate to the [`NETWORKS` page](https://intercloud.cudos.org/networks) in the top navigation menu.
-2. Click on `Create  a network`.
+1. Navigate to the [`NETWORKS` page](https://intercloud.cudos.org/#/networks) when you click **Deploy** on the top navigation menu.
+2. Click on `Create`.
 3. Choose the details of your private network.
     - **Location**: private networks are not shared between datacentres, so you need to choose in which datacentre you want to create your private network.
     - **Name**: a unique identifier for your private network.

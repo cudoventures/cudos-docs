@@ -48,6 +48,21 @@ module.exports = {
             'cudos-intercloud/usage/via-user-interface/viewing-your-machines',
             'cudos-intercloud/usage/via-user-interface/profile',
             'cudos-intercloud/usage/via-user-interface/payments',
+            
+            
+            {
+              type: 'category',
+              collapsed: false,
+              label: 'Templates',
+              items: [
+                'cudos-intercloud/usage/via-user-interface/templates/templates-overview',
+                'cudos-intercloud/usage/via-user-interface/templates/jupyter-hub',
+                'cudos-intercloud/usage/via-user-interface/templates/jupyter-lab',
+                'cudos-intercloud/usage/via-user-interface/templates/ollama',
+                'cudos-intercloud/usage/via-user-interface/templates/open-manus',
+                'cudos-intercloud/usage/via-user-interface/templates/vllm',
+              ]
+            },
             'cudos-intercloud/usage/via-user-interface/private-networks',
           ]
         },

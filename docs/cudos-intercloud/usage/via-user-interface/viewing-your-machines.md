@@ -5,7 +5,7 @@ id: viewing-your-machines
 
 # Viewing Your Virtual Machines
 
-To view all the machines you have created, click on the **Machines** option from the Menu. 
+To view all the machines you have created, click on the **Deploy** tab in the top navigation menu and select **Machines**. 
 
 ![cic-mmachine-list](@site/static/img/cic-machine-list.png)
 
