@@ -5,7 +5,7 @@ id: profile
 
 # Profile Page
 
-Use your profile page to add new identities to your account, and also to view all currently active discounts.
+Use your profile page to add new identities to your account, contact support, view docs, and log out.
 
 ## My Identities
 
