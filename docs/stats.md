@@ -1,5 +1,5 @@
 ---
-title: Stats Overview for CUDOS Intercloud
+title: Stats Overview for the CUDOS Ecosystem
 id: stats
 ---
 
@@ -9,13 +9,13 @@ The [Stats page](https://intercloud.cudos.org/stats) offers real-time and histor
 The Stats dashboard is designed to help users easily explore platform activity. Here's how to navigate it:
 
 ### Tabs: All Data, On-Demand, and Private Cloud Clusters
-The dashboard is organised into three main tabs:
+The dashboard is organised into three tabs:
 
 **All Data**: Shows metrics across all usage types.
 
 **On-Demand**: Shows metrics specifically related to on-demand deployments.
 
-**Private Cloud Clusters**: Shows metrics from private cluster environments.
+**Private Cloud Clusters**: Shows metrics from bigger cluster environments.
 
 ### Timeframe Selection
 Use the  range selectors at the top of each metric to customise the period for which data is displayed. Available options include viewing data from the past 7 days or the past 12 months.
@@ -32,7 +32,7 @@ Hover over any data point in the charts to reveal the exact figure and date.
 The CUDOS Intercloud Stats page presents several key metrics that provide insights into platform usage and performance. Here’s a breakdown of each metric:
 
 ### Spending (USD)
-The total amount spent by users over selected timeframe. This metric provides insight into the financial growth and adoption.
+The total amount spent by users over the selected timeframe. This metric provides insight into the financial growth and adoption.
 
 ### GPU Hours
 The total number of GPU compute hours consumed across the platform. This metric highlights the demand for high-performance, GPU-intensive workloads.
@@ -57,6 +57,6 @@ Additional important indicators include:
 - Storage Usage: The total disk storage consumed, showing storage needs across deployments.
 
 
-## 🎓 Want to learn more?
+## 🎓Want to learn more?
 
-You can learn more about this by [joining our Discord](https://discord.com/invite/t397SKqf4u) or [Telegram](https://t.me/cudostelegram).
+You can learn more about this by [joining our Discord](https://discord.com/invite/cudos) or [Telegram](https://t.me/cudostelegram).

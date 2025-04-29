@@ -124,6 +124,6 @@ print(list_completion.data)
 ```
 See more here: [OpenAI docs](https://github.com/ollama/ollama/blob/main/docs/openai.md).
 
-## 🎓Want to learn more?
+## 🎓 Want to learn more?
 
-You can learn more about this by [joining our Discord](https://discord.com/invite/t397SKqf4u) or [Telegram](https://t.me/cudostelegram).
+You can learn more about this by [joining our Discord](https://discord.com/invite/cudos) or [Telegram](https://t.me/cudostelegram).

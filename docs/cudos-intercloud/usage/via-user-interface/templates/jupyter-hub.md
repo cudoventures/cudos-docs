@@ -38,6 +38,6 @@ Conda, pip and apt packages can be install for all users via the terminal, pleas
 ### Adding data and sharing it
 You can add data to JupyterHub and share it with your users by following [this guide](https://tljh.jupyter.org/en/latest/howto/content/add-data.html).
 
-## 🎓Want to learn more?
+## 🎓 Want to learn more?
 
-You can learn more about this by [joining our Discord](https://discord.com/invite/t397SKqf4u) or [Telegram](https://t.me/cudostelegram).
+You can learn more about this by [joining our Discord](https://discord.com/invite/cudos) or [Telegram](https://t.me/cudostelegram).
