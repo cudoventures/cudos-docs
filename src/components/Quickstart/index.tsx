@@ -18,6 +18,13 @@ const Quickstarts = [
       <p>Navigate the CUDOS merger with ASI and find a guide to help you use your new FET tokens.</p>
     ),
   },
+  {
+    name: '3. Ecosystem Stats',
+    url: '../../../docs/stats',
+    description: (
+      <p>Discover real-time insights into platform activity, including compute usage, spending, user growth, and data center distribution.</p>
+    ),
+  },
 ];
 interface Props {
   name: string;
