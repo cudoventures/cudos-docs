@@ -5,17 +5,16 @@ id: payments
 
 # Managing Your Payments
 
-On [Payments page](https://intercloud.cudos.org/payments) you can top up your account balance, from which all VMs take payments from.
-Any promotions applied to any payment methods will be displayed here.
+The [Payments page](https://intercloud.cudos.org/payments) is your central hub for managing your account balance, which funds all your VMs. Any active promotions will be displayed here.
 
 ![cic-payments](@site/static/img/cic-payments.png)
 
-You can choose the amount you want to top up by either in crypto or in USD.
-You can find a full list of accepted currencies and chains [here](/docs/cudos-intercloud/chains-currencies.md).
+Choose your preferred top-up amount in either cryptocurrency or USD.
+For a comprehensive list of supported currencies and blockchain networks, visit our [chains and currencies documentation.](/docs/cudos-intercloud/chains-currencies.md)
 
-# Squid Router: How to Make Cross-Chain Payments
+# Cross-Chain Payments with Squid Router
 
-[Squid router](https://intercloud.cudos.org/payments/squid/new) allows you to transfer tokens between different blockchain networks in a single transaction. The interface provides a straightforward way to swap or transfer tokens across 70+ chains with minimal effort.
+[Squid router](https://intercloud.cudos.org/payments/squid/new) allows you to transfer tokens between different blockchain networks in a single transaction. The interface provides a straightforward way to swap or transfer tokens **across 70+ chains** with minimal steps required.
 
 SCREENSHOT
 
@@ -59,7 +58,10 @@ The "ROUTE DETAILS" section shows:
 
 ### 6. Review USD Value
 
-The "EXPECTED USD AMOUNT" shows the approximate value of your transaction in USD
+The "EXPECTED USD AMOUNT" shows the approximate value of your transaction in USD.
+:::note
+The USD amount shown is our target payment, but actual value may vary due to exchange rate fluctuations beyond our control. For payment certainty, we recommend converting to USDC yourself before making payment.
+:::
 
 ### 7. Check for Errors and Warnings
 
@@ -93,7 +95,7 @@ After submission:
 
 ### Viewing Transfer History
 
-After completing transfers, you can monitor all your transactions through the **History** tab
+After completing transfers, you can monitor all your transactions through the [History](https://intercloud.cudos.org/payments/squid/history) tab
 
 SCREENSHOT
 
@@ -101,7 +103,7 @@ SCREENSHOT
 
 To see more information about a specific transfer:
 
-1. Click on a transaction in the history list or its transaction hash
+1. Click on a transaction in the history list
 2. The Transfer details page will show:
    - **Amount Credited**: The fiat value equivalent received
    - **Amount Transferred**: The exact token amount sent
