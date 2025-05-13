@@ -19,6 +19,7 @@ module.exports = {
             'asi-merge/final-cudos-data',
           ]
         },
+        'squid-router',
         'stats'
       ],
     },
