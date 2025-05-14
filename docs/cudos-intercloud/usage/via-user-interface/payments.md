@@ -122,7 +122,6 @@ This detailed view is helpful for verifying completed transfers, troubleshooting
 
 ## Important Notes
 
-- **Fees Matter**: Remember that cross-chain transfers involve multiple fees (gas fees on both chains plus routing fees)
 - **Balance Check**: Always ensure you have enough balance to cover both your transfer amount and all fees
 - **Route Complexity**: More complex routes (more stops) may take longer to complete and could involve higher fees
 - **Network Congestion**: During times of high network activity, fees may increase and transaction times may be longer
