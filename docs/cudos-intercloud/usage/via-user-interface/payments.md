@@ -22,27 +22,19 @@ For a comprehensive list of supported currencies and blockchain networks, visit 
 
 ### 1. Select Your Blockchain Network
 
-In the "SELECT CHAIN" section, you'll see your current blockchain network. In the example, **Ethereum** is selected as indicated by the dropdown menu. If you need to change the source chain, click on this dropdown to select from available networks.
+In "SELECT CHAIN," choose your blockchain network from the dropdown.
 
 ### 2. Choose Your Token
 
-Under "SELECT TOKEN," you'll see:
-
-- The token you're transferring (**ETH** for example)
-- Your available balance
-
-Click this dropdown if you want to select a different token from your wallet.
+Under "SELECT TOKEN," pick the token you're transferring from the dropdown.
 
 ### 3. Enter Transfer Amount
 
-In the "TRANSFER AMOUNT" field:
-
-- Input the amount you wish to transfer
-- Click the "Maximum" button to automatically use your maximum available balance
+Input your desired transfer amount or click "Maximum" for your full balance.
 
 ### 4. Review Transaction Details
 
-Before confirming, carefully review the transaction breakdown:
+Check the transaction breakdown:
 
 - **Input**: The total amount being processed
 - **Transfer amount**: The actual amount being sent
@@ -53,14 +45,13 @@ Before confirming, carefully review the transaction breakdown:
 
 ### 5. Check Route Details
 
-The "ROUTE DETAILS" section shows:
-
-- The number of stops your transaction will make
+- View the number of stops your transaction will make
 - Click the arrow to expand and see the detailed routing path
 
 ### 6. Review USD Value
 
 The "EXPECTED USD AMOUNT" shows the approximate value of your transaction in USD.
+
 :::note
 The USD amount shown is our target payment, but actual value may vary due to exchange rate fluctuations beyond our control. For payment certainty, we recommend converting to USDC yourself before making payment.
 :::
@@ -105,14 +96,14 @@ To see more information about a specific transfer:
 
 ![squid_history](@site/static/img/squid_transfer_history.png)
 
-2. The Transfer details page will show:
-   - **Amount Credited**: The fiat value equivalent received
-   - **Amount Transferred**: The exact token amount sent
-   - **Chain**: The blockchain network used
-   - **State**: Current status of the transaction (Complete, Pending, Failed)
-   - **Started/Finished**: Timestamps showing when the transfer began and completed
-   - **Source Transaction**: The transaction hash on the sending chain
-   - **Final Transaction**: The transaction hash on the receiving chain
+2. Click on any transaction to see:
+
+- Amount Credited
+- Amount Transferred
+- Chain used
+- Transaction status
+- Timestamps
+- Transaction hashes
 
 3. For even more details, click the **View details** button next to the final transaction hash
 
@@ -122,23 +113,13 @@ This detailed view is helpful for verifying completed transfers, troubleshooting
 
 ## Important Notes
 
-- **Balance Check**: Always ensure you have enough balance to cover both your transfer amount and all fees
-- **Route Complexity**: More complex routes (more stops) may take longer to complete and could involve higher fees
-- **Network Congestion**: During times of high network activity, fees may increase and transaction times may be longer
+- Ensure sufficient balance for both transfer and fees
+- More complex routes may take longer and cost more
+- Network congestion may increase fees and transaction times
 
 ## Support and Troubleshooting
 
-If you encounter issues:
-
-1. Check your wallet connection and network status
-2. Ensure you have sufficient balance for the transaction and all fees
-3. Try adjusting the transfer amount to account for fees
-4. If problems persist, visit [support channel](https://discord.com/invite/cudos) for assistance
-
-## Security Tips
-
-- Check that the displayed fees and amounts match your expectations
-- Never share your wallet seed phrase or private keys with anyone, including support staff
+If you encounter issues, visit our [support channel](https://discord.com/invite/cudos) for assistance
 
 ## 🎓 Want to learn more?
 
