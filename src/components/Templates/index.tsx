@@ -52,6 +52,14 @@ const VMTemplates = [
     ),
     image: '/img/vllm-logo.svg'
   },
+  {
+    name: 'Dedicated LLM inference',
+    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/dedicated-inference-vllm',
+    description: (
+      <p>Quick deploy popular LLMs on a dedicated GPU.</p>
+    ),
+    image: '/img/vllm-logo.svg'
+  },
   
 ];
 

@@ -63,6 +63,7 @@ module.exports = {
                 'cudos-intercloud/usage/via-user-interface/templates/openmanus',
                 'cudos-intercloud/usage/via-user-interface/templates/dify',
                 'cudos-intercloud/usage/via-user-interface/templates/vllm',
+                'cudos-intercloud/usage/via-user-interface/templates/dedicated-inference-vllm',
               ]
             },
             'cudos-intercloud/usage/via-user-interface/private-networks',
