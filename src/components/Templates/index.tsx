@@ -30,7 +30,7 @@ const VMTemplates = [
   },
   {
     name: 'OpenManus',
-    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/open-manus',
+    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/openmanus',
     description: (
       <p>OpenManus AI agent on CUDOS Intercloud.</p>
     ),
@@ -64,11 +64,13 @@ function TemplateCard({name, url, description, image}: Props) {
               src={image}
               
               style={{
-                width: '100px',
-                height: '100px',
+                width: '70px',
+                height: '70px',
                 objectFit: 'contain', 
                 marginBottom: '1rem',
                 borderRadius: '0.5rem',
+                background: 'white',
+                padding: '5px',
               }}
             />
           )}
