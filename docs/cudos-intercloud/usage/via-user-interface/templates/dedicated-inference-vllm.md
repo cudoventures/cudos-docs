@@ -11,10 +11,12 @@ The LLMs are served using a vLLM Open AI server, so they come with an Open AI co
 
 To call the model from python you will need:
 
-- Your CUDO_TOKEN
+- Your SECURE_TOKEN
 - The Model ID
 
-Copy the CUDO_TOKEN value and add it to the example below.
+![dedicated](@site/static/img/dedicated.png)
+
+Copy the SECURE_TOKEN value and add it to the example below.
 
 ### Quick Reference
 
@@ -32,13 +34,13 @@ Copy the CUDO_TOKEN value and add it to the example below.
 
 ### Python example
 
-Make sure you know your VM IP address, HuggingFace model ID and CUDO_TOKEN.
+Make sure you know your VM IP address, HuggingFace model ID and SECURE_TOKEN.
 
 ```python
 from openai import OpenAI
 client = OpenAI(
     base_url="http://VM-IP-ADDRESS:8000/v1",
-    api_key="CUDO_TOKEN",
+    api_key="SECURE_TOKEN",
 )
 
 completion = client.chat.completions.create(
