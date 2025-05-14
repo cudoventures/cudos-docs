@@ -16,9 +16,9 @@ For a comprehensive list of supported currencies and blockchain networks, visit 
 
 [Squid router](https://intercloud.cudos.org/payments/squid/new) allows you to transfer tokens between different blockchain networks in a single transaction. The interface provides a straightforward way to swap or transfer tokens **across 70+ chains** with minimal steps required.
 
-SCREENSHOT
-
 ## Step-by-Step Instructions
+
+![squid_payments_1](@site/static/img/squid_payments_1_2.png)
 
 ### 1. Select Your Blockchain Network
 
@@ -49,6 +49,8 @@ Before confirming, carefully review the transaction breakdown:
 - **Gas fees**: Network gas costs
 - **Routing fees**: Additional routing costs
 
+![squid_transfer](@site/static/img/squid_transfer.png)
+
 ### 5. Check Route Details
 
 The "ROUTE DETAILS" section shows:
@@ -64,8 +66,6 @@ The USD amount shown is our target payment, but actual value may vary due to exc
 :::
 
 ### 7. Check for Errors and Warnings
-
-SCREENSHOT
 
 Pay attention to any error messages:
 
@@ -97,13 +97,14 @@ After submission:
 
 After completing transfers, you can monitor all your transactions through the [History](https://intercloud.cudos.org/payments/squid/history) tab
 
-SCREENSHOT
-
 ### Viewing Transfer Details
 
 To see more information about a specific transfer:
 
 1. Click on a transaction in the history list
+
+![squid_history](@site/static/img/squid_transfer_history.png)
+
 2. The Transfer details page will show:
    - **Amount Credited**: The fiat value equivalent received
    - **Amount Transferred**: The exact token amount sent
@@ -114,6 +115,8 @@ To see more information about a specific transfer:
    - **Final Transaction**: The transaction hash on the receiving chain
 
 3. For even more details, click the **View details** button next to the final transaction hash
+
+![squid_details](@site/static/img/squid_transfer_details.png)
 
 This detailed view is helpful for verifying completed transfers, troubleshooting issues, or providing transaction evidence if needed.
 
