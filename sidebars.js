@@ -61,6 +61,7 @@ module.exports = {
                 'cudos-intercloud/usage/via-user-interface/templates/jupyterlab',
                 'cudos-intercloud/usage/via-user-interface/templates/ollama',
                 'cudos-intercloud/usage/via-user-interface/templates/openmanus',
+                'cudos-intercloud/usage/via-user-interface/templates/dify',
                 'cudos-intercloud/usage/via-user-interface/templates/vllm',
               ]
             },

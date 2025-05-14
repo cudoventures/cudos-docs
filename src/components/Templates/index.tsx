@@ -37,6 +37,14 @@ const VMTemplates = [
     image: '/img/openmanus-logo.jpg',
   },
   {
+    name: 'Dify',
+    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/dify',
+    description: (
+      <p>Use Dify to Build LLM Chatbots on CUDOS Intercloud.</p>
+    ),
+    image: '/img/dify-color.svg',
+  },
+  {
     name: 'VLLM',
     url: '/docs/cudos-intercloud/usage/via-user-interface/templates/vllm',
     description: (
