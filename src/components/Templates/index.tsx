@@ -6,7 +6,7 @@ import Heading from '@theme/Heading';
 const VMTemplates = [
   {
     name: 'Jupyter Hub',
-    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/jupyter-hub',
+    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/jupyterhub',
     description: (
       <p>Multi-user Jupyter Notebooks on CUDOS Intercloud.</p>
     ),
@@ -14,7 +14,7 @@ const VMTemplates = [
   },
   {
     name: 'Jupyter Lab',
-    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/jupyter-lab',
+    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/jupyterlab',
     description: (
       <p>Jupyter Notebooks on CUDOS Intercloud.</p>
     ),
