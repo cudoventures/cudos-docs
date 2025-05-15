@@ -6,7 +6,7 @@ import Heading from '@theme/Heading';
 const VMTemplates = [
   {
     name: 'Jupyter Hub',
-    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/jupyter-hub',
+    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/jupyterhub',
     description: (
       <p>Multi-user Jupyter Notebooks on CUDOS Intercloud.</p>
     ),
@@ -14,7 +14,7 @@ const VMTemplates = [
   },
   {
     name: 'Jupyter Lab',
-    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/jupyter-lab',
+    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/jupyterlab',
     description: (
       <p>Jupyter Notebooks on CUDOS Intercloud.</p>
     ),
@@ -30,17 +30,33 @@ const VMTemplates = [
   },
   {
     name: 'OpenManus',
-    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/open-manus',
+    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/openmanus',
     description: (
       <p>OpenManus AI agent on CUDOS Intercloud.</p>
     ),
     image: '/img/openmanus-logo.jpg',
   },
   {
+    name: 'Dify',
+    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/dify',
+    description: (
+      <p>Use Dify to Build LLM Chatbots on CUDOS Intercloud.</p>
+    ),
+    image: '/img/dify-color.svg',
+  },
+  {
     name: 'VLLM',
     url: '/docs/cudos-intercloud/usage/via-user-interface/templates/vllm',
     description: (
       <p>VLLM is used to deploy open source LLMs for high performance.</p>
+    ),
+    image: '/img/vllm-logo.svg'
+  },
+  {
+    name: 'Dedicated LLM inference',
+    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/dedicated-inference-vllm',
+    description: (
+      <p>Quick deploy popular LLMs on a dedicated GPU.</p>
     ),
     image: '/img/vllm-logo.svg'
   },
@@ -64,11 +80,13 @@ function TemplateCard({name, url, description, image}: Props) {
               src={image}
               
               style={{
-                width: '100px',
-                height: '100px',
+                width: '70px',
+                height: '70px',
                 objectFit: 'contain', 
                 marginBottom: '1rem',
                 borderRadius: '0.5rem',
+                background: 'white',
+                padding: '5px',
               }}
             />
           )}
