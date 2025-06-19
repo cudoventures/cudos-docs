@@ -60,7 +60,14 @@ const VMTemplates = [
     ),
     image: '/img/vllm-logo.svg'
   },
-  
+  {
+    name: 'Nexus OS',
+    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/nexus-os',
+    description: (
+      <p>Run a Nexus OS node with ease on CUDOS Intercloud.</p>
+    ),
+    image: '/img/nexus-os-logo.png'
+  },
 ];
 
 interface Props {
