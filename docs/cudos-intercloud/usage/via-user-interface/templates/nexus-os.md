@@ -17,8 +17,8 @@ The Nexus L1 concentrates the world’s compute power into a single, ultra-high 
   This is required to access your node. Follow our step-by-step guide to [generate an SSH key](https://docs.cudos.org/docs/cudos-intercloud/usage/via-user-interface/creating-an-ssh-key).
  
 
-To reach the Nexus OS template deployment page, click on the available deployment option. This will give you some good default settings that you can fully customise in the next steps.
-
+To reach the [Nexus OS template](https://intercloud.cudos.org/templates) deployment page, click on the available deployment option. This will give you some good default settings that you can fully customise in the next steps.
+![nexus-5](@site/static/img/nexus_5.png)
 
 ## Customise the deployment
 On the template deployment page, enter your Node ID and select a machine.  
