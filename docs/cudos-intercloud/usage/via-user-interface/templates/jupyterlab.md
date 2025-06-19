@@ -9,7 +9,7 @@ The quick deploy app uses the **jupyter/scipy-notebook** image which includes co
 
 ## Get started
 
-To reach the Jupyter Lab template page, click click either the small, medium or large instance of Jupyter Lab. This will give you some good default settings but you can fully customise your deployment at the next step.
+To reach the Jupyter Lab template page, click either the small, medium or large instance of Jupyter Lab. This will give you some good default settings but you can fully customise your deployment at the next step.
 
 ## Customise the deployment
 
