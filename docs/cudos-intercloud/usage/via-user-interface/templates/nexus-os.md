@@ -4,14 +4,14 @@ id: nexus-os
 ---
 The Nexus L1 concentrates the world’s compute power into a single, ultra-high performance, EVM-compatible blockchain. Run a node with ease and start contributing to the next-gen compute network.
 
+Nexus Testnet III will be a staggered release in order to deliver the most stable and performant experience to everyone. Throughout today (23/06/2025), it will go live in the United States, Vietnam, Nigeria, Russia, India, Indonesia, the United Kingdom, and Hong Kong SAR and Mainland China in order.
+
 ## Get started
 
 ### Prerequisites
-- A Nexus account  
-  Sign up [here](https://app.nexus.xyz/).
 
-- Nexus CLI Node ID  
-  You can find this by logging into your Nexus account, navigating to the **Nodes** tab, and clicking **“Add CLI Node.”**
+- Wallet Address  
+  This is the wallet address you logged into the Nexus app with. Login [here](https://app.nexus.xyz/)
 
 - SSH Public Key  
   This is required to access your node. Follow our step-by-step guide to [generate an SSH key](https://docs.cudos.org/docs/cudos-intercloud/usage/via-user-interface/creating-an-ssh-key).
@@ -21,8 +21,8 @@ To reach the [Nexus OS template](https://intercloud.cudos.org/templates) deploym
 ![nexus-5](@site/static/img/nexus_5.png)
 
 ## Customise the deployment
-On the template deployment page, enter your Node ID and select a machine.  
-The recommended specification is **2 vCPU and 4 GB RAM** (feel free to select a higher specification).  
+On the template deployment page, enter your **wallet address** and select a machine in a region where the testnet has been rolled out.  
+The recommended specification is **2 vCPU and 8 GB RAM** (feel free to select a higher specification).  
 **Note:** GPU resources are not utilised by the Nexus CLI, so adding GPU capacity is optional and not required for this deployment.
 
 
