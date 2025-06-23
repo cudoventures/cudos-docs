@@ -23,6 +23,9 @@ To reach the [Nexus OS template](https://intercloud.cudos.org/templates) deploym
 ## Customise the deployment
 On the template deployment page, enter your Node ID and select a machine.  
 The recommended specification is **2 vCPU and 4 GB RAM** (feel free to select a higher specification).  
+**Note:** GPU resources are not utilised by the Nexus CLI, so adding GPU capacity is optional and not required for this deployment.
+
+
 Add your public SSH key, then click **Confirm and Deploy**.  
 ![nexus-1](@site/static/img/nexus_1.png)
 
@@ -40,6 +43,37 @@ You’ll also see your node ID with a **green status** on the Nexus website, ind
 
 ![nexus-4](@site/static/img/nexus_4.png)
 
-## 🎓 Want to learn more?
+## Troubleshooting and Updates
+### Accessing Logs
+If your node requires troubleshooting, you'll need to access the logs. Follow these steps:
+Use ssh to connect to the machine:
+```bash
+ssh root@ip-address
+```
+Check the logs:
+```bash
+journalctl -u nexus
+```
 
-You can learn more about this by [joining our Discord](https://discord.com/invite/cudos) or [Telegram](https://t.me/cudostelegram).
+### Updating the Nexus Binary
+You may need to manually update the Nexus CLI, here's how:
+
+Use ssh to connect to the machine:
+```bash
+ssh root@ip-address
+```
+Download the latest and make it executable:
+```bash
+wget -O nexus https://github.com/nexus-xyz/nexus-cli/releases/linktothelatestnexusbinaryforlinuxx86 && chmod +x nexus && mv nexus /usr/local/bin/nexus 
+```
+Restart the Nexus Service:
+```bash
+systemctl restart nexus
+```
+
+### Troubleshooting Support
+If you're unsure or need further assistance, join the [Nexus Discord](https://discord.gg/nexus-xyz) and ask for help.  
+Be ready to share your logs or any error messages to help the community assist you faster.
+
+## 🎓 Want to learn more?
+You can learn more about this by joining the CUDOS Intercloud community on [Discord](https://discord.com/invite/cudos) or [Telegram](https://t.me/cudostelegram).
