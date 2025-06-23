@@ -11,7 +11,7 @@ Nexus Testnet III will be a staggered release in order to deliver the most stabl
 ### Prerequisites
 
 - Wallet Address  
-  This is the wallet address you logged into the Nexus app with. Login [here](https://app.nexus.xyz/)
+  This is the wallet address on your Nexus app. Login [here](https://app.nexus.xyz/)
 
 - SSH Public Key  
   This is required to access your node. Follow our step-by-step guide to [generate an SSH key](https://docs.cudos.org/docs/cudos-intercloud/usage/via-user-interface/creating-an-ssh-key).
