@@ -72,8 +72,5 @@ systemctl restart nexus
 ```
 
 ### Troubleshooting Support
-If you're unsure or need further assistance, join the [Nexus Discord](https://discord.gg/nexus-xyz) and ask for help.  
+If you're unsure or need further assistance, join the CUDOS Intercloud [Discord](https://discord.com/invite/cudos) or [Telegram](https://t.me/cudostelegram) and ask for help.  
 Be ready to share your logs or any error messages to help the community assist you faster.
-
-## 🎓 Want to learn more?
-You can learn more about this by joining the CUDOS Intercloud community on [Discord](https://discord.com/invite/cudos) or [Telegram](https://t.me/cudostelegram).
