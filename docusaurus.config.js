@@ -160,14 +160,6 @@ const config = {
           },
         ],
       },
-      announcementBar: {
-        id: "announcement-bar",
-        content:
-          'CUDOS Completes Token Merger with ASI Alliance. <a target="_blank" rel="noopener noreferrer" href="https://www.cudos.org/blog/cudos-completes-token-merger-with-asi-alliance">Click to read more.</a>',
-        backgroundColor: "#1b1b1d",
-        textColor: "#fff",
-        isCloseable: true,
-      },
       prism: {
         theme: require("prism-react-renderer/themes/dracula"),
         additionalLanguages: ["rust"],
