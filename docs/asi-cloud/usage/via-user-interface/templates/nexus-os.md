@@ -25,11 +25,9 @@ On the template deployment page, enter your **wallet address** and select a mach
 The recommended specification is **2 vCPU and 8 GB RAM** (feel free to select a higher specification).  
 **Note:** GPU resources are not utilised by the Nexus CLI, so adding GPU capacity is optional and not required for this deployment.
 
-
-Add your public SSH key, then click **Confirm and Deploy**.  
 ![nexus-1](@site/static/img/nexus_1.png)
 
-![nexus-2](@site/static/img/nexus_2.png)
+Add your public SSH key, then click **Confirm and Deploy**.
 
 ## Deployment Results
 
@@ -38,8 +36,6 @@ Please allow up to **2 minutes** for the process to complete.
 
 Once deployed, you’ll be taken to the VM information page on ASI Cloud.  
 You’ll also see your node ID with a **green status** on the Nexus website, indicating it’s running.
-
-![nexus-3](@site/static/img/nexus_3.png)
 
 ![nexus-4](@site/static/img/nexus_4.png)
 

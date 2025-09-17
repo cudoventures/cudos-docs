@@ -5,12 +5,12 @@ id: viewing-your-machines
 
 # Viewing Your Virtual Machines
 
-To view all the machines you have created, click on the **Deploy** tab in the top navigation menu and select **Machines**. 
+To view all the machines you have created, click on the **Machines** page in the left navigation. 
 
-![cic-mmachine-list](@site/static/img/cic-machine-list.png)
+![asic-machine-list](@site/static/img/asic-machine-list.png)
 
 A list of the currently active machines will be displayed, as well as machines that were terminated in an earlier version of the platform.
-To remove terminated machines in bulk from the active list, or to delete active machines, you can select them in the list, and then click the **Delete** button.
+To remove terminated machines in bulk from the active list, or to delete active machines, you can select them in the list, and then click the **Delete selected** button.
 To display all deleted machines you can use the **Show deleted machines** toggle switch at the top right of the machine list.
 
 ## Machine States
@@ -26,7 +26,7 @@ There are a few machine states to be aware of:
 
 Click on a machine’s ID to view more details about it. This will take you to the virtual machine's details page that contains information about its status, region, IP address, operating system distro and version, and specification. 
 
-![cic-my-vm](@site/static/img/cic-my-vm.png)
+![asic-my-vm](@site/static/img/asic-my-vm.png)
 
 If you have any discounts applied for your next billing period they will also be displayed on this page.
 

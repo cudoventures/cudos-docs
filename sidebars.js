@@ -6,9 +6,17 @@ module.exports = {
       items: [
         'welcome',
         'asi-cloud/introduction/getting-started',
-        'asi-cloud/models',
+        'asi-cloud/pricing',
         'asi-cloud/referral-system',
         'asi-cloud/discounts-and-bonuses',
+        {
+          type: 'category',
+          label: 'Support',
+          items: [
+            'asi-cloud/support/general-support',
+            'asi-cloud/support/faqs',
+          ],
+        },
       ],
     },
   ],
@@ -36,29 +44,31 @@ module.exports = {
         'asi-cloud/introduction/getting-started',
       ],
     },
-    'asi-cloud/models',
+    'asi-cloud/pricing',
     {
       type: 'category',
       collapsed: false,
-      label: 'Usage',
+      label: 'Serverless Inference',
       items: [
-        
+        'asi-cloud/usage/interact-via-cli',
+      ],
+    },
+        {
+      type: 'category',
+      collapsed: true,
+      label: 'Deploy Infrastructure',
+      items: [
+        'asi-cloud/usage/creating-an-ssh-key',
         {
           type: 'category',
-          collapsed: false,
+          collapsed: true,
           label: 'Via User Interface',
           items: [
-            'asi-cloud/usage/via-user-interface/signing-in',
-            'asi-cloud/usage/via-user-interface/creating-an-ssh-key',
             'asi-cloud/usage/via-user-interface/creating-a-virtual-machine',
             'asi-cloud/usage/via-user-interface/viewing-your-machines',
-            'asi-cloud/usage/via-user-interface/profile',
-            'asi-cloud/usage/via-user-interface/payments',
-            
-            
             {
               type: 'category',
-              collapsed: false,
+              collapsed: true,
               label: 'Templates',
               items: [
                 'asi-cloud/usage/via-user-interface/templates/templates-overview',
@@ -78,7 +88,25 @@ module.exports = {
         'asi-cloud/usage/interact-via-cli',
       ],
     },
-    'asi-cloud/chains-currencies',
+    {
+      type: 'category',
+      collapsed: true,
+      label: 'Your Account',
+      items: [
+            'asi-cloud/usage/via-user-interface/payments',
+            'asi-cloud/chains-currencies',
+      ],
+    },
+    {
+      type: 'category',
+      collapsed: true,
+      label: 'Managing Payments',
+      items: [
+            'asi-cloud/usage/via-user-interface/payments',
+            'asi-cloud/chains-currencies',
+      ],
+    },
+    'asi-cloud/models',
     'asi-cloud/referral-system',
     'asi-cloud/discounts-and-bonuses',
     {
