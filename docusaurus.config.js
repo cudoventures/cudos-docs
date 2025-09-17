@@ -75,8 +75,8 @@ const config = {
       navbar: {
         logo: {
           alt: "Site Logo",
-          src: "img/logo.png",
-          srcDark: "img/logo-dark.png",
+          src: "img/ASICloudLogo.svg",
+          srcDark: "img/ASICloudLogo-dark.svg",
           target: "_self",
           width: 150,
           height: 32,
