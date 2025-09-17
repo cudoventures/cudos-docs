@@ -1,25 +1,29 @@
 module.exports = {
-  welcomeSidebar: [
+    welcomeSidebar: [
     {
       type: 'category',
       label: 'Welcome',
       items: [
         'welcome',
-        {
-          type: 'category',
-          collapsed: false,
-          label: 'ASI Alliance Merger',
-          items: [
-            'asi-merge/asi-merge-intro',
-            'asi-merge/swap-details',
-            'asi-merge/migrate-tokens',
-            'asi-merge/manage-native-fet',
-            'asi-merge/asi-merger-cex',
-            'asi-merge/asi-merge-stats',
-            'asi-merge/final-cudos-data',
-          ]
-        },
-        'stats'
+        'asi-cloud/introduction/getting-started',
+        'asi-cloud/models',
+        'asi-cloud/referral-system',
+        'asi-cloud/discounts-and-bonuses',
+      ],
+    },
+  ],
+  mergerSidebar: [
+    {
+      type: 'category',
+      label: 'ASI Alliance Merger',
+      items: [
+        'asi-merge/asi-merge-intro',
+        'asi-merge/swap-details',
+        'asi-merge/migrate-tokens',
+        'asi-merge/manage-native-fet',
+        'asi-merge/asi-merger-cex',
+        'asi-merge/asi-merge-stats',
+        'asi-merge/final-cudos-data',
       ],
     },
   ],

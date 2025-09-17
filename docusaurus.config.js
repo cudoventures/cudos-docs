@@ -85,9 +85,21 @@ const config = {
         items: [
           {
             type: "doc",
-            label: "☁️ CUDOS Intercloud",
-            docId: "asi-cloud/introduction/overview",
+            label: "📖 Tutorials",
+            docId: "asi-merge/asi-merge-intro",
             position: "left",
+          },
+          {
+            type: "doc",
+            label: "📊 Ecosystem Statistics",
+            docId: "stats",
+            position: "left",
+          },
+          {
+            type: "doc",
+            docId: "asi-merge/asi-merge-intro",
+            position: "left",
+            html: '<img src="/img/cudos.svg" alt="Icon" style="height: 20px; margin-right: 8px; vertical-align: middle;" />CUDOS Merger',
           },
         ],
       },
