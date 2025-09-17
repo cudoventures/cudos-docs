@@ -14,10 +14,10 @@ Nexus Testnet III will be a staggered release in order to deliver the most stabl
   This is the wallet address on your Nexus app. Login [here](https://app.nexus.xyz/)
 
 - SSH Public Key  
-  This is required to access your node. Follow our step-by-step guide to [generate an SSH key](https://docs.cudos.org/docs/cudos-intercloud/usage/via-user-interface/creating-an-ssh-key).
+  This is required to access your node. Follow our step-by-step guide to [generate an SSH key](https://docs.cudos.org/docs/asi-cloud/usage/via-user-interface/creating-an-ssh-key).
  
 
-To reach the [Nexus OS template](https://intercloud.cudos.org/templates) deployment page, click on the available deployment option. This will give you some good default settings that you can fully customise in the next steps.
+To reach the [Nexus OS template](https://asicloud.cudos.org/templates) deployment page, click on the available deployment option. This will give you some good default settings that you can fully customise in the next steps.
 ![nexus-5](@site/static/img/nexus_5.png)
 
 ## Customise the deployment
@@ -36,7 +36,7 @@ Add your public SSH key, then click **Confirm and Deploy**.
 After clicking **Confirm and Deploy**, your virtual machine (which runs your Nexus node) will be provisioned.  
 Please allow up to **2 minutes** for the process to complete.
 
-Once deployed, you’ll be taken to the VM information page on CUDOS Intercloud.  
+Once deployed, you’ll be taken to the VM information page on ASI Cloud.  
 You’ll also see your node ID with a **green status** on the Nexus website, indicating it’s running.
 
 ![nexus-3](@site/static/img/nexus_3.png)
@@ -72,7 +72,7 @@ systemctl restart nexus
 ```
 
 ### Troubleshooting Support
-If you're unsure or need further assistance, join the CUDOS Intercloud [Discord](https://discord.com/invite/cudos) or [Telegram](https://t.me/cudostelegram) and ask for help.  
+If you're unsure or need further assistance, join the ASI Cloud [Discord](https://discord.com/invite/cudos) or [Telegram](https://t.me/cudostelegram) and ask for help.  
 Be ready to share your logs or any error messages to help the community assist you faster.
 
 You can also reach out to the Nexus [Discord](https://discord.gg/nexus-xyz) community.

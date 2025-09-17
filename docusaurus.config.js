@@ -86,7 +86,7 @@ const config = {
           {
             type: "doc",
             label: "☁️ CUDOS Intercloud",
-            docId: "cudos-intercloud/introduction/overview",
+            docId: "asi-cloud/introduction/overview",
             position: "left",
           },
         ],

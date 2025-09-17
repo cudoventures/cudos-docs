@@ -5,16 +5,16 @@ id: payments
 
 # Managing Your Payments
 
-The [Payments page](https://intercloud.cudos.org/payments) is your central hub for managing your account balance, which funds all your VMs. Any active promotions will be displayed here. For payments with wider range of tokens please check out [Squid router](https://intercloud.cudos.org/payments/squid/new) below.
+The [Payments page](https://asicloud.cudos.org/payments) is your central hub for managing your account balance, which funds all your VMs. Any active promotions will be displayed here. For payments with wider range of tokens please check out [Squid router](https://asicloud.cudos.org/payments/squid/new) below.
 
 ![cic-payments](@site/static/img/cic-payments.png)
 
 Choose your preferred top-up amount in either cryptocurrency or USD.
-For a comprehensive list of supported currencies and blockchain networks, visit our [chains and currencies documentation.](/docs/cudos-intercloud/chains-currencies.md)
+For a comprehensive list of supported currencies and blockchain networks, visit our [chains and currencies documentation.](/docs/asi-cloud/chains-currencies.md)
 
 # Cross-Chain Payments with Squid Router
 
-[Squid router](https://intercloud.cudos.org/payments/squid/new) allows you to transfer tokens between different blockchain networks in a single transaction. The interface provides a straightforward way to swap or transfer tokens **across 70+ chains** with minimal steps required.
+[Squid router](https://asicloud.cudos.org/payments/squid/new) allows you to transfer tokens between different blockchain networks in a single transaction. The interface provides a straightforward way to swap or transfer tokens **across 70+ chains** with minimal steps required.
 
 ## Step-by-Step Instructions
 
@@ -86,7 +86,7 @@ After submission:
 
 ### Viewing Transfer History
 
-After completing transfers, you can monitor all your transactions through the [History](https://intercloud.cudos.org/payments/squid/history) tab
+After completing transfers, you can monitor all your transactions through the [History](https://asicloud.cudos.org/payments/squid/history) tab
 
 ### Viewing Transfer Details
 

@@ -3,9 +3,9 @@ title: Referral system
 id: referral-system
 ---
 
-# CUDOS Intercloud Referral System
+# ASI Cloud Referral System
 
-Intercloud users have the ability to refer other users with their referral code, or a referral link.
+ASI Cloud users have the ability to refer other users with their referral code, or a referral link.
 Benefits include:
 - Referrers typically receive between 1 and 1.5% of the usage of all users they have referred.
 - Withdrawals are received in FET tokens.
@@ -22,7 +22,7 @@ Referrals only go one level at the moment -- you do not earn referral commission
 
 To share your referral link, click on top of it in the `Overview` tab to copy it to the clipboard.
 If you wish to send only your referral code, you can find that within your referral link -- it's the last part, highlighted in blue.
-For example, if your referral link is `https://intercloud.cudos.org/?referrer=sample-referral-code-314159`, then your referral code would be `sample-referral-code-314159`.
+For example, if your referral link is `https://asicloud.cudos.org/?referrer=sample-referral-code-314159`, then your referral code would be `sample-referral-code-314159`.
 
 ## Withdrawing your referral money
 

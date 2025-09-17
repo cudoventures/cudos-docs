@@ -67,7 +67,7 @@ curl http://localhost:11434/api/generate \
   -H "Content-Type: application/json" \
   -d '{
     "model": "llama3",
-    "prompt": "Why should I use CUDOS Intercloud?",
+    "prompt": "Why should I use ASI Cloud?",
     "stream": false
   }'
 ```
@@ -79,7 +79,7 @@ import requests
 url = "http://localhost:11434/api/generate"
 payload = {
     "model": "llama3",
-    "prompt": "Why should I use CUDOS Intercloud?",
+    "prompt": "Why should I use ASI Cloud?",
     "stream": False
 }
 

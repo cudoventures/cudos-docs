@@ -4,10 +4,10 @@ id: discounts-and-bonuses
 ---
 
 # Time-limited Promotions
-CUDOS Intercloud offers all its users different discounts and bonuses on all its offerings, particularly those who are active members of the ASI Alliance ecosystem.
+ASI Cloud offers all its users different discounts and bonuses on all its offerings, particularly those who are active members of the ASI Alliance ecosystem.
 
 ## Staking Discounts
-Any users staking FET tokens in the ASI Alliance Network will now get up to 5% off on any services purchased within Intercloud.
+Any users staking FET tokens in the ASI Alliance Network will now get up to 5% off on any services purchased within ASI Cloud.
 To calculate the amount staked, all the tokens delegated to validators in ASI Alliance for all Cosmos addresses connected to the account are aggregated.
 Then, the discount is calculated as
 
@@ -40,7 +40,7 @@ The bonus credit is assigned after all network and routing fees are taken.
 
 ## Bonus Credit for Deposit Milestones
 There’s a tiered bonus system, to reward the most active users of the platform.
-The more credit you add to the platform, the more you get back in your account as Intercloud balance, up to $12,000.
+The more credit you add to the platform, the more you get back in your account as ASI Cloud balance, up to $12,000.
 Please note that the credit that counts towards this milestone started counting on June 25, 2024; any credit an account had before will not count towards the milestones.
 The different tiers are:
 

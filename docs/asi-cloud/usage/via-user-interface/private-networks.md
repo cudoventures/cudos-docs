@@ -11,9 +11,9 @@ If your setup permits this can lead to significant savings when deploying many m
 
 ## Creating a Private Network
 
-Creating a private network with CUDOS Intercloud is very simple.
+Creating a private network with ASI Cloud is very simple.
 
-1. Navigate to the [`NETWORKS` page](https://intercloud.cudos.org/#/networks) when you click **Deploy** on the top navigation menu.
+1. Navigate to the [`NETWORKS` page](https://asicloud.cudos.org/#/networks) when you click **Deploy** on the top navigation menu.
 2. Click on `Create`.
 3. Choose the details of your private network.
     - **Location**: private networks are not shared between datacentres, so you need to choose in which datacentre you want to create your private network.
@@ -21,7 +21,7 @@ Creating a private network with CUDOS Intercloud is very simple.
     - **Subnet**: the address range for the private network. If you are unsure about what should go in here, you can learn more [here](https://en.wikipedia.org/wiki/Private_network#Private_IPv4_addresses) for example.
 
 :::note
-CUDOS Intercloud's suppliers all use IPv4 at the moment.
+ASI Cloud's suppliers all use IPv4 at the moment.
 :::
 
 After that, your network will be created and you will be able to choose it in the `Networking` box of the VM creation page.
@@ -61,8 +61,8 @@ If you are using a jump host, it is recommended that this jump host is dedicated
 
 Private networks are billed separately from VMs, but they are also billed hourly.
 The price per network depends on the datacentre in which it's created in, but they are all around $0.0045 per hour.
-Please visit [the network creation page](https://intercloud.cudos.org/networks/new) to see the exact prices in each datacentre.
+Please visit [the network creation page](https://asicloud.cudos.org/networks/new) to see the exact prices in each datacentre.
 
 As a side note, IP addresses are billed at around $0.0035 per hour in most datacentres.
-You can find the exact values in the [VM creation page](https://intercloud.cudos.org/machines/new).
+You can find the exact values in the [VM creation page](https://asicloud.cudos.org/machines/new).
 If you are planning on deploying a large number of VMs and your setup allows for most of your VMs to not have a public IP address, this could also be a way to decrease some cost, as well as improve security.

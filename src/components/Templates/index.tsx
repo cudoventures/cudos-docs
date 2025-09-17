@@ -6,23 +6,23 @@ import Heading from '@theme/Heading';
 const VMTemplates = [
   {
     name: 'Jupyter Hub',
-    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/jupyterhub',
+    url: '/docs/asi-cloud/usage/via-user-interface/templates/jupyterhub',
     description: (
-      <p>Multi-user Jupyter Notebooks on CUDOS Intercloud.</p>
+      <p>Multi-user Jupyter Notebooks on ASI Cloud.</p>
     ),
     image: '/img/jupyter-logo.svg',
   },
   {
     name: 'Jupyter Lab',
-    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/jupyterlab',
+    url: '/docs/asi-cloud/usage/via-user-interface/templates/jupyterlab',
     description: (
-      <p>Jupyter Notebooks on CUDOS Intercloud.</p>
+      <p>Jupyter Notebooks on ASI Cloud.</p>
     ),
     image: '/img/jupyter-logo.svg',
   },
   {
     name: 'Ollama',
-    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/ollama',
+    url: '/docs/asi-cloud/usage/via-user-interface/templates/ollama',
     description: (
       <p>Ollama is the easiest way to deploy open source LLMs.</p>
     ),
@@ -30,23 +30,23 @@ const VMTemplates = [
   },
   {
     name: 'OpenManus',
-    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/openmanus',
+    url: '/docs/asi-cloud/usage/via-user-interface/templates/openmanus',
     description: (
-      <p>OpenManus AI agent on CUDOS Intercloud.</p>
+      <p>OpenManus AI agent on ASI Cloud.</p>
     ),
     image: '/img/openmanus-logo.jpg',
   },
   {
     name: 'Dify',
-    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/dify',
+    url: '/docs/asi-cloud/usage/via-user-interface/templates/dify',
     description: (
-      <p>Use Dify to Build LLM Chatbots on CUDOS Intercloud.</p>
+      <p>Use Dify to Build LLM Chatbots on ASI Cloud.</p>
     ),
     image: '/img/dify-color.svg',
   },
   {
     name: 'VLLM',
-    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/vllm',
+    url: '/docs/asi-cloud/usage/via-user-interface/templates/vllm',
     description: (
       <p>VLLM is used to deploy open source LLMs for high performance.</p>
     ),
@@ -54,7 +54,7 @@ const VMTemplates = [
   },
   {
     name: 'Dedicated LLM inference',
-    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/dedicated-inference-vllm',
+    url: '/docs/asi-cloud/usage/via-user-interface/templates/dedicated-inference-vllm',
     description: (
       <p>Quick deploy popular LLMs on a dedicated GPU.</p>
     ),
@@ -62,9 +62,9 @@ const VMTemplates = [
   },
   {
     name: 'Nexus OS',
-    url: '/docs/cudos-intercloud/usage/via-user-interface/templates/nexus-os',
+    url: '/docs/asi-cloud/usage/via-user-interface/templates/nexus-os',
     description: (
-      <p>Run a Nexus OS node with ease on CUDOS Intercloud.</p>
+      <p>Run a Nexus OS node with ease on ASI Cloud.</p>
     ),
     image: '/img/nexus-os-logo.png'
   },

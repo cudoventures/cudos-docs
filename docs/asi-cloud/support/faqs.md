@@ -12,7 +12,7 @@ Please reach out to us and ask for help in the [`intercloud-support` channel in 
 Windows is currently not supported due to technical limitations. Make sure you follow our socials for updates on changes and new features.
 
 ### What’s the command to connect to my VM?
-`ssh root@ip-address` where you can copy the `ip-address` from the CUDOS Intercloud interface.
+`ssh root@ip-address` where you can copy the `ip-address` from the ASI Cloud interface.
 
 ### Do I still have to pay even if the VM is powered off?
 Yes, because while the VM is not powered on, the resources you have assigned to the VM are reserved for your VM.

@@ -4,7 +4,7 @@ id: templates-overview
 ---
 
 
-Deploy full application stacks on CUDOS Intercloud.
+Deploy full application stacks on ASI Cloud.
 
 To access templates, first click on the Deploy tab in the top navigation menu and select templates.
 
