@@ -4,7 +4,8 @@ id: chains-currencies
 ---
 
 # Supported Chains and Currencies
-You can add balance to your ASI Cloud account using a wide range of currencies, with more to come soon.
+You can add balance to your ASI Cloud account directly using a wide range of currencies, if you prefer not to use Squid Router.
+The currently avaiable tokens are:
 
 ## IBC tokens
 - FET on ASI Alliance
@@ -19,3 +20,7 @@ You can add balance to your ASI Cloud account using a wide range of currencies, 
 - USDT on Ethereum
 - USDC on Polygon
 - USDT on Polygon
+
+FET tokens have a 5% discount on all payments, given FET is the currency of the ASI chain in Cosmos.
+
+All non-stablecoin currencies are immediately traded in Osmosis for stablecoin, to ensure a predictable and stable balance is added to your account.

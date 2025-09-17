@@ -100,15 +100,15 @@ module.exports = {
     {
       type: 'category',
       collapsed: true,
-      label: 'Managing Payments',
+      label: 'Payments',
       items: [
             'asi-cloud/usage/via-user-interface/payments',
             'asi-cloud/chains-currencies',
       ],
     },
+    'asi-cloud/discounts-and-bonuses',
     'asi-cloud/models',
     'asi-cloud/referral-system',
-    'asi-cloud/discounts-and-bonuses',
     {
       type: 'category',
       label: 'Support',

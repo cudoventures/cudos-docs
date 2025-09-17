@@ -7,7 +7,7 @@ id: payments
 
 The [Payments page](https://asicloud.cudos.org/payments) is your central hub for managing your account balance, which funds all your VMs. Any active promotions will be displayed here. For payments with wider range of tokens please check out [Squid router](https://asicloud.cudos.org/payments/squid/new) below.
 
-![cic-payments](@site/static/img/cic-payments.png)
+![asic-payments](@site/static/img/asic-payments.png)
 
 Choose your preferred top-up amount in either cryptocurrency or USD.
 For a comprehensive list of supported currencies and blockchain networks, visit our [chains and currencies documentation.](/docs/asi-cloud/chains-currencies.md)
@@ -18,7 +18,9 @@ For a comprehensive list of supported currencies and blockchain networks, visit 
 
 ## Step-by-Step Instructions
 
-![squid_payments_1](@site/static/img/squid_payments_1_2.png)
+You can reach tghe Squid Router payments page either from the payments page described above, or by 
+
+![squid_payments_1](@site/static/img/squid_payments_1.png)
 
 ### 1. Select Your Blockchain Network
 
@@ -94,7 +96,7 @@ To see more information about a specific transfer:
 
 1. Click on a transaction in the history list
 
-![squid_history](@site/static/img/squid_transfer_history.png)
+![squid_history](@site/static/img/squid_history.png)
 
 2. Click on any transaction to see:
 
@@ -107,7 +109,7 @@ To see more information about a specific transfer:
 
 3. For even more details, click the **View details** button next to the final transaction hash
 
-![squid_details](@site/static/img/squid_transfer_details.png)
+![squid_details](@site/static/img/squid_details.png)
 
 This detailed view is helpful for verifying completed transfers, troubleshooting issues, or providing transaction evidence if needed.
 
