@@ -44,13 +44,13 @@ module.exports = {
         'asi-cloud/introduction/getting-started',
       ],
     },
-    'asi-cloud/pricing',
     {
       type: 'category',
       collapsed: false,
       label: 'Serverless Inference',
       items: [
         'asi-cloud/usage/interact-via-cli',
+        'asi-cloud/models',
       ],
     },
         {
@@ -93,8 +93,14 @@ module.exports = {
       collapsed: true,
       label: 'Your Account',
       items: [
-            'asi-cloud/usage/via-user-interface/payments',
-            'asi-cloud/chains-currencies',
+            'asi-cloud/profile/profile-overview',
+            'asi-cloud/profile/settings',
+            'asi-cloud/profile/ssh',
+            'asi-cloud/profile/api-keys',
+            'asi-cloud/profile/profile-discounts',
+            'asi-cloud/profile/messages',
+            'asi-cloud/profile/contacts',
+            'asi-cloud/profile/identities',
       ],
     },
     {
@@ -106,8 +112,8 @@ module.exports = {
             'asi-cloud/chains-currencies',
       ],
     },
+    'asi-cloud/pricing',
     'asi-cloud/discounts-and-bonuses',
-    'asi-cloud/models',
     'asi-cloud/referral-system',
     {
       type: 'category',

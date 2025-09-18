@@ -4,7 +4,7 @@
 
 | Organization | Model Name           | API Model String                          | Context length |
 |--------------|----------------------|-------------------------------------------|----------------|
-| ASI          | ASI1                 | `asi1-mini            `                   | 131,072        |
+| ASI          | asi1-mini                 | `asi1-mini            `                   | 131,072        |
 | Google       | Gemma-3-27B          | `google/gemma-3-27b-it`                   | 128,000        |
 | Alibaba      | Qwen3-32B            | `qwen/qwen3-32b`                          | 40,960         |
 | Meta         | Llama 3.3 70B Instruct | `meta-llama/llama-3.3-70b-instruct`     | 131,072        |
