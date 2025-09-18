@@ -115,10 +115,6 @@ const config = {
                 href: "https://www.cudos.org/about/",
               },
               {
-                label: "Careers",
-                href: "https://cudoventures.teamtailor.com/",
-              },
-              {
                 label: "Blog",
                 href: "https://www.cudos.org/blog/",
               },
@@ -134,14 +130,6 @@ const config = {
               {
                 href: "https://github.com/CudoVentures",
                 label: "Github",
-              },
-              {
-                label: "Grant Program",
-                href: "https://cudos.foundation/grants/",
-              },
-              {
-                label: "Cudo Foundation",
-                href: "https://cudos.foundation/about/",
               },
               {
                 label: "Blog",
