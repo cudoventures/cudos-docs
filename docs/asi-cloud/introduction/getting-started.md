@@ -18,8 +18,8 @@ Regardless of the method used, you can later add more blockchain addresses into 
 
 ![asic-login](@site/static/img/asic-login.png)
 
-Once you’ve done that, you’ll need to fund your account with [any of the cryptocurrencies that we accept](/docs/asi-cloud/chains-currencies).
-If you wish to top up your account with FET tokens, please visit the [Fetch.ai docs](https://fetch.ai/docs/concepts/fetch-network/native-and-erc20-fet-tokens).
+Once you’ve done that, you’ll need to fund your account with [any of the cryptocurrencies that we accept](/docs/asi-cloud/usage/via-user-interface/payments), or using the Squid Router integration.
+If you wish to top up your account with FET tokens, please visit the [ASI website](https://superintelligence.io/asi-token-fet/).
 Please note that we only accept the native version of the FET token for payments, at the moment.
 If you are holding the ERC-20 version and would like to use it to purchase cloud infrastructure, you can move it to the Fetch.ai Network using the [Fetch.ai Token Bridge](https://token-bridge.fetch.ai/).
 
