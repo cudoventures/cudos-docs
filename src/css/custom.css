@@ -8,7 +8,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-font-family-base: 'Open Sans';
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --ifm-font-weight-normal: 400;
   --ifm-font-weight-bold: 700;
   --ifm-font-weight-semibold: 600;
