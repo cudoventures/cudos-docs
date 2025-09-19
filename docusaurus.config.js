@@ -86,7 +86,7 @@ const config = {
           {
             type: "doc",
             label: "📖 Tutorials",
-            docId: "asi-merge/asi-merge-intro",
+            docId: "asi-cloud/inference/tutorials/tutorials-overview",
             position: "left",
           },
           {

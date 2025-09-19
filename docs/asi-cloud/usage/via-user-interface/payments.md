@@ -5,6 +5,10 @@ id: payments
 
 # Managing Your Payments
 
+:::note
+You need to connect a blockchain wallet in order to make a cryptocurrency payment into the platform with it. This can be done in the [identities](/docs/asi-cloud/profile/identities) page.
+:::
+
 The [Payments page](https://asicloud.cudos.org/payments) is your central hub for managing your account balance, which funds all your VMs. Any active promotions will be displayed here. For payments with wider range of tokens please check out [Squid router](https://asicloud.cudos.org/payments/squid/new) below.
 
 ![asic-payments](@site/static/img/asic-payments.png)

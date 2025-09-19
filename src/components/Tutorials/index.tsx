@@ -3,19 +3,19 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 
-const Quickstarts = [
+const Tutorials = [
   {
-    name: '1. Inference service',
-    url: '../../../docs/asi-cloud/inference/quickstart',
+    name: 'Chat completions',
+    url: '../../../asi-cloud/inference/tutorials/chat-completions',
     description: (
-      <p>Token-based inference service running on industry leading ASI infrastructure.</p>
+      <p>Learn how to maintain context for chatbot-like interactions, how to receive tokens as they are generated, and more.</p>
     ),
   },
   {
-    name: '2. Deploy infrastructure',
-    url: '../../../docs/asi-cloud/usage/via-user-interface/creating-a-virtual-machine',
+    name: 'Structured JSON output',
+    url: '../../../asi-cloud/inference/tutorials/structured-output',
     description: (
-      <p>Deploy high-performance cloud GPUs on-demand and at scale for AI, machine learning, web3 dapps and more.</p>
+      <p>Useful for apps where you want predictable, structured data.</p>
     ),
   },
 ];
@@ -25,7 +25,7 @@ interface Props {
   description: JSX.Element;
 }
 
-function QuickstartCard({name, url, description}: Props) {
+function TutorialsCard({name, url, description}: Props) {
   return (
     <div className="col col--6 margin-bottom--lg">
       <div className={clsx('card')}>
@@ -45,11 +45,11 @@ function QuickstartCard({name, url, description}: Props) {
   );
 }
 
-export function QuickstartCardsRow(): JSX.Element {
+export function TutorialsCardsRow(): JSX.Element {
   return (
     <div className="row">
-      {Quickstarts.map((quickstart) => (
-        <QuickstartCard key={quickstart.name} {...quickstart} />
+      {Tutorials.map((tutorial) => (
+        <TutorialsCard key={tutorial.name} {...tutorial} />
       ))}
     </div>
   );

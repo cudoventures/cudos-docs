@@ -6,7 +6,7 @@ module.exports = {
       items: [
         'welcome',
         'asi-cloud/introduction/getting-started',
-        'asi-cloud/pricing',
+        'asi-cloud/inference/pricing',
         'asi-cloud/referral-system',
         'asi-cloud/discounts-and-bonuses',
         {
@@ -49,8 +49,19 @@ module.exports = {
       collapsed: false,
       label: 'Serverless Inference',
       items: [
-        'asi-cloud/usage/interact-via-cli',
-        'asi-cloud/models',
+        'asi-cloud/inference/quickstart',
+        'asi-cloud/inference/models',
+        'asi-cloud/inference/pricing',
+        {
+              type: 'category',
+              collapsed: false,
+              label: 'Tutorials',
+              items: [
+                'asi-cloud/inference/tutorials/tutorials-overview',
+                'asi-cloud/inference/tutorials/chat-completions',
+                'asi-cloud/inference/tutorials/structured-output',
+              ]
+        },
       ],
     },
         {
@@ -106,13 +117,12 @@ module.exports = {
     {
       type: 'category',
       collapsed: true,
-      label: 'Payments',
+      label: 'Adding Balance',
       items: [
             'asi-cloud/usage/via-user-interface/payments',
             'asi-cloud/chains-currencies',
       ],
     },
-    'asi-cloud/pricing',
     'asi-cloud/discounts-and-bonuses',
     'asi-cloud/referral-system',
     {
