@@ -12,13 +12,13 @@ The quick deploy app is based on [The Littlest JupyterHub](https://tljh.jupyter.
 To reach the Jupyter Hub template page, click click either the small, medium or large instance of Jupyter Hub. This will give you some good default settings but you can fully customise your deployment at the next step.
 
 VM configuration
-A GPU is automatically selected by clicking small, medium or large, however you can choose a different GPU or even multiple GPUs for your deployment. The default disk size is set between 100-200GB which should be enough for most users. However, if you have a very large data set to deploy on the machine you may need to increase the size.
+A GPU is automatically selected by clicking small, medium or large, however you can choose a different GPU or even multiple GPUs for your deployment. The default disk size is set between 100-200GB which should be enough for most users. However, if you have a very large dataset to deploy on the machine you may need to increase the size.
 
 Having a large number of users may require larger system memory and vCPU allocations. [Read this](https://tljh.jupyter.org/en/latest/howto/admin/resource-estimation.html) for more information.
 
 ## Using JupyterHub
 
-When you deploy the VM you will be shown the VM information page. Find the public IP address and paste it into your browser using **HTTP** (**HTTPS** is not supported) e.g. `http://192.2.3.4`
+When you deploy the VM you will be shown the VM information page. Find the public IP address and paste it into your browser using **http** (**https** is not supported) e.g. `http://192.2.3.4`
 ![jupyterhub-login](@site/static/img/jupyterhub-login.png)
 
 Use the username `admin` and create a password to sign in. The first user to sign in will have an account created for them and become the administrator.

@@ -13,7 +13,7 @@ To reach the Jupyter Lab template page, click either the small, medium or large 
 
 ## Customise the deployment
 
-You can just choose an id for your App and deploy it. Or you may want to configure the spec of the machine.
+You can just choose an id for your App and deploy it. Or you may want to configure th spec of the machine.
 
 ## GPU selection
 
@@ -21,7 +21,7 @@ A GPU is automatically selected by clicking small, medium or large, however you 
 
 ## Disk size
 
-The default disk size is set between 100-200GB which should be enough for most users. However, if you have a very large data set to deploy on the machine you may need to increase the size.
+The default disk size is set between 100-200GB which should be enough for most users. However, if you have a very large dataset to deploy on the machine you may need to increase the size.
 
 ## Using Jupyterlab
 
@@ -43,8 +43,8 @@ The default password is simply `password`, enter it along with your new password
 
 There are a few options for moving data in and out of your notebook.
 
-- You can upload data sets to the cloud or download them using a tool like `wget` or `curl` from the command line.
-- You can use HuggingFace to store and download your data sets `pip install datasets`.
+- You can upload datasets to the cloud or download them using a tool like `wget` or `curl` from the command line.
+- You can use HuggingFace to store and download your datasets `pip install datasets`.
 - JupyterLab has an upload button in the top right of the IDE, you can also download any files by right-clicking them.
 - Using a tool like `scp` to copy files from another cloud machine or your local machine, you will need to have SSH keys set up on your VM.
 

@@ -22,17 +22,17 @@ For a comprehensive list of supported currencies and blockchain networks, visit 
 
 ## Step-by-Step Instructions
 
-You can reach the Squid Router payments page either from the payments page described above, or by 
+You can reach tghe Squid Router payments page either from the payments page described above, or by 
 
 ![squid_payments_1](@site/static/img/squid_payments_1.png)
 
 ### 1. Select Your Blockchain Network
 
-In "SELECT CHAIN," choose your blockchain network from the drop down.
+In "SELECT CHAIN," choose your blockchain network from the dropdown.
 
 ### 2. Choose Your Token
 
-Under "SELECT TOKEN," pick the token you're transferring from the drop down.
+Under "SELECT TOKEN," pick the token you're transferring from the dropdown.
 
 ### 3. Enter Transfer Amount
 

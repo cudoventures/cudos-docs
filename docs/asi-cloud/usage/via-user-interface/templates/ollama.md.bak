@@ -92,7 +92,7 @@ Ollama also supports and it's OpenAI compatible API.
 
 Note: OpenAI compatibility is experimental and is subject to major adjustments including breaking changes. For fully-featured access to the Ollama API, see the [Ollama Python library](https://github.com/ollama/ollama-python), [JavaScript library](https://github.com/ollama/ollama-js) and [REST API](https://github.com/ollama/ollama/blob/main/docs/api.md).
 
-#### Install the OpenAI SDK:
+#### Install the openai sdk:
 ```
 pip install openai
 ```
@@ -103,7 +103,7 @@ This is the unique token that was displayed during the VM creation process.
 Please make sure to copy and save it securely at that time.
 You will not be able to view it again after the VM is created.
 
-Replace the script below with the right IP address and secure token.
+Replace the script below with the right ip address and secure token.
 
 Using python you can write:
 ```python

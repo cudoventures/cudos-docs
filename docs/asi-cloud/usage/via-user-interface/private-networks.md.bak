@@ -28,7 +28,7 @@ After that, your network will be created and you will be able to choose it in th
 
 ## Creating a VM in a Private Network
 
-The process is the same as for any other VM, except that you need to select the private network that you want in the drop down menu of the Networking box.
+The process is the same as for any other VM, except that you need to select the private network that you want in the dropdown menu of the Networking box.
 Optionally, you can assign a public IP address, so that it can be reached from the outside as well.
 
 Please note that **you will need a jump host the first time you want to connect to a VM in a private network**.
@@ -54,7 +54,7 @@ ssh -J root@1.2.3.4 root@10.0.0.8
 ```
 
 You only need the jump host when you want to log in to the other machine, so for extra security **you could shut down or even delete the jump host when you aren't using it**.
-Alternatively, you could set up a reverse SSH proxy, where the VM dials out to a jump box you already have on the outside.
+Alternatively, you could set up a reverse SSH proxy, where the VM dials out to a jumpbox you already have on the outside.
 If you are using a jump host, it is recommended that this jump host is dedicated to this purpose, though it's not essential.
 
 ## Billing
