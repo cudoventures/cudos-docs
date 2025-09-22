@@ -13,7 +13,7 @@ Please reach out to us and ask for help in the [`asi-cloud-support` channel in t
 ## Serverless Inference
 
 ### What’s the base API endpoint and how do I authenticate?
-Use the ASI Cloud Inference API base URL and include your API key:
+Use the ASI:Cloud Inference API base URL and include your API key:
 
 ```http
 POST https://inference.asicloud.cudos.org/v1
@@ -24,7 +24,7 @@ Content-Type: application/json
 ---
 
 ### How do I get an API key?
-Log in to your ASI Cloud dashboard and generate an LLM API key. One key works across all supported models.
+Log in to your ASI:Cloud dashboard and generate an LLM API key. One key works across all supported models.
 
 ---
 
@@ -153,7 +153,7 @@ Windows is currently not supported due to technical limitations. Make sure you f
 ---
 
 ### What’s the command to connect to my VM?
-`ssh root@ip-address` where you can copy the `ip-address` from the ASI Cloud interface.
+`ssh root@ip-address` where you can copy the `ip-address` from the ASI:Cloud interface.
 
 ---
 

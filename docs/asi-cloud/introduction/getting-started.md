@@ -3,9 +3,9 @@ title: Getting Started
 id: getting-started
 ---
 
-# Create ASI Cloud account
+# Create ASI:Cloud account
 
-ASI Cloud currently supports both email and crypto wallet login.
+ASI:Cloud currently supports both email and crypto wallet login.
 The currently supported login methods are:
 - Email login.
 - Google login.

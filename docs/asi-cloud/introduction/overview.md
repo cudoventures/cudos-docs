@@ -3,7 +3,7 @@ title: Overview
 id: overview
 ---
 
-**ASI Cloud** is a permissionless GPU Cloud and AI inference platform developed by the ASI Alliance (CUDOS × SingularityNET).
+**ASI:Cloud** is a permissionless GPU Cloud and AI inference platform developed by the ASI Alliance (CUDOS × SingularityNET).
 It evolves CUDOS Intercloud into the AI compute layer for the ASI Alliance and the wider AI developer ecosystem, prioritizing open access, transparent pricing and per-pay-token access to state-of-the-art open-source Large Language Models (LLMs). 
 
 At a glance:

@@ -11,7 +11,7 @@ If your setup permits this can lead to significant savings when deploying many m
 
 ## Creating a Private Network
 
-Creating a private network with ASI Cloud is very simple.
+Creating a private network with ASI:Cloud is very simple.
 
 1. Navigate to the [`NETWORKS` page](https://asicloud.cudos.org/#/networks) when you click **Deploy** on the top navigation menu.
 2. Click on `Create`.
@@ -21,7 +21,7 @@ Creating a private network with ASI Cloud is very simple.
     - **Subnet**: the address range for the private network. If you are unsure about what should go in here, you can learn more [here](https://en.wikipedia.org/wiki/Private_network#Private_IPv4_addresses) for example.
 
 :::note
-ASI Cloud's suppliers all use IPv4 at the moment.
+ASI:Cloud's suppliers all use IPv4 at the moment.
 :::
 
 After that, your network will be created and you will be able to choose it in the `Networking` box of the VM creation page.

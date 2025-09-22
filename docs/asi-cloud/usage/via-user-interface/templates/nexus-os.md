@@ -34,7 +34,7 @@ Add your public SSH key, then click **Confirm and Deploy**.
 After clicking **Confirm and Deploy**, your virtual machine (which runs your Nexus node) will be provisioned.  
 Please allow up to **2 minutes** for the process to complete.
 
-Once deployed, you’ll be taken to the VM information page on ASI Cloud.  
+Once deployed, you’ll be taken to the VM information page on ASI:Cloud.  
 You’ll also see your node ID with a **green status** on the Nexus website, indicating it’s running.
 
 ![nexus-4](@site/static/img/nexus_4.png)
@@ -68,7 +68,7 @@ systemctl restart nexus
 ```
 
 ### Troubleshooting Support
-If you're unsure or need further assistance, join the ASI Cloud [Discord](https://discord.com/invite/cudos) or [Telegram](https://t.me/cudostelegram) and ask for help.  
+If you're unsure or need further assistance, join the ASI:Cloud [Discord](https://discord.com/invite/cudos) or [Telegram](https://t.me/cudostelegram) and ask for help.  
 Be ready to share your logs or any error messages to help the community assist you faster.
 
 You can also reach out to the Nexus [Discord](https://discord.gg/nexus-xyz) community.

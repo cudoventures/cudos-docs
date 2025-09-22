@@ -4,7 +4,7 @@ id: chains-currencies
 ---
 
 # Supported Chains and Currencies
-You can add balance to your ASI Cloud account directly using a wide range of currencies, if you prefer not to use Squid Router.
+You can add balance to your ASI:Cloud account directly using a wide range of currencies, if you prefer not to use Squid Router.
 The currently avaiable tokens are:
 
 ## IBC tokens

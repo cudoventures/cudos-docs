@@ -3,7 +3,7 @@ title: Quickstart
 id: quickstart
 ---
 
-To start your inference journey with ASI Cloud first you will need to:
+To start your inference journey with ASI:Cloud first you will need to:
 - Log into the platform.
 - Generate an [LLM API key](/docs/asi-cloud/profile/api-keys).
 - Ensure you have balance.

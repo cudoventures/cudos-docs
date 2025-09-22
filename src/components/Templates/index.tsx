@@ -8,7 +8,7 @@ const VMTemplates = [
     name: 'Jupyter Hub',
     url: '/docs/asi-cloud/usage/via-user-interface/templates/jupyterhub',
     description: (
-      <p>Multi-user Jupyter Notebooks on ASI Cloud.</p>
+      <p>Multi-user Jupyter Notebooks on ASI:Cloud.</p>
     ),
     image: '/img/jupyter-logo.svg',
   },
@@ -16,7 +16,7 @@ const VMTemplates = [
     name: 'Jupyter Lab',
     url: '/docs/asi-cloud/usage/via-user-interface/templates/jupyterlab',
     description: (
-      <p>Jupyter Notebooks on ASI Cloud.</p>
+      <p>Jupyter Notebooks on ASI:Cloud.</p>
     ),
     image: '/img/jupyter-logo.svg',
   },
@@ -32,7 +32,7 @@ const VMTemplates = [
     name: 'OpenManus',
     url: '/docs/asi-cloud/usage/via-user-interface/templates/openmanus',
     description: (
-      <p>OpenManus AI agent on ASI Cloud.</p>
+      <p>OpenManus AI agent on ASI:Cloud.</p>
     ),
     image: '/img/openmanus-logo.jpg',
   },
@@ -40,7 +40,7 @@ const VMTemplates = [
     name: 'Dify',
     url: '/docs/asi-cloud/usage/via-user-interface/templates/dify',
     description: (
-      <p>Use Dify to Build LLM Chatbots on ASI Cloud.</p>
+      <p>Use Dify to Build LLM Chatbots on ASI:Cloud.</p>
     ),
     image: '/img/dify-color.svg',
   },
@@ -64,7 +64,7 @@ const VMTemplates = [
     name: 'Nexus OS',
     url: '/docs/asi-cloud/usage/via-user-interface/templates/nexus-os',
     description: (
-      <p>Run a Nexus OS node with ease on ASI Cloud.</p>
+      <p>Run a Nexus OS node with ease on ASI:Cloud.</p>
     ),
     image: '/img/nexus-os-logo.png'
   },

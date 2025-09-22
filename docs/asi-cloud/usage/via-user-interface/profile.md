@@ -9,15 +9,15 @@ Use your profile page to add new identities to your account, contact support, vi
 
 ## My Identities
 
-The identities associated with your ASI Cloud account are shown at the top of the profile page. 
+The identities associated with your ASI:Cloud account are shown at the top of the profile page. 
 
 :::info
 
-Identities on ASI Cloud refer to the blockchain accounts added to your ASI Cloud account. These are used for payments as well as VM management. 
+Identities on ASI:Cloud refer to the blockchain accounts added to your ASI:Cloud account. These are used for payments as well as VM management. 
 
 :::
 
-On this page you can see the current blockchain accounts you have added to your ASI Cloud account.
+On this page you can see the current blockchain accounts you have added to your ASI:Cloud account.
 All of them are shared within the account, and so VMs and payments can be managed by logging in with any of the accounts listed.
 
 ![cic-profile](@site/static/img/cic-profile.png)
@@ -28,9 +28,9 @@ All of them are shared within the account, and so VMs and payments can be manage
     1. On your Keplr wallet switch to the account you would like to add, making that account the current active account.
     2. For MetaMask you can choose which accounts you want to connect to the page from the MetaMask pop-up. If you choose more than one, the currently active one in the wallet extension will be the one added to the platform.
     3. Secret's login is also done using Keplr and the currently active account selected within.
-2. Click on `Connect another address` at the top right. A window will pop-up where you will be prompted to approve the connection of the account to ASI Cloud. Click on the **approve** button to confirm.
+2. Click on `Connect another address` at the top right. A window will pop-up where you will be prompted to approve the connection of the account to ASI:Cloud. Click on the **approve** button to confirm.
 
-An additional identity has been successfully added to your ASI Cloud account. 
+An additional identity has been successfully added to your ASI:Cloud account. 
 
 :::note
 
