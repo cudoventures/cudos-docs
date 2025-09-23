@@ -1,25 +1,37 @@
 module.exports = {
-  welcomeSidebar: [
+    welcomeSidebar: [
     {
       type: 'category',
       label: 'Welcome',
       items: [
         'welcome',
+        'asi-cloud/introduction/getting-started',
+        'asi-cloud/inference/pricing',
+        'asi-cloud/referral-system',
+        'asi-cloud/discounts-and-bonuses',
         {
           type: 'category',
-          collapsed: false,
-          label: 'ASI Alliance Merger',
+          label: 'Support',
           items: [
-            'asi-merge/asi-merge-intro',
-            'asi-merge/swap-details',
-            'asi-merge/migrate-tokens',
-            'asi-merge/manage-native-fet',
-            'asi-merge/asi-merger-cex',
-            'asi-merge/asi-merge-stats',
-            'asi-merge/final-cudos-data',
-          ]
+            'asi-cloud/support/general-support',
+            'asi-cloud/support/faqs',
+          ],
         },
-        'stats'
+      ],
+    },
+  ],
+  mergerSidebar: [
+    {
+      type: 'category',
+      label: 'ASI Alliance Merger',
+      items: [
+        'asi-merge/asi-merge-intro',
+        'asi-merge/swap-details',
+        'asi-merge/migrate-tokens',
+        'asi-merge/manage-native-fet',
+        'asi-merge/asi-merger-cex',
+        'asi-merge/asi-merge-stats',
+        'asi-merge/final-cudos-data',
       ],
     },
   ],
@@ -28,60 +40,97 @@ module.exports = {
       type: 'category',
       label: 'Introduction',
       items: [
-        'cudos-intercloud/introduction/overview',
-        'cudos-intercloud/introduction/getting-started',
+        'asi-cloud/introduction/overview',
+        'asi-cloud/introduction/getting-started',
       ],
     },
     {
       type: 'category',
       collapsed: false,
-      label: 'Usage',
+      label: 'Serverless Inference',
       items: [
-        
+        'asi-cloud/inference/quickstart',
+        'asi-cloud/inference/models',
+        'asi-cloud/inference/pricing',
         {
-          type: 'category',
-          collapsed: false,
-          label: 'Via User Interface',
-          items: [
-            'cudos-intercloud/usage/via-user-interface/signing-in',
-            'cudos-intercloud/usage/via-user-interface/creating-an-ssh-key',
-            'cudos-intercloud/usage/via-user-interface/creating-a-virtual-machine',
-            'cudos-intercloud/usage/via-user-interface/viewing-your-machines',
-            'cudos-intercloud/usage/via-user-interface/profile',
-            'cudos-intercloud/usage/via-user-interface/payments',
-            
-            
-            {
               type: 'category',
               collapsed: false,
-              label: 'Templates',
+              label: 'Tutorials',
               items: [
-                'cudos-intercloud/usage/via-user-interface/templates/templates-overview',
-                'cudos-intercloud/usage/via-user-interface/templates/jupyterhub',
-                'cudos-intercloud/usage/via-user-interface/templates/jupyterlab',
-                'cudos-intercloud/usage/via-user-interface/templates/ollama',
-                'cudos-intercloud/usage/via-user-interface/templates/openmanus',
-                'cudos-intercloud/usage/via-user-interface/templates/dify',
-                'cudos-intercloud/usage/via-user-interface/templates/vllm',
-                'cudos-intercloud/usage/via-user-interface/templates/dedicated-inference-vllm',
-                'cudos-intercloud/usage/via-user-interface/templates/nexus-os',
+                'asi-cloud/inference/tutorials/tutorials-overview',
+                'asi-cloud/inference/tutorials/chat-completions',
+                'asi-cloud/inference/tutorials/structured-output',
               ]
-            },
-            'cudos-intercloud/usage/via-user-interface/private-networks',
-          ]
         },
-        'cudos-intercloud/usage/interact-via-cli',
       ],
     },
-    'cudos-intercloud/chains-currencies',
-    'cudos-intercloud/referral-system',
-    'cudos-intercloud/discounts-and-bonuses',
+        {
+      type: 'category',
+      collapsed: true,
+      label: 'Deploy Infrastructure',
+      items: [
+        'asi-cloud/usage/creating-an-ssh-key',
+        {
+          type: 'category',
+          collapsed: true,
+          label: 'Via User Interface',
+          items: [
+            'asi-cloud/usage/via-user-interface/creating-a-virtual-machine',
+            'asi-cloud/usage/via-user-interface/viewing-your-machines',
+            {
+              type: 'category',
+              collapsed: true,
+              label: 'Templates',
+              items: [
+                'asi-cloud/usage/via-user-interface/templates/templates-overview',
+                'asi-cloud/usage/via-user-interface/templates/jupyterhub',
+                'asi-cloud/usage/via-user-interface/templates/jupyterlab',
+                'asi-cloud/usage/via-user-interface/templates/ollama',
+                'asi-cloud/usage/via-user-interface/templates/openmanus',
+                'asi-cloud/usage/via-user-interface/templates/dify',
+                'asi-cloud/usage/via-user-interface/templates/vllm',
+                'asi-cloud/usage/via-user-interface/templates/dedicated-inference-vllm',
+                'asi-cloud/usage/via-user-interface/templates/nexus-os',
+              ]
+            },
+            'asi-cloud/usage/via-user-interface/private-networks',
+          ]
+        },
+        'asi-cloud/usage/interact-via-cli',
+      ],
+    },
+    {
+      type: 'category',
+      collapsed: true,
+      label: 'Your Account',
+      items: [
+            'asi-cloud/profile/profile-overview',
+            'asi-cloud/profile/settings',
+            'asi-cloud/profile/ssh',
+            'asi-cloud/profile/api-keys',
+            'asi-cloud/profile/profile-discounts',
+            'asi-cloud/profile/messages',
+            'asi-cloud/profile/contacts',
+            'asi-cloud/profile/identities',
+      ],
+    },
+    {
+      type: 'category',
+      collapsed: true,
+      label: 'Adding Balance',
+      items: [
+            'asi-cloud/usage/via-user-interface/payments',
+            'asi-cloud/chains-currencies',
+      ],
+    },
+    'asi-cloud/discounts-and-bonuses',
+    'asi-cloud/referral-system',
     {
       type: 'category',
       label: 'Support',
       items: [
-        'cudos-intercloud/support/general-support',
-        'cudos-intercloud/support/faqs',
+        'asi-cloud/support/general-support',
+        'asi-cloud/support/faqs',
       ],
     },
   ],

@@ -20,4 +20,4 @@ To start using it, please import your account into it.
 ### [Keplr](https://www.keplr.app/)
 
 Keplr also supports the FET token, however the vesting schedule may not display correctly, and it doesn't link as well to Mintscan as the Cosmostation wallet does.
-To add the ASI Alliance chain to you Keplr account to be able to see your FET tokens, please log in to [CUDOS Intercloud](https://intercloud.cudos.org/).
+To add the ASI Alliance chain to you Keplr account to be able to see your FET tokens, please log in to [ASI:Cloud](https://asicloud.cudos.org/).

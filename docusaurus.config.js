@@ -70,13 +70,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: "dark",
+        defaultMode: "light",
       },
       navbar: {
         logo: {
           alt: "Site Logo",
-          src: "img/logo.png",
-          srcDark: "img/logo-dark.png",
+          src: "img/ASICloudLogo.svg",
+          srcDark: "img/ASICloudLogo-dark.svg",
           target: "_self",
           width: 150,
           height: 32,
@@ -85,9 +85,21 @@ const config = {
         items: [
           {
             type: "doc",
-            label: "☁️ CUDOS Intercloud",
-            docId: "cudos-intercloud/introduction/overview",
+            label: "📖 Tutorials",
+            docId: "asi-cloud/inference/tutorials/tutorials-overview",
             position: "left",
+          },
+          {
+            type: "doc",
+            label: "📊 Ecosystem Statistics",
+            docId: "stats",
+            position: "left",
+          },
+          {
+            type: "doc",
+            docId: "asi-merge/asi-merge-intro",
+            position: "left",
+            html: '<img src="/img/cudos.svg" alt="Icon" style="height: 20px; margin-right: 8px; vertical-align: middle;" />CUDOS Merger',
           },
         ],
       },
@@ -101,10 +113,6 @@ const config = {
               {
                 label: "About us",
                 href: "https://www.cudos.org/about/",
-              },
-              {
-                label: "Careers",
-                href: "https://cudoventures.teamtailor.com/",
               },
               {
                 label: "Blog",
@@ -122,14 +130,6 @@ const config = {
               {
                 href: "https://github.com/CudoVentures",
                 label: "Github",
-              },
-              {
-                label: "Grant Program",
-                href: "https://cudos.foundation/grants/",
-              },
-              {
-                label: "Cudo Foundation",
-                href: "https://cudos.foundation/about/",
               },
               {
                 label: "Blog",
@@ -159,14 +159,6 @@ const config = {
             ],
           },
         ],
-      },
-      announcementBar: {
-        id: "announcement-bar",
-        content:
-          'CUDOS Completes Token Merger with ASI Alliance. <a target="_blank" rel="noopener noreferrer" href="https://www.cudos.org/blog/cudos-completes-token-merger-with-asi-alliance">Click to read more.</a>',
-        backgroundColor: "#1b1b1d",
-        textColor: "#fff",
-        isCloseable: true,
       },
       prism: {
         theme: require("prism-react-renderer/themes/dracula"),

@@ -8,7 +8,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-font-family-base: 'Open Sans';
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --ifm-font-weight-normal: 400;
   --ifm-font-weight-bold: 700;
   --ifm-font-weight-semibold: 600;
@@ -21,6 +21,10 @@
   --ifm-color-primary-lightest: #6DD0F1;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* Custom navigation colors */
+  --ifm-menu-color: #6b7280;
+  --ifm-menu-color-hover: rgb(0, 0, 0);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -40,17 +44,21 @@
   --aa-muted-color-rgb: 109, 208, 241 !important;
   --aa-input-border-color-rgb: 109, 208, 241 !important;
   --aa-background-color-rgb: 27, 32, 49 !important;
+  
+  /* Custom navigation colors for dark mode */
+  --ifm-menu-color: #9ca3af;
+  --ifm-menu-color-hover: rgb(0, 0, 0);
 }
 
 [data-theme='light'] {
   --ifm-color-primary: #6DD0F1;
-  --ifm-color-primary-dark: #1B2031;
+  --ifm-color-primary-dark: #4f46e5;
   --ifm-color-primary-darker: #b5d5de;
   --ifm-color-primary-darkest: #83bac9;
-  --ifm-color-primary-light: #6DD0F1;
+  --ifm-color-primary-light: #7783eb;
   --ifm-color-primary-lighter: #ffffff;
   --ifm-color-primary-lightest: #ffffff;
-  --ifm-card-background-color: #f6f6f6;
+  --ifm-card-background-color: #ffffff;
   --ifm-breadcrumb-color-active: #6DD0F1;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
@@ -60,6 +68,70 @@
   --aa-input-border-color-rgb: 109, 208, 241 !important;
   --aa-background-color-rgb: 255, 255, 255 !important;
 }
+
+/* Keep sidebar with white background */
+.theme-doc-sidebar-container,
+.theme-doc-sidebar,
+.menu {
+  background-color: white !important;
+}
+
+/* Dark mode sidebar background */
+[data-theme='dark'] .theme-doc-sidebar-container,
+[data-theme='dark'] .theme-doc-sidebar,
+[data-theme='dark'] .menu {
+  background-color: #242526 !important; /* Dark background for sidebar */
+}
+
+/* Gray navigation text for sidebar */
+.theme-doc-sidebar-item-link,
+.menu__link,
+.theme-doc-sidebar-item-category-level-1 .menu__link,
+.theme-doc-sidebar-item-category-level-2 .menu__link {
+  color: var(--ifm-menu-color) !important;
+  transition: all 0.3s ease;
+  margin: 2px 0;
+  text-decoration: none;
+}
+
+/* Category labels */
+.theme-doc-sidebar-item-category > .menu__list-item-collapsible > .menu__link {
+  color: var(--ifm-menu-color) !important;
+}
+
+/* Gradient hover effect for navigation items */
+.theme-doc-sidebar-item-link:hover,
+.menu__link:hover,
+.theme-doc-sidebar-item-category-level-1 .menu__link:hover,
+.theme-doc-sidebar-item-category-level-2 .menu__link:hover {
+  background: linear-gradient(135deg, #bac0f4 0%, #ffffff 100%) !important;
+  color: var(--ifm-menu-color-hover) !important;
+}
+
+/* Active/Current page styling */
+.theme-doc-sidebar-item-link--active,
+.menu__link--active {
+  background: linear-gradient(135deg,#bac0f4 0%, #ffffff 100%) !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+.main-wrapper,
+.docusaurus-wrapper,
+.theme-doc-markdown,
+.markdown {
+  background-color: transparent;
+}
+
+ 
+html, body {
+  background-color: #f8fafc;
+}
+
+[data-theme='dark'] html,
+[data-theme='dark'] body {
+  background-color: rgb(0, 0, 0);
+}
+
 
 .markdown img {
   margin: auto;

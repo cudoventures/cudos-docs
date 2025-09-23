@@ -6,16 +6,16 @@ id: stats
 The [Stats page](https://intercloud.cudos.org/stats) offers real-time and historical insights into the usage of CUDO and CUDOS hardware solutions. 
 
 ## Navigating the Dashboard
-The Stats dashboard is designed to help users easily explore platform activity. Here's how to navigate it:
+The Stats dashboard is designed to help users easily explore platform and ecosystem activity. Here's how to navigate it.
 
-### Tabs: All Data, On-Demand, and Private Cloud Clusters
 The dashboard is organised into three tabs:
 
-**All Data**: Shows metrics across all usage types.
+- **All Data**: Shows metrics across all usage types.
+- **On-Demand**: Shows metrics specifically related to on-demand deployments.
+- **Private Cloud Clusters**: Shows metrics from bigger cluster environments.
+- **Transaction Records**: Shows on-chain records of ecosystem actions, payments and USDC flows through the ASI chain in Cosmos.
 
-**On-Demand**: Shows metrics specifically related to on-demand deployments.
-
-**Private Cloud Clusters**: Shows metrics from bigger cluster environments.
+Below is a description of the different sections of the main dashboard.
 
 ### Timeframe Selection
 Use the  range selectors at the top of each metric to customise the period for which data is displayed. Available options include viewing data from the past 7 days or the past 12 months.
@@ -48,13 +48,13 @@ The number of active data centers by country, that are contributing resources to
 ### Other Metrics
 Additional important indicators include:
 
-- User Registrations: The total number of users who have registered on the platform, showing community growth.
+- **User Registrations**: The total number of users who have registered on the platform, showing community growth.
 
-- VMs Deployed: The total number of Virtual Machines deployed, showing platform usage and engagement.
+- **VMs Deployed**: The total number of Virtual Machines deployed, showing platform usage and engagement.
 
-- Memory Usage: The total memory consumed across deployed instances, providing insight into application resource demands.
+- **Memory Usage**: The total memory consumed across deployed instances, providing insight into application resource demands.
 
-- Storage Usage: The total disk storage consumed, showing storage needs across deployments.
+- **Storage Usage**: The total disk storage consumed, showing storage needs across deployments.
 
 
 ## 🎓Want to learn more?

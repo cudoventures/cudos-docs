@@ -5,24 +5,17 @@ import Heading from '@theme/Heading';
 
 const Quickstarts = [
   {
-    name: '1. Cloud Infrastructure',
-    url: '../../../docs/cudos-intercloud/introduction/overview',
+    name: '1. Inference service',
+    url: '../../../docs/asi-cloud/inference/quickstart',
+    description: (
+      <p>Token-based inference service running on industry leading ASI infrastructure.</p>
+    ),
+  },
+  {
+    name: '2. Deploy infrastructure',
+    url: '../../../docs/asi-cloud/usage/via-user-interface/creating-a-virtual-machine',
     description: (
       <p>Deploy high-performance cloud GPUs on-demand and at scale for AI, machine learning, web3 dapps and more.</p>
-    ),
-  },
-  {
-    name: '2. ASI Merger',
-    url: '../../../docs/asi-merge/asi-merge-intro',
-    description: (
-      <p>Navigate the CUDOS merger with ASI and find a guide to help you use your new FET tokens.</p>
-    ),
-  },
-  {
-    name: '3. Ecosystem Stats',
-    url: '../../../docs/stats',
-    description: (
-      <p>Discover real-time insights into platform activity, including compute usage, spending, user growth, and data center distribution.</p>
     ),
   },
 ];
