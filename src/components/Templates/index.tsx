@@ -85,14 +85,14 @@ function TemplateCard({name, url, description, image}: Props) {
         {image && (
             <img
               src={image}
-              
+              alt={name}
+              className="template-card-image"
               style={{
                 width: '70px',
                 height: '70px',
                 objectFit: 'contain', 
                 marginBottom: '1rem',
                 borderRadius: '0.5rem',
-                background: 'white',
                 padding: '5px',
               }}
             />

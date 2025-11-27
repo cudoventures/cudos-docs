@@ -104,11 +104,11 @@ const config = {
         ],
       },
       footer: {
-        // style: 'dark',
+        style: 'dark',
         copyright: "ASI Alliance Member",
         links: [
           {
-            title: "Company",
+            title: "Resources",
             items: [
               {
                 label: "About us",
@@ -129,16 +129,12 @@ const config = {
             items: [
               {
                 href: "https://github.com/CudoVentures",
-                label: "Github",
-              },
-              {
-                label: "Blog",
-                href: "https://www.cudos.org/about/",
+                label: "GitHub",
               },
             ],
           },
           {
-            title: "Social",
+            title: "Community",
             items: [
               {
                 label: "Telegram",
@@ -151,10 +147,6 @@ const config = {
               {
                 label: "Twitter",
                 href: "https://twitter.com/CUDOS_",
-              },
-              {
-                label: "Medium",
-                href: "https://medium.com/cudos",
               },
             ],
           },

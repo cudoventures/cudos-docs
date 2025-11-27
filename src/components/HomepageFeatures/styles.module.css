@@ -8,4 +8,39 @@
 .featureSvg {
   height: 200px;
   width: 200px;
+  max-width: 100%;
+}
+
+/* Responsive styles for features */
+@media (max-width: 996px) {
+  .features {
+    padding: 1.5rem 0;
+  }
+  
+  .featureSvg {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding: 1rem 0;
+  }
+  
+  .featureSvg {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features {
+    padding: 0.75rem 0;
+  }
+  
+  .featureSvg {
+    height: 100px;
+    width: 100px;
+  }
 }
