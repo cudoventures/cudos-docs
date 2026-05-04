@@ -5,128 +5,162 @@ id: payments
 
 # Managing Your Payments
 
-:::note
-You need to connect a blockchain wallet in order to make a cryptocurrency payment into the platform with it. This can be done in the [identities](/docs/asi-cloud/profile/identities) page.
-:::
+The [Payments page](https://asicloud.cudos.org/payments) is your central hub for funding your ASI:Cloud account, reviewing past transactions, and downloading receipts. The same balance is used for **all** workloads on the platform — virtual machines, GPU compute, and serverless inference.
 
-The [Payments page](https://asicloud.cudos.org/payments) is your central hub for managing your account balance, which funds all your VMs. Any active promotions will be displayed here. For payments with wider range of tokens please check out [Squid router](https://asicloud.cudos.org/payments/squid/new) below.
+The page has two tabs:
+
+- **Add funds** — top up your balance with card or crypto.
+- **Payment history** — view, inspect and download receipts for past transactions.
+
+You can reach the page from the **Add balance** entry in the left navigation, the **Top up** button on the Dashboard, or directly inside any payment-required flow (e.g. the final step of [Creating a Virtual Machine](./creating-a-virtual-machine#step-3--payment-info)).
 
 ![asic-payments](@site/static/img/asic-payments.png)
 
-Choose your preferred top-up amount in either cryptocurrency or USD.
-For a comprehensive list of supported currencies and blockchain networks, visit our [chains and currencies documentation.](/docs/asi-cloud/chains-currencies.md)
+---
 
-# Cross-Chain Payments with Squid Router
+## Add funds
 
-[Squid router](https://asicloud.cudos.org/payments/squid/new) allows you to transfer tokens between different blockchain networks in a single transaction. The interface provides a straightforward way to swap or transfer tokens **across 70+ chains** with minimal steps required.
+The **Payment method** panel on the left lists every supported method, grouped into FIAT and CRYPTO. The **Summary** panel on the right updates based on the method you select.
 
-## Step-by-Step Instructions
+### FIAT — Card (Stripe)
 
-You can reach the Squid Router payments page either from the payments page described above, or by 
+Pay by debit or credit card via **Stripe**.
 
-![squid_payments_1](@site/static/img/squid_payments_1.png)
+1. Select **Card** under FIAT.
+2. Enter the USD **Amount** to add to your balance. The minimum top-up is **$10.00**.
+3. (Optional) Toggle **Enable auto-top up** and configure the rules below — see [Auto-top up](#auto-top-up) for the full breakdown.
+4. Tick **I agree with Terms and Conditions** and click **Continue**.
+5. The right panel switches to a Stripe-hosted **Checkout** with a *Back to summary* link.
+   - Pick a presentation currency. When a non-USD currency is shown, the exchange rate is displayed underneath.
+   - Pay with a saved Link account or click **Pay without Link** to enter card details manually.
+6. On success the funds are credited to your USD balance immediately.
 
-### 1. Select Your Blockchain Network
+#### Auto-top up
 
-In "SELECT CHAIN," choose your blockchain network from the drop down.
+Auto-top up keeps your machines and AI inference going automatically when your balance runs low — recommended for long-lived workloads, since it prevents VMs from being terminated and inference requests from being throttled when the balance hits zero.
 
-### 2. Choose Your Token
+When you toggle **Enable auto-top up** in the Summary panel, three controls appear:
 
-Under "SELECT TOKEN," pick the token you're transferring from the drop down.
+| Control | What it does |
+| --- | --- |
+| **When balance falls below $X top up with:** | The trigger threshold — once your balance dips below this value, an auto-top-up runs. Pick a preset (**$25 / $50 / $100 / $250**) or enter a **Custom amount** for the threshold. |
+| **Top up amount** | The USD amount that's charged each time the threshold is hit. |
+| **Maximum monthly top up amount** | A safety cap on total auto-top-up spend per calendar month. Pick **$100 / $1000 / $2000 / $5000** or set a custom value. Once the cap is reached, auto-top-up pauses for the rest of the month. |
 
-### 3. Enter Transfer Amount
+Auto-top-up uses the card you complete the initial top-up with. You can change or disable it later — see [Managing auto-top up](#managing-auto-top-up) below.
 
-Input your desired transfer amount or click "Maximum" for your full balance.
+#### Managing auto-top up
 
-### 4. Review Transaction Details
+Once auto-top up is enabled, an extra **Top up** tab appears alongside **Add funds** and **Payment history** on the Payments page. From there you can:
 
-Check the transaction breakdown:
+- Adjust the trigger threshold, top-up amount, and monthly cap.
+- Switch the card on file.
+- **Disable auto-top up** — turning it off removes the tab until you re-enable it during a future top-up.
 
-- **Input**: The total amount being processed
-- **Transfer amount**: The actual amount being sent
-- **Gas fees**: Network gas costs
-- **Routing fees**: Additional routing costs
+### CRYPTO
 
-![squid_transfer](@site/static/img/squid_transfer.png)
+ASI:Cloud accepts the following tokens, each on multiple chains where applicable:
 
-### 5. Check Route Details
+| Token | Chains |
+| --- | --- |
+| **FET** | Fetch.ai mainnet |
+| **USDT** | Ethereum, Polygon Mainnet, Osmosis Mainnet |
+| **USDC** | Ethereum, Polygon Mainnet, Osmosis Mainnet |
+| **OSMO** | Osmosis Mainnet |
 
-- View the number of stops your transaction will make
-- Click the arrow to expand and see the detailed routing path
+Click any token row to expand it and pick the chain you want to pay on. For an authoritative list of supported networks see the [Chains and Currencies](../../chains-currencies) page.
 
-### 6. Review USD Value
+#### Step 1 — Choose a token and amount
 
-The "EXPECTED USD AMOUNT" shows the approximate value of your transaction in USD.
+1. Pick the token (and chain, if applicable) under CRYPTO.
+2. Enter the **Predicted USD credit** — this is the USD amount you want added to your balance. The minimum varies by token (for example, $5.00 for FET).
+3. The Summary shows the equivalent token amount, e.g. `51.15312… FET`, and a notice such as:
+   > *"Estimated based on the current exchange rate of 0.1954914948929529 FET per USD. The rate may change before the payment is completed, and you may get more or less than predicted."*
+4. Tick **I agree with Terms and Conditions** and click **Continue**.
 
-:::note
-The USD amount shown is our target payment, but actual value may vary due to exchange rate fluctuations beyond our control. For payment certainty, we recommend converting to USDC yourself before making payment.
+#### Step 2 — Select a wallet
+
+The right panel pins your selection (e.g. *USDT Ethereum*) with a **Change** link, and the left panel switches to **Select wallet**.
+
+| Wallet | Notes |
+| --- | --- |
+| **MetaMask** | Detected automatically when the browser extension is installed. EVM chains. |
+| **WalletConnect** | Use any WalletConnect-compatible mobile wallet. |
+
+(Cosmos-ecosystem chains such as Osmosis Mainnet and Fetch.ai use Keplr/Leap; the wallet picker presents the appropriate options for the chain you chose in step 1.)
+
+The Summary repeats:
+
+> *"We'll convert this price from USD to your selected crypto at our current rate when you confirm the transaction."*
+
+…and shows the final **Total** in USD.
+
+#### Step 3 — Approve in the wallet
+
+After clicking the wallet, you'll see a **Continue in [WalletName]** prompt while the connection request is sent to your extension or mobile app. Approve the connection, then approve the actual transfer transaction.
+
+Once the transaction is confirmed on the source chain, the equivalent USD amount lands in your ASI:Cloud balance.
+
+---
+
+## Payment history
+
+Switch to the **Payment history** tab for a full audit trail of every top-up.
+
+The list view shows:
+
+| Column | Notes |
+| --- | --- |
+| **Status** | `Complete`, plus other statuses for in-flight transactions. |
+| **Date** | Local date and time. |
+| **Amount** | USD value credited. |
+| **Source** | Original token amount (e.g. `0.0004 ETH`, `1.0000 USDT`, `14.0000 FET`) or `10.00 USD` for card payments. A copy icon next to the source copies the value. |
+| **Method** | `Crypto` or `Card`. |
+
+Use the page numbers at the bottom to navigate, and the **Add funds +** button at the top right to jump back to the funding flow.
+
+### Transaction details
+
+Click any row to open the transaction detail view, which shows:
+
+- **Payment amount** in USD.
+- **Status** (e.g. `Complete`).
+- **Date** and time.
+- For crypto: **Chain**, **Token amount** and **Address** (with copy icons).
+- A **View transaction in explorer** link that opens the source chain's block explorer (e.g. Etherscan).
+- A **Download Receipt (PDF)** button.
+
+A **Back to payment history** link returns you to the list.
+
+### PDF receipts
+
+Each completed payment can be downloaded as a PDF receipt. The receipt includes:
+
+- **Amount paid**, **Date paid**, **Payment method** (e.g. *Cryptocurrency*).
+- **Receipt number** (the on-chain transaction hash for crypto payments).
+- **Status** badge.
+- For crypto: **Chain**, **Token amount**, **Address**, **Transaction hash**, and a **Transaction link** to the public block explorer.
+
+:::caution
+The downloadable receipt is an **automated payment receipt**, not a tax document or an invoice. Keep it for your records, but use your own accounting workflow if you need a formal invoice.
 :::
 
-### 7. Check for Errors and Warnings
+![asic-payment-receipt](@site/static/img/asic-payment-receipt.gif)
 
-Pay attention to any error messages:
+---
 
-- The red warning "Your remaining balance is insufficient to cover the required fees" indicates that your current balance cannot cover both the transfer amount and all associated fees
+### Important notes
 
-### 8. Adjust Transfer Amount (If Needed)
+- Ensure sufficient balance for both transfer and fees.
+- More complex routes may take longer and cost more.
+- Network congestion may increase fees and transaction times.
 
-If you see an insufficient balance error:
+---
 
-- Click the "Adjust transfer amount to fit fees" button to automatically recalculate a valid transfer amount that includes all fees
-- This will reduce your transfer amount to ensure enough is left for gas and routing fees
+## Support and troubleshooting
 
-### 9. Confirm Transaction
-
-Once everything looks correct and there are no error messages:
-
-- Click "Perform payment"
-- Your wallet will prompt you to approve the transaction
-
-### 10. Wait for Confirmation
-
-After submission:
-
-- Your wallet will display a pending transaction
-- Wait for the transaction to complete on both the source and destination chains
-- Squid Router will handle all the cross-chain bridging automatically
-
-### Viewing Transfer History
-
-After completing transfers, you can monitor all your transactions through the [History](https://asicloud.cudos.org/payments/squid/history) tab
-
-### Viewing Transfer Details
-
-To see more information about a specific transfer:
-
-1. Click on a transaction in the history list
-
-![squid_history](@site/static/img/squid_history.png)
-
-2. Click on any transaction to see:
-
-- Amount Credited
-- Amount Transferred
-- Chain used
-- Transaction status
-- Timestamps
-- Transaction hashes
-
-3. For even more details, click the **View details** button next to the final transaction hash
-
-![squid_details](@site/static/img/squid_details.png)
-
-This detailed view is helpful for verifying completed transfers, troubleshooting issues, or providing transaction evidence if needed.
-
-## Important Notes
-
-- Ensure sufficient balance for both transfer and fees
-- More complex routes may take longer and cost more
-- Network congestion may increase fees and transaction times
-
-## Support and Troubleshooting
-
-If you encounter issues, visit our [support channel](https://discord.com/invite/cudos) for assistance
+If you encounter issues, visit our [support channel](https://discord.com/invite/cudos) for assistance.
 
 ## 🎓 Want to learn more?
 
-You can learn more about this by [joining our Discord](https://discord.com/invite/cudos) or [Telegram](https://t.me/cudostelegram).
+Join our [Discord](https://discord.com/invite/cudos) or [Telegram](https://t.me/cudostelegram).

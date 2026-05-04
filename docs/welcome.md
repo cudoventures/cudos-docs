@@ -4,7 +4,7 @@ id: welcome
 ---
 
 
-**ASI:Cloud is a high performance cloud platform focusing on inference and AI workloads. It provides token-based access to the most popular models as well as access to a wide range of global GPU infrastructure. Developed by [CUDOS](https://www.cudos.org) in collaboration with [SNET](https://singularitynet.io/).**
+**ASI:Cloud is a high performance cloud platform focusing on inference and AI workloads. It provides token-based access to the most popular models as well as access to a wide range of global VMs infrastructure. Developed by [CUDOS](https://www.cudos.org) in collaboration with [SNET](https://singularitynet.io/).**
 
 ___
 
@@ -14,6 +14,26 @@ ___
 import {QuickstartCardsRow} from '@site/src/components/Quickstart';
 
 <QuickstartCardsRow />
+```
+
+## Browse the docs
+
+Jump straight to a topic. Hand-picked entry points across the platform.
+
+```mdx-code-block
+import {DocLinks} from '@site/src/components/WelcomeMenus';
+
+<DocLinks />
+```
+
+## Connect with us
+
+Follow along, get support, or jump into the products directly.
+
+```mdx-code-block
+import {SiteLinks} from '@site/src/components/WelcomeMenus';
+
+<SiteLinks />
 ```
 
 ## About CUDOS

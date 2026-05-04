@@ -122,6 +122,71 @@
   background-color: transparent;
 }
 
+/* Welcome page menus (DocLinks / SiteLinks) */
+.welcome-menu .welcome-group {
+  margin-bottom: 1.5rem;
+}
+
+.welcome-group__label {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background: #ECEDFE;
+  color: #4F46E5;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  text-decoration: none !important;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.welcome-pill:hover {
+  background: #DCDEFB;
+  color: #4F46E5;
+  transform: translateY(-1px);
+}
+
+.welcome-pill__icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.welcome-pill__arrow {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+  margin-left: 0.125rem;
+}
+
+.welcome-pill__label {
+  white-space: nowrap;
+}
+
+[data-theme='dark'] .welcome-pill {
+  background: rgba(125, 132, 235, 0.18);
+  color: #B9BFF5;
+}
+
+[data-theme='dark'] .welcome-pill:hover {
+  background: rgba(125, 132, 235, 0.32);
+  color: #DDE0FA;
+}
+
  
 html, body {
   background-color: #f8fafc;

@@ -6,7 +6,6 @@ module.exports = {
       items: [
         'welcome',
         'asi-cloud/introduction/getting-started',
-        'asi-cloud/inference/pricing',
         'asi-cloud/referral-system',
         'asi-cloud/discounts-and-bonuses',
         {
@@ -51,7 +50,7 @@ module.exports = {
       items: [
         'asi-cloud/inference/quickstart',
         'asi-cloud/inference/models',
-        'asi-cloud/inference/pricing',
+        'asi-cloud/inference/speech',
         {
               type: 'category',
               collapsed: false,
@@ -110,8 +109,6 @@ module.exports = {
             'asi-cloud/profile/api-keys',
             'asi-cloud/profile/profile-discounts',
             'asi-cloud/profile/messages',
-            'asi-cloud/profile/contacts',
-            'asi-cloud/profile/identities',
       ],
     },
     {
