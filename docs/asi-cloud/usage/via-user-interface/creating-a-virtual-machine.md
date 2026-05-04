@@ -150,4 +150,4 @@ Please back up any critical and sensitive data that you store in a Virtual Machi
 - [Viewing Your Virtual Machines](./viewing-your-machines) — connect to your VM via SSH and manage its lifecycle.
 - [Templates](./templates/templates-overview) — deploy preconfigured stacks (JupyterLab, Ollama, vLLM, Dify, OpenManus, etc.) instead of a bare VM.
 - [Private Networks](./private-networks) — attach machines to a private network.
-- [Adding Balance](../payments) — top up by card or crypto outside the VM creation flow.
+- [Adding Balance](./payments) — top up by card or crypto outside the VM creation flow.

@@ -3,8 +3,28 @@ title: Welcome to ASI:Cloud Docs
 id: welcome
 ---
 
+```mdx-code-block
+import {WelcomeHero} from '@site/src/components/WelcomeHero';
+
+<WelcomeHero />
+```
 
 **ASI:Cloud is a high performance cloud platform focusing on inference and AI workloads. It provides token-based access to the most popular models as well as access to a wide range of global VMs infrastructure. Developed by [CUDOS](https://www.cudos.org) in collaboration with [SNET](https://singularitynet.io/).**
+
+<div className="stat-strip">
+  <div className="stat-strip__cell">
+    <div className="stat-strip__value">12<span className="stat-strip__unit">+ models</span></div>
+    <div className="stat-strip__label">Open-weight catalogue</div>
+  </div>
+  <div className="stat-strip__cell">
+    <div className="stat-strip__value">$0.01<span className="stat-strip__unit">/1M tok</span></div>
+    <div className="stat-strip__label">From — input tokens</div>
+  </div>
+  <div className="stat-strip__cell">
+    <div className="stat-strip__value">Free<span className="stat-strip__unit"> tier</span></div>
+    <div className="stat-strip__label">asi1-mini on us</div>
+  </div>
+</div>
 
 ___
 

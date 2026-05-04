@@ -11,7 +11,7 @@ _This is the simplest possible use case: send one prompt and receive one complet
 
 **Python**
 
-```
+```python
 import os, openai
 client = openai.OpenAI(api_key=os.environ["ASI_API_KEY"], base_url="https://inference.asicloud.cudos.org/v1")
 
@@ -26,7 +26,7 @@ print(resp.choices[0].message.content)
 
 **curl**
 
-```
+```bash
 curl https://inference.asicloud.cudos.org/v1/chat/completions \
   -H "Authorization: Bearer $ASI_API_KEY" \
   -H "Content-Type: application/json" \
@@ -46,7 +46,7 @@ _Models do not automatically remember previous queries. To maintain context, you
 
 **Python**
 
-```
+```python
 resp = client.chat.completions.create(
   model="google/gemma-3-27b-it",
   messages=[
@@ -61,7 +61,7 @@ print(resp.choices[0].message.content)
 
 **curl**
 
-```
+```bash
 curl https://inference.asicloud.cudos.org/v1/chat/completions \
   -H "Authorization: Bearer $ASI_API_KEY" \
   -H "Content-Type: application/json" \
@@ -82,7 +82,7 @@ curl https://inference.asicloud.cudos.org/v1/chat/completions \
 
 _The `system` role sets global instructions for the model. Use this to establish a persona, domain expertise, or communication style. For example, you can make the assistant act like a blockchain auditor, a teacher, or a concise technical lead._
 
-```
+```python
 resp = client.chat.completions.create(
   model="google/gemma-3-27b-it",
   messages=[
@@ -100,7 +100,7 @@ _Instead of waiting for the full answer, you can receive tokens incrementally as
 
 **Python**
 
-```
+```python
 import os, openai
 client = openai.OpenAI(api_key=os.environ["ASI_API_KEY"], base_url="https://inference.asicloud.cudos.org/v1")
 
@@ -120,7 +120,7 @@ for chunk in stream:
 
 **curl (SSE)**
 
-```
+```bash
 curl -N https://inference.asicloud.cudos.org/v1/chat/completions \
   -H "Authorization: Bearer $ASI_API_KEY" \
   -H "Content-Type: application/json" \
@@ -152,7 +152,7 @@ _The API supports many optional parameters. These are the most practical to know
 
 **Example**
 
-```
+```json
 {
   "model": "google/gemma-3-27b-it",
   "messages": [{"role":"user","content":"Give me 3 ideas for a birthday gift."}],

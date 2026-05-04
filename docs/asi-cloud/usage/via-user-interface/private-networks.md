@@ -49,7 +49,7 @@ For convenience, you can do that with a single command with the `-J` flag in the
 
 As an example, if the public IP address of your jump host VM in your private network has public address `1.2.3.4`, and the address in the private network of another VM you want to connect to is `10.0.0.8`, then the command to SSH into your second server that doesn't have a public IP address is
 
-```
+```bash
 ssh -J root@1.2.3.4 root@10.0.0.8
 ```
 

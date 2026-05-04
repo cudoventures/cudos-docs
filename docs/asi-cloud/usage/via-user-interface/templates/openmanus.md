@@ -39,7 +39,7 @@ ssh root@ip-address
 
 OpenManus will take time to start running and download the required models, a file called ~/openmanus-is-ready will appear when OpenManus has finished installing. You can either run ls every minute or so manually to find out when it is ready; or you can run the following command to automatically watch for it every 3 seconds:
 
-```
+```bash
 watch -n 3 ls
 ```
 

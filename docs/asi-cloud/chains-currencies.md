@@ -5,7 +5,7 @@ id: chains-currencies
 
 # Supported Chains and Currencies
 
-ASI:Cloud accepts the following tokens directly on the [Payments page](./usage/via-user-interface/payments#crypto). For chains and tokens not listed here, use the [Squid Router](./usage/via-user-interface/payments#cross-chain-payments-with-squid-router) for cross-chain payments.
+ASI:Cloud accepts the following tokens directly on the [Payments page](./usage/via-user-interface/payments#crypto). For chains and tokens not listed here, use the [Squid Router](https://asicloud.cudos.org/payments/squid/new) for cross-chain payments.
 
 | Token | Chain(s) |
 | --- | --- |
