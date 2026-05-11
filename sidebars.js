@@ -22,7 +22,6 @@ const serverlessInferenceCategory = {
   label: 'Serverless Inference',
   items: [
     'asi-cloud/inference/quickstart',
-    'asi-cloud/inference/models',
     'asi-cloud/inference/speech',
     {
       type: 'category',
@@ -45,23 +44,6 @@ const deployInfrastructureCategory = {
     'asi-cloud/usage/creating-an-ssh-key',
     'asi-cloud/usage/via-user-interface/creating-a-virtual-machine',
     'asi-cloud/usage/via-user-interface/viewing-your-machines',
-    {
-      type: 'category',
-      collapsed: true,
-      label: 'Templates',
-      items: [
-        'asi-cloud/usage/via-user-interface/templates/templates-overview',
-        'asi-cloud/usage/via-user-interface/templates/jupyterhub',
-        'asi-cloud/usage/via-user-interface/templates/jupyterlab',
-        'asi-cloud/usage/via-user-interface/templates/ollama',
-        'asi-cloud/usage/via-user-interface/templates/openmanus',
-        'asi-cloud/usage/via-user-interface/templates/dify',
-        'asi-cloud/usage/via-user-interface/templates/vllm',
-        'asi-cloud/usage/via-user-interface/templates/dedicated-inference-vllm',
-        'asi-cloud/usage/via-user-interface/templates/nexus-os',
-      ],
-    },
-    'asi-cloud/usage/via-user-interface/private-networks',
     'asi-cloud/usage/interact-via-cli',
   ],
 };

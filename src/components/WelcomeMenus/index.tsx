@@ -8,7 +8,7 @@ const docGroups: {label: string; links: DocLink[]}[] = [
   {
     label: 'Serverless Inference',
     links: [
-      {label: 'Available models', to: '/docs/asi-cloud/inference/models'},
+      {label: 'Quickstart', to: '/docs/asi-cloud/inference/quickstart'},
       {label: 'Speech', to: '/docs/asi-cloud/inference/speech'},
       {label: 'Tutorials', to: '/docs/asi-cloud/inference/tutorials/tutorials-overview'},
       {label: 'Streaming', to: '/docs/asi-cloud/inference/tutorials/tutorials-overview'},
@@ -20,8 +20,8 @@ const docGroups: {label: string; links: DocLink[]}[] = [
     links: [
       {label: 'Creating an SSH key', to: '/docs/asi-cloud/usage/creating-an-ssh-key'},
       {label: 'Creating a virtual machine', to: '/docs/asi-cloud/usage/via-user-interface/creating-a-virtual-machine'},
-      {label: 'Private networks', to: '/docs/asi-cloud/usage/via-user-interface/private-networks'},
-      {label: 'Templates', to: '/docs/asi-cloud/usage/via-user-interface/templates/templates-overview'},
+      {label: 'Viewing your machines', to: '/docs/asi-cloud/usage/via-user-interface/viewing-your-machines'},
+      {label: 'CLI', to: '/docs/asi-cloud/usage/interact-via-cli'},
     ],
   },
   {

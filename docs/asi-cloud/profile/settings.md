@@ -10,7 +10,7 @@ The **Settings** page is where you manage your personal information, communicati
 The page has two tabs:
 
 - **User settings** — personal info, communication preferences, login methods, and password.
-- **Template default variables** — saved variables reused across [templates](../usage/via-user-interface/templates/templates-overview).
+- **Template default variables** — saved variables reused across VM deployments.
 
 ![profile_settings](@site/static/img/profile-settings1.png)
 
@@ -95,4 +95,4 @@ You always remain signed in via your original method even after adding a passwor
 
 ## Template default variables
 
-Switch to the **Template default variables** tab to store variables that are consumed by some popular [templates](../usage/via-user-interface/templates/templates-overview), so you don't have to re-enter them every time you deploy a new machine. Common examples include API keys (e.g. a Hugging Face token used by the vLLM template) and other reusable secrets.
+Switch to the **Template default variables** tab to store variables reused across VM deployments, so you don't have to re-enter them every time you deploy a new machine. Common examples include API keys (e.g. a Hugging Face token) and other reusable secrets.

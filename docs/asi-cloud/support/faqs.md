@@ -79,7 +79,7 @@ You can also provide a `json_schema` to constrain the output.
 
 ### Which models are available?
 
-A curated set including ASI's own model and popular open-weight instruct and reasoning models — for example `asi1-mini`, **Gemma 3 / Gemma 4** (Google), **gpt-oss-20b / gpt-oss-120b** (OpenAI), **Hermes 4 70B** (Nous Research), **Qwen**, **Llama**, **GLM** and **Mistral** variants. Check the [Available Models](../inference/models) table for the full, current list, context lengths, and capabilities.
+A curated set including ASI's own model and popular open-weight instruct and reasoning models — for example `asi1-mini`, **Gemma 3 / Gemma 4** (Google), **gpt-oss-20b / gpt-oss-120b** (OpenAI), **Hermes 4 70B** (Nous Research), **Qwen**, **Llama**, **GLM** and **Mistral** variants. The full list with context lengths is available directly in the [ASI:Cloud inference dashboard](https://asicloud.cudos.org/inference).
 
 ### Is there a free model to test with?
 
@@ -87,11 +87,11 @@ Yes — `asi1-mini` is free to use (funded by ASI). You can also try any model t
 
 ### How is pricing structured?
 
-Pricing is per model, with separate input and output token rates. See the [Available Models](../inference/models) table for the latest amounts.
+Pricing is per model, with separate input and output token rates. Current prices are shown directly in the [ASI:Cloud inference dashboard](https://asicloud.cudos.org/inference).
 
 ### What's the maximum context length?
 
-It varies by model — current top-end models on the platform expose context windows in the **128k–222k token** range. Refer to the [Available Models](../inference/models) table for the exact context window of each model.
+It varies by model — current top-end models on the platform expose context windows in the **128k–222k token** range. Check the model selector in the [inference dashboard](https://asicloud.cudos.org/inference) for the exact context window of each model.
 
 ### Any best practices for production?
 
@@ -220,14 +220,3 @@ No, the VM resources cannot be modified after the VM is deployed. Destroy the VM
 
 When the VM is in a *Stopped* state the resources are still reserved for that VM, and you will continue to be charged for it. If you wish not to be charged once you are done using it, **destroy** the VM.
 
----
-
-## Templates
-
-### What are Templates?
-
-[Templates](../usage/via-user-interface/templates/templates-overview) are one-click application stacks that deploy on top of an ASI:Cloud GPU machine. The current catalogue includes **JupyterLab**, **JupyterHub**, **Ollama**, **vLLM**, **Dify** and **OpenManus**, each with Small / Medium / Large GPU presets.
-
-### Some templates ask for a Hugging Face token. Where do I store it?
-
-Open **Settings → Template default variables** and save your Hugging Face token (and any other reusable variables) there. The next time you deploy a template that needs them, the values are pre-filled for you.

@@ -14,7 +14,7 @@ export function WelcomeHero(): JSX.Element {
           workloads. Token-based access to popular open models, plus NVIDIA GPUs
           on-demand. Start in minutes.
         </p>
-        <Link className="welcome-hero__cta" to="/docs/asi-cloud/inference/models">
+        <Link className="welcome-hero__cta" to="/docs/asi-cloud/inference/quickstart">
           Select model &amp; get started
           <svg className="welcome-hero__cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
             <path d="M5 12h14" />
