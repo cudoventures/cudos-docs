@@ -15,7 +15,7 @@ Pass `response_format={"type": "json_object"}` (or `json_schema` if you want str
 Always validate the JSON client-side (e.g., json.loads() in Python, Pydantic/Zod schema validation).
 
 ### Basic Example (Python)
-```
+```python
 resp = client.chat.completions.create(
   model="google/gemma-3-27b-it",
   response_format={"type": "json_object"},
@@ -29,7 +29,7 @@ print(resp.choices[0].message.content)  # JSON string
 ```
 
 ### Basic Example (cURL)
-```
+```bash
 curl https://llm.c.singularitynet.dev/v1/chat/completions \
   -H "Authorization: Bearer $ASI_API_KEY" \
   -H "Content-Type: application/json" \

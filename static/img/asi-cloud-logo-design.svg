@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 30" fill="currentColor">
+  
+  <g>
+    <circle cx="10" cy="15" r="6"></circle>
+    <circle cx="34" cy="15" r="6"></circle>
+    <circle cx="22" cy="5" r="4.5"></circle>
+    <circle cx="22" cy="25" r="4.5"></circle>
+    <path d="M10 15 L22 5 L34 15 L22 25 Z" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+    <circle cx="22" cy="15" r="3.2"></circle>
+  </g>
+  
+  <g transform="translate(54, 7)" font-family="&#39;Favorit Pro&#39;, &#39;Archivo&#39;, sans-serif" font-weight="500" font-size="18" letter-spacing="0.5">
+    <text x="0" y="15">ASI:CLOUD</text>
+  </g>
+</svg>

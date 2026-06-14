@@ -1,21 +1,28 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const math = require("remark-math");
-const katex = require("rehype-katex");
+const {themes: prismThemes} = require("prism-react-renderer");
+const lightCodeTheme = prismThemes.github;
+const darkCodeTheme = prismThemes.dracula;
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+module.exports = async function createConfig() {
+  const {default: math} = await import("remark-math");
+  const {default: katex} = await import("rehype-katex");
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+  /** @type {import('@docusaurus/types').Config} */
+  const config = {
   title: "Welcome to CUDOS Docs",
   tagline: "Single source of truth for CUDOS products and services",
   url: "https://docs.cudos.org",
   baseUrl: "/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
   favicon: "img/favicon.ico",
+  clientModules: [require.resolve("./src/clientModules/gtagNoop.js")],
   plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
 
   // GitHub pages deployment config.
@@ -161,10 +168,12 @@ const config = {
         ],
       },
       prism: {
-        theme: require("prism-react-renderer/themes/dracula"),
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
         additionalLanguages: ["rust"],
       },
     }),
-};
+  };
 
-module.exports = config;
+  return config;
+};
