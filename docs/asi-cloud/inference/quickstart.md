@@ -7,9 +7,8 @@ To start your inference journey with ASI:Cloud first you will need to:
 - Log into the platform.
 - Generate an [LLM API key](/docs/asi-cloud/profile/api-keys).
 - Ensure you have balance.
-  - To add balance, first you need to make sure you have connected a blockchain wallet in the [identities page](/docs/asi-cloud/profile/identities).
-  - After that, you can use that wallet to fund your account using cryptocurrency from the [payments page](/docs/asi-cloud/usage/via-user-interface/payments).
-  - There's a free model -- `asi1-mini` -- funded by ASI.
+  - To add balance, go to the Payments page where you can either pay by card via Stripe or top up using cryptocurrencies.
+  - There's also a free model -- `asi1-mini` -- funded by ASI.
 
 ## Base URL and Authentication
 

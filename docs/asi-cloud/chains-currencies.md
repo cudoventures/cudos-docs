@@ -4,23 +4,18 @@ id: chains-currencies
 ---
 
 # Supported Chains and Currencies
-You can add balance to your ASI:Cloud account directly using a wide range of currencies, if you prefer not to use Squid Router.
-The currently available tokens are:
 
-## IBC tokens
-- FET on ASI Alliance
-- ARCH on Archway
-- ATOM on Cosmos Hub
-- OSMO on Osmosis
-- SCRT on Secret Network
-- USDC.axl on Osmosis
+ASI:Cloud accepts the following tokens directly on the [Payments page](./usage/via-user-interface/payments#crypto). For chains and tokens not listed here, use the [Squid Router](https://asicloud.cudos.org/payments/squid/new) for cross-chain payments.
 
-## EVM tokens
-- USDC on Ethereum
-- USDT on Ethereum
-- USDC on Polygon
-- USDT on Polygon
+| Token | Chain(s) |
+| --- | --- |
+| **FET** | Fetch.ai mainnet |
+| **USDT** | Ethereum, Polygon Mainnet, Osmosis Mainnet |
+| **USDC** | Ethereum, Polygon Mainnet, Osmosis Mainnet |
+| **OSMO** | Osmosis Mainnet |
 
-FET tokens have a 5% discount on all payments, given FET is the currency of the ASI chain in Cosmos.
+<div style={{marginBottom: '1.5rem'}} />
 
-All non-stablecoin currencies are immediately traded in Osmosis for stablecoin, to ensure a predictable and stable balance is added to your account.
+FET payments receive a **5% discount**, given FET is the native token of the ASI chain.
+
+All non-stablecoin payments are converted to a stablecoin at the time of the transaction so a predictable USD amount is credited to your balance.
