@@ -30,7 +30,7 @@ print(resp.choices[0].message.content)  # JSON string
 
 ### Basic Example (cURL)
 ```bash
-curl https://llm.c.singularitynet.dev/v1/chat/completions \
+curl https://inference.asicloud.cudos.org/v1/chat/completions \
   -H "Authorization: Bearer $ASI_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{

@@ -79,11 +79,11 @@ You can also provide a `json_schema` to constrain the output.
 
 ### Which models are available?
 
-A curated set including ASI's own model and popular open-weight instruct and reasoning models — for example `asi1-mini`, **Gemma 3 / Gemma 4** (Google), **gpt-oss-20b / gpt-oss-120b** (OpenAI), **Hermes 4 70B** (Nous Research), **Qwen**, **Llama**, **GLM** and **Mistral** variants. The full list with context lengths is available directly in the [ASI:Cloud inference dashboard](https://asicloud.cudos.org/inference).
+A curated set including ASI's own model and popular open-weight instruct and reasoning models, for example `asi1-mini`, **Gemma 3 / Gemma 4** (Google), **gpt-oss-20b / gpt-oss-120b** (OpenAI), **Hermes 4 70B** (Nous Research), **Qwen**, **Llama**, **GLM** and **Mistral** variants. The full list with context lengths is available directly in the [ASI:Cloud inference dashboard](https://asicloud.cudos.org/inference).
 
 ### Is there a free model to test with?
 
-Yes — `asi1-mini` is free to use (funded by ASI). You can also try any model through the built-in chat UI on each model's page.
+Yes, `asi1-mini` is free to use (funded by ASI). You can also try any model through the built-in chat UI on each model's page.
 
 ### How is pricing structured?
 
@@ -91,7 +91,7 @@ Pricing is per model, with separate input and output token rates. Current prices
 
 ### What's the maximum context length?
 
-It varies by model — current top-end models on the platform expose context windows in the **128k–222k token** range. Check the model selector in the [inference dashboard](https://asicloud.cudos.org/inference) for the exact context window of each model.
+It varies by model. Current top-end models on the platform expose context windows in the **128k–222k token** range. Check the model selector in the [inference dashboard](https://asicloud.cudos.org/inference) for the exact context window of each model.
 
 ### Any best practices for production?
 
@@ -116,7 +116,7 @@ Yes. Open **Serverless Inference → Speech** in the dashboard. Upload an audio 
 
 ### Is there a text-to-speech option?
 
-Yes — switch to the **Synthesise** tab on the Speech page. The **History** tab lists your previous transcription and synthesis jobs.
+Yes, switch to the **Synthesise** tab on the Speech page. The **History** tab lists your previous transcription and synthesis jobs.
 
 ---
 
@@ -128,7 +128,7 @@ You can sign up and sign in with any of: **Google**, **Discord**, **MetaMask**, 
 
 ### Can I link more than one login method to my account?
 
-Yes. Open **Settings → My Login methods → Connect a new log in method** and pick a provider. The new method works alongside the existing one — both will sign you in to the same account.
+Yes. Open **Settings → My Login methods → Connect a new log in method** and pick a provider. The new method works alongside the existing one; both will sign you in to the same account.
 
 ### I don't see a Password Change section in Settings. Why?
 
@@ -146,10 +146,10 @@ Yes. **Card** payments are processed via **Stripe** on the Add funds page. You c
 
 No, crypto is no longer required. You can fund your account with:
 
-- **Card** (Stripe) — minimum $10.00.
-- **Crypto** — FET on Fetch.ai mainnet; USDT/USDC on Ethereum, Polygon and Osmosis; OSMO on Osmosis; minimum varies by token (e.g. $5 for FET).
+- **Card** (Stripe): minimum $10.00.
+- **Crypto**: FET on Fetch.ai mainnet; USDT/USDC on Ethereum, Polygon and Osmosis; OSMO on Osmosis; minimum varies by token (e.g. $5 for FET).
 
-For crypto payments, you don't need to link a wallet to your account — just approve the top-up from a browser-extension wallet (e.g. MetaMask) or via WalletConnect at checkout. See [Managing Payments → CRYPTO](../usage/via-user-interface/payments#crypto) for the full flow.
+For crypto payments, you don't need to link a wallet to your account; just approve the top-up from a browser-extension wallet (e.g. MetaMask) or via WalletConnect at checkout. See [Managing Payments → CRYPTO](../usage/via-user-interface/payments#crypto) for the full flow.
 
 ### Is there a minimum top-up?
 
@@ -174,7 +174,7 @@ For sign-in we support **MetaMask, ASI Wallet, Keplr** and **WalletConnect**. Fo
 
 ### Where can I find a receipt for a payment I've made?
 
-Open the **Payment history** tab on the Payments page, click any completed transaction, and use **Download Receipt (PDF)**. The receipt includes the transaction hash and a link to the public block explorer for crypto payments. Note that the receipt is an automated payment receipt — it is not a tax document or a formal invoice.
+Open the **Payment history** tab on the Payments page, click any completed transaction, and use **Download Receipt (PDF)**. The receipt includes the transaction hash and a link to the public block explorer for crypto payments. Note that the receipt is an automated payment receipt; it is not a tax document or a formal invoice.
 
 ### Can my account be topped up automatically when it runs low?
 
@@ -194,7 +194,7 @@ Windows is currently not supported due to technical limitations. Available distr
 
 ### Do I still have to pay even if the VM is powered off?
 
-Yes — while the VM exists, the resources assigned to it are reserved for you, even if the OS is powered off. To stop being billed, **destroy** the VM rather than just stopping it.
+Yes, while the VM exists, the resources assigned to it are reserved for you, even if the OS is powered off. To stop being billed, **destroy** the VM rather than just stopping it.
 
 ### Why can't I create a VM even though I am logged in already?
 
@@ -205,7 +205,7 @@ This issue can result from a number of reasons (insufficient balance, missing wa
 Virtual machines are metered **hourly**. The hourly rate begins as soon as the machine is provisioned and stops when you destroy it.
 
 :::note
-The **Duration Type** and **Duration** controls in the payment step do **not** change the billing rate — VMs are always billed hourly. Those controls are an estimator that lets you size your top-up correctly (e.g. picking *Monthly × 1* funds you for ~one month of continuous runtime).
+The **Duration Type** and **Duration** controls in the payment step do **not** change the billing rate; VMs are always billed hourly. Those controls are an estimator that lets you size your top-up correctly (e.g. picking *Monthly × 1* funds you for ~one month of continuous runtime).
 :::
 
 ### How can I access my VM?

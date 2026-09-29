@@ -5,7 +5,7 @@ id: chat-completions
 
 # Chat Completions (OpenAI-Compatible) Guide
 
-## Hello World — Single Turn
+## Hello World: Single Turn {#hello-world--single-turn}
 
 _This is the simplest possible use case: send one prompt and receive one complete reply. Ideal for FAQs, search, or one-shot reasoning tasks._
 
@@ -138,17 +138,17 @@ curl -N https://inference.asicloud.cudos.org/v1/chat/completions \
 
 _The API supports many optional parameters. These are the most practical to know:_
 
-- **model** _(string)_ — the deployed model ID.
+- **model** _(string)_: the deployed model ID.
     
-- **messages** _(array)_ — chat history with roles `system`, `user`, `assistant`.
+- **messages** _(array)_: chat history with roles `system`, `user`, `assistant`.
     
-- **stream** _(bool)_ — return output incrementally.
+- **stream** _(bool)_: return output incrementally.
     
-- **temperature** _(float)_ — controls creativity/randomness (0 = deterministic, 1 = creative).
+- **temperature** _(float)_: controls creativity/randomness (0 = deterministic, 1 = creative).
     
-- **top_p** _(float)_ — probability mass cutoff for sampling (an alternative to temperature).
+- **top_p** _(float)_: probability mass cutoff for sampling (an alternative to temperature).
     
-- **max_tokens** _(int)_ — cap response length to avoid runaway generations.
+- **max_tokens** _(int)_: cap response length to avoid runaway generations.
 
 **Example**
 

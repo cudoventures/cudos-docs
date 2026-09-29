@@ -78,6 +78,7 @@ module.exports = async function createConfig() {
     ({
       colorMode: {
         defaultMode: "light",
+        respectPrefersColorScheme: true,
       },
       navbar: {
         logo: {

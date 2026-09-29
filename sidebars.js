@@ -1,6 +1,7 @@
 const welcomeItems = [
   'welcome',
   'asi-cloud/introduction/overview',
+  'asi-cloud/inference/models',
   'asi-cloud/introduction/getting-started',
   'asi-cloud/referral-system',
   'asi-cloud/discounts-and-bonuses',

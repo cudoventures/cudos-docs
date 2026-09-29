@@ -18,7 +18,7 @@ import {WelcomeHero} from '@site/src/components/WelcomeHero';
   </div>
   <div className="stat-strip__cell">
     <div className="stat-strip__value">$0.01<span className="stat-strip__unit">/1M tok</span></div>
-    <div className="stat-strip__label">From — input tokens</div>
+    <div className="stat-strip__label">From / input tokens</div>
   </div>
   <div className="stat-strip__cell">
     <div className="stat-strip__value">Free<span className="stat-strip__unit"> tier</span></div>

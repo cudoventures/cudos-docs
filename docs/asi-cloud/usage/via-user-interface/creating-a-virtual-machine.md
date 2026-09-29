@@ -17,7 +17,7 @@ You don't need to fund your account before starting the wizard. If your balance 
 
 ---
 
-## Step 1 — Select processor
+## Step 1: Select processor {#step-1--select-processor}
 
 Choose the type of machine you want to deploy.
 
@@ -25,12 +25,12 @@ Choose the type of machine you want to deploy.
 
 At the top of the step, switch between:
 
-- **CPU Machines** — general-purpose virtual machines on AMD or Intel x86-64.
-- **GPU Machines** — NVIDIA-accelerated instances for training and inference workloads.
+- **CPU Machines**: general-purpose virtual machines on AMD or Intel x86-64.
+- **GPU Machines**: NVIDIA-accelerated instances for training and inference workloads.
 
 ### Filters
 
-Use the filter bar to narrow the catalogue (the page shows the number of matching SKUs — typically 150+ across both tabs):
+Use the filter bar to narrow the catalogue (the page shows the number of matching SKUs, typically 150+ across both tabs):
 
 | Filter | Options |
 | --- | --- |
@@ -62,20 +62,20 @@ Pricing is metered hourly regardless of the duration you pick later. The hourly 
 
 ---
 
-## Step 2 — Configure machine
+## Step 2: Configure machine {#step-2--configure-machine}
 
 Configure the OS, identity and lifecycle of the VM. The right-hand **Summary** panel updates live with the cost preview.
 
 ### Name & Count
 
-- **Name** — pre-filled with an auto-generated handle (e.g. *Drab Melted Processor*); editable.
-- **Count** — deploy multiple identical VMs from the same configuration in one go.
+- **Name**: pre-filled with an auto-generated handle (e.g. *Drab Melted Processor*); editable.
+- **Count**: deploy multiple identical VMs from the same configuration in one go.
 
 ### Operating System
 
-Pick a **Distribution** — Ubuntu, Fedora, Debian, CentOS — or open the **Other** dropdown for additional distributions such as Rocky Linux.
+Pick a **Distribution** (Ubuntu, Fedora, Debian, CentOS) or open the **Other** dropdown for additional distributions such as Rocky Linux.
 
-The **Version** dropdown then lists the available images for that distribution, with the disk-image size shown on the right (e.g. *Ubuntu 24.04 (LTS) x64 — 7 GiB*). Ubuntu also offers GPU-focused **AI/ML Ready** images with Docker and NVIDIA (or AMD) drivers preinstalled.
+The **Version** dropdown then lists the available images for that distribution, with the disk-image size shown on the right (e.g. *Ubuntu 24.04 (LTS) x64, 7 GiB*). Ubuntu also offers GPU-focused **AI/ML Ready** images with Docker and NVIDIA (or AMD) drivers preinstalled.
 
 ### SSH Public Keys
 
@@ -85,7 +85,7 @@ If you don't have an SSH keypair yet, follow the [Creating an SSH Key](../creati
 
 ### Startup Script (optional)
 
-Provide a cloud-init / shell script that runs on first boot — useful for installing packages, pulling code or starting a service automatically.
+Provide a cloud-init / shell script that runs on first boot to install packages, pull code or start a service automatically.
 
 ### Summary panel
 
@@ -100,7 +100,7 @@ Click **Continue to Payment** when you're ready.
 
 ---
 
-## Step 3 — Payment info
+## Step 3: Payment info {#step-3--payment-info}
 
 Choose how to pay for the machine.
 
@@ -108,31 +108,31 @@ Choose how to pay for the machine.
 
 The first option uses your existing ASI:Cloud balance:
 
-- **Use available balance** — shows the available USD amount.
+- **Use available balance**: shows the available USD amount.
 - If the balance is insufficient for at least one hour of runtime, an *Insufficient* warning appears and you must top up via one of the options below.
 
 ### Fiat
 
-- **Card** — pay by credit/debit card via **Stripe**.
+- **Card**: pay by credit/debit card via **Stripe**.
 
 ### Crypto
 
-- **FET** — Fetch.ai / ASI Alliance native token.
-- **USDT** — multi-chain (Ethereum, Polygon, Osmosis).
-- **USDC** — multi-chain (Ethereum, Polygon, Osmosis).
-- **OSMO** — Osmosis native token.
+- **FET**: Fetch.ai / ASI Alliance native token.
+- **USDT**: multi-chain (Ethereum, Polygon, Osmosis).
+- **USDC**: multi-chain (Ethereum, Polygon, Osmosis).
+- **OSMO**: Osmosis native token.
 
 ### Duration
 
 The right-hand **Summary** panel includes:
 
-- **Duration Type** — Hourly / Daily / Monthly.
-- **Duration** — the number of selected units.
+- **Duration Type**: Hourly / Daily / Monthly.
+- **Duration**: the number of selected units.
 
 These controls produce the **Estimated Total** and, when topping up via card or crypto, determine how much credit is added to your balance.
 
 :::important Billing model
-Virtual machines on ASI:Cloud are **always metered hourly** — the Duration Type and Duration controls do **not** change the rate at which the VM is billed. They exist purely so you can size your top-up correctly (e.g. picking *Monthly × 1* tops you up for ~one month of continuous runtime). Stop the machine at any time and metering stops with it.
+Virtual machines on ASI:Cloud are **always metered hourly**; the Duration Type and Duration controls do **not** change the rate at which the VM is billed. They exist purely so you can size your top-up correctly (e.g. picking *Monthly × 1* tops you up for ~one month of continuous runtime). Stop the machine at any time and metering stops with it.
 :::
 
 Tick **I agree with Terms and Conditions** and click **Pay & Deploy** to provision the VM. You'll be redirected to **Viewing Your Virtual Machines** once the machine is created.
@@ -147,5 +147,5 @@ Please back up any critical and sensitive data that you store in a Virtual Machi
 
 ## What's next
 
-- [Viewing Your Virtual Machines](./viewing-your-machines) — connect to your VM via SSH and manage its lifecycle.
-- [Adding Balance](./payments) — top up by card or crypto outside the VM creation flow.
+- [Viewing Your Virtual Machines](./viewing-your-machines): connect to your VM via SSH and manage its lifecycle.
+- [Adding Balance](./payments): top up by card or crypto outside the VM creation flow.

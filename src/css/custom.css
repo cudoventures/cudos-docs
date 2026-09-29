@@ -201,7 +201,7 @@ body {
   color: var(--asi-fg) !important;
 }
 
-/* Sidebar items: 2px accent left bar on active, soft indigo bg */
+/* Sidebar items: soft indigo background on active */
 .theme-doc-sidebar-item-link .menu__link,
 .theme-doc-sidebar-item-link--level-2 .menu__link,
 .theme-doc-sidebar-item-link--level-3 .menu__link {
@@ -224,7 +224,6 @@ body {
 .menu__link--active:not(.menu__link--sublist) {
   background: var(--asi-accent-bg) !important;
   color: var(--asi-accent) !important;
-  border-left: 2px solid var(--asi-accent) !important;
   font-weight: 600 !important;
 }
 

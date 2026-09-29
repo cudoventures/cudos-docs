@@ -5,13 +5,13 @@ id: speech
 
 # Speech
 
-The **Speech** page in the ASI:Cloud dashboard provides AI-powered **speech-to-text** and **text-to-speech** tools. It is a dashboard-only feature — there is no public API for Speech yet — and it is **free to use**.
+The **Speech** page in the ASI:Cloud dashboard provides AI-powered **speech-to-text** and **text-to-speech** tools. It is a dashboard-only feature with no public API yet, and it is **free to use**.
 
 Open it from **Serverless Inference → Speech** in the left navigation. The page has three tabs:
 
-- **Transcribe** — convert an audio file (or live recording) to text.
-- **Synthesise** — generate natural-sounding speech from text.
-- **History** — review and download your previous Speech jobs.
+- **Transcribe**: convert an audio file (or live recording) to text.
+- **Synthesise**: generate natural-sounding speech from text.
+- **History**: review and download your previous Speech jobs.
 
 :::note
 Speech currently only supports **English**.
@@ -45,11 +45,11 @@ The output transcript appears below the upload area once the job is complete, an
 
 Use the **Synthesise** tab to generate audio from text.
 
-1. Pick a **Voice** from the dropdown — two voices are currently available.
+1. Pick a **Voice** from the dropdown. Two voices are currently available.
 2. Enter your text in the **Enter text** field. The character counter on the bottom right caps each job at **5000 characters**.
 3. Adjust the **Settings**:
-   - **Speed** — slider from **0.5x** to **2x** (default **1.0x**).
-   - **Reverb** — toggle a reverb effect on or off.
+   - **Speed**: slider from **0.5x** to **2x** (default **1.0x**).
+   - **Reverb**: toggle a reverb effect on or off.
 4. Click **Generate speech**.
 
 The generated audio appears below the form with a player and download button, and is also saved to **History**.

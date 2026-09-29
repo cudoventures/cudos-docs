@@ -5,12 +5,12 @@ id: payments
 
 # Managing Your Payments
 
-The [Payments page](https://asicloud.cudos.org/payments) is your central hub for funding your ASI:Cloud account, reviewing past transactions, and downloading receipts. The same balance is used for **all** workloads on the platform — virtual machines, GPU compute, and serverless inference.
+The [Payments page](https://asicloud.cudos.org/payments) is your central hub for funding your ASI:Cloud account, reviewing past transactions, and downloading receipts. The same balance is used for **all** workloads on the platform: virtual machines, GPU compute, and serverless inference.
 
 The page has two tabs:
 
-- **Add funds** — top up your balance with card or crypto.
-- **Payment history** — view, inspect and download receipts for past transactions.
+- **Add funds**: top up your balance with card or crypto.
+- **Payment history**: view, inspect and download receipts for past transactions.
 
 You can reach the page from the **Add balance** entry in the left navigation, the **Top up** button on the Dashboard, or directly inside any payment-required flow (e.g. the final step of [Creating a Virtual Machine](./creating-a-virtual-machine#step-3--payment-info)).
 
@@ -22,13 +22,13 @@ You can reach the page from the **Add balance** entry in the left navigation, th
 
 The **Payment method** panel on the left lists every supported method, grouped into FIAT and CRYPTO. The **Summary** panel on the right updates based on the method you select.
 
-### FIAT — Card (Stripe)
+### FIAT: Card (Stripe) {#fiat--card-stripe}
 
 Pay by debit or credit card via **Stripe**.
 
 1. Select **Card** under FIAT.
 2. Enter the USD **Amount** to add to your balance. The minimum top-up is **$10.00**.
-3. (Optional) Toggle **Enable auto-top up** and configure the rules below — see [Auto-top up](#auto-top-up) for the full breakdown.
+3. (Optional) Toggle **Enable auto-top up** and configure the rules below. See [Auto-top up](#auto-top-up) for the full breakdown.
 4. Tick **I agree with Terms and Conditions** and click **Continue**.
 5. The right panel switches to a Stripe-hosted **Checkout** with a *Back to summary* link.
    - Pick a presentation currency. When a non-USD currency is shown, the exchange rate is displayed underneath.
@@ -37,17 +37,17 @@ Pay by debit or credit card via **Stripe**.
 
 #### Auto-top up
 
-Auto-top up keeps your machines and AI inference going automatically when your balance runs low — recommended for long-lived workloads, since it prevents VMs from being terminated and inference requests from being throttled when the balance hits zero.
+Auto-top up keeps your machines and AI inference going automatically when your balance runs low. It is recommended for long-lived workloads, since it prevents VMs from being terminated and inference requests from being throttled when the balance hits zero.
 
 When you toggle **Enable auto-top up** in the Summary panel, three controls appear:
 
 | Control | What it does |
 | --- | --- |
-| **When balance falls below $X top up with:** | The trigger threshold — once your balance dips below this value, an auto-top-up runs. Pick a preset (**$25 / $50 / $100 / $250**) or enter a **Custom amount** for the threshold. |
+| **When balance falls below $X top up with:** | The trigger threshold: once your balance dips below this value, an auto-top-up runs. Pick a preset (**$25 / $50 / $100 / $250**) or enter a **Custom amount** for the threshold. |
 | **Top up amount** | The USD amount that's charged each time the threshold is hit. |
 | **Maximum monthly top up amount** | A safety cap on total auto-top-up spend per calendar month. Pick **$100 / $1000 / $2000 / $5000** or set a custom value. Once the cap is reached, auto-top-up pauses for the rest of the month. |
 
-Auto-top-up uses the card you complete the initial top-up with. You can change or disable it later — see [Managing auto-top up](#managing-auto-top-up) below.
+Auto-top-up uses the card you complete the initial top-up with. You can change or disable it later. See [Managing auto-top up](#managing-auto-top-up) below.
 
 #### Managing auto-top up
 
@@ -55,7 +55,7 @@ Once auto-top up is enabled, an extra **Top up** tab appears alongside **Add fun
 
 - Adjust the trigger threshold, top-up amount, and monthly cap.
 - Switch the card on file.
-- **Disable auto-top up** — turning it off removes the tab until you re-enable it during a future top-up.
+- **Disable auto-top up**: turning it off removes the tab until you re-enable it during a future top-up.
 
 ### CRYPTO
 
@@ -70,15 +70,15 @@ ASI:Cloud accepts the following tokens, each on multiple chains where applicable
 
 Click any token row to expand it and pick the chain you want to pay on. For an authoritative list of supported networks see the [Chains and Currencies](../../chains-currencies) page.
 
-#### Step 1 — Choose a token and amount
+#### Step 1: Choose a token and amount {#step-1--choose-a-token-and-amount}
 
 1. Pick the token (and chain, if applicable) under CRYPTO.
-2. Enter the **Predicted USD credit** — this is the USD amount you want added to your balance. The minimum varies by token (for example, $5.00 for FET).
+2. Enter the **Predicted USD credit**. This is the USD amount you want added to your balance. The minimum varies by token (for example, $5.00 for FET).
 3. The Summary shows the equivalent token amount, e.g. `51.15312… FET`, and a notice such as:
    > *"Estimated based on the current exchange rate of 0.1954914948929529 FET per USD. The rate may change before the payment is completed, and you may get more or less than predicted."*
 4. Tick **I agree with Terms and Conditions** and click **Continue**.
 
-#### Step 2 — Select a wallet
+#### Step 2: Select a wallet {#step-2--select-a-wallet}
 
 The right panel pins your selection (e.g. *USDT Ethereum*) with a **Change** link, and the left panel switches to **Select wallet**.
 
@@ -95,7 +95,7 @@ The Summary repeats:
 
 …and shows the final **Total** in USD.
 
-#### Step 3 — Approve in the wallet
+#### Step 3: Approve in the wallet {#step-3--approve-in-the-wallet}
 
 After clicking the wallet, you'll see a **Continue in [WalletName]** prompt while the connection request is sent to your extension or mobile app. Approve the connection, then approve the actual transfer transaction.
 

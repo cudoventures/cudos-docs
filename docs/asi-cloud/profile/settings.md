@@ -9,8 +9,8 @@ The **Settings** page is where you manage your personal information, communicati
 
 The page has two tabs:
 
-- **User settings** — personal info, communication preferences, login methods, and password.
-- **Template default variables** — saved variables reused across VM deployments.
+- **User settings**: personal info, communication preferences, login methods, and password.
+- **Template default variables**: saved variables reused across VM deployments.
 
 ![profile_settings](@site/static/img/profile-settings1.png)
 
@@ -31,13 +31,13 @@ Set the **Name** that ASI:Cloud displays throughout the platform.
 Add email addresses that should receive notifications and platform updates.
 
 :::note
-Email addresses added here are for **communications only** — they cannot be used to sign in. To add an email as a login method, use [My Login methods](#my-login-methods) further down the page instead.
+Email addresses added here are for **communications only**; they cannot be used to sign in. To add an email as a login method, use [My Login methods](#my-login-methods) further down the page instead.
 :::
 
 For each email address you can see badges describing where it came from and whether it has been confirmed, for example:
 
-- **GOOGLE ACCOUNT** — pulled from your Google identity.
-- **VERIFIED** — the address has been confirmed.
+- **GOOGLE ACCOUNT**: pulled from your Google identity.
+- **VERIFIED**: the address has been confirmed.
 
 Click **Add a contact method** to register additional email addresses.
 
@@ -75,7 +75,7 @@ Click **Connect a new log in method** to open the **Connect account** dialog. Fr
 …or scroll down to **continue with email** by entering an **Email**, **Password** and **Confirm password**, then clicking **Continue**.
 
 :::tip Linking an additional method
-If you originally signed in with Google (or another social/wallet provider), you can link extra login methods here — for example, adding email + password as a second way to access the same account. The new method works **alongside** the existing one; both will sign you in to the same account.
+If you originally signed in with Google (or another social/wallet provider), you can link extra login methods here, for example, adding email + password as a second way to access the same account. The new method works **alongside** the existing one; both will sign you in to the same account.
 :::
 
 ![connect-account](@site/static/img/connect-account.gif)
@@ -84,8 +84,8 @@ If you originally signed in with Google (or another social/wallet provider), you
 
 Whether this section is shown depends on how you signed up:
 
-- **Signed up with a wallet, Google, or Discord only** — your account does not have a password and the section will read *"You don't have a password configured. To set up password login, add an email address as a log in method in the section above."* Add an email login method first to enable password sign-in.
-- **Signed up (or linked) with email + password** — the section lets you change your password using the standard old / new / confirm flow.
+- **Signed up with a wallet, Google, or Discord only**: your account does not have a password and the section will read *"You don't have a password configured. To set up password login, add an email address as a log in method in the section above."* Add an email login method first to enable password sign-in.
+- **Signed up (or linked) with email + password**: the section lets you change your password using the standard old / new / confirm flow.
 
 :::note
 You always remain signed in via your original method even after adding a password. Password login is just an additional option, not a replacement.
