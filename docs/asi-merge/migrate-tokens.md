@@ -11,6 +11,5 @@ Please read our [step-by-step guide](https://www.cudos.org/blog/how-to-migrate-y
 ### Native Token Migration
 
 The native tokens were migrated automatically.
-You can find your ASI Alliance address and view your new FET tokens using the [CUDOS ASI Vesting Viewer](https://asi-vesting.cudos.org/).
 
 Please see [this post](https://www.cudos.org/blog/cudos-completes-token-merger-with-asi-alliance) and our [FET guide](https://www.cudos.org/blog/guide-to-access-and-manage-your-new-fet-tokens) for further details.
