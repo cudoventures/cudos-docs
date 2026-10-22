@@ -39,8 +39,8 @@ Question ids must be unique within a request and can't be empty or contain `:` o
 | [`choice`](./choice.md) | Pick one option from a fixed set | Object: option name → description, or `null` | `choice`, `probabilities`, `confidence` |
 | [`score`](./score.md) | Rate against ordered levels | Array of levels, lowest first | `score`, `legend`, `probabilities`, `confidence` |
 | [`noul`](./noul.md) | Answer yes or no | Optional: `{"true": "...", "false": "..."}` | `noul`, the probability of yes |
-| [`span`](./spans.md) | Quote one piece of the state | Not used. Optional `max_tokens` | `found`, `text`, `start`, `end`, `confidence`, `coverage` |
-| [`spans`](./spans.md) | Quote every matching piece | Not used. Optional `max_tokens`, `max_items` | `found`, `items` |
+| [`span`](./spans.md) | Quote one piece of the state | Optional: `{"max_tokens": n}` | `found`, `text`, `start`, `end`, `confidence`, `coverage` |
+| [`spans`](./spans.md) | Quote every matching piece | Optional: `{"max_tokens": n, "max_items": n}` | `found`, `items` |
 
 ## Choosing a type
 
@@ -67,7 +67,11 @@ Group the questions you need about one state into one request. You can also add 
 
 **Keep the options in a fixed order.** Answers can shift when the same options are listed in a different order. Define each question once in code and reuse it.
 
-**Put shared context in the state.** A policy that several questions depend on belongs in the state, not repeated in each question's instructions.
+**Put shared context in the state or in top-level `instructions`.** A policy that several questions depend on belongs in the state, or in the request's top-level `instructions` field, not repeated in each question's instructions.
+
+**Name ids for what they mean.** Question ids appear in the prompt, so `refund_eligible` is better than `q3`. Still put the full question in `instructions`.
+
+**Several labels can apply?** Ask one [noul](./noul.md) per label instead of one choice, because a choice always picks exactly one option.
 
 ## Chat completions shape
 

@@ -41,6 +41,8 @@ const superDeciderCategory = {
     'asi-cloud/inference/super-decider/confidence',
     'asi-cloud/inference/super-decider/thinking',
     'asi-cloud/inference/super-decider/patterns',
+    'asi-cloud/inference/super-decider/agent-skill',
+    'asi-cloud/inference/super-decider/migrate-from-jev',
     {
       type: 'category',
       collapsed: true,

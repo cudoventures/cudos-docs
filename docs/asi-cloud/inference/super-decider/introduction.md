@@ -89,4 +89,6 @@ The two work well together: Super Decider decides quickly and cheaply, and a [ch
 - [Questions](./questions.md): how to write questions and choose between types.
 - [Confidence](./confidence.md): how to read probabilities and set thresholds.
 - [Patterns](./patterns.md): common ways to build with Super Decider.
+- [Agent skill](./agent-skill.md): teach your coding agent to build with Super Decider.
+- [Migrate from Jev](./migrate-from-jev.md): move an existing Jev integration.
 - [Model card](./model-card.md): architecture, reported results and known limitations.

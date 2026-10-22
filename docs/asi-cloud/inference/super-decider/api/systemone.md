@@ -26,6 +26,7 @@ POST https://inference.asicloud.cudos.org/v1/systemone
 | `state` | string or JSON | Yes | What the model reads. See [State](../state.md). |
 | `questions` | object | Yes | Question id → question. 1 to 64 questions. |
 | `images` | array of strings | No | Up to 8 images as base64 data URLs. See [Images](../images.md). |
+| `instructions` | string | No | Context that applies to every question, such as a policy. |
 | `thinking` | string | No | `"auto"` (default), `"auto_forced"`, `"always"` or `"off"`. See [Thinking](../thinking.md). |
 | `thinking_budget` | integer | No | Longest thought in tokens, 16 to 4096. Default 512. |
 
@@ -35,9 +36,7 @@ POST https://inference.asicloud.cudos.org/v1/systemone
 | --- | --- | --- | --- |
 | `type` | string | All | `choice`, `score`, `noul`, `span` or `spans`. |
 | `instructions` | string | All | The question, in plain language. |
-| `criteria` | object or array | `choice`, `score`, `noul` | **choice**: option name → description or `null`. **score**: array of levels, lowest first. **noul**: optional `{"true": "...", "false": "..."}`. |
-| `max_tokens` | integer | `span`, `spans` | Longest piece to return, 1 to 96 tokens. |
-| `max_items` | integer | `spans` | Most pieces to return, 1 to 64. |
+| `criteria` | object or array | All | **choice**: option name → description or `null`, at least 2 options. **score**: array of levels, lowest first, at least 2. **noul**: optional `{"true": "...", "false": "..."}`. **span**: optional `{"max_tokens": n}`, 1 to 96. **spans**: optional `{"max_tokens": n, "max_items": n}`, `max_items` 1 to 64. |
 
 ## Response
 

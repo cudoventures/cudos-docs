@@ -57,7 +57,7 @@ These are the developer's figures. Measure the model on your own data before you
 - **Sensitive to input order.** Answers can change when the input changes in ways that keep its meaning, such as the order of JSON keys or of a question's options. Build requests the same way every time.
 - **Multi-step arithmetic.** The model is sometimes confidently wrong on multi-step date and money calculations. [Thinking](./thinking.md) on every question fixes part of these; doing the arithmetic in code avoids them.
 - **English-centric.** The training data is mostly English.
-- **Images.** The model wasn't fine-tuned on images. It reads them through its base model's vision path, and image requests never think.
+- **Images.** The model wasn't fine-tuned on images. It reads them through its base model's vision path, and image requests only think with `"thinking": "always"`.
 
 ## Links
 

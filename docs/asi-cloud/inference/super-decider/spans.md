@@ -13,7 +13,7 @@ There are two types:
 
 ## Request
 
-Span questions don't take `criteria`. They take optional limits instead.
+For span questions, `criteria` is optional and holds limits on the answer.
 
 ```json
 {
@@ -27,16 +27,18 @@ Span questions don't take `criteria`. They take optional limits instead.
     "emails": {
       "type": "spans",
       "instructions": "Every email address in the message",
-      "max_items": 5
+      "criteria": {"max_items": 5}
     }
   }
 }
 ```
 
-| Field | Applies to | Description |
+| `criteria` field | Applies to | Description |
 | --- | --- | --- |
 | `max_tokens` | `span`, `spans` | Longest piece to return, in tokens. 1 to 96. Defaults to 24 for `span` and 64 for `spans`. |
 | `max_items` | `spans` | Most pieces to return. 1 to 64. Defaults to 16. |
+
+On [chat completions](./api/chat-completions.md), put `max_tokens` and `max_items` directly on the question instead.
 
 ## Response
 

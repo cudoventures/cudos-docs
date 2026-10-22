@@ -21,9 +21,11 @@ description: Super Decider request limits and HTTP error responses.
 | Status | When | Body |
 | --- | --- | --- |
 | 400 | `model` is missing | `{"error": "Model name not provided"}` |
+| 400 | Unknown `model` name, such as `jev-latest` | `{"error": "Model not found"}` |
 | 400 / 422 | Invalid request: unknown `thinking` value, bad question shape, state too long, raw text state on chat completions | `{"error": {"code": ..., "message": "..."}}` |
-| 401 | Missing or wrong API key | `{"error": {"code": "authentication_error", "message": ...}}` |
-| 429 | Rate limit for your key | Retry after a short wait |
+| 401 | No `Authorization` header, or not in the form `Bearer sk-...` | `{"error": {"code": "authentication_error", "message": "Authorization header missing or invalid format. ..."}}` |
+| 403 | API key not valid | `{"error": {"code": "authentication_error", "message": "Access forbidden"}}` |
+| 429 | Rate limit for your key | No `Retry-After` header. Wait a second or two and retry. |
 
 ### Reading validation errors
 
@@ -45,7 +47,7 @@ if resp.status_code in (400, 422):
 
 ### Retrying
 
-Retry 429 and 5xx responses with exponential backoff, for example waits of 0.5 s, 1 s and 2 s. Don't retry 400, 401 or 422: fix the request or the key first.
+Retry 429 and 5xx responses with backoff. A 429 has no `Retry-After` header, so wait a second or two before the first retry and longer after each one. Don't retry 400, 401, 403 or 422: fix the request or the key first.
 
 ## Getting help
 

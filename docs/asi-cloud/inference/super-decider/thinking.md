@@ -19,7 +19,19 @@ Set `thinking` in the request body:
 | `"always"` | The model thinks before every question. |
 | `"off"` | No thinking. Fastest. |
 
+`auto` and `auto_forced` only think on **text requests with at most 2 questions**. For requests with images or more than 2 questions, the model thinks only when you set `"always"`.
+
 Set `thinking_budget` to limit the length of the thought, from 16 to 4096 tokens. The default is 512.
+
+### On chat completions
+
+[Chat completions](./api/chat-completions.md) ignore the `thinking` field. Put the setting in the question schema instead:
+
+| Schema key | Same as |
+| --- | --- |
+| `"adaptive": false` | `"thinking": "off"` |
+| `"think": 512` | `"thinking": "always"`, with a thought of up to 512 tokens |
+| Neither | `"thinking": "auto"` |
 
 ## Cost
 
@@ -82,6 +94,33 @@ In Singularity Compute's test of this request, `"thinking": "off"` answered in 0
 
 Even with thinking, compute values in code where you can. It is faster, cheaper and exact.
 
-:::note
-Requests with [images](./images.md) never think, whatever `thinking` is set to.
-:::
+## Thinking cascade
+
+To get thinking's accuracy without paying its latency on every request, ask everything with `"thinking": "off"` first. Then ask again with `"thinking": "always"` only for the answers below your confidence threshold.
+
+```python
+import os
+import requests
+
+URL = "https://inference.asicloud.cudos.org/v1/systemone"
+HEADERS = {"Authorization": f"Bearer {os.environ['ASI_API_KEY']}"}
+
+def decide(state, questions, **options):
+    body = {"model": "super-decider", "state": state, "questions": questions, **options}
+    r = requests.post(URL, headers=HEADERS, json=body, timeout=60)
+    r.raise_for_status()
+    return r.json()["answers"]
+
+def certainty(answer):
+    if answer["type"] == "noul":
+        return max(answer["noul"], 1 - answer["noul"])
+    return answer["confidence"]
+
+answers = decide(state, questions, thinking="off")
+
+unsure = {qid: questions[qid] for qid, a in answers.items() if certainty(a) < 0.8}
+if unsure:
+    answers.update(decide(state, unsure, thinking="always"))
+```
+
+Re-asking only the unsure questions also keeps the second request small. If it has at most 2 text questions, `"auto"` would think too, but `"always"` makes sure.

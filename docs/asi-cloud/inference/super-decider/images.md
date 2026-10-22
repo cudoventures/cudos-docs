@@ -14,7 +14,7 @@ Super Decider can read images along with the state: invoices, receipts, screensh
 | Format | Base64 data URLs inside the JSON body, such as `data:image/png;base64,...` |
 | Multipart uploads | Not supported |
 | HTTP(S) image links | Untested |
-| Thinking | Image requests never think |
+| Thinking | Only with `"thinking": "always"` |
 
 :::note
 Super Decider wasn't fine-tuned on images. It reads them through its base model's vision path. Test it on your own documents before you rely on it, and check the [known limitations](./model-card.md#known-limitations).
@@ -113,5 +113,5 @@ answers = json.loads(r.choices[0].message.content)["answers"]
 ## Tips
 
 - Send images at a resolution where the text is readable. Crop away margins and unrelated content.
-- Totals and other arithmetic on images can't use [thinking](./thinking.md). When a check depends on a calculation, extract the numbers with questions and do the arithmetic in code.
+- The automatic [thinking](./thinking.md) modes don't apply to image requests. When a check depends on a calculation, such as a total, set `"thinking": "always"`, or extract the numbers with questions and do the arithmetic in code.
 - Keep a person in the loop for low-confidence answers, especially for payments.

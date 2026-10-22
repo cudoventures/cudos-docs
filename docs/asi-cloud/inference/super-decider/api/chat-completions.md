@@ -44,6 +44,12 @@ Compared with `/v1/systemone`:
 - `questions` is an array, and each question carries its own `id`.
 - A choice lists its options in `options`, each with a `name` and an optional `description`.
 - A score lists its levels in `levels`.
+- A span puts `max_tokens` and `max_items` directly on the question.
+- The request's `thinking` field is ignored. Control thinking with schema keys: `"adaptive": false` for no thought, or `"think": 512` for a thought of up to 512 tokens on every question. See [Thinking](../thinking.md#on-chat-completions).
+
+```json
+{"think": 512, "questions": [...]}
+```
 
 ## Example
 
