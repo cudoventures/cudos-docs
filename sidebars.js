@@ -17,6 +17,46 @@ const supportCategory = {
   ],
 };
 
+const superDeciderCategory = {
+  type: 'category',
+  collapsed: true,
+  label: 'Super Decider',
+  items: [
+    'asi-cloud/inference/super-decider/introduction',
+    'asi-cloud/inference/super-decider/quickstart',
+    'asi-cloud/inference/super-decider/state',
+    {
+      type: 'category',
+      collapsed: true,
+      label: 'Questions',
+      link: {type: 'doc', id: 'asi-cloud/inference/super-decider/questions'},
+      items: [
+        'asi-cloud/inference/super-decider/choice',
+        'asi-cloud/inference/super-decider/score',
+        'asi-cloud/inference/super-decider/noul',
+        'asi-cloud/inference/super-decider/spans',
+      ],
+    },
+    'asi-cloud/inference/super-decider/images',
+    'asi-cloud/inference/super-decider/confidence',
+    'asi-cloud/inference/super-decider/thinking',
+    'asi-cloud/inference/super-decider/patterns',
+    'asi-cloud/inference/super-decider/agent-skill',
+    'asi-cloud/inference/super-decider/migrate-from-jev',
+    {
+      type: 'category',
+      collapsed: true,
+      label: 'API reference',
+      items: [
+        'asi-cloud/inference/super-decider/api/systemone',
+        'asi-cloud/inference/super-decider/api/chat-completions',
+        'asi-cloud/inference/super-decider/api/errors',
+      ],
+    },
+    'asi-cloud/inference/super-decider/model-card',
+  ],
+};
+
 const serverlessInferenceCategory = {
   type: 'category',
   collapsed: false,
@@ -24,6 +64,7 @@ const serverlessInferenceCategory = {
   items: [
     'asi-cloud/inference/quickstart',
     'asi-cloud/inference/speech',
+    superDeciderCategory,
     {
       type: 'category',
       collapsed: true,

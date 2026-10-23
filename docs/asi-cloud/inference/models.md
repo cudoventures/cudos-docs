@@ -21,6 +21,14 @@ Prices are in **USD per 1 million tokens**, with input and output billed separat
 | MiniMax M3 | 440B | 524,300 | $0.30 | $1.20 |
 | Qwen3.8 27B | 27B | 262,144 | $0.45 | $3.20 |
 
+## Decision models
+
+Decision models answer typed questions with calibrated probabilities instead of writing text. See the [Super Decider docs](./super-decider/introduction.md).
+
+| Model | Parameters | Context window | Input / 1M tokens | Output / 1M tokens |
+| --- | ---: | ---: | ---: | ---: |
+| Super Decider | 26B (4B active) | 131,072 | $0.03 | Free |
+
 ## Embedding models
 
 Use the API model string to select an embedding model. Context lengths are measured in tokens.

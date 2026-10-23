@@ -1197,3 +1197,55 @@ img[alt=bcc-my-vms] {
 img[alt=bcc-ssh-key-input] {
   width: 60%;
 }
+
+/* Super Decider request flow */
+.sd-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  margin: 32px 0;
+}
+
+.sd-flow__step {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--asi-border);
+  border-radius: var(--asi-r-md);
+  background: var(--asi-bg-muted);
+}
+
+.sd-flow__step--model {
+  border-color: var(--asi-accent);
+  background: var(--asi-accent-bg);
+}
+
+.sd-flow__title {
+  font: 600 14px/20px var(--asi-font-ui);
+  color: var(--asi-fg-strong);
+}
+
+.sd-flow__body {
+  margin-top: 4px;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--asi-fg-muted);
+}
+
+.sd-flow__arrow {
+  align-self: center;
+  font: 500 18px/1 var(--asi-font-mono);
+  color: var(--asi-fg-muted);
+}
+
+@media (max-width: 720px) {
+  .sd-flow {
+    flex-direction: column;
+  }
+  .sd-flow__arrow {
+    transform: rotate(90deg);
+  }
+  .sd-flow__arrow--plus {
+    transform: none;
+  }
+}
